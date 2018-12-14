@@ -1,0 +1,73 @@
+/**
+ * Button
+ *
+ * @uses .Button
+ */
+.Button {
+	user-select: none;
+
+	/* stylelint-disable-next-line */
+	transition:
+		color 0.3s map-get( $easings, ease-in-out ),
+		background-color 0.3s map-get( $easings, ease-in-out ),
+		border-color 0.3s map-get( $easings, ease-in-out );
+
+	@extend %font-family-title, %text-align-center, %vertical-align-middle;
+
+	@include media-breakpoint-up( lg ) {
+		white-space: nowrap;
+	}
+
+	border: {
+		color: transparent;
+		style: solid;
+		radius: $grid-gutter-width / 2;
+		width: 1px;
+	}
+
+	$this: &;
+
+	/* stylelint-disable-next-line */
+	@extend .d-inline-block;
+
+	@include letter-spacing( -50 );
+
+	@include padding(
+		top $grid-gutter-width / ( $scale-factor * 2 )
+		right $grid-gutter-width / $scale-factor
+		bottom $grid-gutter-width / ( $scale-factor * 2 )
+		left $grid-gutter-width / $scale-factor
+	);
+
+	&:not(:disabled):not(.disabled) {
+		@extend %Cursor-pointer;
+	}
+
+	&--primary {
+		color: the_color( black );
+
+		background: {
+			color: the_color( white );
+		}
+		border: {
+			color: the_color( white );
+		}
+
+		&:hover {
+			background-color: transparent;
+			color: the_color( black );
+		}
+	}
+
+	&--outline-primary {
+		color: the_color( white );
+		border: {
+			color: the_color( white );
+		}
+
+		&:hover {
+			background-color: the_color( white );
+			color: the_color( black );
+		}
+	}
+}

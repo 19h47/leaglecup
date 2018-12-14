@@ -1,0 +1,26 @@
+/**
+ * Cursors
+ *
+ * Construct each cursor property found in $cursors with
+ * a placeholder and a utility class
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+$cursor: 'none' 'cursor';
+
+@each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+	@include media-breakpoint-up( $breakpoint-name ) {
+		@each $cursor in $cursor {
+
+			// Placeholder
+			%cursor-#{ unquote( $breakpoint-name ) }-#{ unquote( $cursor ) } {
+				cursor: #{ unquote( $cursor ) };
+			}
+
+			// .cursor-{ $breakpoint-name }-{ $cursor }
+			.cursor-#{ unquote( $breakpoint-name ) }-#{ unquote( $cursor ) } {
+				@extend %cursor-#{ unquote( $breakpoint-name ) }-#{ unquote( $cursor ) };
+			}
+		}
+	}
+}

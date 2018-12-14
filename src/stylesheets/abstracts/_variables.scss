@@ -1,0 +1,221 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/**
+ * Color variation
+ *
+ * Each colors used in the theme.
+ *
+ * @uses get_color( $key, $value ) to retrieve color value
+ * @type nested map
+ * @see http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+ * @see http://www.colorhexa.com/ to pickup color name
+ */
+$color-variations: (
+	black: #000,
+	white: #fff,
+
+	red: (
+		pure: #ff0000,
+	),
+
+	blue: (
+		pure: #0000ff,
+	),
+
+	orange: (
+		very-soft: #f1c6b6,
+	),
+
+	/**
+	 * Brand colors
+	 *
+	 * @see https://brandcolors.net/
+	 */
+	socials: (
+		facebook: #3b5998,
+		twitter: #1da1f2,
+		google-plus: #dd4b39,
+		linkedin: #0077b5,
+		viadeo: #f07355,
+	)
+);
+
+
+/**
+ * Font
+ *
+ * A map containing all information about fonts
+ *
+ * @type map
+ */
+$font: (
+
+
+	/**
+	 * Font
+	 *
+	 * All fonts families found in the site are listed here
+	 *
+	 * @uses map-get( $font, $key ) to retrieve font value from map
+	 * @type map
+	 */
+	families: (
+		body: ( 'Helvetica Neue', sans-serif ),
+		title: ( 'Helvetica Neue', sans-serif ),
+	),
+
+
+	/**
+	 * Font weights
+	 *
+	 * Each font weight used in the theme.
+	 *
+	 * @uses map-get( $font, weights ) to retrieve font weight value
+	 * @type map
+	 */
+	weights: (
+		extralight: 100,
+		light: 200,
+		book: 300,
+		regular: 400,
+		medium: 500,
+		semibold: 600,
+		bold: 700,
+		extrabold: 800,
+		extrablack: 900
+	),
+
+
+	/**
+	 * Font styles
+	 *
+	 * Each font style used in the theme.
+	 *
+	 * @uses map-get( $font, styles ) to retrieve font style value
+	 * @type list
+	 */
+	styles: 'italic',
+
+
+	/**
+	 * Font sizes
+	 *
+	 * Each font size used in the theme.
+	 *
+	 * @uses map-get( $font, sizes ) to retrieve font size value
+	 * @type list
+	 */
+	sizes: '22',
+);
+
+
+/**
+ * Base
+ */
+$base-font-size: 16;
+$base-font-size-px: $base-font-size * 1px;
+$base-line-height: 22;
+$scale-factor: 1.333;
+
+
+/**
+ * Outer gutter width
+ *
+ * (Most of the time it's the size of a gutter divide by 2.)
+ * Useful for the container.
+ */
+$grid-outer-gutter-width-unitless: $base-line-height * 2;
+$grid-outer-gutter-width: $grid-outer-gutter-width-unitless * 1px;
+
+
+/**
+ * Prototype width
+ *
+ * From Photoshop, Sketch, Illustrator, Paint maybe? 😝
+ */
+$prototype-width-unitless: 1280;
+$prototype-width: $prototype-width-unitless * 1px;
+
+
+/**
+ * Container width without grid outer gutter width
+ *
+ * Width keep from prototype
+ */
+$container-width-without-outer-gutter-unitless: 1192;
+$container-width: $container-width-without-outer-gutter-unitless * 1px;
+
+
+/**
+ * Container sizes
+ *
+ * Sizes keep from prototype (grid + outer gutter * 2 )
+ */
+$container-width-unitless: $container-width-without-outer-gutter-unitless + ( $grid-outer-gutter-width-unitless * 2 );
+$container-width: $container-width-unitless * 1px;
+
+
+/**
+ * Prototype height
+ */
+$prototype-height-unitless: 812;
+$prototype-height: $prototype-height-unitless * 1px;
+
+
+/**
+ * Spacers
+ *
+ * Usefull for padding and margin utilities rythm
+ */
+$spacers: (
+	0: 0,
+	1: $grid-gutter-width-unitless * 0.25,
+	2: $grid-gutter-width-unitless * 0.5,
+	3: $grid-gutter-width-unitless,
+	4: $grid-gutter-width-unitless * 1.5,
+	5: $grid-gutter-width-unitless * 2,
+	6: $grid-gutter-width-unitless * 3,
+	7: $grid-gutter-width-unitless * 4,
+	8: $grid-gutter-width-unitless * 5,
+);
+
+
+/**
+ * Directories
+ *
+ * Each directories used in this theme.
+ *
+ * @uses 	map-get( $directories, $key ) to retrieve directory value
+ * @type 	map
+ * @author 	Jérémy Levron <jeremylevron@19h47.fr>
+ */
+$directories: (
+	fonts: '../fonts/',
+	img: '../img/',
+	svg: '../img/svg/',
+	jpg: '../img/jpg/',
+	png: '../img/png/',
+	gif: '../img/gif/',
+);
+
+
+/**
+ * State classes
+ *
+ * Each state class used in this theme.
+ *
+ * @uses map-get( $state-classes, $key ) to retrieve class value
+ * @type map
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+$state-classes: (
+	menu-open: menu--is-open,
+	search-open: search--is-open,
+	panel-open: panel--is-open,
+	panel-loading: panel--is-loading,
+	map-open: map--is-open,
+	form-open: form--is-open,
+	submenu-open: submenu--is-open,
+);

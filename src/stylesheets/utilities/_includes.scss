@@ -1,0 +1,15 @@
+%line-height-inherit {
+	line-height: inherit;
+}
+
+.line-height-inherit {
+	@extend %line-height-inherit;
+}
+
+%list-style-type-none {
+	list-style-type: none;
+}
+
+.list-style-type-none {
+	list-style-type: none;
+}

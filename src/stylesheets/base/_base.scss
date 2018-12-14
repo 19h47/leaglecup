@@ -1,0 +1,41 @@
+/**
+ * Base
+ */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+
+	font-size: $base-font-size-px;
+	line-height: $scale-factor;
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+	text-rendering: optimizeLegibility;
+
+	@extend %font-family-body, %font-weight-regular;
+
+	background: { color: the_color( black ); }
+}
+
+a,
+button {
+	cursor: pointer;
+	outline: none;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+p {
+	@include margin (
+		top 0
+		bottom #{ $base-line-height }px
+	);
+}
