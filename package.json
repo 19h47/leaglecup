@@ -30,7 +30,7 @@
         "stylelint": "^9.9.0",
         "stylelint-config-airbnb": "0.0.0",
         "stylelint-order": "^2.0.0",
-        "stylelint-scss": "^3.4.4",
+        "stylelint-scss": "^3.5.0",
         "stylelint-webpack-plugin": "^0.10.5",
         "svgo": "^1.1.1",
         "svgo-loader": "^2.2.0",
