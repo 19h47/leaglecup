@@ -1,0 +1,10 @@
+/**
+ * Logo
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @uses .Logo
+ */
+.Logo {
+    @extend .d-inline-block;
+    @extend %vertical-align-middle;
+}

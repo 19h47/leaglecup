@@ -1,0 +1,29 @@
+@keyframes focus-white {
+
+	0% {
+		box-shadow: 0 0 0 0 rgba( the_color( white ), ( $base-line-height * 3 ) / 100 );
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba( the_color( white ), 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba( the_color( white ), 0);
+	}
+}
+
+@keyframes focus-black {
+
+	0% {
+		box-shadow: 0 0 0 0 rgba( the_color( black ), ( $base-line-height * 3 ) / 100 );
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba( the_color( black ), 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba( the_color( black ), 0);
+	}
+}

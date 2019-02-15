@@ -1,0 +1,61 @@
+{#
+	@author     Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+	@file       views/header.twig
+	@package    WordPress
+	@subpackage rbrxhrns
+#}
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html {{ html_class( 'ie9 no-js no-touch' ) }} {{ language_attributes }}>
+<![endif]-->
+<!--[if !(IE 9)]><!-->
+<html {{ language_attributes }} {{ html_class( 'no-js no-touch' ) }}>
+<!--<![endif]-->
+
+	<head>
+
+		<meta charset="{{ site.charset }}">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+		<base href="{{ theme.path }}/dist/">
+
+		{{ wp_head }}
+
+		{# {% include 'components/google-analytics.twig' %} #}
+
+	</head>
+
+	<body {{ body_class( body_class | join( ' ' ) ) }} itemscope itemtype="http://schema.org/WebPage">
+
+		<div id="svg-sprite" class="d-none">{% include '/dist/icons.svg' %}</div>
+
+		<header class="Site-header">
+			<div class="Site-container">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<a class="d-inline-block" href="{{ site.link }}">
+							<img class="Logo" src="{{ manifest['img/svg/logo-decor.svg'] }}" alt="{{ site.description }}" width="202" height="72">
+						</a>
+					</div>
+					<div class="col-12 col-md-7">
+						{%
+							include 'views/components/menu-main.html.twig'
+							with { items: menu.main.items }
+							only
+						%}
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main id="main-container" role="main">
+
+			<div
+				id="page-content"
+				class="page-content"
+				data-node-type="{{ node_type }}"
+				data-meta-title="{{ wp_get_document_title() }}"
+				data-body-class="{{ get_body_class( node_type ) | join( ' ' ) }}"
+			>

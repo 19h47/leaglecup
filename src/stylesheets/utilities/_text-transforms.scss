@@ -1,0 +1,32 @@
+/**
+ * Text transforms
+ *
+ * Construct each text transformation found in $text-transforms with
+ * a placeholder and a utility class
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr>
+ */
+$text-transforms: uppercase;
+
+@each $text-transform in $text-transforms {
+
+	// Placeholder
+	%text-transform-#{ $text-transform } {
+		text-transform: #{ $text-transform };
+	}
+
+	// .text-transform-{ $text-transform }
+	.text-transform-#{ $text-transform } {
+		@extend %text-transform-#{ $text-transform };
+	}
+
+	// .text-{ $text-transform }
+	.text-#{ $text-transform } {
+		@extend %text-transform-#{ $text-transform };
+	}
+
+	// .{ $text-transform }
+	.#{ $text-transform } {
+		@extend %text-transform-#{ $text-transform };
+	}
+}

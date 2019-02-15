@@ -1,0 +1,34 @@
+%line-height-inherit {
+	line-height: inherit;
+}
+
+.line-height-inherit {
+	@extend %line-height-inherit;
+}
+
+%list-style-type-none {
+	list-style-type: none;
+}
+
+.list-style-type-none {
+	list-style-type: none;
+}
+
+// Utilities
+@import
+// 	'colors',
+// 	'cursors',
+// 	// 'displays',
+// 	// 'floats',
+	'fonts',
+// 	'margins',
+// 	'overflows',
+// 	'paddings',
+	'positions',
+// 	'sizes',
+	'text-aligns',
+// 	'text-decorations',
+	'text-transforms',
+	'vertical-aligns';
+// 	'visibilities',
+// 	'white-spaces';

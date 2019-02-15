@@ -1,0 +1,9 @@
+/**
+ * Site header
+ *
+ * @uses .Site-header
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
+.Site-header {
+    @include margin( top ( $grid-gutter-width / 2 ) + 1 );
+}

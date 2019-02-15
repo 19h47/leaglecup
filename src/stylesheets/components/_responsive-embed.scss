@@ -1,0 +1,42 @@
+/**
+ * Embed responsive
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @uses .embed-responsive
+ */
+.embed-responsive {
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+
+	@extend %position-relative;
+
+	/* stylelint-disable-next-line */
+	@extend .d-block;
+
+	.embed-responsive-item,
+	iframe,
+	embed,
+	object,
+	video {
+		border: 0;
+
+		@include absolute(
+			top 0
+			left 0
+			bottom 0
+		);
+
+		@include size( 100% );
+	}
+
+	// Modifier class for 16:9 aspect ratio
+	&-16by9 {
+		padding-bottom: percentage( 9 / 16 );
+	}
+
+	// Modifier class for 4:3 aspect ratio
+	&-4by3 {
+		padding-bottom: percentage( 3 / 4 );
+	}
+}

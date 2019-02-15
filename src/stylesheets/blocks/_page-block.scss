@@ -1,0 +1,29 @@
+/**
+ * Page block
+ */
+.page-block {
+
+	transition: 0.7s map-get( $easings, ease );
+
+	/**
+	 * Fade in
+	 */
+	&.fade-in {
+		@include autoAlpha( 0 );
+
+		&.is-in-viewport {
+			@include autoAlpha( 1 );
+		}
+	}
+
+	/**
+	 * Slide in up
+	 */
+	&.slide-in-up {
+		transform: translateY( $grid-gutter-width );
+
+		&.is-in-viewport {
+			transform: translateY( 0 );
+		}
+	}
+}

@@ -1,0 +1,27 @@
+/**
+ * Menu main
+ *
+ * @uses .Menu-main
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
+.Menu-main {
+    $this: &;
+
+    @include letter-spacing( 100 );
+    @include margin( top $grid-gutter-width * 1.5 );
+    @extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
+    @extend .d-flex, .justify-content-between;
+
+    font: {
+        size: 13.5px;
+    }
+    line-height: #{ $base-line-height }px;
+
+    // .Menu-main__item
+    &__item {}
+
+    // .Menu-main__link
+    &__link {
+        @extend .d-block;
+    }
+}

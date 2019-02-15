@@ -1,0 +1,23 @@
+{#
+
+Display a grid like Photoshop with same shortcut CMD+;
+
+@file common/guid.html.twig
+@author  Julien Vasseur <julien@poigneedemainvirile.com>
+
+#}
+<div class="Guid js-guid d-none">
+	<div class="Site-container h-100">
+		<div class="row h-100">
+
+		{% for i in 1..12 %}
+			<div class="col-1 text-align-center h-100">
+				<div class="Guid__column text-align-xs-center">
+					{{ i }}
+				</div>
+			</div>
+		{% endfor %}
+
+		</div>
+	</div>
+</div>
