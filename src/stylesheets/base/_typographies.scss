@@ -9,7 +9,8 @@ h1,
 	font-size: $base-font-size-px * power( $scale-factor, 3 );
 	line-height: #{ $base-line-height * 2 }px;
 
-	@extend %font-weight-bold;
+	@extend %font-weight-bold, %text-transform-uppercase;
+	@include letter-spacing( 100 );
 
 	@include margin(
 		top #{ $base-line-height }px
@@ -33,11 +34,9 @@ h2,
 h3,
 .h3 {
 	font-size: $base-font-size-px * power( $scale-factor, 1 );
-	line-height: #{ $base-line-height * 2 }px;
+	line-height: #{ $base-line-height }px;
 
-	@extend %font-family-title, %font-weight-semibold;
-
-	@include letter-spacing( 200 );
+	@extend %font-weight-regular;
 
 	@include margin(
 		top #{ $base-line-height }px

@@ -1,10 +1,10 @@
 /**
- * Hero
+ * Hero block
  *
- * @uses .Hero
+ * @uses .Hero-block
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-.Hero {
+.Hero-block {
     $this: &;
 
     @extend %position-relative;
@@ -22,52 +22,42 @@
         content: '';
     }
 
-    // .Hero .Grid
+    // .Hero-block .Grid
     .Grid {
         color: rgba( the_color( white ), 0.2 );
     }
 
-    // .Hero__inner
+    // .Hero-block__inner
     &__inner {
+        @extend %position-relative;
         @include padding(
             top $grid-gutter-width * 10
         );
+
+        z-index: 4;
     }
 
-    // .Hero__title
+    // .Hero-block__title
     &__title {
-        @extend %position-relative;
         @include margin(
             top 0
             bottom $grid-gutter-width
         );
-
-        z-index: 4;
     }
 
-    // .Hero__content
-    &__content {
-        @extend %position-relative;
+    // .Hero-block__content
+    &__content {}
 
-        z-index: 4;
-    }
+    // .Hero-block__button
+    &__button {}
 
-    // .Hero__button
-    &__button {
-        @extend %position-relative;
-
-        z-index: 4;
-    }
-
-    // .Hero__logo
+    // .Hero-block__logo
     &__logo {
         @extend .d-block;
-        @extend %margin-x-auto, %position-relative;
-
-        z-index: 4;
+        @extend %margin-x-auto;
     }
 
-    // .Hero__footer
+    // .Hero-block__footer
     &__footer {
         @include absolute( right 0 bottom 0 left 0 );
         @include margin( bottom $grid-gutter-width * 4 );
@@ -83,7 +73,7 @@
         }
     }
 
-    // .Hero__image
+    // .Hero-block__image
     &__image {
         @include absolute( top 0 right 0 bottom 0 left 0 );
         @include size( 100% );

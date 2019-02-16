@@ -63,4 +63,6 @@
 				data-body-class="{{ get_body_class( node_type ) | join( ' ' ) }}"
 			>
 
-			{% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ) } %}
+				{% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ) } %}
+				{% include 'blocks/event.html.twig' with { event: post.get_field( 'event' ) } %}
+				{% include 'blocks/partners.html.twig' with { partners: post.get_field( 'partners' ) } %}

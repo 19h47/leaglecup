@@ -35,11 +35,13 @@
 @import
 	'layout/site',
 	'layout/header',
-	'layout/footer',
-	'layout/hero';
+	'layout/footer';
 
 // Blocks
-// @import '';
+@import
+	'blocks/hero',
+	'blocks/event',
+	'blocks/partners';
 
 
 // Components

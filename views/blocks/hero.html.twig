@@ -1,39 +1,39 @@
 {#
 
-Hero
+Hero-block
 
 @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
 @param arr hero
 @file blocks/hero.html.twig
 
 #}
-<section class="Hero">
+<section class="Hero-block">
 
-	<div class="Site-container Hero__inner">
+	<div class="Site-container Hero-block__inner">
 		<div class="row align-items-center">
 			<div class="col-12 col-md-5 offset-md-1">
-				<h1 class="Hero__title">{{- site.title -}}</h1>
-				<div class="Hero__content">{{- hero.content -}}</div>
+				<h1 class="Hero-block__title">{{- site.title -}}</h1>
+				<div class="Hero-block__content Wysiwyg">{{- hero.content -}}</div>
 
 				{% if hero.link %}
-					<a class="Hero__button Button Button--outline-primary" href="{{ hero.link.url }}"{{ hero.link.target ? ' target="_blank"' }}>
+					<a class="Hero-block__button Button Button--outline-primary" href="{{ hero.link.url }}"{{ hero.link.target ? ' target="_blank"' }}>
 						{{- hero.link.title | default( 'Découvrir' ) -}}
 					</a>
 				{% endif %}
 
 			</div>
 			<div class="col-12 col-md-4 offset-md-1">
-				<img class="Hero__logo" src="{{ manifest['img/svg/logo.svg'] }}" alt="{{ site.description }}" width="261" height="188">
+				<img class="Hero-block__logo" src="{{ manifest['img/svg/logo.svg'] }}" alt="{{ site.description }}" width="261" height="188">
 			</div>
 		</div>
 	</div>
 
-	<footer class="Hero__footer">
+	<footer class="Hero-block__footer">
 		{% include 'svg/use.html.twig' with { icon: 'scroll-to' } only %}
 		<p class="margin-0">{{- __( 'Scroll' ) }}</p>
 	</footer>
 
 	{% include 'common/grid.html.twig' %}
 
-	<img class="Hero__image" src="{{ Image( hero.image ).src }}" alt="">
+	<img class="Hero-block__image" src="{{ Image( hero.image ).src }}" alt="">
 </section>

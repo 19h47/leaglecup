@@ -1,0 +1,50 @@
+{#
+
+Partners-block
+
+@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+@param arr partners
+@file blocks/partners.html.twig
+
+#}
+<section class="Partners-block">
+	<header class="Site-container Partners-block__header">
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<img class="Logo" src="{{ manifest['img/svg/logo-decor-white.svg'] }}" alt="{{ site.description }}" width="202" height="72">
+			</div>
+			<div class="col-12 col-md-7 text-align-right">
+				<a class="Partners-block__menu" href="">{{- __( 'Les partenaires' ) -}}</a>
+			</div>
+			<div class="col-12 col-md-1 text-align-right">
+				{% include 'components/socials.html.twig' %}
+			</div>
+		</div>
+	</header>
+	<div class="Site-container Partners-block__inner">
+		<div class="row align-items-center">
+			<div class="col-12 col-md-6 offset-md-1">
+				<h2 class="Partners-block__title h1">{{- partners.title -}}</h2>
+				<h3 class="h2">{{- partners.subtitle -}}</h3>
+
+				<div class="Partners-block__content Wysiwyg">{{- partners.content -}}</div>
+
+				{% if partners.link %}
+					<a class="Partners-block__button Button Button--outline-primary" href="{{ partners.link.url }}"{{ partners.link.target ? ' target="_blank"' }}>
+						{{- partners.link.title | default( 'Découvrir' ) -}}
+					</a>
+				{% endif %}
+			</div>
+
+            <div class="col-12 col-md-4">
+				<img class="Partners-block__logo" src="{{ manifest['img/svg/golf-ball.svg'] }}" alt="{{ site.description }}" width="217" height="217">
+			</div>
+
+		</div>
+	</div>
+
+	{% include 'common/grid.html.twig' %}
+
+    <img class="Hero-block__image" src="{{ Image( partners.image ).src }}" alt="">
+
+</section>
