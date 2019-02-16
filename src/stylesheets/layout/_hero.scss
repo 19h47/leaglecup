@@ -1,0 +1,96 @@
+/**
+ * Hero
+ *
+ * @uses .Hero
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
+.Hero {
+    $this: &;
+
+    @extend %position-relative;
+
+    height: $grid-gutter-width * 30;
+    color: the_color( white );
+
+    // overlay
+    &::after {
+        @include absolute( top 0 right 0 bottom 0 left 0 );
+        @extend .d-block;
+        @include size( 100% );
+
+        background-color: rgba( the_color( blue, very-dark ), 0.8 );
+        content: '';
+    }
+
+    // .Hero .Grid
+    .Grid {
+        color: rgba( the_color( white ), 0.2 );
+    }
+
+    // .Hero__inner
+    &__inner {
+        @include padding(
+            top $grid-gutter-width * 10
+        );
+    }
+
+    // .Hero__title
+    &__title {
+        @extend %position-relative;
+        @include margin(
+            top 0
+            bottom $grid-gutter-width
+        );
+
+        z-index: 4;
+    }
+
+    // .Hero__content
+    &__content {
+        @extend %position-relative;
+
+        z-index: 4;
+    }
+
+    // .Hero__button
+    &__button {
+        @extend %position-relative;
+
+        z-index: 4;
+    }
+
+    // .Hero__logo
+    &__logo {
+        @extend .d-block;
+        @extend %margin-x-auto, %position-relative;
+
+        z-index: 4;
+    }
+
+    // .Hero__footer
+    &__footer {
+        @include absolute( right 0 bottom 0 left 0 );
+        @include margin( bottom $grid-gutter-width * 4 );
+        @extend %text-transform-uppercase, %font-weight-medium, %text-align-center;
+        @include letter-spacing( 100 );
+
+        font-size: 13.5px;
+        z-index: 4;
+
+        svg {
+            @include size( $grid-gutter-width / 2, $grid-gutter-width );
+            @include margin( bottom $grid-gutter-width / 2 );
+        }
+    }
+
+    // .Hero__image
+    &__image {
+        @include absolute( top 0 right 0 bottom 0 left 0 );
+        @include size( 100% );
+
+        object: {
+            fit: cover;
+            position: center;
+        }
+    }
+}

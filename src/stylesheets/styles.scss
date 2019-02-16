@@ -14,7 +14,7 @@
 
 
 // Vendors
-@import '../../node_modules/ress/ress';
+@import '~ress/ress';
 
 
 // Abstracts
@@ -35,7 +35,8 @@
 @import
 	'layout/site',
 	'layout/header',
-	'layout/footer';
+	'layout/footer',
+	'layout/hero';
 
 // Blocks
 // @import '';
@@ -51,11 +52,12 @@
 	'components/wysiwyg',
 	'components/responsive-embed',
 	'components/latest-actualities',
-	'components/menu-main';
+	'components/menu-main',
+	'components/grid';
 
 
 // Pages
-// @import '';
+@import 'pages/front-page';
 
 
 // Utilities

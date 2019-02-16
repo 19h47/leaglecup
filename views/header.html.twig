@@ -59,3 +59,5 @@
 				data-meta-title="{{ wp_get_document_title() }}"
 				data-body-class="{{ get_body_class( node_type ) | join( ' ' ) }}"
 			>
+
+			{% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ) } %}

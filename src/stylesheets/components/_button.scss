@@ -4,9 +4,12 @@
  * @uses .Button
  */
 .Button {
+	$this: &;
+
+	@extend .d-inline-block;
+
 	user-select: none;
 
-	/* stylelint-disable-next-line */
 	transition:
 		color 0.3s map-get( $easings, ease-in-out ),
 		background-color 0.3s map-get( $easings, ease-in-out ),
@@ -14,29 +17,25 @@
 
 	white-space: nowrap;
 
-	@extend %font-family-title, %text-align-center, %vertical-align-middle, %text-transform-uppercase, %font-weight-bold;
-	@include letter-spacing( 100 );
+	@extend %text-align-center, %text-transform-uppercase, %font-weight-medium;
+	@include letter-spacing( 240 );
 
 	border: {
 		color: transparent;
 		style: solid;
-		radius: $grid-gutter-width;
+		radius: $grid-gutter-width / 2;
 		width: 1px;
 	}
 	min-height: $grid-gutter-width * 2;
 
-	$this: &;
-
-
-	/* stylelint-disable-next-line */
-	@extend .d-inline-block;
-
-	@include letter-spacing( -50 );
+	font: {
+		size: 13.5px;
+	}
 
 	@include padding(
-		top $grid-gutter-width / ( $scale-factor * 2 ) + 6
+		top ( $grid-gutter-width / 2 ) + 2
 		right $grid-gutter-width
-		bottom $grid-gutter-width / ( $scale-factor * 2 )
+		bottom ( $grid-gutter-width / 2 ) + 2
 		left $grid-gutter-width
 	);
 
@@ -61,9 +60,9 @@
 	}
 
 	&--outline-primary {
-		color: the_color( black );
+		color: the_color( white );
 		border: {
-			color: the_color( black );
+			color: the_color( white );
 		}
 	}
 }

@@ -5,5 +5,13 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Site-header {
-    @include margin( top ( $grid-gutter-width / 2 ) + 1 );
+    $this: &;
+
+    @include margin( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) );
+
+    @at-root .Front-page & {
+        @include absolute( top 0 right 0 left 0 );
+
+        z-index: 4;
+    }
 }

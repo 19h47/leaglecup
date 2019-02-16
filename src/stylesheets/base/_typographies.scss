@@ -9,7 +9,7 @@ h1,
 	font-size: $base-font-size-px * power( $scale-factor, 3 );
 	line-height: #{ $base-line-height * 2 }px;
 
-	@extend %font-family-title, %font-weight-bold;
+	@extend %font-weight-bold;
 
 	@include margin(
 		top #{ $base-line-height }px
@@ -22,7 +22,7 @@ h2,
 	font-size: $base-font-size-px * power( $scale-factor, 2 );
 	line-height: #{ $base-line-height * 2 }px;
 
-	@extend %font-family-title, %font-weight-bold;
+	@extend %font-weight-bold;
 
 	@include margin(
 		top #{ $base-line-height }px

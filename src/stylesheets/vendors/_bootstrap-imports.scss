@@ -1,9 +1,9 @@
 // Core variables and mixins
-@import '../../../node_modules/bootstrap/scss/functions';
+@import '~bootstrap/scss/functions';
 
-@import '../../../node_modules/bootstrap/scss/variables';
+@import '~bootstrap/scss/variables';
 
-@import '../../../node_modules/bootstrap/scss/mixins';
+@import '~bootstrap/scss/mixins';
 
 @import 'bootstrap-variables';
 
@@ -13,44 +13,44 @@
 // @import '../../../bootstrap/glyphicons';
 
 // Core CSS
-// @import '../../../node_modules/bootstrap/scss/scaffolding';
-// @import '../../../node_modules/bootstrap/scss/type';
-// @import '../../../node_modules/bootstrap/scss/code';
-@import '../../../node_modules/bootstrap/scss/grid';
-// @import '../../../node_modules/bootstrap/scss/tables';
-// @import '../../../node_modules/bootstrap/scss/forms';
-// @import '../../../node_modules/bootstrap/scss/buttons';
+// @import '~bootstrap/scss/scaffolding';
+// @import '~bootstrap/scss/type';
+// @import '~bootstrap/scss/code';
+@import '~bootstrap/scss/grid';
+// @import '~bootstrap/scss/tables';
+// @import '~bootstrap/scss/forms';
+// @import '~bootstrap/scss/buttons';
 
 // Components
-// @import '../../../node_modules/bootstrap/scss/dropdowns';
-// @import '../../../node_modules/bootstrap/scss/button-groups';
-// @import '../../../node_modules/bootstrap/scss/input-groups';
-// @import '../../../node_modules/bootstrap/scss/navs';
-// @import '../../../node_modules/bootstrap/scss/navbar';
-// @import '../../../node_modules/bootstrap/scss/breadcrumbs';
-// @import '../../../node_modules/bootstrap/scss/pagination';
-// @import '../../../node_modules/bootstrap/scss/pager';
-// @import '../../../node_modules/bootstrap/scss/labels';
-// @import '../../../node_modules/bootstrap/scss/badges';
-// @import '../../../node_modules/bootstrap/scss/jumbotron';
-// @import '../../../node_modules/bootstrap/scss/thumbnails';
-// @import '../../../node_modules/bootstrap/scss/alerts';
-// @import '../../../node_modules/bootstrap/scss/progress-bars';
-// @import '../../../node_modules/bootstrap/scss/media';
-// @import '../../../node_modules/bootstrap/scss/list-group';
-// @import '../../../node_modules/bootstrap/scss/panels';
-// @import '../../../node_modules/bootstrap/scss/responsive-embed';
-// @import '../../../node_modules/bootstrap/scss/wells';
-// @import '../../../node_modules/bootstrap/scss/close';
+// @import '~bootstrap/scss/dropdowns';
+// @import '~bootstrap/scss/button-groups';
+// @import '~bootstrap/scss/input-groups';
+// @import '~bootstrap/scss/navs';
+// @import '~bootstrap/scss/navbar';
+// @import '~bootstrap/scss/breadcrumbs';
+// @import '~bootstrap/scss/pagination';
+// @import '~bootstrap/scss/pager';
+// @import '~bootstrap/scss/labels';
+// @import '~bootstrap/scss/badges';
+// @import '~bootstrap/scss/jumbotron';
+// @import '~bootstrap/scss/thumbnails';
+// @import '~bootstrap/scss/alerts';
+// @import '~bootstrap/scss/progress-bars';
+// @import '~bootstrap/scss/media';
+// @import '~bootstrap/scss/list-group';
+// @import '~bootstrap/scss/panels';
+// @import '~bootstrap/scss/responsive-embed';
+// @import '~bootstrap/scss/wells';
+// @import '~bootstrap/scss/close';
 
 // Components w/ JavaScript
-@import '../../../node_modules/bootstrap/scss/modal';
-// @import '../../../node_modules/bootstrap/scss/tooltip';
-// @import '../../../node_modules/bootstrap/scss/popovers';
-// @import '../../../node_modules/bootstrap/scss/carousel';
+@import '~bootstrap/scss/modal';
+// @import '~bootstrap/scss/tooltip';
+// @import '~bootstrap/scss/popovers';
+// @import '~bootstrap/scss/carousel';
 
-@import '../../../node_modules/bootstrap/scss/transitions';
+@import '~bootstrap/scss/transitions';
 
 // Utilities
-@import '../../../node_modules/bootstrap/scss/utilities/display';
-@import '../../../node_modules/bootstrap/scss/utilities/flex';
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/flex';

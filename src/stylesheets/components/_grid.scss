@@ -1,0 +1,38 @@
+/**
+ * Grid
+ *
+ * @uses .Grid
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
+.Grid {
+    @include absolute( top 0 right 0 bottom 0 left 0 );
+    @include margin( top 0 right auto bottom 0 left auto );
+    @include padding( right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
+
+    max-width: $container-width;
+    z-index: 3;
+
+    // .Grid-column
+    &-column {
+        @extend .d-inline-block;
+        @include size( percentage( 1 / 8 ), 100% );
+
+        border: {
+            right: {
+                color: currentColor;
+                style: solid;
+                width: 1px;
+            }
+        }
+
+        &:first-child {
+            border: {
+                left: {
+                    color: currentColor;
+                    style: solid;
+                    width: 1px;
+                }
+            }
+        }
+    }
+}

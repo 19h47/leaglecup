@@ -1,0 +1,30 @@
+{#
+
+Hero
+
+@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+#}
+<section class="Hero">
+
+	<div class="Site-container Hero__inner">
+		<div class="row align-items-center">
+			<div class="col-12 col-md-5 offset-md-1">
+				<h1 class="Hero__title">Leagle Cup</h1>
+				<p class="Hero__content">La <strong>LEAGLE CUP</strong> se veut le nouvel événement golfique où le monde du <strong>Droit</strong> rencontre celui du <strong>Chiffre</strong>.<br>L’événement est exclusivement réservé aux avocats et aux experts-comptables.</p>
+				<a class="Hero__button Button Button--outline-primary" href="">{{- __( 'Découvrir' ) -}}</a>
+			</div>
+			<div class="col-12 col-md-4 offset-md-1">
+				<img class="Hero__logo" src="{{ manifest['img/svg/logo.svg'] }}" alt="{{ site.description }}" width="261" height="188">
+			</div>
+		</div>
+	</div>
+
+	<footer class="Hero__footer">
+		{% include 'svg/use.html.twig' with { icon: 'scroll-to' } only %}
+		<p class="margin-0">Scroll</p>
+	</footer>
+
+	{% include 'common/grid.html.twig' %}
+
+	<img class="Hero__image" src="{{ Image( hero.image ).src }}" alt="">
+</section>
