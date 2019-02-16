@@ -6,14 +6,6 @@
 	@extend %line-height-inherit;
 }
 
-%list-style-type-none {
-	list-style-type: none;
-}
-
-.list-style-type-none {
-	list-style-type: none;
-}
-
 // Utilities
 @import
 // 	'colors',
@@ -29,6 +21,7 @@
 	'text-aligns',
 // 	'text-decorations',
 	'text-transforms',
-	'vertical-aligns';
+	'vertical-aligns',
 // 	'visibilities',
 // 	'white-spaces';
+	'lists';

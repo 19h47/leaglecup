@@ -41,10 +41,13 @@
 					</div>
 					<div class="col-12 col-md-7">
 						{%
-							include 'views/components/menu-main.html.twig'
+							include 'components/menu-main.html.twig'
 							with { items: menu.main.items }
 							only
 						%}
+					</div>
+					<div class="col-12 col-md-1 text-align-right">
+						{% include 'components/socials.html.twig' %}
 					</div>
 				</div>
 			</div>

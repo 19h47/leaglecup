@@ -12,6 +12,7 @@
     @at-root .Front-page & {
         @include absolute( top 0 right 0 left 0 );
 
+        color: the_color( white );
         z-index: 4;
     }
 }

@@ -1,0 +1,17 @@
+{#
+	@file   views/components/socials.html.twig
+	@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+#}
+{% if contact.socials is iterable %}
+<ul class="Socials">
+	{% spaceless %}
+		{% for social in contact.socials %}
+		<li class="Socials__item">
+			<a class="Socials__link" href="{{ social.link }}" title="{{ social.title }}">
+				{% include 'svg/use.html.twig' with { icon: social.slug } only %}
+			</a>
+		</li>
+		{% endfor %}
+	{% endspaceless %}
+</ul>
+{% endif %}

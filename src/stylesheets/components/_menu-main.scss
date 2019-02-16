@@ -17,10 +17,6 @@
     }
     line-height: #{ $base-line-height }px;
 
-    @at-root .Front-page & {
-        color: the_color( white );
-    }
-
     // .Menu-main__item
     &__item {}
 

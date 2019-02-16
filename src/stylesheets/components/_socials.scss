@@ -3,4 +3,41 @@
  *
  * @uthor Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-.Socials {}
+.Socials {
+    $this: &;
+
+    @extend %list-style-type-none;
+
+    @at-root .Site-header & {
+        @include margin( top $grid-gutter-width * 1.5 );
+    }
+
+    // .Socials__item
+    &__item {
+        @extend .d-inline-block;
+        @include margin( right $grid-gutter-width / 8 left $grid-gutter-width / 8 );
+
+        &:first-child { @include margin( left 0 ); }
+        &:last-child { @include margin( right 0 ); }
+    }
+
+    // .Socials__link
+    &__link {
+        @extend .d-flex, .align-items-center, .justify-content-center;
+        @include size( $grid-gutter-width );
+
+        border: {
+            color: currentColor;
+            radius: $grid-gutter-width / 4;
+            style: solid;
+            width: 1px;
+        }
+
+
+        svg {
+            @include size( $grid-gutter-width / 2 );
+
+            fill: currentColor;
+        }
+    }
+}
