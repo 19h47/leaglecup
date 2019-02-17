@@ -10,22 +10,23 @@
     background-color: the_color( blue, very-dark );
     color: the_color( white );
 
+    hr {
+        @include margin( bottom $grid-gutter-width );
+        border: none;
+
+        height: 1px;
+        background: {
+            color: the_color( white );
+        }
+    }
+
     // .Site-footer__top
     &__top {
         @include padding( bottom $grid-gutter-width * 4 );
     }
 
     // .Site-footer__bottom
-    &__bottom {
-        @include padding( top $grid-gutter-width );
-        border: {
-            top: {
-                color: currentColor;
-                style: solid;
-                width: 1px;
-            }
-        }
-    }
+    &__bottom {}
 
     // .Site-footer__copyright
     &__copyright {
