@@ -36,3 +36,7 @@ p {
 		bottom #{ $base-line-height }px
 	);
 }
+
+strong {
+	@extend %font-weight-bold;
+}

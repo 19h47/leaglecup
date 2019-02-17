@@ -16,11 +16,7 @@
         @include margin( top $grid-gutter-width * 1.5 );
     }
 
-    @at-root .Event-block & {
-        @include margin( top $grid-gutter-width * 1.5 );
-    }
-
-    @at-root .Partners-block & {
+    @at-root .block & {
         @include margin( top $grid-gutter-width * 1.5 );
     }
 

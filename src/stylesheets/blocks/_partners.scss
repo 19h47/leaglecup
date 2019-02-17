@@ -26,49 +26,10 @@
         content: '';
     }
 
-    // .Partners__header
-    &__header {
-        @extend %position-relative;
-        @include margin( bottom $grid-gutter-width / 2 );
-        @include padding( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) );
-
-        z-index: 4;
-    }
-
-    // .Partners-block__menu
-    &__menu {
-        @include margin( top $grid-gutter-width * 1.5 );
-        @extend .d-inline-block;
-        @extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
-        @include letter-spacing( 100 );
-
-        font: {
-            size: 13.5px;
-        }
-        line-height: #{ $base-line-height }px;
-    }
-
-    // .Partners__inner
-    &__inner {
-        @extend %position-relative;
-        @include padding(
-            top $grid-gutter-width * 4
-            bottom $grid-gutter-width * 4
-        );
-
-        z-index: 4;
-    }
-
-    // .Partners-block__title
-    &__title {
-        @include margin( top 0 bottom $grid-gutter-width );
-    }
-
-    // .Partners-block__content
-    &__content {
+    // .Partners-block .block__content
+    .block__content {
         p {
             @extend .h3;
-            @include margin( bottom $grid-gutter-width );
         }
     }
 

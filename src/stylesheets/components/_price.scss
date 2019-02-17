@@ -1,0 +1,109 @@
+/**
+ * Price
+ *
+ * @uses .Price
+ */
+.Price {
+    @extend %position-relative;
+    @include padding( top $grid-gutter-width * 4 bottom $grid-gutter-width * 4 );
+
+    color: the_color( white );
+
+    // overlay
+    &::after {
+        @include absolute( top 0 right 0 bottom 0 left 0 );
+        @extend .d-block;
+        @include size( 100% );
+
+        background-color: rgba( the_color( blue, very-dark ), 0.5 );
+        content: '';
+    }
+
+    // .Price .Grid
+    .Grid {
+        color: rgba( the_color( white ), 0.2 );
+    }
+
+    // .Price__title
+    &__title {
+        @extend %position-relative;
+        @include margin( top 0 bottom 0 );
+
+        line-height: 48px;
+        z-index: 4;
+
+        span {
+            @extend %font-weight-regular;
+            font: {
+                size: 18px;
+            }
+        }
+    }
+
+    // .Price__thumbnail
+    &__thumbnail {
+        @include size( 100% );
+        @extend %position-relative;
+
+        z-index: 4;
+
+        img {
+            @include size( 100% );
+            @extend .d-inline-block;
+            @extend %vertical-align-middle;
+
+            object: {
+                fit: cover;
+                position: center;
+            }
+        }
+    }
+
+    // .Price__section
+    &__section {
+        @include margin( top $grid-gutter-width bottom $grid-gutter-width );
+        @extend %position-relative;
+
+        z-index: 4;
+
+        &:first-child { @include margin( top 0 ); }
+
+        // .Price__section__title
+        &__title {
+    		@extend .h2, .d-flex, .justify-content-between;
+    		@include margin( top 0 bottom $grid-gutter-width / 2 );
+
+    		border: {
+    			bottom: {
+    				style: solid;
+    				width: 1px;
+    			}
+    		}
+            font: {
+                size: 24px;
+            }
+
+            span {
+                @extend %font-weight-regular;
+            }
+        }
+
+        // .Price__section__content
+        &__content {
+            ul {
+                @extend %list-style-type-none;
+            }
+        }
+    }
+
+    // .Price__background
+    &__background {
+        @include absolute( top 0 right 0 bottom 0 left 0 );
+        @include size( 100% );
+
+        object: {
+            fit: cover;
+            position: center;
+        }
+    }
+}

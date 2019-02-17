@@ -37,17 +37,6 @@
         z-index: 4;
     }
 
-    // .Hero-block__title
-    &__title {
-        @include margin(
-            top 0
-            bottom $grid-gutter-width
-        );
-    }
-
-    // .Hero-block__content
-    &__content {}
-
     // .Hero-block__button
     &__button {}
 

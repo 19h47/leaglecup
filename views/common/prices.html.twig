@@ -1,0 +1,45 @@
+{#
+
+Prices
+
+@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+
+#}
+<section class="Prices">
+    {% for price in prices %}
+        <article class="Price">
+            <div class="Site-container">
+                <div class="row">
+                    <div class="col-12 col-md-10 offset-1">
+                        <h2 class="Prices__title h1">{{ __( 'Les tarifs' ) }}</h2>
+                        <h3 class="Price__title h2">{{- price.title }} <span>{{ __( '(TVA non applicable)' ) -}}</span></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-5 offset-md-1">
+                        <div class="Price__thumbnail">
+                            <img src="{{ Image( price.thumbnail ).src }}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        {% for section in price.get_field( 'sections' ) %}
+                            <div class="Price__section">
+                                <h4 class="Price__section__title">
+                                    <strong>{{- section.title -}}</strong>
+                                    {{- section.price ? " <span>#{ section.price } €</span>" -}}
+                                </h4>
+                                <div class="Price__section__content">
+                                    {{ section.content }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            {% include 'common/grid.html.twig' %}
+
+            <img class="Price__background" src="{{ Image( price.thumbnail ).src }}">
+        </article>
+    {% endfor %}
+</section>

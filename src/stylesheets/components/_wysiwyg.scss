@@ -2,9 +2,16 @@
  * What you see is what you get
  */
 .Wysiwyg {
+	@extend %position-relative;
+
+	z-index: 4;
 
 	& > *:first-child {
 		margin-top: 0!important;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0!important;
 	}
 
 	h1 {}
