@@ -7,12 +7,25 @@
 .Site-header {
     $this: &;
 
-    @include margin( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) );
+    @extend %position-relative;
+    @include padding( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) );
+
+    background: {
+        color: the_color( blue, very-soft );
+    }
+    color: the_color( white );
+
+    // .Site-header .Grid
+    .Grid {
+        color: rgba( the_color( white ), 0.2 );
+    }
 
     @at-root .Front-page & {
         @include absolute( top 0 right 0 left 0 );
 
-        color: the_color( white );
-        z-index: 4;
+        background: {
+            color: transparent;
+        }
+        z-index: 5;
     }
 }

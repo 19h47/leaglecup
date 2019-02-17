@@ -4,4 +4,49 @@
  * @uses .Site-footer
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
-.Site-footer {}
+.Site-footer {
+    @include padding( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) bottom $grid-gutter-width * 2 );
+
+    background-color: the_color( blue, very-dark );
+    color: the_color( white );
+
+    // .Site-footer__top
+    &__top {
+        @include padding( bottom $grid-gutter-width * 4 );
+    }
+
+    // .Site-footer__bottom
+    &__bottom {
+        @include padding( top $grid-gutter-width );
+        border: {
+            top: {
+                color: currentColor;
+                style: solid;
+                width: 1px;
+            }
+        }
+    }
+
+    // .Site-footer__copyright
+    &__copyright {
+        @extend .d-flex, .justify-content-between;
+        @extend %list-style-type-none, %text-transform-uppercase;
+        @include letter-spacing( 100 );
+
+        font: {
+            size: 13.5px;
+        }
+    }
+
+    // .Site-footer__partners
+    &__partners {
+        @extend .d-flex, .align-items-center;
+
+        a {
+            @include margin( right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
+
+            &:last-child { @include margin( right 0 ); }
+            &:first-child { @include margin( left 0 ); }
+        }
+    }
+}

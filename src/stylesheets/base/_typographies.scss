@@ -46,10 +46,10 @@ h3,
 
 h4,
 .h4 {
-	font-size: $base-font-size-px;
+	font-size: $base-font-size-px * power( $scale-factor, 1 );
 	line-height: #{ $base-line-height }px;
 
-	@extend %font-family-title, %font-weight-bold;
+	@extend %font-weight-regular;
 
 	@include margin(
 		top #{ $base-line-height }px

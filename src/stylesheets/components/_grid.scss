@@ -8,6 +8,7 @@
     @include absolute( top 0 right 0 bottom 0 left 0 );
     @include margin( top 0 right auto bottom 0 left auto );
     @include padding( right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
+    @extend %Pointer-events-none;
 
     max-width: $container-width;
     z-index: 3;

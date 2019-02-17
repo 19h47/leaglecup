@@ -1,0 +1,40 @@
+{
+    "key": "group_5c68a2ac0e172",
+    "title": "Options du Partenaire",
+    "fields": [
+        {
+            "key": "field_5c68a2b108a6e",
+            "label": "Lien",
+            "name": "link",
+            "type": "url",
+            "instructions": "Indiquer le site internet du Partenaire",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Lien"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "partner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1550361355
+}

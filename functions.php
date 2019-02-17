@@ -108,17 +108,13 @@ class LeagleCup extends Timber {
 
 		require_once get_template_directory() . '/inc/customizer/contact.php';
 
-		// require_once get_template_directory() . '/inc/post-types/Partner.php';
-		// require_once get_template_directory() . '/inc/post-types/Pledge.php';
-		// require_once get_template_directory() . '/inc/post-types/Reward.php';
+		require_once get_template_directory() . '/inc/post-types/Partner.php';
 
-		// require_once get_template_directory() . '/inc/taxonomies/PartnerCategory.php';
+		require_once get_template_directory() . '/inc/taxonomies/PartnerCategory.php';
 
-		// new Partner( $this->get_theme_name(), $this->get_theme_version() );
-		// new Pledge( $this->get_theme_name(), $this->get_theme_version() );
-		// new Reward( $this->get_theme_name(), $this->get_theme_version() );
+		new Partner( $this->get_theme_name(), $this->get_theme_version() );
 
-		// new PartnerCategory( $this->get_theme_name(), $this->get_theme_version() );
+		new PartnerCategory( $this->get_theme_name(), $this->get_theme_version() );
 
 		new Admin( $this->get_theme_name(), $this->get_theme_version() );
 
@@ -256,6 +252,8 @@ class LeagleCup extends Timber {
 				$context['contact']['shares'][$social['slug']] = $social;
 			}
 		}
+
+		$context['partners'] = Timber::get_sidebar( 'partners.php' );
 
 		$context['current_url'] = home_url( add_query_arg( array(), $wp->request ) );
 		$context['manifest'] = $this->theme_manifest;

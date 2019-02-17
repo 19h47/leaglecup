@@ -1,0 +1,13 @@
+{#
+    @file pages/front-page.html.twig
+    @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+#}
+{% extends 'index.html.twig' %}
+
+{% block hero %}{% endblock %}
+
+{% block content %}
+    {% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ) } %}
+	{% include 'blocks/event.html.twig' with { event: post.get_field( 'event' ) } %}
+	{% include 'blocks/partners.html.twig' with { partners: post.get_field( 'partners' ) } %}
+{% endblock %}

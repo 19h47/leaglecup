@@ -9,9 +9,26 @@
 
 	h1 {}
 
-	h2 {}
+	h2 {
+		@extend .h1;
+		@include margin( bottom $grid-gutter-width );
+	}
 
-	h3 {}
+	h3 {
+		@extend .h2;
+		@include margin( bottom $grid-gutter-width / 2 );
+
+		border: {
+			bottom: {
+				style: solid;
+				width: 1px;
+			}
+		}
+	}
+
+	h4 {
+		width: 50%;
+	}
 
 	img {
 		max-width: 100%;

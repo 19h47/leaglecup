@@ -41,34 +41,37 @@
 
     // .Event-block__inner
     &__inner {
+        @extend %position-relative;
         @include padding(
             top $grid-gutter-width * 4
             bottom $grid-gutter-width * 4
         );
+
+        z-index: 4;
     }
 
     // .Event-block__title
     &__title {
-        @extend %position-relative;
         @include margin(
             top 0
             bottom $grid-gutter-width
         );
-
-        z-index: 4;
     }
 
     // .Event-block__content
-    &__content {
-        @extend %position-relative;
-
-        z-index: 4;
-    }
+    &__content {}
 
     // .Event-block__button
-    &__button {
-        @extend %position-relative;
+    &__button {}
 
-        z-index: 4;
+    // .Event-block__image
+    &__image {
+        @include absolute( top 0 right 0 bottom 0 );
+        @include size( 100% );
+
+        object: {
+            fit: cover;
+            position: $grid-gutter-width * 24 center;
+        }
     }
 }

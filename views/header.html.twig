@@ -30,39 +30,3 @@
 	<body {{ body_class( body_class | join( ' ' ) ) }} itemscope itemtype="http://schema.org/WebPage">
 
 		<div id="svg-sprite" class="d-none">{% include '/dist/icons.svg' %}</div>
-
-		<header class="Site-header">
-			<div class="Site-container">
-				<div class="row">
-					<div class="col-12 col-md-4">
-						<a class="d-inline-block" href="{{ site.link }}">
-							<img class="Logo" src="{{ manifest['img/svg/logo-decor.svg'] }}" alt="{{ site.description }}" width="202" height="72">
-						</a>
-					</div>
-					<div class="col-12 col-md-7">
-						{%
-							include 'components/menu-main.html.twig'
-							with { items: menu.main.items }
-							only
-						%}
-					</div>
-					<div class="col-12 col-md-1 text-align-right">
-						{% include 'components/socials.html.twig' %}
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<main id="main-container" role="main">
-
-			<div
-				id="page-content"
-				class="page-content"
-				data-node-type="{{ node_type }}"
-				data-meta-title="{{ wp_get_document_title() }}"
-				data-body-class="{{ get_body_class( node_type ) | join( ' ' ) }}"
-			>
-
-				{% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ) } %}
-				{% include 'blocks/event.html.twig' with { event: post.get_field( 'event' ) } %}
-				{% include 'blocks/partners.html.twig' with { partners: post.get_field( 'partners' ) } %}

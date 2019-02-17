@@ -1,0 +1,43 @@
+{
+    "key": "group_5c689cd1bf12f",
+    "title": "Options de la Page",
+    "fields": [
+        {
+            "key": "field_5c689ce0a0e33",
+            "label": "Afficher les Partenaires",
+            "name": "display_partners",
+            "type": "true_false",
+            "instructions": "Indiquer si la Page doit afficher les Partenaires",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1550359834
+}

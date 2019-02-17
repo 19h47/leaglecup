@@ -1,0 +1,25 @@
+/**
+ *
+ */
+.wp-block {
+
+    // .wp-block-columns
+    &-columns {
+
+
+        &.has-2-columns {}
+    }
+
+    // .wp-block-column
+    &-column {
+
+        &:not(:last-child) {
+            @include margin( right $grid-gutter-width / 2 );
+        }
+
+        &:not(:first-child) {
+            @include margin( left $grid-gutter-width / 2 );
+        }
+
+    }
+}

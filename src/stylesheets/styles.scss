@@ -24,6 +24,7 @@
 	'abstracts/placeholders',
 	'abstracts/animations';
 
+@import 'vendors/wp-block';
 
 // Base stuff
 @import
@@ -55,11 +56,14 @@
 	'components/responsive-embed',
 	'components/latest-actualities',
 	'components/menu-main',
-	'components/grid';
+	'components/grid',
+	'components/partners';
 
 
 // Pages
-@import 'pages/front-page';
+@import
+	'pages/front-page',
+	'pages/page';
 
 
 // Utilities
