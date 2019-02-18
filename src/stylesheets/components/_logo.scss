@@ -9,6 +9,8 @@
     @extend %vertical-align-middle;
 
     @at-root .Site-footer & {
-        @include margin( bottom $grid-gutter-width / 2 );
+        @include media-breakpoint-up( 'md' ) {
+            @include margin( bottom $grid-gutter-width / 2 );
+        }
     }
 }

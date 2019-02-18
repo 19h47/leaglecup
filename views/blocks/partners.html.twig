@@ -7,35 +7,20 @@ Partners-block
 @file blocks/partners.html.twig
 
 #}
-<section class="Partners-block block">
-	<header class="Site-container block__header">
-		<div class="row">
-			<div class="col-12 col-md-4">
-				<img class="Logo" src="{{ manifest['img/svg/logo-decor-white.svg'] }}" alt="{{ site.description }}" width="202" height="72">
-			</div>
+{% extends 'blocks/block.html.twig' %}
 
-			{% if partners.link %}
-				<div class="col-12 col-md-7 text-align-right">
-					<a class="block__menu" href="{{ partners.link.url }}">{{- __( 'Les partenaires' ) -}}</a>
-				</div>
-			{% endif %}
-
-			<div class="col-12 col-md-1 text-align-right{{ partners.link ?: ' offset-md-7' }}">
-				{% include 'components/socials.html.twig' %}
-			</div>
-		</div>
-	</header>
-	<div class="Site-container block__inner">
+{% block content %}
+	<div class="Site-container page-block__inner">
 		<div class="row align-items-center">
 			<div class="col-12 col-md-6 offset-md-1">
-				<h2 class="block__title h1">{{- partners.title -}}</h2>
-				<h3 class="h2">{{- partners.subtitle -}}</h3>
+				<h2 class="page-block__title h1">{{- block.title -}}</h2>
+				<h3 class="h2">{{- block.subtitle -}}</h3>
 
-				<div class="block__content Wysiwyg">{{- partners.content -}}</div>
+				<div class="page-block__content Wysiwyg">{{- block.content -}}</div>
 
-				{% if partners.link %}
-					<a class="Button Button--outline-primary" href="{{ partners.link.url }}"{{ partners.link.target ? ' target="_blank"' }}>
-						{{- partners.link.title | default( 'Découvrir' ) -}}
+				{% if block.link %}
+					<a class="Button Button--outline-primary" href="{{ block.link.url }}"{{ block.link.target ? ' target="_blank"' }}>
+						{{- block.link.title | default( 'Découvrir' ) -}}
 					</a>
 				{% endif %}
 			</div>
@@ -49,6 +34,6 @@ Partners-block
 
 	{% include 'common/grid.html.twig' %}
 
-    <img class="Hero-block__image" src="{{ Image( partners.image ).src }}" alt="">
+    <img class="Hero-block__image" src="{{ Image( block.image ).src }}" alt="{{ Image( block.image ).alt }}" width="{{ Image( block.image ).width }}" height="{{ Image( block.image ).height }}">
 
-</section>
+{% endblock %}

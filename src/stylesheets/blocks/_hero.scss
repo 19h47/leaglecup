@@ -9,7 +9,10 @@
 
     @extend %position-relative;
 
-    height: $grid-gutter-width * 30;
+    @include media-breakpoint-up( 'md' ) {
+        height: $grid-gutter-width * 30;
+    }
+
     color: the_color( white );
 
     // overlay
@@ -31,10 +34,18 @@
     &__inner {
         @extend %position-relative;
         @include padding(
-            top $grid-gutter-width * 10
+            top $grid-gutter-width * 4
+            bottom $grid-gutter-width * 4
         );
 
         z-index: 4;
+
+        @include media-breakpoint-up( 'md' ) {
+            @include padding(
+                top $grid-gutter-width * 10
+                bottom 0
+            );
+        }
     }
 
     // .Hero-block__button
@@ -42,7 +53,7 @@
 
     // .Hero-block__logo
     &__logo {
-        @extend .d-block;
+        @extend .d-none, .d-md-block;
         @extend %margin-x-auto;
     }
 
@@ -50,6 +61,7 @@
     &__footer {
         @include absolute( right 0 bottom 0 left 0 );
         @include margin( bottom $grid-gutter-width * 4 );
+        @extend .d-none, .d-md-block;
         @extend %text-transform-uppercase, %font-weight-medium, %text-align-center;
         @include letter-spacing( 100 );
 

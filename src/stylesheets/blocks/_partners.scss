@@ -35,7 +35,7 @@
 
     // .Partners-block__logo
     &__logo {
-        @extend .d-block;
+        @extend .d-none, .d-md-block;
         @extend %margin-x-auto;
     }
 

@@ -107,6 +107,7 @@ class LeagleCup extends Timber {
 		// require_once get_template_directory() . '/inc/acf.php';
 
 		require_once get_template_directory() . '/inc/customizer/contact.php';
+		require_once get_template_directory() . '/inc/customizer/link.php';
 
 		require_once get_template_directory() . '/inc/post-types/Partner.php';
 		require_once get_template_directory() . '/inc/post-types/Price.php';
@@ -122,6 +123,7 @@ class LeagleCup extends Timber {
 
 		// Customizer
 		add_action( 'customize_register', 'lgcp_customize_contact' );
+		add_action( 'customize_register', 'lgcp_customize_link' );
 	}
 
 
@@ -254,6 +256,8 @@ class LeagleCup extends Timber {
 				$context['contact']['shares'][$social['slug']] = $social;
 			}
 		}
+
+		$context['permalinks']['legal_mentions'] = get_permalink( get_theme_mod( 'legal_mentions' ) );
 
 		$context['partners'] = Timber::get_sidebar( 'partners.php' );
 		$context['prices'] = Timber::get_sidebar( 'prices.php' );

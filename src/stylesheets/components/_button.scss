@@ -6,7 +6,7 @@
 .Button {
 	$this: &;
 
-	@extend .d-inline-block;
+	@extend .d-block, .d-md-inline-block;
 
 	user-select: none;
 
@@ -15,7 +15,9 @@
 		background-color 0.3s map-get( $easings, ease-in-out ),
 		border-color 0.3s map-get( $easings, ease-in-out );
 
-	white-space: nowrap;
+	@include media-breakpoint-up( 'md' ) {
+		white-space: nowrap;
+	}
 
 	@extend %text-align-center, %text-transform-uppercase, %font-weight-medium;
 	@include letter-spacing( 240 );
@@ -26,6 +28,7 @@
 		radius: $grid-gutter-width / 2;
 		width: 1px;
 	}
+	max-width: 100%;
 	min-height: $grid-gutter-width * 2;
 
 	font: {
@@ -63,6 +66,11 @@
 		color: the_color( white );
 		border: {
 			color: the_color( white );
+		}
+
+		&:hover {
+			background-color: the_color( white );
+			color: the_color( black );
 		}
 	}
 }

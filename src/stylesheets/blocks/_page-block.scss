@@ -26,4 +26,51 @@
 			transform: translateY( 0 );
 		}
 	}
+
+	// .page-block__header
+    &__header {
+		@extend .d-none, .d-md-block;
+        @extend %position-relative;
+        @include margin( bottom $grid-gutter-width / 2 );
+        @include padding( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) );
+
+        z-index: 4;
+    }
+
+    // .page-block__title
+    &__title {
+        @include margin(
+            top 0
+            bottom $grid-gutter-width
+        );
+    }
+
+    // .block-content
+    &__content {
+        @include margin( bottom $grid-gutter-width );
+    }
+
+    // .page-block__inner
+    &__inner {
+        @extend %position-relative;
+        @include padding(
+            top $grid-gutter-width * 4
+            bottom $grid-gutter-width * 4
+        );
+
+        z-index: 4;
+    }
+
+    // .page-block__menu
+    &__menu {
+        @include margin( top $grid-gutter-width * 1.5 );
+        @extend .d-inline-block;
+        @extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
+        @include letter-spacing( 100 );
+
+        font: {
+            size: 13.5px;
+        }
+        line-height: #{ $base-line-height }px;
+    }
 }

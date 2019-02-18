@@ -13,10 +13,14 @@
     }
 
     @at-root .Site-footer & {
-        @include margin( top $grid-gutter-width * 1.5 );
+        @include margin( top $grid-gutter-width );
+
+        @include media-breakpoint-up( 'md' ) {
+            @include margin( top $grid-gutter-width * 1.5 );
+        }
     }
 
-    @at-root .block & {
+    @at-root .page-block & {
         @include margin( top $grid-gutter-width * 1.5 );
     }
 

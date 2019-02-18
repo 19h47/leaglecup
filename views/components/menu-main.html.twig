@@ -7,7 +7,7 @@
 <ul class="Menu-main" itemscope itemtype="http://schema.org/SiteNavigationElement">
 	{% for item in items %}
 		<li id="{{ item.id }}" class="Menu-main__item{{ item.classes ? ' ' ~ item.classes | join( ' ' ) }}" itemprop="name">
-			<a class="Menu-main__link" href="{{ item.url }}" itemprop="url" data-transition="fade">
+			<a class="Menu-main__link{{ item.current ? ' is-current' : '' }}" href="{{ item.url }}" itemprop="url" data-transition="fade">
 				{{- item.title -}}
 			</a>
 		</li>

@@ -14,22 +14,23 @@
     &-column {
         @include margin( bottom 0 );
 
-        &:not(:last-child) {
-            @include margin( right $grid-gutter-width / 2 );
-        }
+        @include media-breakpoint-up( 'md' ) {
+            &:not(:last-child) {
+                @include margin( right $grid-gutter-width / 2 );
+            }
 
-        &:not(:first-child) {
-            @include margin( left $grid-gutter-width / 2 );
-        }
+            &:not(:first-child) {
+                @include margin( left $grid-gutter-width / 2 );
+            }
 
-    	& > *:last-child {
-    		margin-bottom: 0!important;
-    	}
+        	& > *:last-child {
+        		margin-bottom: 0!important;
+        	}
+        }
 
         .wp-block-image {
             @include margin( top $grid-gutter-width * 2 bottom $grid-gutter-width * 2 );
         }
-
     }
 
     // .wp-block-image

@@ -8,6 +8,23 @@
 
 {% block content %}
     {% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ) } %}
-	{% include 'blocks/event.html.twig' with { event: post.get_field( 'event' ) } %}
-	{% include 'blocks/partners.html.twig' with { partners: post.get_field( 'partners' ) } %}
+	{% include 'blocks/event.html.twig'
+        with {
+            block: post.get_field( 'event' ),
+            name: 'Event',
+            title: __( 'L\'événement' ),
+            socials: contact.socials,
+            site: site,
+        }
+    %}
+	{%
+        include 'blocks/partners.html.twig'
+        with {
+            block: post.get_field( 'partners' ),
+            name: 'Partners',
+            title: __( 'Les partenaires' ),
+            socials: contact.socials,
+            site: site,
+        }
+    %}
 {% endblock %}

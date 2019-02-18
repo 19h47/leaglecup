@@ -34,7 +34,7 @@
 	}
 
 	h4 {
-		width: 50%;
+		@extend %w-md-50;
 	}
 
 	img {

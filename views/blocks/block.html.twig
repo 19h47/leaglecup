@@ -1,0 +1,31 @@
+{#
+
+Block
+
+@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+#}
+<section class="{{ name }}-block page-block">
+    <header class="Site-container page-block__header">
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<img class="Logo" src="{{ manifest['img/svg/logo-decor-white.svg'] }}" alt="{{ site.description }}" width="202" height="72">
+			</div>
+
+            {% if block.link %}
+        		<div class="col-12 col-md-7 text-align-right{{ socials is iterable ? '' : ' offset-md-1' }}">
+        			<a class="page-block__menu" href="{{ block.link.url }}">{{- title -}}</a>
+        		</div>
+        	{% endif %}
+
+        	{% if socials is iterable %}
+        		<div class="col-12 col-md-1 text-align-right{{ block.link ? '' : ' offset-md-7' }}">
+        			{% include 'components/socials.html.twig' %}
+        		</div>
+        	{% endif %}
+
+    	</div>
+	</header>
+
+    {% block content %}{% endblock %}
+
+</section>

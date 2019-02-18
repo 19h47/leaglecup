@@ -6,7 +6,7 @@
 
 h1,
 .h1 {
-	font-size: $base-font-size-px * power( $scale-factor, 3 );
+	font-size: $base-font-size-px * power( $scale-factor, 2 );
 	line-height: #{ $base-line-height * 2 }px;
 
 	@extend %font-weight-bold, %text-transform-uppercase;
@@ -16,11 +16,15 @@ h1,
 		top #{ $base-line-height }px
 		bottom #{ $base-line-height * 2 }px
 	);
+
+	@include media-breakpoint-up( 'md' ) {
+		font-size: $base-font-size-px * power( $scale-factor, 3 );
+	}
 }
 
 h2,
 .h2 {
-	font-size: $base-font-size-px * power( $scale-factor, 2 );
+	font-size: $base-font-size-px * power( $scale-factor, 1 );
 	line-height: #{ $base-line-height * 2 }px;
 
 	@extend %font-weight-bold;
@@ -29,6 +33,10 @@ h2,
 		top #{ $base-line-height }px
 		bottom #{ $base-line-height }px
 	);
+
+	@include media-breakpoint-up( 'md' ) {
+		font-size: $base-font-size-px * power( $scale-factor, 2 );
+	}
 }
 
 h3,

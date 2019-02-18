@@ -92,7 +92,7 @@ class Partner {
 			'label'                 => 'partenaire',
 			'description'           => __( 'Les partenaires', $this->theme_name ),
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+			'supports'              => array( 'title', 'thumbnail' ),
 			'taxonomies' 			=> array( 'partner_category' ),
 			'hierarchical'          => false,
 			'public'                => true,
