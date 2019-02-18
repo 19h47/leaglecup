@@ -1,5 +1,16 @@
 {
     "require": {
         "timber/timber": "^1.8"
+    },
+    "scripts": {
+		"lint": "vendor/bin/phpcs --standard=WordPress"
+	},
+    "support"    : {
+		"issues": "https://github.com/19h47/leaglecup/issues",
+		"source": "https://github.com/19h47/leaglecup"
+	},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpcompatibility/phpcompatibility-wp": "*"
     }
 }

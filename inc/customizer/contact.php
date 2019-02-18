@@ -1,4 +1,15 @@
 <?php
+/**
+ * Contact
+ *
+ * PHP version 7.2.10
+ *
+ * @category Contact
+ * @package  lglcp
+ * @author   Jérémy Levron <jeremylevron@19h47.fr>
+ * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @link     http://19h47.fr
+ */
 
 /**
  * Contact
@@ -7,21 +18,16 @@
  */
 function lgcp_customize_contact( $wp_customize ) {
 
-	/**
-	 * Add contact section
-	 */
+	// Add contact section.
 	$wp_customize->add_section(
 		'contact',
 		array(
-			'title' 		=> __( 'Coordonnées' ),
-			'description'	=> __( 'Réglages des coordonnées' ),
+			'title'       => __( 'Coordonnées' ),
+			'description' => __( 'Réglages des coordonnées' ),
 		)
 	);
 
-
-	/**
-	 * Facebook
-	 */
+	// Facebook.
 	$wp_customize->add_setting(
 		'facebook',
 		array(
@@ -30,19 +36,17 @@ function lgcp_customize_contact( $wp_customize ) {
 		)
 	);
 
-
 	$wp_customize->add_control(
 		'facebook',
 		array(
-			'label'     	=> __( 'Facebook' ),
-			'description'	=> __( 'Indiquer l\'URL du compte Facebook' ),
-			'section'   	=> 'contact',
-			'settings'  	=> 'facebook',
+			'label'       => __( 'Facebook' ),
+			'description' => __( 'Indiquer l\'URL du compte Facebook' ),
+			'section'     => 'contact',
+			'settings'    => 'facebook',
 		)
 	);
 
-
-	// LinkedIn
+	// LinkedIn.
 	$wp_customize->add_setting(
 		'linkedin',
 		array(
@@ -50,13 +54,14 @@ function lgcp_customize_contact( $wp_customize ) {
 			'transport' => 'postMessage',
 		)
 	);
+
 	$wp_customize->add_control(
 		'linkedin',
 		array(
-			'label'         => __( 'LinkedIn' ),
-			'description'   => __( 'Indiquer l\'URL du compte LinkedIn' ),
-			'section'       => 'contact',
-			'settings'      => 'linkedin',
+			'label'       => __( 'LinkedIn' ),
+			'description' => __( 'Indiquer l\'URL du compte LinkedIn' ),
+			'section'     => 'contact',
+			'settings'    => 'linkedin',
 		)
 	);
 }

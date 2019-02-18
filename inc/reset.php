@@ -1,25 +1,28 @@
 <?php
+/**
+ * Reset
+ *
+ * PHP version 7.2.10
+ *
+ * @category Reset
+ * @package  lglcp
+ * @author   Jérémy Levron <jeremylevron@19h47.fr>
+ * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @link     http://19h47.fr
+ */
 
-// disable loading of stylesheets and scripts from Contact Form 7 plugin
-// add_filter( 'wpcf7_load_js', '__return_false' );
-// add_filter( 'wpcf7_load_css', '__return_false' );
-
-// remove Get Shortlink
 add_filter( 'pre_get_shortlink', '__return_empty_string' );
-
-// Disable Canonical meta from Yoast SEO Plugin
 add_filter( 'wpseo_canonical', '__return_false' );
-
-//
-add_filter( 'show_admin_bar', '__return_false' );
 
 
 /**
  * Disable emojicons.
- * @see http://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
+ *
+ * @see    http://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
+ * @return void
  */
-function disable_wp_emojicons() {
-	// all actions related to emojis
+function lglcp_disable_wp_emojicons() {
+	// All actions related to emojis.
 	remove_action( 'admin_print_styles', 'print_emoji_styles' );
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
@@ -28,20 +31,21 @@ function disable_wp_emojicons() {
 	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
 	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
-	// filter to remove TinyMCE emojis
+	// Filter to remove TinyMCE emojis.
 	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 
 if ( ! is_admin() ) {
-	add_action( 'init', 'disable_wp_emojicons' );
+	add_action( 'init', 'lglcp_disable_wp_emojicons' );
 }
 
 
 /**
  * Remove unnecessary metas from <head>.
  *
+ * @return void
  */
-function remove_some_metas() {
+function lglcup_remove_some_metas() {
 	remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 	remove_action( 'wp_head', 'wp_shortlink_wp_head' );
@@ -51,4 +55,4 @@ function remove_some_metas() {
 	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 	remove_action( 'wp_head', 'rel_canonical' );
 }
-add_action( 'after_setup_theme', 'remove_some_metas' );
+add_action( 'after_setup_theme', 'lglcup_remove_some_metas' );

@@ -1,4 +1,12 @@
 <?php
+/**
+ * Class Admin
+ *
+ * PHP version 7
+ *
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @package LeagleCup
+ */
 
 /**
  * Admin class
@@ -8,9 +16,10 @@ class Admin {
 	/**
 	 * The unique identifier of this theme.
 	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this theme.
+	 * @since  1.0.0
+	 * @access protected
+	 * @var    string
+	 * @param str $thme_name    The string used to uniquely identify this theme.
 	 */
 	protected $theme_name;
 
@@ -18,9 +27,10 @@ class Admin {
 	/**
 	 * The version of the theme.
 	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this theme.
+	 * @since  1.0.0
+	 * @access private
+	 * @var    string
+	 * @param str $version    The current version of this theme.
 	 */
 	private $theme_version;
 
@@ -29,6 +39,8 @@ class Admin {
 	 * Construct function
 	 *
 	 * @access public
+	 * @param str $theme_name The theme name.
+	 * @param str $theme_version The theme version.
 	 */
 	public function __construct( $theme_name, $theme_version ) {
 		add_filter( 'admin_footer_text', array( $this, 'set_admin_footer_text' ) );
@@ -38,7 +50,7 @@ class Admin {
 	/**
 	 * Set admin footer text
 	 *
-	 * @link https://developer.wordpress.org/reference/hooks/admin_footer_text/
+	 * @link   https://developer.wordpress.org/reference/hooks/admin_footer_text/
 	 * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
 	 * @access public
 	 * @return str

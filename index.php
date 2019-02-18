@@ -1,9 +1,10 @@
 <?php
-
 /**
- * @package  	LeagleCup
- * @file 		index.php
- * @author   	Jérémy Levron <levronjeremy@19h47.fr> (http://19h47.fr)
+ * Index
+ *
+ * @package LeagleCup
+ * @file    index.php
+ * @author  Jérémy Levron <levronjeremy@19h47.fr> (http://19h47.fr)
  */
 
 use Timber\Timber;
@@ -14,10 +15,9 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 
 $context = Timber::get_context();
-$post = new TimberPost();
 
-$context['post'] = $post;
-$context['node_type'] = 'default-page';
+$context['post']       = new TimberPost();
+$context['node_type']  = 'default-page';
 $context['body_class'] = 'index';
 
 $templates = array( 'index.html.twig' );

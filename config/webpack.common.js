@@ -1,6 +1,6 @@
 /**
  *
- * @file webpack.common.js
+ * @file   webpack.common.js
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
@@ -14,7 +14,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
-function resolve (dir) {
+function resolve(dir) {
 	return path.join(__dirname, '..', dir)
 }
 
@@ -104,7 +104,7 @@ module.exports = {
 			},
 			'svg-transform-loader',
 			'svgo-loader'
-		]},
+			]},
 		{
 			test: /\.svg$/,
 			exclude: [/fonts/, /icons/],
@@ -175,19 +175,23 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist'], {
-			root: resolve('')
-		}),
-		new CopyWebpackPlugin([{
-			from: resolve('src/favicons' ),
-			to: 'favicons'
-		}]),
+        new CleanWebpackPlugin(
+            ['dist'], {
+                root: resolve('')
+            }
+        ),
+		new CopyWebpackPlugin([
+            {
+				from: resolve('src/favicons'),
+				to: 'favicons'
+			}
+        ]),
 		new ManifestPlugin(),
 		new SpriteLoaderPlugin({ plainSprite: true }),
 		new WebpackNotifierPlugin({
-			title: 'Webpack',
-			excludeWarnings: true,
-			alwaysNotify: true
-		}),
+            title: 'Webpack',
+            excludeWarnings: true,
+            alwaysNotify: true
+        }),
 	],
 };

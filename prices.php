@@ -1,22 +1,21 @@
 <?php
-
 /**
- * Partners
+ * Prices
  *
- * @package     LeagleCup
- * @file 		partners.php
- * @author      Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @package LeagleCup
+ * @file    prices.php
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
-// Grab context
+// Grab context.
 $context = Timber::get_context();
 
-// Get terms
+// Get terms.
 $context['prices'] = Timber::get_posts(
-    array(
-        'post_type'         => 'price',
-        'posts_per_page'    => -1,
-    )
+	array(
+		'post_type'      => 'price',
+		'posts_per_page' => -1,
+	)
 );
 
 Timber::render( 'common/prices.html.twig', $context );
