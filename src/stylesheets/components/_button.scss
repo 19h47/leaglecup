@@ -73,4 +73,16 @@
 			color: the_color( black );
 		}
 	}
+
+	&--outline-secondary {
+		color: the_color( blue, very-dark );
+		border: {
+			color: the_color( blue, very-dark );
+		}
+
+		&:hover {
+			background-color: the_color( blue, very-dark );
+			color: the_color( white );
+		}
+	}
 }

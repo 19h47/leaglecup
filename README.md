@@ -8,17 +8,23 @@ LEAGLE CUP is a website for golf lovers.
 
 ### Install the WordPress rules
 
+Add __PHP_CodeSniffer__ to the `composer.json` file
+
 ```json
 {
     "require": {
-        "squizlabs/php_codesniffer": "2.*"
+        "squizlabs/php_codesniffer": "*"
     }
 }
 ```
 
+Then update dependencies
+
 ```bash
 composer update
 ```
+
+Create the project
 
 ```bash
 composer create-project wp-coding-standards/wpcs:dev-master --no-dev

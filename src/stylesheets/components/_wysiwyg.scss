@@ -43,6 +43,6 @@
 	}
 
 	a {
-		text-decoration: underline;
+		@extend %text-decoration-underline;
 	}
 }

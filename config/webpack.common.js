@@ -47,6 +47,7 @@ module.exports = {
 			Router: resolve('src/js/router'),
 			Api: resolve('src/js/api'),
 			Store: resolve('src/js/store'),
+			Vendors: resolve('src/js/vendors'),
 
 			// img
 			img: resolve('src/img'),
@@ -71,7 +72,7 @@ module.exports = {
 		rules: [{
 			enforce: 'pre',
 			test: /\.js$/,
-			exclude: /node_modules/,
+			exclude: [/node_modules/, /vendors/],
 			loader: 'eslint-loader'
 		},
 		{
@@ -184,6 +185,10 @@ module.exports = {
             {
 				from: resolve('src/favicons'),
 				to: 'favicons'
+			},
+			{
+				from: resolve('src/js/vendors/feature.js'),
+				to: 'js'
 			}
         ]),
 		new ManifestPlugin(),

@@ -100,6 +100,21 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_5c6c8fc93626c",
+            "label": "Lien",
+            "name": "link",
+            "type": "link",
+            "instructions": "Indiquer le lien du Tarif",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -119,5 +134,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550410431
+    "modified": 1550618589
 }

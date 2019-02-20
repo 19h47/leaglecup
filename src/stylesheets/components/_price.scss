@@ -106,4 +106,12 @@
             position: center;
         }
     }
+
+    // .Price__footer
+    &__footer {
+        @extend %position-relative, %text-align-md-center;
+        @include margin( top $grid-gutter-width * 3 );
+
+        z-index: 4;
+    }
 }

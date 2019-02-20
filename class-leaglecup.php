@@ -358,7 +358,6 @@ class LeagleCup extends Timber {
 		 */
 		add_post_type_support( 'page', 'excerpt' );
 
-		add_action( 'wp_head', array( $this, 'javascript_detection' ), 2 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
@@ -370,35 +369,17 @@ class LeagleCup extends Timber {
 	 * @access public
 	 */
 	public function enqueue_style() {
-		// Add custom fonts, used in the main stylesheet.
-		$webfonts = array();
-		foreach ( $this->webfonts() as $name => $url ) {
-			wp_register_style( 'font-' . $name, $url, array(), null );
-			$webfonts[] = 'font-' . $name;
-		}
+		wp_dequeue_style( 'wp-block-library' );
 
-		/**
-		 * Theme stylesheet
-		 */
+		// Theme stylesheet.
 		wp_register_style(
 			$this->theme_name . '-global',
 			get_template_directory_uri() . '/dist/' . $this->theme_manifest['main.css'],
-			$webfonts,
+			array(),
 			null
 		);
 
 		wp_enqueue_style( $this->theme_name . '-global' );
-	}
-
-
-	/**
-	 * List webfonts used by the theme.
-	 *
-	 * @return array
-	 * @access public
-	 */
-	public function webfonts() {
-		return array();
 	}
 
 
@@ -420,27 +401,19 @@ class LeagleCup extends Timber {
 			true
 		);
 
+		wp_enqueue_script(
+			'feature',
+   			get_template_directory_uri() . '/dist/js/feature.js',
+			array(),
+			null,
+			false
+		);
+		wp_add_inline_script(
+			'feature',
+			'document.documentElement.className=document.documentElement.className.replace("no-js","js"),feature.touch&&!navigator.userAgent.match(/Trident\/(6|7)\./)&&(document.documentElement.className=document.documentElement.className.replace("no-touch","touch"));'
+		);
+
 		wp_enqueue_script( $this->theme_name . '-main' );
-	}
-
-
-	/**
-	 * Handles JavaScript detection.
-	 * Adds a `js` class to the root `<html>` element when JavaScript is detected.
-	 *
-	 * @access public
-	 */
-	public function javascript_detection() {
-		?>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/feature.js/1.0.1/feature.min.js"></script>
-		<script>
-			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
-
-			if (feature.touch && !navigator.userAgent.match(/Trident\/(6|7)\./)) {
-				document.documentElement.className = document.documentElement.className.replace( 'no-touch', 'touch' );
-			}
-		</script>
-		<?php
 	}
 
 

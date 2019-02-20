@@ -6,6 +6,7 @@
     // .wp-block-columns
     &-columns {
         @include margin( bottom $grid-gutter-width * 2 );
+        @extend .flex-wrap, .flex-md-nowrap, .d-flex;
 
         &.has-2-columns {}
     }
@@ -14,7 +15,16 @@
     &-column {
         @include margin( bottom 0 );
 
+        flex: 1;
+        flex-basis: 100%;
+        min-width: 0;
+        word-break: break-word;
+        overflow-wrap: break-word;
+
         @include media-breakpoint-up( 'md' ) {
+            flex-basis: 50%;
+            flex-grow: 0;
+
             &:not(:last-child) {
                 @include margin( right $grid-gutter-width / 2 );
             }
@@ -42,6 +52,18 @@
             @extend %vertical-align-middle;
             max-width: 100%;
             height: auto;
+        }
+    }
+
+    // .wp-block-button
+    &-button {
+        @include margin( top $grid-gutter-width bottom $grid-gutter-width );
+
+
+        // .wp-block__link
+        &__link {
+            @extend .Button, .Button--outline-secondary;
+            text-decoration: none!important;
         }
     }
 }

@@ -35,6 +35,15 @@ Prices
                         {% endfor %}
                     </div>
                 </div>
+
+                {% if price.get_field( 'link' ) %}
+
+                    <footer class="Price__footer">
+                        <a class="Button Button--outline-primary" href="{{ price.get_field( 'link' ).url }}"{{- price.get_field( 'link' ).target ? ' target="_blank"' : '' -}}>
+                            {{- price.get_field( 'link' ).title | default( 'Je m\'inscris' ) -}}
+                        </a>
+                    </footer>
+                {% endif %}
             </div>
 
             {% include 'common/grid.html.twig' %}
