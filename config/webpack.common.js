@@ -9,7 +9,6 @@ const path = require('path');
 
 // Plugins
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
@@ -181,16 +180,6 @@ module.exports = {
                 root: resolve('')
             }
         ),
-		new CopyWebpackPlugin([
-            {
-				from: resolve('src/favicons'),
-				to: 'favicons'
-			},
-			{
-				from: resolve('src/js/vendors/feature.js'),
-				to: 'js'
-			}
-        ]),
 		new ManifestPlugin(),
 		new SpriteLoaderPlugin({ plainSprite: true }),
 		new WebpackNotifierPlugin({

@@ -170,19 +170,15 @@ class Partner {
 	public function render_custom_columns( $column_name, $post_id ) {
 		switch ( $column_name ) {
 			case 'thumbnail':
-				$html = '';
-
 				if ( get_the_post_thumbnail( $post_id ) ) {
-					$html  = '<a href="' . get_edit_post_link( $post_id ) . '">';
-					$html .= the_post_thumbnail( 'full' );
-					$html .= '</a>';
-
-					return $html;
+					echo '<a href="' . get_edit_post_link( $post_id ) . '">';
+					the_post_thumbnail( 'full' );
+					echo '</a>';
 				} else {
-					$html = '—';
+					echo '—';
 				}
 
-				return $html;
+				break;
 		}
 	}
 

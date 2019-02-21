@@ -360,6 +360,8 @@ class LeagleCup extends Timber {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+
+		// add_filter( 'script_loader_tag', array( $this, 'defer_scripts' ), 10, 3 );
 	}
 
 
@@ -403,7 +405,7 @@ class LeagleCup extends Timber {
 
 		wp_enqueue_script(
 			'feature',
-   			get_template_directory_uri() . '/dist/js/feature.js',
+			'//cdnjs.cloudflare.com/ajax/libs/feature.js/1.0.1/feature.min.js',
 			array(),
 			null,
 			false
@@ -414,6 +416,21 @@ class LeagleCup extends Timber {
 		);
 
 		wp_enqueue_script( $this->theme_name . '-main' );
+	}
+
+	/**
+	 * Defer script
+	 * @param  str $tag    Tag.
+	 * @param  str $handle Handle.
+	 * @param  str $src    Src.
+	 * @return str
+	 */
+	function defer_scripts( $tag, $handle, $src ) {
+		if ( 'feature' !== $handle  ) {
+			return $tag;
+		}
+
+		return str_replace( ' src', ' defer="defer" src', $tag );
 	}
 
 
