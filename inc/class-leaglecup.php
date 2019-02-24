@@ -11,7 +11,7 @@
 /**
  * Autoload
  */
-require_once __DIR__ . '/vendor/autoload.php';
+require_once get_template_directory() . '/vendor/autoload.php';
 
 
 /**
@@ -351,17 +351,10 @@ class LeagleCup extends Timber {
 			)
 		);
 
-		/**
-		 * Add excerpt on page
-		 *
-		 * @see https://codex.wordpress.org/Function_Reference/add_post_type_support
-		 */
 		add_post_type_support( 'page', 'excerpt' );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-
-		// add_filter( 'script_loader_tag', array( $this, 'defer_scripts' ), 10, 3 );
 	}
 
 
@@ -378,7 +371,7 @@ class LeagleCup extends Timber {
 			$this->theme_name . '-global',
 			get_template_directory_uri() . '/dist/' . $this->theme_manifest['main.css'],
 			array(),
-			null
+			'1.0.0'
 		);
 
 		wp_enqueue_style( $this->theme_name . '-global' );
@@ -399,7 +392,7 @@ class LeagleCup extends Timber {
 			$this->theme_name . '-main',
 			get_template_directory_uri() . '/dist/' . $this->theme_manifest['main.js'],
 			array(),
-			null,
+			'1.0.0',
 			true
 		);
 
@@ -407,7 +400,7 @@ class LeagleCup extends Timber {
 			'feature',
 			'//cdnjs.cloudflare.com/ajax/libs/feature.js/1.0.1/feature.min.js',
 			array(),
-			null,
+			'1.0.0',
 			false
 		);
 		wp_add_inline_script(
@@ -420,13 +413,15 @@ class LeagleCup extends Timber {
 
 	/**
 	 * Defer script
+	 *
+	 * @access public
 	 * @param  str $tag    Tag.
 	 * @param  str $handle Handle.
 	 * @param  str $src    Src.
 	 * @return str
 	 */
-	function defer_scripts( $tag, $handle, $src ) {
-		if ( 'feature' !== $handle  ) {
+	public function defer_scripts( $tag, $handle, $src ) {
+		if ( 'feature' !== $handle ) {
 			return $tag;
 		}
 

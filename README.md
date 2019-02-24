@@ -27,11 +27,11 @@ composer update
 Create the project
 
 ```bash
-composer create-project wp-coding-standards/wpcs:dev-master --no-dev
+Make create-project
 ```
 
 ### Add the Rules to PHP CodeSniffer
 
 ```bash
-vendor/bin/phpcs --config-set installed_paths wpcs
+Make config-set
 ```

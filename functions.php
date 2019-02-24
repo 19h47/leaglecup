@@ -16,4 +16,4 @@
  *
  * @link https://github.com/19h47/leaglecup
  */
-require_once get_template_directory() . '/class-leaglecup.php';
+require_once get_template_directory() . '/inc/class-leaglecup.php';

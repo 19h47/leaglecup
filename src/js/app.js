@@ -4,7 +4,9 @@ import GuidGuidBangBang from 'Common/GuidGuidBangBang';
 // console.log(`%c${name}@${version} – ${repository.url}`, 'color: #6a6a6a');
 
 (() => {
-	const guid = new GuidGuidBangBang();
+	if (process.env.NODE_ENV !== 'production') {
+		const guid = new GuidGuidBangBang();
 
-	guid.init();
+		guid.init();
+	}
 })();

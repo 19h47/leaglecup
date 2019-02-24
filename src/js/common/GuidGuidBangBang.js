@@ -7,6 +7,8 @@ export default class GuidGuidBangBang {
 	constructor() {
 		this.$cont = null;
 		this.class = 'd-none';
+
+		document.body.appendChild(GuidGuidBangBang.render(12));
 	}
 
 	init() {
@@ -41,5 +43,23 @@ export default class GuidGuidBangBang {
 
 	show() {
 		return this.$cont.classList.add(this.class);
+	}
+
+	static render(columns) {
+		const div = document.createElement('div');
+		const column = index => `
+			<div class="col-1 text-align-center h-100">
+				<div class="Guid__column text-align-xs-center">${index}</div>
+			</div>
+		`;
+		let inner = '';
+
+		div.className = 'Guid js-guid d-none';
+
+		for (let i = 1; i <= columns; i += 1) {
+			inner += column(i);
+		}
+		div.innerHTML = `<div class="Site-container h-100"><div class="row h-100">${inner}</div></div>`;
+		return div;
 	}
 }
