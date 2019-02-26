@@ -6,7 +6,7 @@
  *
  * @package LeagleCup
  * @file    index.php
- * @author  Jérémy Levron <levronjeremy@19h47.fr> (http://19h47.fr)
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
 use Timber\Timber;

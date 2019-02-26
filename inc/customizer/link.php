@@ -5,10 +5,10 @@
  * PHP version 7.2.10
  *
  * @category Link
- * @package  lglcp
- * @author   Jérémy Levron <jeremylevron@19h47.fr>
+ * @package  LeagleCup
+ * @author   Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
- * @link     http://19h47.fr
+ * @link     https://github.com/19h47/leaglecup
  */
 
 /**

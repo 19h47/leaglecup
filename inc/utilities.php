@@ -5,8 +5,8 @@
  * PHP version 7.2.10
  *
  * @category Utilities
- * @package  lglcp
- * @author   Jérémy Levron <jeremylevron@19h47.fr>
+ * @package  LeagleCup
+ * @author   Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
  * @link     http://19h47.fr
  */
@@ -62,9 +62,13 @@ if ( ! function_exists( 'get_theme_manifest' ) ) :
 	/**
 	 * Get theme manifest
 	 *
-	 * @return arr
+	 * @return bool|arr
 	 */
 	function get_theme_manifest() {
+		if ( is_admin() ) {
+			return false;
+		}
+
 		$request = wp_remote_get( get_template_directory_uri() . '/dist/manifest.json' );
 
 		return json_decode( wp_remote_retrieve_body( $request ), true );
