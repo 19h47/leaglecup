@@ -8,7 +8,7 @@
     $this: &;
 
     @include letter-spacing( 100 );
-    @include margin( top $grid-gutter-width );
+    @include margin( top $grid-gutter-width right ( $grid-gutter-width / 4 ) * -1 left ( $grid-gutter-width / 4 ) * -1 );
     @extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
     @extend .d-flex, .justify-content-between, .flex-column, .flex-md-row;
 
@@ -28,22 +28,30 @@
     &__link {
         @extend .d-inline-block, .d-md-block;
         @extend %position-relative;
+		@include padding( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
 
-        transition: background-color 0.3s map-get( $easings, ease-in-out );
 
         &::after {
-            @include absolute( top 100% right 0 left 0 );
+            @include absolute( top 0 right 0 bottom 0 left 0 );
 
-            @include size( 100%, 1px );
+            @include size( 100% );
 
-            background-color: rgba( the_color( white ), 0 );
+			transition: border-color 0.3s map-get( $easings, ease-in-out );
+			border: {
+				color: rgba( the_color( white ), 0 );
+				radius: $grid-gutter-width / 4;
+				style: solid;
+				width: 1px;
+			}
             content: '';
         }
 
         &:hover,
         &.is-current {
             &::after {
-                background-color: rgba( the_color( white ), 1 );
+				border: {
+					color: rgba( the_color( white ), 1 );
+				}
             }
         }
     }

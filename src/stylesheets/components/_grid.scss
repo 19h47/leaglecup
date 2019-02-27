@@ -11,8 +11,21 @@
     @extend %Pointer-events-none;
     @extend .d-none, .d-md-block;
 
+	animation: 1.4s map-get( $easings, ease-in-out ) 0s 1 apparition;
+	transform-origin: 0 0;
     max-width: $container-width;
     z-index: 3;
+
+	@keyframes apparition {
+		0% {
+			opacity: 0;
+			transform: scaleY( 0 );
+		}
+		100% {
+			opacity: 1;
+			transform: scaleY( 1 );
+		}
+	}
 
     // .Grid-column
     &-column {

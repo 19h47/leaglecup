@@ -1,9 +1,7 @@
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 12 24" style="enable-background:new 0 0 12 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{opacity:0.6;fill:#FFFFFF;}
-</style>
-<path class="st0" d="M6,1c2.8,0,5,2.2,5,5v12c0,2.8-2.2,5-5,5c-2.8,0-5-2.2-5-5V6C1,3.2,3.2,1,6,1 M6,0L6,0C2.7,0,0,2.7,0,6v12
+
+<path style="opacity: 0.6;" fill="#FFFFFF" d="M6,1c2.8,0,5,2.2,5,5v12c0,2.8-2.2,5-5,5c-2.8,0-5-2.2-5-5V6C1,3.2,3.2,1,6,1 M6,0L6,0C2.7,0,0,2.7,0,6v12
 	c0,3.3,2.7,6,6,6h0c3.3,0,6-2.7,6-6V6C12,2.7,9.3,0,6,0L6,0z"/>
-<circle class="dot" cx="6" cy="6" r="3" fill="#FFFFFF"/>
+
 </svg>

@@ -38,6 +38,23 @@
                 @include size( $grid-gutter-width / 2, $grid-gutter-width );
                 @include margin( top $grid-gutter-width / 2 bottom $grid-gutter-width / 2 );
             }
+
+			.scroll-to {
+				@include absolute();
+			}
+
+			.scroll-to-dot {
+				animation: MoveUpDown 2.4s map-get( $easings, ease ) infinite;
+
+				@keyframes MoveUpDown {
+					0%, 100% {
+						transform: translate3d( 0, 0, 0 );
+					}
+					50% {
+						transform: translate3d( 0, 12px, 0 );
+					}
+				}
+			}
         }
     }
 

@@ -58,20 +58,10 @@
     }
 
     // .Hero-block__footer
-    &__footer {
+    .Page__hero__footer {
         @include absolute( right 0 bottom 0 left 0 );
         @include margin( bottom $grid-gutter-width * 4 );
         @extend .d-none, .d-md-block;
-        @extend %text-transform-uppercase, %font-weight-medium, %text-align-center;
-        @include letter-spacing( 100 );
-
-        font-size: 13.5px;
-        z-index: 4;
-
-        svg {
-            @include size( $grid-gutter-width / 2, $grid-gutter-width );
-            @include margin( bottom $grid-gutter-width / 2 );
-        }
     }
 
     // .Hero-block__image

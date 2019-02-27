@@ -53,22 +53,29 @@
         line-height: 24px;
 
         a {
+			@extend .d-inline, .d-inline-block;
             @extend %position-relative;
 
-            transition: background-color 0.3s map-get( $easings, ease-in-out );
-
             &::after {
-                @include absolute( top 100% right 0 left 0 );
+                @include absolute( top 0 right 0 bottom 0 left 0 );
 
-                @include size( 100%, 1px );
+                @include size( 100% );
 
-                background-color: rgba( the_color( white ), 0 );
+				transition: border-color 0.3s map-get( $easings, ease-in-out );
+				border-bottom: {
+					color: rgba( the_color( white ), 0 );
+					radius: $grid-gutter-width / 4;
+					style: solid;
+					width: 1px;
+				}
                 content: '';
             }
 
             &:hover {
                 &::after {
-                    background-color: rgba( the_color( white ), 1 );
+					border-bottom: {
+						color: rgba( the_color( white ), 1 );
+					}
                 }
             }
         }
