@@ -37,9 +37,9 @@
 
 	@include padding(
 		top ( $grid-gutter-width / 2 ) + 2
-		right $grid-gutter-width
+		right $grid-gutter-width / 1.5
 		bottom ( $grid-gutter-width / 2 ) + 2
-		left $grid-gutter-width
+		left $grid-gutter-width / 1.5
 	);
 
 	&:not(:disabled):not(.disabled) {
