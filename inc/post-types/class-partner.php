@@ -90,7 +90,7 @@ class Partner {
 			'label'               => 'partenaire',
 			'description'         => __( 'Les partenaires', 'lglcup' ),
 			'labels'              => $labels,
-			'supports'            => array( 'title', 'thumbnail' ),
+			'supports'            => array( 'title', 'thumbnail', 'editor' ),
 			'taxonomies'          => array( 'partner_category' ),
 			'hierarchical'        => false,
 			'public'              => true,
