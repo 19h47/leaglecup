@@ -59,7 +59,7 @@ module.exports = merge(
 			new PurgecssPlugin({
       			paths: glob.sync(path.join(__dirname, '..', 'views/**/*.html.twig')),
 				whitelist: ['is-invalid', 'is-hidden', 'is-current', 'is-in-viewport', 'Front-page'],
-				whitelistPatternsChildren: [/^flickity-?/, /^wp-block-?/]
+				whitelistPatternsChildren: [/^flickity-/, /^wp-block-/, /^Partners-block/, /^Event-block/]
     		}),
         ]
     },

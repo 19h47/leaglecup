@@ -2,6 +2,7 @@
  * Page block
  */
 .page-block {
+	@extend %position-relative;
 
 	transition: 0.7s map-get( $easings, ease );
 

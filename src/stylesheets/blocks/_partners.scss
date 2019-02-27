@@ -7,8 +7,6 @@
 .Partners-block {
     $this: &;
 
-    @extend %position-relative;
-
     color: the_color( white );
 
     // .Partners-block .Grid
