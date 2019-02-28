@@ -14,6 +14,18 @@
 		margin-bottom: 0!important;
 	}
 
+	ul {
+		@include padding( left $grid-gutter-width );
+
+		li:last-child {
+			@include margin( bottom 0 );
+		}
+	}
+
+	li {
+		@include margin( bottom $grid-gutter-width / 2 );
+	}
+
 	h1 {}
 
 	h2 {
