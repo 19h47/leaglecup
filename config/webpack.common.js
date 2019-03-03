@@ -13,6 +13,12 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
+/**
+ * Resolve
+ *
+ * @param {str} dir Dir.
+ * @return {str} Dir.
+ */
 function resolve(dir) {
 	return path.join(__dirname, '..', dir)
 }
@@ -180,7 +186,8 @@ module.exports = {
 	plugins: [
         new CleanWebpackPlugin(
             ['dist'], {
-                root: resolve('')
+                root: resolve(''),
+				verbose: false,
             }
         ),
 		manifestPlugin,
