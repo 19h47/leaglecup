@@ -10,15 +10,17 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path: /languages
  * Text Domain: member-posts
+ *
+ * @package LeagleCup
  */
 
-//* If this file is called directly, abort.
+// If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
-    die;
+	die;
 }
 
 /**
  * LIENS FICHIER PHP
  */
-// Fichier de functions pour ACF
+// Fichier de functions pour ACF.
 require_once get_template_directory() . '/inc/block/member/functions.php';
