@@ -20,7 +20,7 @@
 	}
 
 	@extend %text-align-center, %text-transform-uppercase, %font-weight-medium;
-	@include letter-spacing( 240 );
+	@include letter-spacing( 100 );
 
 	border: {
 		color: transparent;

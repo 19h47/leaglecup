@@ -7,7 +7,7 @@
 {% block hero %}{% endblock %}
 
 {% block content %}
-    {% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ) } %}
+    {% include 'blocks/hero.html.twig' with { hero: post.get_field( 'hero' ), target: 'Event' } %}
 	{% include 'blocks/event.html.twig'
         with {
             block: post.get_field( 'event' ),
