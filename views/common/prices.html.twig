@@ -5,7 +5,7 @@ Prices
 @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
 
 #}
-<section class="Prices">
+<div class="Prices">
     {% for price in prices %}
         <article class="Price">
             <div class="Site-container">
@@ -18,7 +18,7 @@ Prices
                 <div class="row">
                     <div class="col-12 col-md-5 offset-md-1">
                         <div class="Price__thumbnail">
-                            <img src="{{ Image( price.thumbnail ).src }}">
+                            <img src="{{ Image( price.thumbnail ).src }}" alt="{{ price.title }}">
                         </div>
                     </div>
                     <div class="col-12 col-md-5">
@@ -48,7 +48,7 @@ Prices
 
             {% include 'common/grid.html.twig' %}
 
-            <img class="Price__background" src="{{ Image( price.thumbnail ).src }}">
+            <img class="Price__background" src="{{ Image( price.thumbnail ).src }}" alt="{{ price.title }}">
         </article>
     {% endfor %}
-</section>
+</div>

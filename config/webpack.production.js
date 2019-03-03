@@ -12,6 +12,7 @@ const common = require('./webpack.common.js');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = merge(
     common,
@@ -61,6 +62,7 @@ module.exports = merge(
 				whitelist: ['is-invalid', 'is-hidden', 'is-current', 'is-in-viewport', 'Front-page', 'Site-header', 'Page'],
 				whitelistPatternsChildren: [/^flickity-/, /^wp-block-/, /^Partners-block/, /^Event-block/]
     		}),
+			new CompressionPlugin()
         ]
     },
 );

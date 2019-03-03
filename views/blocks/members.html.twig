@@ -17,7 +17,7 @@
 			<ul class="Member__socials Socials">
 			{% for link, key in member.get_field( 'links' ) if key.url %}
 				<li class="Socials__item">
-					<a class="Socials__link" href="{{ link == 'email' ? "mailto:#{key.url}" : key.url }}" target="_target" title="{{ key.label }}">
+					<a class="Socials__link" href="{{ link == 'email' ? "mailto:#{key.url}" : key.url }}" target="_blank" title="{{ key.label }}">
 						{% include 'svg/use.html.twig' with { icon: link } %}
 					</a>
 				</li>

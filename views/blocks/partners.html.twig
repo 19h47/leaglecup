@@ -14,7 +14,10 @@ Partners
 		<div class="row align-items-center">
 			<div class="col-12 col-md-6 offset-md-1">
 				<h2 class="page-block__title h1">{{- block.title -}}</h2>
-				<h3 class="h2">{{- block.subtitle -}}</h3>
+
+				{% if block.subtitle %}
+					<h3 class="h2">{{- block.subtitle -}}</h3>
+				{% endif %}
 
 				<div class="page-block__content Wysiwyg">{{- block.content -}}</div>
 
