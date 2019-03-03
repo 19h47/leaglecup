@@ -63,6 +63,7 @@ if ( ! function_exists( 'get_theme_manifest' ) ) :
 	 * Get theme manifest
 	 *
 	 * @return bool|arr
+	 * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
 	 */
 	function get_theme_manifest() {
 		if ( is_admin() ) {

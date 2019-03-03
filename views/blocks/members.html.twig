@@ -1,0 +1,29 @@
+{#
+
+@file blocks/members.html.twig
+#}
+<ul class="Members">
+{% for member in Post( members ) %}
+	<li class="Member">
+		<div class="Member__thumbnail">
+			{% if member.thumbnail %}
+				<img src="{{ TimberImage( member.thumbnail ).src }}" alt="{{ member.title }}" width="{{ TimberImage( member.thumbnail ).width }}" height="{{ TimberImage( member.thumbnail ).height }}">
+			{% endif %}
+		</div>
+
+		<h3 class="Member__title">{{ member.title }}</h3>
+
+		{% if member.get_field( 'links' ) is iterable %}
+			<ul class="Member__socials Socials">
+			{% for link, key in member.get_field( 'links' ) if key.url %}
+				<li class="Socials__item">
+					<a class="Socials__link" href="{{ link == 'email' ? "mailto:#{key.url}" : key.url }}" target="_target" title="{{ key.label }}">
+						{% include 'svg/use.html.twig' with { icon: link } %}
+					</a>
+				</li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+	</li>
+{% endfor %}
+</ul>

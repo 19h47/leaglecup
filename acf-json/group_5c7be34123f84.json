@@ -1,0 +1,199 @@
+{
+    "key": "group_5c7be34123f84",
+    "title": "Options du membre",
+    "fields": [
+        {
+            "key": "field_5c7be3469f0bc",
+            "label": "Liens",
+            "name": "links",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5c7c1c6818ace",
+                    "label": "LinkedIn",
+                    "name": "linkedin",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c7be3669f0bd",
+                            "label": "LinkedIn",
+                            "name": "url",
+                            "type": "url",
+                            "instructions": "Indiquer l'URL du profil LinkedIn du Membre",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "LinkedIn"
+                        },
+                        {
+                            "key": "field_5c7c1c9018acf",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Label du profil LinkedIn",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "LinkedIn",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c7c1cff6637c",
+                    "label": "Site internet",
+                    "name": "website",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c7be38d9f0be",
+                            "label": "Site internet",
+                            "name": "url",
+                            "type": "url",
+                            "instructions": "Indiquer l'URL du site internet du Membre",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Site internet"
+                        },
+                        {
+                            "key": "field_5c7c1d486637d",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Label du lien Site internet",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Site internet",
+                            "placeholder": "Site internet",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5c7c1d9664133",
+                    "label": "Adresse email",
+                    "name": "email",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c7be3bd9f0bf",
+                            "label": "Adresse email",
+                            "name": "url",
+                            "type": "email",
+                            "instructions": "Indiquer l'adresse email du Membre",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Adresse email",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5c7c1dcf64134",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "Label de l'adresse email",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Adresse email",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "member"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1551638619
+}

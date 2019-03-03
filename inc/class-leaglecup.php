@@ -108,18 +108,22 @@ class LeagleCup extends Timber {
 
 		include_once get_template_directory() . '/inc/post-types/class-partner.php';
 		include_once get_template_directory() . '/inc/post-types/class-price.php';
+		include_once get_template_directory() . '/inc/post-types/class-member.php';
 
 		include_once get_template_directory() . '/inc/taxonomies/class-partnercategory.php';
 
+		include_once get_template_directory() . '/inc/block/member/index.php';
+
 		new Partner( $this->get_theme_version() );
 		new Price( $this->get_theme_version() );
+		new Member( $this->get_theme_version() );
 
 		new PartnerCategory( $this->get_theme_version() );
 
 		new Admin( $this->get_theme_name(), $this->get_theme_version() );
 
-		add_action( 'customize_register', 'lgcp_customize_contact' );
-		add_action( 'customize_register', 'lgcp_customize_link' );
+		add_action( 'customize_register', 'leaglecup_customize_contact' );
+		add_action( 'customize_register', 'leaglecup_customize_link' );
 	}
 
 
@@ -127,6 +131,7 @@ class LeagleCup extends Timber {
 	 * Add to Twig
 	 *
 	 * @param obj $twig Twig environment.
+	 * @access public
 	 */
 	public function add_to_twig( $twig ) {
 
@@ -356,6 +361,9 @@ class LeagleCup extends Timber {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
+
+
+
 
 
 	/**

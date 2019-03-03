@@ -17,6 +17,9 @@ function resolve(dir) {
 	return path.join(__dirname, '..', dir)
 }
 
+// Manifest plugin
+const manifestPlugin = new ManifestPlugin();
+
 module.exports = {
 	devServer: {
 		contentBase: resolve('dist'),
@@ -180,7 +183,7 @@ module.exports = {
                 root: resolve('')
             }
         ),
-		new ManifestPlugin(),
+		manifestPlugin,
 		new SpriteLoaderPlugin({ plainSprite: true }),
 		new WebpackNotifierPlugin({
             title: 'Webpack',

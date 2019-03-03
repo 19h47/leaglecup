@@ -21,7 +21,7 @@ add_filter( 'wpseo_canonical', '__return_false' );
  * @see    http://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
  * @return void
  */
-function lglcp_disable_wp_emojicons() {
+function leaglecup_disable_wp_emojicons() {
 	// All actions related to emojis.
 	remove_action( 'admin_print_styles', 'print_emoji_styles' );
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -36,7 +36,7 @@ function lglcp_disable_wp_emojicons() {
 }
 
 if ( ! is_admin() ) {
-	add_action( 'init', 'lglcp_disable_wp_emojicons' );
+	add_action( 'init', 'leaglecup_disable_wp_emojicons' );
 }
 
 

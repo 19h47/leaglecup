@@ -1,0 +1,37 @@
+/**
+ *
+ */
+.Member {
+	@include margin( top 0 right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
+
+	margin-bottom: 0!important;
+	width: percentage( 1 / 5 );
+
+	&:first-child { @include margin( left 0 ); }
+	&:last-child { @include margin( right 0 ); }
+
+
+	&__thumbnail {
+		height: $grid-gutter-width * 8;
+		background-color: rgba( the_color( blue, very-dark ), 0.5 );
+
+		img {
+			@extend .d-inline-block;
+			@extend %vertical-align-middle;
+			@include size( 100%, 100%!important );
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	// .Member__title
+	&__title {
+		margin-top: 0!important;
+		font-size: $base-font-size-px!important;
+	}
+
+	// .Member__socials
+	&__socials {
+		padding-left: 0!important;
+	}
+}

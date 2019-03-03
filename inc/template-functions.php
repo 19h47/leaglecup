@@ -1,6 +1,8 @@
 <?php
 /**
- * Additional features to allow styling of the templates
+ * Custom template tags for this theme
+ *
+ * Additional features to allow styling of the templates.
  *
  * PHP version 7.2.10
  *

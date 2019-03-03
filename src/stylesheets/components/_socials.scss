@@ -51,6 +51,10 @@
 
             fill: the_color( white );
 			transition: fill 0.3s map-get( $easings, ease-in-out );
+
+			@at-root .Member & {
+				fill: the_color( blue, very-dark );
+			}
         }
 
 		&:hover {
@@ -58,11 +62,21 @@
 				color: the_color( white );
 			}
 
+			@at-root .Member & {
+				background: {
+					color: the_color( blue, very-dark );
+				}
+			}
+
 			svg {
 				fill: the_color( blue, very-dark );
 
 				@at-root .Page .Site-header & {
 					fill: the_color( blue, very-soft );
+				}
+
+				@at-root .Member & {
+					fill: the_color( white );
 				}
 			}
 		}
