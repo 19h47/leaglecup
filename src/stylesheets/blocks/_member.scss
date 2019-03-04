@@ -2,13 +2,18 @@
  *
  */
 .Member {
-	@include margin( top 0 right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
+	@include margin( top $grid-gutter-width right 0 bottom $grid-gutter-width left 0 );
 
 	margin-bottom: 0!important;
-	width: percentage( 1 / 5 );
+	width: 100%;
 
-	&:first-child { @include margin( left 0 ); }
-	&:last-child { @include margin( right 0 ); }
+	@include media-breakpoint-up( 'md' ) {
+		@include margin( top 0 right $grid-gutter-width / 2 bottom 0 left $grid-gutter-width / 2 )
+		width: percentage( 1 / 5 );
+	}
+
+	&:first-child { @include margin( top 0 left 0 ); }
+	&:last-child { @include margin( bottom 0 right 0 ); }
 
 
 	&__thumbnail {

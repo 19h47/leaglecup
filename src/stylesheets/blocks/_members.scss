@@ -2,7 +2,7 @@
  * Members
  */
 .Members {
-	@extend .d-flex;
+	@extend .d-flex, .flex-column, .flex-md-row;
 	@extend %list-style-type-none;
 	@include margin( top $grid-gutter-width * 4 bottom $grid-gutter-width * 4 );
 
