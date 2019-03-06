@@ -120,7 +120,9 @@ class LeagleCup extends Timber {
 
 		new PartnerCategory( $this->get_theme_version() );
 
-		new Admin( $this->get_theme_name(), $this->get_theme_version() );
+		if ( is_admin() ) {
+			new Admin( $this->get_theme_name(), $this->get_theme_version() );
+		}
 
 		add_action( 'customize_register', 'leaglecup_customize_contact' );
 		add_action( 'customize_register', 'leaglecup_customize_link' );

@@ -16,7 +16,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Customizer object.
  */
-function lgcp_customize_contact( $wp_customize ) {
+function leaglecup_customize_contact( $wp_customize ) {
 
 	// Add contact section.
 	$wp_customize->add_section(
