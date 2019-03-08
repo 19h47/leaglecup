@@ -462,4 +462,6 @@ class LeagleCup extends Timber {
 	}
 }
 
-new LeagleCup( 'lglcup', '1.0.0' );
+$wp_theme = wp_get_theme();
+
+new LeagleCup( 'lglcup', $wp_theme->Version );
