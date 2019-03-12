@@ -15,6 +15,7 @@
 	}
 
 	ul {
+		@include margin( top $grid-gutter-width bottom $grid-gutter-width );
 		@include padding( left $grid-gutter-width );
 
 		li:last-child {
