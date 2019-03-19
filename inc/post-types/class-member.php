@@ -38,6 +38,7 @@ class Member {
 		$this->register_post_type();
 
 		add_action( 'init', array( $this, 'register_post_type' ) );
+		add_action( 'admin_head', array( $this, 'css' ) );
 
 		add_filter( 'dashboard_glance_items', array( $this, 'at_a_glance' ) );
 	}
@@ -144,5 +145,17 @@ class Member {
 		}
 
 		return $items;
+	}
+
+
+	/**
+	 * CSS
+	 */
+	public function css() {
+		?>
+		<style>
+			#dashboard_right_now .member-count:before { content: "\f307"; }
+		</style>
+		<?php
 	}
 }
