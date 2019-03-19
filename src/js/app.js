@@ -1,8 +1,6 @@
-// import { name, version, repository } from '@/../package.json';
 import GuidGuidBangBang from 'Common/GuidGuidBangBang';
+import ElectronicSignature from 'Blocks/ElectronicSignature';
 import animateScrollTo from 'animated-scroll-to';
-
-// console.log(`%c${name}@${version} – ${repository.url}`, 'color: #6a6a6a');
 
 (() => {
 	if (process.env.NODE_ENV !== 'production') {
@@ -10,6 +8,10 @@ import animateScrollTo from 'animated-scroll-to';
 
 		guid.init();
 	}
+
+	//
+	const electronicSignature = new ElectronicSignature('.js-electronic-signature');
+	electronicSignature.init();
 
 	// Scroll to button
 	const buttons = document.querySelectorAll('.js-scroll-to');
