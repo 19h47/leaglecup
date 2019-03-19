@@ -8,9 +8,9 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class CreateContractor {
-	constructor(param, host, number) {
+	constructor( param, host, number ) {
 		const params = Object.assign({
-			action: 'getOrCreateContractor',
+			action: 'getOrCreateContractor'
 		},
 		param,
 		{
@@ -33,16 +33,16 @@ export default class CreateContractor {
 			registration_number: '',
 			birthdate: '',
 			birthplace: '',
-			category: '',
+			category: ''
 		});
 
-		this.url = new URL(`${host}/calinda/hub/selling/model/contractor/create`);
+		this.url = new URL( `${host}/calinda/hub/selling/model/contractor/create` );
 
-		Object.keys(params).forEach(key => this.url.searchParams.append(key, params[key]));
+		Object.keys( params ).forEach( key => this.url.searchParams.append( key, params[key]) );
 	}
 
 	async init() {
-		const response = await fetch(this.url);
+		const response = await fetch( this.url );
 
 		return response.json();
 	}

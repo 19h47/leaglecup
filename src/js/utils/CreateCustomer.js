@@ -8,9 +8,9 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class CreateCustomer {
-	constructor(param, host, number) {
+	constructor( param, host, number ) {
 		const params = Object.assign({
-			action: 'selectOrCreateCustomer',
+			action: 'selectOrCreateCustomer'
 		},
 		param,
 		{
@@ -31,16 +31,16 @@ export default class CreateCustomer {
 			number,
 			phone: '',
 			postal_code: '44000',
-			registration_number: '',
+			registration_number: ''
 		});
 
-		this.url = new URL(`${host}/calinda/hub/selling/model/customer/update`);
+		this.url = new URL( `${host}/calinda/hub/selling/model/customer/update` );
 
-		Object.keys(params).forEach(key => this.url.searchParams.append(key, params[key]));
+		Object.keys( params ).forEach( key => this.url.searchParams.append( key, params[key]) );
 	}
 
 	async init() {
-		const response = await fetch(this.url);
+		const response = await fetch( this.url );
 
 		return response.json();
 	}
