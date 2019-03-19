@@ -5,7 +5,7 @@
  * PHP version 7.2.10
  *
  * @package LeagleCup
- * @file    index.php
+ * @file    front-page.php
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
