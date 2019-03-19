@@ -62,13 +62,15 @@
 	'components/grid',
 	'components/partners',
 	'components/price',
-	'components/prices';
+	'components/prices',
+	'components/form';
 
 
 // Pages
 @import
 	'pages/front-page',
-	'pages/page';
+	'pages/page',
+	'pages/register-page';
 
 
 // Utilities

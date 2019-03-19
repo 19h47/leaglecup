@@ -19,11 +19,11 @@ export default class CreateContract {
 		},
 		param,
 		{
-			date: new Date().getTime() + 3600 * 1000,
+			date: new Date().getTime(),
 			vendor_email,
-			closed: false,
 			customer_number,
 			contract_definition_id,
+			closed: false,
 			message_title: '',
 			message_body: '',
 			filename: '',

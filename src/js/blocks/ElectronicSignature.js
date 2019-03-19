@@ -10,9 +10,14 @@ export default class ElectronicSignature {
 	constructor(element) {
 		// eslint-disable-next-line
 		const bouncer = new Bouncer(element, {
+			errorClass: 'Form__error-message',
 			messages: {
 				missingValue: {
 					default: 'Veuillez remplir ce champ s\'il vous plaît.',
+				},
+				patternMismatch: {
+					email: 'Veuillez entrer une adresse email valide.',
+					default: 'Veuillez correspondre au format attendu.',
 				},
 			},
 			disableSubmit: true,
@@ -40,6 +45,7 @@ export default class ElectronicSignature {
 	initEvents() {
 		document.addEventListener('bouncerFormValid', (event) => {
 			this.dataForm = new FormData(event.target).entries();
+			this.$form.classList.add('Form--loading');
 
 			// eslint-disable-next-line
 			for (const pair of this.dataForm) {
@@ -72,9 +78,21 @@ export default class ElectronicSignature {
 			config.VENDOR_EMAIL,
 		);
 
-		customer.init().then(() => {
-			contractor.init();
-			contract.init();
-		});
+		customer.init()
+			.then(() => {
+				contractor.init();
+				contract.init();
+
+				return true;
+			})
+			.then(() => {
+				this.$form.classList.remove('Form--loading');
+				this.$form.classList.add('Form--success');
+			})
+			.catch((error) => {
+				console.log(error);
+				this.$form.classList.remove('Form--loading');
+				this.$form.classList.add('Form--error');
+			});
 	}
 }
