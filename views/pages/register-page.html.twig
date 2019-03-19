@@ -1,0 +1,74 @@
+{#
+
+@file pages/register-page.html.twig
+@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+
+#}
+{% extends 'index.html.twig' %}
+
+{% block content %}
+	<div class="Site-container">
+		<div class="row">
+			<div class="col-12">
+				<form class="Form js-electronic-signature" method="post" enctype="multipart/form-data">
+
+					{# Hidden #}
+					<input id="country" type="hidden" name="country" value="FR">
+					<input id="company_name" type="hidden" name="company_name" value="">
+					<input id="registration_number" type="hidden" name="registration_number" value="">
+					<input id="address_2" type="hidden" name="address_2" value="">
+					<input id="phone" type="hidden" name="phone" value="">
+					<input id="job_title" type="hidden" name="job_title" value="">
+					<input id="birthdate" type="hidden" name="birthdate" value="">
+					<input id="birthplace" type="hidden" name="birthplace" value="">
+
+					<div class="Form__group">
+						<label for="civility">Civilité</label>
+						<select id="civility" name="civility">
+							<option value="MONSIEUR">Monsieur</option>
+							<option value="MADAME">Madame</option>
+							<option value="MADEMOISELLE">Mademoiselle</option>
+						</select>
+					</div>
+
+					<div class="Form__group">
+						<label for="firstname">Prénom</label>
+						<input id="firstname" type="text" name="firstname" required>
+					</div>
+
+					<div class="Form__group">
+						<label for="lastname">Nom</label>
+						<input id="lastname" type="text" name="lastname" required>
+					</div>
+
+					<div class="Form__group">
+						<label for="email">Email</label>
+						<input id="email" type="email" name="email" required>
+					</div>
+
+					<div class="Form__group">
+						<label for="cell_phone">Téléphone mobile du contact</label>
+						<input id="cell_phone" type="tel" name="cell_phone" required>
+					</div>
+
+					<div class="Form__group">
+						<label for="address_1">adresse partie 1</label>
+						<input id="address_1" type="text" name="address_1" required>
+					</div>
+
+					<div class="Form__group">
+						<label for="city">Ville</label>
+						<input id="city" type="text" name="city" required>
+					</div>
+
+					<div class="Form__group">
+						<label for="postal_code">Code postal</label>
+						<input id="postal_code" type="text" name="postal_code" required>
+					</div>
+
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

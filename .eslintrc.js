@@ -7,7 +7,6 @@ module.exports = {
 	extends: [
 		'standard',
 		'airbnb-base',
-		'wordpress'
 	],
 	rules: {
 		'no-console': 'off',
@@ -18,7 +17,7 @@ module.exports = {
 			props: true,
 			ignorePropertyModificationsFor: ['state']
 		}],
-		camelcase: ['error', {properties: 'never'}]
+		'yoda': [2, 'always']
 	},
 	parserOptions: {
 		parser: 'babel-eslint',

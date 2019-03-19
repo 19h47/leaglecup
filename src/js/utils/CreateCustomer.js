@@ -1,6 +1,7 @@
 /**
  * Create customer
  *
+ * @param obj data
  * @param obj param
  * @param str host
  * @param int number
@@ -8,39 +9,39 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class CreateCustomer {
-	constructor( param, host, number ) {
+	constructor(data, param, host, number) {
 		const params = Object.assign({
-			action: 'selectOrCreateCustomer'
+			action: 'selectOrCreateCustomer',
 		},
 		param,
 		{
-			address_1: '1 impasse Joseph Peignon',
-			address_2: '',
-			birthdate: '',
-			birthplace: '',
-			cell_phone: '0609187529',
-			city: 'Nantes',
-			civility: 'MONSIEUR', // MADAME, MADEMOISELLE
-			country: 'FR',
-			company_name: '19h47',
+			address_1: data.address_1,
+			address_2: data.address_2,
+			birthdate: data.birthdate,
+			birthplace: data.birthplace,
+			cell_phone: data.cell_phone,
+			city: data.city,
+			civility: data.civility,
+			country: data.country,
+			company_name: data.company_name,
 			customer_code: '1234',
-			email: 'jeremylevron@19h47.fr',
-			firstname: 'Jérémy',
-			job_title: '',
-			lastname: 'Levron',
+			email: data.email,
+			firstname: data.firstname,
+			job_title: data.job_title,
+			lastname: data.lastname,
 			number,
-			phone: '',
-			postal_code: '44000',
-			registration_number: ''
+			phone: data.phone,
+			postal_code: data.postal_code,
+			registration_number: data.registration_number,
 		});
 
-		this.url = new URL( `${host}/calinda/hub/selling/model/customer/update` );
+		this.url = new URL(`${host}/calinda/hub/selling/model/customer/update`);
 
-		Object.keys( params ).forEach( key => this.url.searchParams.append( key, params[key]) );
+		Object.keys(params).forEach(key => this.url.searchParams.append(key, params[key]));
 	}
 
 	async init() {
-		const response = await fetch( this.url );
+		const response = await fetch(this.url);
 
 		return response.json();
 	}

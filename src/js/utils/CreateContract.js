@@ -5,38 +5,40 @@
  *
  * @param obj param
  * @param str host
- * @param int number
- * @param int id
+ * @param int customer_number
+ * @param int contract_definition_id
+ * @param str vendor_email
  * @see https://www.sellandsign.com/fr/api-creation-contrat-a-faire-signer/
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class CreateContract {
-	constructor( param, host, number, id ) {
+	// eslint-disable-next-line
+	constructor(param, host, customer_number, contract_definition_id, vendor_email) {
 		const params = Object.assign({
-			action: 'createContract'
+			action: 'createContract',
 		},
 		param,
 		{
 			date: new Date().getTime() + 3600 * 1000,
-			vendor_email: 'api.leagle-cup@calindasoftware.com',
+			vendor_email,
 			closed: false,
-			customer_number: number,
-			contract_definition_id: id,
+			customer_number,
+			contract_definition_id,
 			message_title: '',
 			message_body: '',
 			filename: '',
 			keep_on_move: false,
 			transaction_id: '',
-			customer_entity_id: -1
+			customer_entity_id: -1,
 		});
 
-		this.url = new URL( `${host}/calinda/hub/selling/model/contract/create` );
+		this.url = new URL(`${host}/calinda/hub/selling/model/contract/create`);
 
-		Object.keys( params ).forEach( key => this.url.searchParams.append( key, params[key]) );
+		Object.keys(params).forEach(key => this.url.searchParams.append(key, params[key]));
 	}
 
 	async init() {
-		const response = await fetch( this.url );
+		const response = await fetch(this.url);
 
 		return response.json();
 	}
