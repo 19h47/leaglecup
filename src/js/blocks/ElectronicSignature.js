@@ -34,7 +34,9 @@ export default class ElectronicSignature {
 		this.$elements = this.$form.querySelectorAll('input,select,textarea');
 		this.data = {};
 
-		this.customer_number = 123;
+		this.customer_number = new Date().getTime();
+		this.number = new Date().getTime();
+
 		this.param = { j_token: config.TOKEN };
 
 		this.initEvents();
@@ -63,17 +65,18 @@ export default class ElectronicSignature {
 			this.param,
 			config.HOST,
 			this.customer_number,
+			this.number,
 		);
 		const contractor = new CreateContractor(
 			this.data,
 			this.param,
 			config.HOST,
-			this.customer_number,
+			this.number,
 		);
 		const contract = new CreateContract(
 			this.param,
 			config.HOST,
-			this.customer_number,
+			this.number,
 			config.CONTRACT_DEFINITION_ID,
 			config.VENDOR_EMAIL,
 		);

@@ -50,10 +50,17 @@
 		@include size( 100%, $grid-gutter-width * 2 );
 
 		border: {
-			color: currentColor;
+			color: rgba( the_color( blue, very-dark ), 0.3 );
 			radius: $grid-gutter-width / 2;
 			style: solid;
 			width: 1px;
+		}
+		transition: border-color 0.3s map-get( $easings, ease-in-out );
+
+		&:focus {
+			border: {
+				color: rgba( the_color( blue, very-dark ), 1 );
+			}
 		}
 
 		// .Form__input--text
@@ -67,6 +74,7 @@
 	&__label {
 		@include margin( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
 		@extend .d-block;
+		@extend %font-weight-bold;
 		@include margin( bottom $grid-gutter-width / 4 );
 
 		// .Form__label--required
@@ -74,6 +82,7 @@
 			&::after {
 				@include margin( left $grid-gutter-width / 8 );
 				@extend .d-inline-block;
+				@extend %font-weight-regular;
 
 				color: the_color( red, pure );
 				content: '*';

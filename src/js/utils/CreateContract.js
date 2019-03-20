@@ -5,7 +5,7 @@
  *
  * @param obj param
  * @param str host
- * @param int customer_number
+ * @param int number
  * @param int contract_definition_id
  * @param str vendor_email
  * @see https://www.sellandsign.com/fr/api-creation-contrat-a-faire-signer/
@@ -13,7 +13,7 @@
  */
 export default class CreateContract {
 	// eslint-disable-next-line
-	constructor(param, host, customer_number, contract_definition_id, vendor_email) {
+	constructor(param, host, number, contract_definition_id, vendor_email) {
 		const params = Object.assign({
 			action: 'createContract',
 		},
@@ -21,7 +21,7 @@ export default class CreateContract {
 		{
 			date: new Date().getTime(),
 			vendor_email,
-			customer_number,
+			customer_number: number,
 			contract_definition_id,
 			closed: false,
 			message_title: '',

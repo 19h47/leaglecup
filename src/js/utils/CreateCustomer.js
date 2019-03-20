@@ -4,12 +4,13 @@
  * @param obj data
  * @param obj param
  * @param str host
- * @param int number
+ * @param int customer_code
  * @see https://www.sellandsign.com/fr/api-creation-client-signataire/
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class CreateCustomer {
-	constructor(data, param, host, number) {
+	// eslint-disable-next-line
+	constructor(data, param, host, customer_code, number) {
 		const params = Object.assign({
 			action: 'selectOrCreateCustomer',
 		},
@@ -24,7 +25,7 @@ export default class CreateCustomer {
 			civility: data.civility,
 			country: data.country,
 			company_name: data.company_name,
-			customer_code: '1234',
+			customer_code,
 			email: data.email,
 			firstname: data.firstname,
 			job_title: data.job_title,

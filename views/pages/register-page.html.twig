@@ -11,8 +11,8 @@
 		<div class="Site-container">
 
 			{% if post.content %}
-				<div class="row">
-					<div class="col-12 col-md-10 offset-md-1">
+				<div class="row margin-bottom-3">
+					<div class="col-12 col-md-8 offset-md-2">
 						<div class="Wysiwyg">{{- post.content -}}</div>
 					</div>
 				</div>
@@ -20,16 +20,14 @@
 
 			<div class="row">
 				<div class="col-12 col-md-8 offset-md-2">
-					<form class="Form row js-electronic-signature" method="post" enctype="multipart/form-data">
+					<form class="Form row js-electronic-signature" method="post">
 
 						<div class="Form__group d-none">
 							{# Hidden #}
 							<input id="country" type="hidden" name="country" value="FR">
-							<input id="company_name" type="hidden" name="company_name" value="">
 							<input id="registration_number" type="hidden" name="registration_number" value="">
 							<input id="address_2" type="hidden" name="address_2" value="">
 							<input id="phone" type="hidden" name="phone" value="">
-							<input id="job_title" type="hidden" name="job_title" value="">
 							<input id="birthdate" type="hidden" name="birthdate" value="">
 							<input id="birthplace" type="hidden" name="birthplace" value="">
 						</div>
@@ -44,28 +42,50 @@
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label Form__label--required" for="firstname">Prénom</label>
-							<input class="Form__input" id="firstname" type="text" name="firstname" required>
+							<label class="Form__label Form__label--required" for="firstname"
+							>
+								{{- 'Prénom' -}}
+							</label>
+							<input
+								class="Form__input"
+								id="firstname"
+								type="text"
+								name="firstname"
+								placeholder="{{ 'ex. Marie' }}"
+								required
+							>
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
 							<label class="Form__label Form__label--required" for="lastname">Nom</label>
-							<input class="Form__input" id="lastname" type="text" name="lastname" required>
+							<input
+								class="Form__input"
+								id="lastname"
+								type="text"
+								name="lastname"
+								placeholder="{{ 'ex. Martin' }}"
+								required
+							>
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label" for="company_name">Entreprise</label>
-							<input class="Form__input" id="company_name" type="text" name="company_name">
+							<label
+								class="Form__label"
+								for="company_name"
+							>
+								{{- 'Entreprise' -}}
+							</label>
+							<input class="Form__input" id="company_name" type="text" name="company_name" placeholder="{{ 'ex. Vandelay Industries' }}">
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label" for="job_title">Fonction dans l'entreprise</label>
-							<input class="Form__input" id="job_title" type="text" name="job_title">
+							<label class="Form__label" for="job_title">{{- 'Fonction dans l\'entreprise' -}}</label>
+							<input class="Form__input" id="job_title" type="text" name="job_title" placeholder="{{ 'ex. importateur / exportateur' }}">
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
 							<label class="Form__label Form__label--required" for="email">{{- 'Email' -}}</label>
-							<input class="Form__input" id="email" type="email" name="email" required>
+							<input class="Form__input" id="email" type="email" name="email" required placeholder="{{ 'ex. art@vandelay.com' }}">
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
@@ -77,26 +97,49 @@
 								id="cell_phone"
 								type="tel"
 								name="cell_phone"
-								required pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
+								required
+								pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
+								placeholder="{{ 'ex. 01 23 45 67 89' }}"
+							>
 						</div>
 
 						<div class="Form__group col-12">
 							<label class="Form__label Form__label--required" for="address_1">{{- 'Adresse' -}}</label>
-							<input class="Form__input" id="address_1" type="text" name="address_1" required>
+							<input class="Form__input" id="address_1" type="text" name="address_1" required placeholder="{{ 'ex. 99 avenue des Champs-Élysées' }}">
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
 							<label class="Form__label Form__label--required" for="city">{{- 'Ville' -}}</label>
-							<input class="Form__input" id="city" type="text" name="city" required>
+							<input
+								class="Form__input"
+								id="city"
+								type="text"
+								name="city"
+								required
+								placeholder="{{ 'ex. Paris' }}"
+							>
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label Form__label--required" for="postal_code" pattern="([A-Z]+[A-Z]?\-)?[0-9]{1,2} ?[0-9]{3}">Code postal</label>
-							<input class="Form__input Form__input--text" id="postal_code" type="text" name="postal_code" required>
+							<label
+								class="Form__label Form__label--required"
+								for="postal_code"
+							>
+								{{- 'Code postal' -}}
+							</label>
+							<input
+								class="Form__input Form__input--text"
+								id="postal_code"
+								type="text"
+								name="postal_code"
+								required
+								pattern="([A-Z]+[A-Z]?\-)?[0-9]{1,2} ?[0-9]{3}"
+								placeholder="{{ 'ex. 75008' }}"
+							>
 						</div>
 
 						<div class="Form__group col-12">
-							<button class="Form__submit Button Button--outline-secondary" type="submit">{{- 'S\'inscrire' -}}</button>
+							<button class="Form__submit Button Button--outline-secondary" type="submit">{{- 'Je m\'inscrire' -}}</button>
 						</div>
 
 						<div class="Form__group col-12 Form__success">
