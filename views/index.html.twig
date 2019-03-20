@@ -7,8 +7,9 @@
 {# Header #}
 {% include 'header.html.twig' %}
 
+
 <header class="Site-header">
-    <div class="Site-container">
+	<div class="Site-container">
 		<div class="row">
 			<div class="col-12 col-md-4">
 				<a class="d-inline-block" href="{{ site.link }}">
@@ -22,22 +23,22 @@
 					only
 				%}
 			</div>
-            {% if contact.socials is iterable %}
-                <div class="col-12 col-md-1 text-align-md-right">
-                    {% include 'components/socials.html.twig' %}
-                </div>
-            {% endif %}
+			{% if contact.socials is iterable %}
+				<div class="col-12 col-md-1 text-align-md-right">
+					{% include 'components/socials.html.twig' %}
+				</div>
+			{% endif %}
 		</div>
 	</div>
 
-    {% block hero %}
-        <section class="Page__hero Site-container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 itemprop="name" class="Page__hero__title">{{- post.title -}}</h1>
-                </div>
-            </div>
-            <div class="Page__hero__footer">
+	{% block hero %}
+		<section class="Page__hero Site-container">
+			<div class="row">
+				<div class="col-12">
+					<h1 itemprop="name" class="Page__hero__title">{{- post.title -}}</h1>
+				</div>
+			</div>
+			<div class="Page__hero__footer">
 				<button type="button" class="js-scroll-to" data-target="main-container">
 					{% include 'svg/use.html.twig' with { icon: 'scroll-to' } only %}
 					<svg class="scroll-to-dot" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 24">
@@ -45,10 +46,10 @@
 					</svg>
 					<p class="margin-0">{{- __( 'Scroll' ) }}</p>
 				</button>
-            </div>
-        </section>
-        {% include 'common/grid.html.twig' %}
-    {% endblock %}
+			</div>
+		</section>
+		{% include 'common/grid.html.twig' %}
+	{% endblock %}
 
 </header>
 
@@ -61,28 +62,28 @@
 		data-body-class="{{ get_body_class( node_type ) | join( ' ' ) }}"
 	>
 
-        {# Content #}
-        {% block content %}
-            {% if post.content or post.get_field( 'display_partners') %}
-                <section class="Page__content">
-                    <div class="Site-container">
-                        {% if post.content %}
-                            <div class="row">
-                                <div class="col-12 col-md-10 offset-md-1">
-                                    <div class="Wysiwyg">{{- post.content -}}</div>
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
+		{# Content #}
+		{% block content %}
+			{% if post.content or post.get_field( 'display_partners') %}
+				<section class="Page__content">
+					<div class="Site-container">
+						{% if post.content %}
+							<div class="row">
+								<div class="col-12 col-md-10 offset-md-1">
+									<div class="Wysiwyg">{{- post.content -}}</div>
+								</div>
+							</div>
+						{% endif %}
+					</div>
 
-                    {% if post.get_field( 'display_partners') %}{{ partners }}{% endif %}
+					{% if post.get_field( 'display_partners') %}{{ partners }}{% endif %}
 
-                    {% include 'common/grid.html.twig' %}
-                </section>
-            {% endif %}
-        {% endblock %}
+					{% include 'common/grid.html.twig' %}
+				</section>
+			{% endif %}
+		{% endblock %}
 
-		</div>
+	</div>
 </main>
 
 

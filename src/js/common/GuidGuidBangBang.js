@@ -12,25 +12,19 @@ export default class GuidGuidBangBang {
 	}
 
 	init() {
-		// if (this.$cont === null || this.$cont === undefined) {
-		// 	return false;
-		// }
 		return this.initEvents();
 	}
 
 	initEvents() {
-		// show/hide guides with CMD+;
 		document.addEventListener('keydown', (e) => {
 			this.$cont = document.querySelector('.js-guid');
-			if ((e.metaKey || e.ctrlKey) && e.keyCode === 186) {
+			if ((e.metaKey || e.ctrlKey) && 186 === e.keyCode) {
 				this.toggle();
 			}
 		});
 	}
 
 	toggle() {
-		// console.info('Guid.toggle');
-
 		if (this.$cont.classList.contains(this.class)) {
 			return this.hide();
 		}
@@ -45,6 +39,12 @@ export default class GuidGuidBangBang {
 		return this.$cont.classList.add(this.class);
 	}
 
+	/**
+	 * Render
+	 *
+	 * @param  int columns Column number.
+	 * @return div
+	 */
 	static render(columns) {
 		const div = document.createElement('div');
 		const column = index => `

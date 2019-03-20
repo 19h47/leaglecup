@@ -36,7 +36,7 @@
         "compression-webpack-plugin": "^2.0.0",
         "css-loader": "^2.1.0",
         "cssnano": "^4.1.10",
-        "eslint": "^5.15.0",
+        "eslint": "^5.15.3",
         "eslint-config-airbnb-base": "^13.1.0",
         "eslint-config-standard": "^12.0.0",
         "eslint-import-resolver-webpack": "^0.10.1",
@@ -68,6 +68,7 @@
         "@babel/runtime": "^7.3.4",
         "animated-scroll-to": "^1.2.2",
         "bootstrap": "^4.3.1",
+        "formbouncerjs": "^1.4.5",
         "ress": "^1.2.2"
     }
 }

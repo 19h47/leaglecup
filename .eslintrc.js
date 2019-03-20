@@ -17,6 +17,7 @@ module.exports = {
 			props: true,
 			ignorePropertyModificationsFor: ['state']
 		}],
+		'yoda': [2, 'always']
 	},
 	parserOptions: {
 		parser: 'babel-eslint',
