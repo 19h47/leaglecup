@@ -39,8 +39,15 @@
 		@extend %position-relative;
 		@include margin( top $grid-gutter-width / 2 bottom $grid-gutter-width );
 
-		&:first-child { @include margin( top 0 ); }
-		&:last-child { @include margin( bottom 0 ); }
+		#{ $this } > &:first-child { @include margin( top 0 ); }
+		#{ $this } > &:last-child { @include margin( bottom 0 ); }
+
+		transition: opacity 0.3s map-get( $easings, ease-in-out );
+
+		&.is-off {
+			@extend %Pointer-events-none;
+			opacity: 0.3;
+		}
 	}
 
 	//
@@ -70,6 +77,101 @@
 		&--tel {}
 	}
 
+	&__radio {
+		$this: &;
+		@extend .d-flex;
+		@extend %Cursor-pointer;
+
+		&:focus {
+			#{ $this }__input {
+				border: {
+					color: rgba( the_color( blue, very-dark ), 1 );
+				}
+			}
+		}
+
+		&__input {
+			@extend %position-relative;
+			@include size( $grid-gutter-width );
+			@include margin( right $grid-gutter-width / 2 );
+
+			border: {
+				color: rgba( the_color( blue, very-dark ), 0.3 );
+				radius: $grid-gutter-width / 2;
+				style: solid;
+				width: 1px;
+			}
+			transition: border-color 0.3s map-get( $easings, ease-in-out );
+
+			&::after {
+				@include absolute( top 0 right 0 bottom 0 left 0 );
+				@include margin( top $grid-gutter-width / 8 right $grid-gutter-width / 8 bottom $grid-gutter-width / 8 left $grid-gutter-width / 8 );
+				@extend .d-block;
+
+				background-color: rgba( the_color( blue, very-dark ), 0 );
+				border: {
+					radius: $grid-gutter-width / 2;
+				}
+				transition: background-color 0.3s map-get( $easings, ease-in-out );
+				content: '';
+			}
+
+			@at-root #{ $this }.is-active #{ $this }__input {
+				&::after {
+					background-color: rgba( the_color( blue, very-dark ), 1 );
+				}
+			}
+		}
+		&__label {}
+	}
+
+	// .Form__checkbox
+	&__checkbox {
+		$this: &;
+
+		@extend .d-flex, .justify-content-end;
+
+		button {
+			@include size( $grid-gutter-width );
+			@extend %position-relative;
+			@include margin( right $grid-gutter-width / 2 );
+
+			flex: 0 0 auto;
+			border: {
+				color: rgba( the_color( blue, very-dark ), 0.3 );
+				radius: $grid-gutter-width / 4;
+				style: solid;
+				width: 1px;
+			}
+			transition: border-color 0.3s map-get( $easings, ease-in-out );
+
+			&::after {
+				@include absolute( top 0 right 0 bottom 0 left 0 );
+				@include margin( top $grid-gutter-width / 8 right $grid-gutter-width / 8 bottom $grid-gutter-width / 8 left $grid-gutter-width / 8 );
+				@extend .d-block;
+
+				background-color: rgba( the_color( blue, very-dark ), 0 );
+				border: {
+					radius: $grid-gutter-width / 8;
+				}
+				transition: background-color 0.3s map-get( $easings, ease-in-out );
+				content: '';
+			}
+
+			&:focus {
+				border: {
+					color: rgba( the_color( blue, very-dark ), 1 );
+				}
+			}
+
+			@at-root #{ $this }.is-active button {
+				&::after {
+					background-color: rgba( the_color( blue, very-dark ), 1 );
+				}
+			}
+		}
+	}
+
 	//
 	&__label {
 		@include margin( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
@@ -95,10 +197,13 @@
 		width: 100%;
 	}
 
-	&__required-message {
-		color: the_color( red, pure );
+	&__message {
 		font-size: 13.5px;
 		line-height: $grid-gutter-width;
+
+		&--required {
+			color: the_color( red, pure );
+		}
 	}
 
 	//

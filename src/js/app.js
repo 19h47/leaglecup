@@ -1,5 +1,6 @@
 import GuidGuidBangBang from 'Common/GuidGuidBangBang';
 import ElectronicSignature from 'Blocks/ElectronicSignature';
+import Form from 'Blocks/Form';
 import animateScrollTo from 'animated-scroll-to';
 
 (() => {
@@ -12,6 +13,10 @@ import animateScrollTo from 'animated-scroll-to';
 	//
 	const electronicSignature = new ElectronicSignature('.js-electronic-signature');
 	electronicSignature.init();
+
+	//
+	const form = new Form('.js-form');
+	form.init();
 
 	// Scroll to button
 	const buttons = document.querySelectorAll('.js-scroll-to');

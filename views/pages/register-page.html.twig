@@ -20,7 +20,7 @@
 
 			<div class="row">
 				<div class="col-12 col-md-8 offset-md-2">
-					<form class="Form row js-electronic-signature" method="post">
+					<form class="Form row js-electronic-signature js-form" method="post">
 
 						<div class="Form__group d-none">
 							{# Hidden #}
@@ -79,7 +79,7 @@
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label" for="job_title">{{- 'Fonction dans l\'entreprise' -}}</label>
+							<label class="Form__label" for="job_title">{{- 'Profession' -}}</label>
 							<input class="Form__input" id="job_title" type="text" name="job_title" placeholder="{{ 'ex. importateur / exportateur' }}">
 						</div>
 
@@ -138,8 +138,138 @@
 							>
 						</div>
 
+						<div class="Form__group col-12 col-md-6">
+							<label class="Form__label" for="license_number">Numéro de licence</label>
+							<input class="Form__input" id="license_number" type="text" name="license_number" placeholder="ex.">
+						</div>
+
+						<div class="Form__group col-12 col-md-6">
+							<label class="Form__label" for="ffg_index">Index FFG</label>
+							<input class="Form__input" id="ffg_index" type="text" name="ffg_index" placeholder="ex.">
+						</div>
+
 						<div class="Form__group col-12">
-							<button class="Form__submit Button Button--outline-secondary" type="submit">{{- 'Je m\'inscrire' -}}</button>
+							<div class="row">
+								<div class="col-8">
+									<p><strong>Description</strong></p>
+								</div>
+								<div class="col-2"><p class="text-align-right"><strong>Prix</strong></p></div>
+								<div class="col-2"><p class="text-align-right"><strong>Total</strong></p></div>
+							</div>
+
+							<div class="Form__group row">
+								<div class="col-8">
+									<p><strong>Participation à la Leagle Cup incluant</strong><br>
+										Inscription à la compétition du 12 octobre 2019<br>
+										Green-fee pour accès au parcours le 12 octobre 2019<br>
+										1 jeton de practice (le 12 octobre 2019)<br>
+										1 chariot manuel (le 12 octobre 2019)<br>
+										Cocktail dînatoire du 11 octobre 2019<br>
+										Buffet de remise des prix du 12 octobre 2019<br>
+										1 nuit (11 octobre 2019) à l’hôtel Barrière Hermitage La Baule (base chambre single)<br>
+										OFFERT / Le polo de la compétition
+									</p>
+									<div class="margin-bottom-3">
+										<label class="Form__label" for="t-shirt-size">Préciser la tailler</label>
+										<select class="Form__select" id="t-shirt-size" name="t-shirt-size">
+											<option value="S">S</option>
+											<option value="M">M</option>
+											<option value="L">L</option>
+											<option value="XL">XL</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-2"><p class="text-align-right">180 €</p></div>
+								<div class="col-2"><p class="text-align-right">180 €</p></div>
+							</div>
+							<div class="Form__group row">
+								<div class="col-8">
+									<p><strong>Options 1</strong><br>Chambre double</p>
+								</div>
+								<div class="col-2"><p class="text-align-right">50 €</p></div>
+								<div class="col-2 text-align-right">
+									<div class="Form__checkbox js-checkbox ">
+										<button type="button"></button>
+										<input class="d-none js-calc" type="checkbox" data-number="50">
+									</div>
+								</div>
+							</div>
+
+							<div class="Form__group row">
+								<div class="col-8">
+									<p><strong>Options 2</strong><br>Green-fee pour accès au parcours le 11 octobre 2019</p>
+								</div>
+								<div class="col-2"><p class="text-align-right">47 €</p></div>
+								<div class="col-2 text-align-right">
+									<div class="Form__checkbox js-checkbox">
+										<button type="button"></button>
+										<input class="d-none js-calc" type="checkbox" data-number="47">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-2 offset-10">
+									<p class="text-align-right Form__label--required"><span class="js-total">180</span> €</p></div>
+							</div>
+
+
+							<div class="row">
+								<div class="col-12">
+									<p class="Form__message Form__message--required margin-0 text-align-right">
+										* TVA non applicable, article 293B du Code Général des Impôts
+									</p>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="Form__group col-12">
+							<p class="Form__label Form__label--required">Obligatoire</p>
+							<div class="Form__checkbox js-checkbox">
+								<button type="button"></button>
+								<span>J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)</span>
+								<input class="d-none" type="checkbox">
+							</div>
+						</div>
+
+						<div class="Form__group js-radios col-12">
+							<h3 class="Form__label">Équipe scramble à 2</h3>
+
+							<div class="Form__group">
+								<div class="Form__radio js-radio" tabindex="0">
+									<span class="Form__radio__input"></span>
+									<span class="Form__radio__label">Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire</span>
+									<input class="d-none" type="radio" id="scramble_alone" name="scramble" value="scramble_alone" checked>
+								</div>
+							</div>
+
+							<div class="Form__group">
+								<div class="Form__radio js-radio" tabindex="0" data-condition-class="js-condition-scramble-team">
+									<span class="Form__radio__input"></span>
+									<span class="Form__radio__label">Je constitue une équipe</button>
+									<input class="d-none" type="radio" id="scramble_team" name="scramble" value="scramble_team">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="Form__group js-condition-scramble-team is-off col-12 col-md-6">
+									<label class="Form__label" for="scramble_team_gender">{{- 'Genre de l\'équipe' -}}</label>
+									<select class="Form__select" name="scramble_team_gender" id="scramble_team_gender">
+										<option value="Monsieur">Monsieur</option>
+										<option value="Madame">Madame</option>
+									</select>
+								</div>
+								<div class="Form__group js-condition-scramble-team is-off col-12 col-md-6">
+									<label class="Form__label" for="scramble_team_name">{{- 'Nom de l\'équipe' -}}</label>
+									<input class="Form__input" id="scramble_team_name" type="text" placeholder="ex. Les croustillants">
+								</div>
+							</div>
+
+						</div>
+
+						<div class="Form__group col-12">
+							<button class="Form__submit Button Button--outline-secondary" type="submit">{{- 'Je m\'inscris' -}}</button>
 						</div>
 
 						<div class="Form__group col-12 Form__success">
@@ -151,7 +281,24 @@
 						</div>
 
 						<div class="Form__group col-12">
-							<p class="Form__required-message margin-0 text-align-right">* Champs obligatoires</p>
+							<p><strong>Conditions de règlement</strong><br>par virement bancaire</p>
+							<p><strong>Coordonnées bancaires :</strong><br>
+								Titulaire du compte : Association LEAGLE CUP<br>
+								RIB : 10278 36058 00011198401 38<br>
+								IBAN : FR76 10278360580001119840138<br>
+								BIC : CMCIFR2A
+							</p>
+						</div>
+
+						<div class="Form__group col-12">
+							<p><strong>Attention</strong><br>
+								L’inscription n’est définitive qu’à réception intégrale de la participation<br>
+								L’inscription entraîne l’acceptation pleine et entière des termes du règlement de la compétition et l’engagement du participant de s’y conformer
+							</p>
+						</div>
+
+						<div class="Form__group col-12">
+							<p class="Form__message Form__message--required margin-0 text-align-right">* Champs obligatoires</p>
 						</div>
 
 					</form>
