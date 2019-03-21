@@ -4,34 +4,14 @@ LEAGLE CUP is a website for golf lovers.
 
 ![leaglecup](screenshot.png)
 
-## PHPCS
+## [WordPress Coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards)
 
-### Install the WordPress rules
+**Step 1:** Run `make create_project` to install `wp-coding-standards/wpcs`.
 
-Add __PHP_CodeSniffer__ to the `composer.json` file
+**Step 2:** Run `composer config-set` to set path for `wpcs`.
 
-```json
-{
-    "require": {
-        "squizlabs/php_codesniffer": "*"
-    }
-}
-```
-
-Then update dependencies
+You are now able to lint PHP files using WordPress Coding standards, for example with `functions.php`:
 
 ```bash
-composer update
-```
-
-Create the project
-
-```bash
-Make create-project
-```
-
-### Add the Rules to PHP CodeSniffer
-
-```bash
-Make config-set
+composer lint functions.php
 ```

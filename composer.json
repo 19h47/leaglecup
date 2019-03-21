@@ -1,14 +1,15 @@
 {
     "require": {
-        "timber/timber": "^1.8"
+        "timber/timber": "1.9.2"
     },
     "scripts": {
-		"lint": "vendor/bin/phpcs --standard=WordPress"
-	},
-    "support"    : {
-		"issues": "https://github.com/19h47/leaglecup/issues",
-		"source": "https://github.com/19h47/leaglecup"
-	},
+        "config-set": "vendor/bin/phpcs --config-set installed_paths wpcs",
+        "lint": "vendor/bin/phpcs --standard=WordPress"
+    },
+    "support": {
+        "issues": "https://github.com/19h47/leaglecup/issues",
+        "source": "https://github.com/19h47/leaglecup"
+    },
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
         "phpcompatibility/phpcompatibility-wp": "*"
