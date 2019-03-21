@@ -17,10 +17,13 @@ module.exports = {
 			props: true,
 			ignorePropertyModificationsFor: ['state']
 		}],
-		'yoda': [2, 'always']
+		'yoda': [2, 'always'],
+		"import/no-named-as-default": 0
 	},
+	parser: 'babel-eslint',
 	parserOptions: {
-		parser: 'babel-eslint',
+  		sourceType: 'module',
+  		allowImportExportEverywhere: true
 	},
 	settings: {
 		'import/resolver': {

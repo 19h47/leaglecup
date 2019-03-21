@@ -6,6 +6,8 @@ import Bouncer from 'formbouncerjs';
 
 import config from 'js/config';
 
+const CreateCustomerProperty = import('Utils/CreateCustomerProperty'/* webpackChunkName: "create-customer-property" */);
+
 export default class ElectronicSignature {
 	constructor(element) {
 		// eslint-disable-next-line
@@ -33,6 +35,17 @@ export default class ElectronicSignature {
 
 		this.$elements = this.$form.querySelectorAll('input,select,textarea');
 		this.data = {};
+		this.properties = {
+			licence_number: '',
+			ffg_index: '',
+			t_shirt_size: '',
+			medical_certificate: '',
+			scramble: '', // scramble_alone || scramble_team
+			scramble_team_gender: '',
+			scramble_team_name: '',
+			option_1: '',
+			option_2: '',
+		};
 
 		this.customer_number = new Date().getTime();
 		this.number = new Date().getTime();
@@ -54,12 +67,24 @@ export default class ElectronicSignature {
 				// eslint-disable-next-line
 				this.data[pair[0]] = pair[1];
 			}
+
+			this.properties = {
+				licence_number: this.data.licence_number,
+				ffg_index: this.data.ffg_index,
+				t_shirt_size: this.data.t_shirt_size,
+				medical_certificate: this.data.medical_certificate || false,
+				scramble: this.data.scramble,
+				scramble_team_gender: this.data.scramble_team_gender,
+				scramble_team_name: this.data.scramble_team_name || false,
+				option_1: this.data.option_1 || false,
+				option_2: this.data.option_2 || false,
+			};
+
 			this.connect();
 		});
 	}
 
 	connect() {
-		console.log(this.data);
 		const customer = new CreateCustomer(
 			this.data,
 			this.param,
@@ -85,6 +110,16 @@ export default class ElectronicSignature {
 			.then(() => {
 				contractor.init();
 				contract.init();
+
+				// eslint-disable-next-line
+				for (let [key, value] of Object.entries(this.properties)) {
+					const property = new CreateCustomerProperty(
+						this.customer_number,
+						key,
+						value,
+					);
+					property.init();
+				}
 
 				return true;
 			})

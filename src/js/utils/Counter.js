@@ -1,3 +1,8 @@
+/**
+ * Class Counter
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
 export default class Counter {
 	constructor(element) {
 		this.$element = element;
@@ -19,10 +24,6 @@ export default class Counter {
 			this.checkboxes[i].addEventListener('change', (event) => {
 				const number = parseInt(event.target.getAttribute('data-number'), 10);
 				const total = parseInt(this.$total.innerHTML, 10);
-
-				console.log(event.target.checked);
-				console.log(total);
-				console.log(number);
 
 				Counter.calc(event.target.checked, number, total, this.$total);
 			});

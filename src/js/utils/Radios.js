@@ -1,3 +1,8 @@
+/**
+ * Class Radios
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
 export default class Radios {
 	constructor(element) {
 		this.$element = element;
@@ -21,6 +26,10 @@ export default class Radios {
 				this.deactivateAll();
 				Radios.toggle(this.elements[i], input, this.elements[i].classList.contains('is-active'));
 			});
+
+			if (input.checked) {
+				Radios.activate(this.elements[i], input, false);
+			}
 		}
 	}
 
@@ -52,7 +61,6 @@ export default class Radios {
 			conditionalEls[i].classList.remove('is-off');
 		}
 
-		radio.value = 1;
 		radio.setAttribute('checked', true);
 
 		return true;
@@ -77,7 +85,6 @@ export default class Radios {
 			conditionalEls[i].classList.add('is-off');
 		}
 
-		radio.value = 0;
 		radio.removeAttribute('checked');
 
 		return true;

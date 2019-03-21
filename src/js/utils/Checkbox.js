@@ -1,3 +1,8 @@
+/**
+ * Class Checkbox
+ *
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ */
 export default class Checkbox {
 	constructor(element) {
 		this.$element = element;
@@ -10,6 +15,10 @@ export default class Checkbox {
 		this.$checkbox = this.$element.querySelector('input');
 
 		this.isActive = this.$element.classList.contains('is-active');
+
+		// Condition
+		const conditionClass = this.$element.getAttribute('data-condition-class');
+		this.conditionalEls = document.querySelectorAll(`.${conditionClass}`) || [];
 
 		this.initEvents();
 
@@ -64,6 +73,10 @@ export default class Checkbox {
 		this.$element.classList.add('is-active');
 		this.$button.classList.add('is-selected');
 
+		for (let i = 0; i < this.conditionalEls.length; i += 1) {
+			this.conditionalEls[i].classList.remove('is-off');
+		}
+
 		this.$checkbox.value = 1;
 		this.$checkbox.setAttribute('checked', true);
 
@@ -82,6 +95,10 @@ export default class Checkbox {
 		this.isActive = false;
 		this.$element.classList.remove('is-active');
 		this.$button.classList.remove('is-selected');
+
+		for (let i = 0; i < this.conditionalEls.length; i += 1) {
+			this.conditionalEls[i].classList.add('is-off');
+		}
 
 		this.$checkbox.value = 0;
 		this.$checkbox.removeAttribute('checked');
