@@ -24,7 +24,9 @@ function resolve(dir) {
 }
 
 // Manifest plugin
-const manifestPlugin = new ManifestPlugin();
+const manifestPlugin = new ManifestPlugin({
+	publicPath: 'dist/'
+});
 
 module.exports = {
 	devServer: {
@@ -120,7 +122,8 @@ module.exports = {
 			use: [{
 				loader: 'file-loader',
 				options: {
-					outputPath: 'img/svg'
+					outputPath: 'img/svg',
+					name: '[name].[ext]',
 				}
 			},
 			{
@@ -158,7 +161,7 @@ module.exports = {
 				loader: 'file-loader',
 				options: {
 					outputPath: 'img/',
-					name: '[ext]/[hash].[ext]',
+					name: '[ext]/[name].[ext]',
 					// publicPath: '../img/',
 				},
 			},

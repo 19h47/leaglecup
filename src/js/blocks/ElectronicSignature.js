@@ -1,12 +1,12 @@
 import CreateCustomer from 'Utils/CreateCustomer';
 import CreateContract from 'Utils/CreateContract';
 import CreateContractor from 'Utils/CreateContractor';
+import AddContractProperty from 'Utils/AddContractProperty';
 
 import Bouncer from 'formbouncerjs';
 
 import config from 'js/config';
 
-const CreateCustomerProperty = import('Utils/CreateCustomerProperty'/* webpackChunkName: "create-customer-property" */);
 
 export default class ElectronicSignature {
 	constructor(element) {
@@ -36,15 +36,16 @@ export default class ElectronicSignature {
 		this.$elements = this.$form.querySelectorAll('input,select,textarea');
 		this.data = {};
 		this.properties = {
-			licence_number: '',
-			ffg_index: '',
-			t_shirt_size: '',
-			medical_certificate: '',
-			scramble: '', // scramble_alone || scramble_team
-			scramble_team_gender: '',
-			scramble_team_name: '',
-			option_1: '',
-			option_2: '',
+			license_number: '', // string
+			ffg_index: '', // string
+			t_shirt_size: 'S', // string: 'S' || 'M' || 'L' || 'XL'
+			medical_certificate: false, // boolean: true || false
+			scramble: '', // string: 'Je viens seul' || 'Je constitue une équipe'
+			scramble_lastname_second_player: '', // string
+			scramble_firstname_second_player: '', // string
+			scramble_license_number_second_player: '', // string
+			option_1: false, // boolean: true || false
+			option_2: false, // boolean: true || false
 		};
 
 		this.customer_number = new Date().getTime();
@@ -69,13 +70,14 @@ export default class ElectronicSignature {
 			}
 
 			this.properties = {
-				licence_number: this.data.licence_number,
+				license_number: this.data.license_number,
 				ffg_index: this.data.ffg_index,
 				t_shirt_size: this.data.t_shirt_size,
 				medical_certificate: this.data.medical_certificate || false,
 				scramble: this.data.scramble,
-				scramble_team_gender: this.data.scramble_team_gender,
-				scramble_team_name: this.data.scramble_team_name || false,
+				scramble_lastname_second_player: this.data.scramble_lastname_second_player,
+				scramble_firstname_second_player: this.data.scramble_firstname_second_player,
+				scramble_license_number_second_player: this.data.scramble_license_number_second_player,
 				option_1: this.data.option_1 || false,
 				option_2: this.data.option_2 || false,
 			};
@@ -106,6 +108,7 @@ export default class ElectronicSignature {
 			config.VENDOR_EMAIL,
 		);
 
+
 		customer.init()
 			.then(() => {
 				contractor.init();
@@ -113,8 +116,7 @@ export default class ElectronicSignature {
 
 				// eslint-disable-next-line
 				for (let [key, value] of Object.entries(this.properties)) {
-					const property = new CreateCustomerProperty(
-						this.customer_number,
+					const property = new AddContractProperty(
 						key,
 						value,
 					);

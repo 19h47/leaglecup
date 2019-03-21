@@ -18,7 +18,7 @@ module.exports = merge(
     common,
     {
         output: {
-            filename: 'js/[name].[chunkhash:8].js'
+            filename: 'js/[name].js'
         },
         mode: 'production',
         devtool: false,
@@ -55,7 +55,7 @@ module.exports = merge(
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: 'css/main.[chunkhash:8].css'
+                filename: 'css/main.css'
             }),
 			new PurgecssPlugin({
       			paths: glob.sync(path.join(__dirname, '..', 'views/**/*.html.twig')),

@@ -78,10 +78,9 @@ class LeagleCup extends Timber {
 		$this->theme_name    = $theme_name;
 		$this->theme_version = $theme_version;
 
-		$this->setup();
 		$this->load_dependencies();
+		$this->setup();
 
-		$this->theme_manifest = get_theme_manifest();
 
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
@@ -247,15 +246,6 @@ class LeagleCup extends Timber {
 			);
 		}
 
-		$twig->addFunction(
-			new Twig_SimpleFunction(
-				'get_theme_manifest',
-				function () {
-					return $this->theme_manifest;
-				}
-			)
-		);
-
 		return $twig;
 	}
 
@@ -312,7 +302,6 @@ class LeagleCup extends Timber {
 		$context['prices']   = Timber::get_sidebar( 'prices.php' );
 
 		$context['current_url'] = home_url( add_query_arg( array(), $wp->request ) );
-		$context['manifest']    = $this->theme_manifest;
 
 		return $context;
 	}
@@ -379,7 +368,7 @@ class LeagleCup extends Timber {
 		// Theme stylesheet.
 		wp_register_style(
 			$this->theme_name . '-global',
-			get_template_directory_uri() . '/dist/' . $this->theme_manifest['main.css'],
+			get_template_directory_uri() . '/dist/css/main.css',
 			array(),
 			'1.0.0'
 		);
@@ -400,7 +389,7 @@ class LeagleCup extends Timber {
 
 		wp_register_script(
 			$this->theme_name . '-main',
-			get_template_directory_uri() . '/dist/' . $this->theme_manifest['main.js'],
+			get_template_directory_uri() . '/dist/js/main.js',
 			array(),
 			'1.0.0',
 			true

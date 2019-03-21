@@ -56,23 +56,3 @@ if ( ! function_exists( 'html_class' ) ) :
 		return 'class="' . join( ' ', get_html_class( $class ) ) . '"';
 	}
 endif;
-
-if ( ! function_exists( 'get_theme_manifest' ) ) :
-
-	/**
-	 * Get theme manifest
-	 *
-	 * @return bool|arr
-	 * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
-	 */
-	function get_theme_manifest() {
-		if ( is_admin() ) {
-			return false;
-		}
-
-		$request = wp_remote_get( get_template_directory_uri() . '/dist/manifest.json' );
-
-		return json_decode( wp_remote_retrieve_body( $request ), true );
-	}
-
-endif;

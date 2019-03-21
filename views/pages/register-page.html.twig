@@ -73,7 +73,7 @@
 								class="Form__label"
 								for="company_name"
 							>
-								{{- 'Entreprise' -}}
+								{{- 'Raison sociale' -}}
 							</label>
 							<input class="Form__input" id="company_name" type="text" name="company_name" placeholder="{{ 'ex. Vandelay Industries' }}">
 						</div>
@@ -139,8 +139,8 @@
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label" for="licence_number">Numéro de licence</label>
-							<input class="Form__input" id="licence_number" type="text" name="licence_number" placeholder="ex.">
+							<label class="Form__label" for="license_number">Numéro de licence</label>
+							<input class="Form__input" id="license_number" type="text" name="license_number" placeholder="ex.">
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
@@ -157,7 +157,7 @@
 								<div class="col-2"><p class="text-align-right"><strong>Total</strong></p></div>
 							</div>
 
-							<div class="Form__group row">
+							<div class="Form__group row overflow-hidden">
 								<div class="col-8">
 									<p><strong>Participation à la Leagle Cup incluant</strong><br>
 										Inscription à la compétition du 12 octobre 2019<br>
@@ -179,14 +179,14 @@
 										</select>
 									</div>
 								</div>
-								<div class="col-2"><p class="text-align-right">180 €</p></div>
-								<div class="col-2"><p class="text-align-right">180 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">180 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">180 €</p></div>
 							</div>
 							<div class="Form__group row">
 								<div class="col-8">
 									<p><strong>Options 1</strong><br>Chambre double</p>
 								</div>
-								<div class="col-2"><p class="text-align-right">50 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox ">
 										<button type="button"></button>
@@ -199,7 +199,7 @@
 								<div class="col-8">
 									<p><strong>Options 2</strong><br>Green-fee pour accès au parcours le 11 octobre 2019</p>
 								</div>
-								<div class="col-2"><p class="text-align-right">47 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">47 €</p></div>
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox">
 										<button type="button"></button>
@@ -209,8 +209,8 @@
 							</div>
 
 							<div class="row">
-								<div class="col-2 offset-10">
-									<p class="text-align-right Form__label--required"><span class="js-total">180</span> €</p></div>
+								<div class="col-12">
+									<p class="text-align-right Form__label--required white-space-nowrap"><span class="js-total">180</span> €</p></div>
 							</div>
 
 
@@ -226,7 +226,7 @@
 
 						<div class="Form__group col-12">
 							<p class="Form__label Form__label--required">Obligatoire</p>
-							<div class="Form__checkbox js-checkbox" data-condition-class="js-condition-medical-certificate">
+							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" data-condition-class="js-condition-medical-certificate">
 								<button type="button"></button>
 								<span>J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)</span>
 								<input class="d-none" id="medical_certificate" name="medical_certificate" type="checkbox" required>
@@ -240,7 +240,7 @@
 								<div class="Form__radio js-radio" tabindex="0">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire</span>
-									<input class="d-none" type="radio" id="scramble_alone" name="scramble" value="scramble_alone" checked>
+									<input class="d-none" type="radio" id="scramble_alone" name="scramble" value="Je viens seul" checked>
 								</div>
 							</div>
 
@@ -248,21 +248,25 @@
 								<div class="Form__radio js-radio" tabindex="0" data-condition-class="js-condition-scramble-team">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je constitue une équipe</button>
-									<input class="d-none" type="radio" id="scramble_team" name="scramble" value="scramble_team">
+									<input class="d-none" type="radio" id="scramble_team" name="scramble" value="Je constitue une équipe">
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="Form__group js-condition-scramble-team is-off col-12 col-md-6">
-									<label class="Form__label" for="scramble_team_gender">{{- 'Genre de l\'équipe' -}}</label>
-									<select class="Form__select" name="scramble_team_gender" id="scramble_team_gender">
-										<option value="Monsieur">Monsieur</option>
-										<option value="Madame">Madame</option>
-									</select>
+									<label class="Form__label" for="scramble_lastname_second_player">{{- 'Nom du deuxième joueur' -}}</label>
+									<input class="Form__input" id="scramble_lastname_second_player" type="text" name="scramble_lastname_second_player" placeholder="ex. Bernard">
 								</div>
 								<div class="Form__group js-condition-scramble-team is-off col-12 col-md-6">
-									<label class="Form__label" for="scramble_team_name">{{- 'Nom de l\'équipe' -}}</label>
-									<input class="Form__input" id="scramble_team_name" name="scramble_team_name" type="text" placeholder="ex. Les croustillants">
+									<label class="Form__label" for="scramble_firstname_second_player">{{- 'Prénom du deuxième joueur' -}}</label>
+									<input class="Form__input" id="scramble_firstname_second_player" name="scramble_firstname_second_player" type="text" placeholder="ex. Jean">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="Form__group js-condition-scramble-team is-off col-12">
+									<label class="Form__label" for="scramble_license_number_second_player">Numéro de licence du deuxième joueur</label>
+									<input class="Form__input" id="scramble_license_number_second_player" type="text" name="scramble_license_number_second_player" placeholder="ex.">
 								</div>
 							</div>
 

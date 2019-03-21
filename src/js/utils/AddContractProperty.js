@@ -1,24 +1,24 @@
 import config from 'js/config';
 
 /**
- * Create customer property
+ * Add Contract Property
  *
- * @param int customer_number
  * @param str key
  * @param     value
  */
-export default class CreateCustomerProperty {
+export default class addContractProperty {
 	// eslint-disable-next-line
-	constructor(customer_number, key, value) {
+	constructor(key, value) {
 		const params = {
-			action: 'getOrCreateCustomerProperty',
-			customer_number,
+			action: 'addContractProperty',
+			j_token: config.TOKEN,
+			contract_id: config.CONTRACT_DEFINITION_ID,
 			key,
 			value,
-			id: -1,
+			to_fill_by_user: true,
 		};
 
-		this.url = new URL(`${config.HOST}/calinda/hub/selling/model/customerproperty/update`);
+		this.url = new URL(`${config.HOST}/calinda/hub/selling/model/contractproperty/insert`);
 
 		Object.keys(params).forEach(k => this.url.searchParams.append(k, params[k]));
 	}
