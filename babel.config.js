@@ -11,7 +11,7 @@ const presets = [
         },
         useBuiltIns: "entry",
     },
-    ],
+],
     ];
 
     const plugins = [

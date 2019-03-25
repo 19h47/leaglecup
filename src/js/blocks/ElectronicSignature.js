@@ -112,16 +112,17 @@ export default class ElectronicSignature {
 		customer.init()
 			.then(() => {
 				contractor.init();
-				contract.init();
-
-				// eslint-disable-next-line
-				for (let [key, value] of Object.entries(this.properties)) {
-					const property = new AddContractProperty(
-						key,
-						value,
-					);
-					property.init();
-				}
+				contract.init().then((data) => {
+					// eslint-disable-next-line
+					for (let [key, value] of Object.entries(this.properties)) {
+						const property = new AddContractProperty(
+							key,
+							value,
+							data.id,
+						);
+						property.init();
+					}
+				});
 
 				return true;
 			})

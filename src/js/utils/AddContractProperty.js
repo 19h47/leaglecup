@@ -8,11 +8,11 @@ import config from 'js/config';
  */
 export default class addContractProperty {
 	// eslint-disable-next-line
-	constructor(key, value) {
+	constructor(key, value, contract_id) {
 		const params = {
 			action: 'addContractProperty',
 			j_token: config.TOKEN,
-			contract_id: config.CONTRACT_DEFINITION_ID,
+			contract_id,
 			key,
 			value,
 			to_fill_by_user: true,

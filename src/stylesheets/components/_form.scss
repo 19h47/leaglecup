@@ -20,6 +20,23 @@
 
 	&__error {
 		@extend .d-none;
+		p {
+			@extend %text-align-center, %margin-y-0;
+			@include padding(
+				top ( $grid-gutter-width / 2 ) + 2
+				right $grid-gutter-width / 1.5
+				bottom ( $grid-gutter-width / 2 ) + 2
+				left $grid-gutter-width / 1.5
+			);
+
+			border: {
+				color: currentColor;
+				radius: $grid-gutter-width / 2;
+				style: solid;
+				width: 1px;
+			}
+			color: the_color( red, pure );
+		}
 
 		@at-root #{ $this }--error & {
 			@extend .d-block;
@@ -28,6 +45,23 @@
 
 	&__success {
 		@extend .d-none;
+		p {
+			@extend %text-align-center, %margin-y-0;
+			@include padding(
+				top ( $grid-gutter-width / 2 ) + 2
+				right $grid-gutter-width / 1.5
+				bottom ( $grid-gutter-width / 2 ) + 2
+				left $grid-gutter-width / 1.5
+			);
+
+			border: {
+				color: currentColor;
+				radius: $grid-gutter-width / 2;
+				style: solid;
+				width: 1px;
+			}
+			color: the_color( yellow,  soft );
+		}
 
 		@at-root #{ $this }--success & {
 			@extend .d-block;
