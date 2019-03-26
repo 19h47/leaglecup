@@ -22,7 +22,7 @@ Partners
 				<div class="page-block__content Wysiwyg">{{- block.content -}}</div>
 
 				{% if block.link %}
-					<a class="Button Button--outline-primary" href="{{ block.link.url }}"{{ block.link.target ? ' target="_blank"' }}>
+					<a class="page-block__button Button Button--outline-primary" href="{{ block.link.url }}"{{ block.link.target ? ' target="_blank"' }}>
 						{{- block.link.title | default( 'Découvrir' ) -}}
 					</a>
 				{% endif %}

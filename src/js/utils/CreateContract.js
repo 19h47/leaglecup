@@ -1,3 +1,5 @@
+import config from 'js/config';
+
 /**
  * Create contract
  *
@@ -12,17 +14,12 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class CreateContract {
-	// eslint-disable-next-line
-	constructor(param, host, number, contract_definition_id, vendor_email) {
-		const params = Object.assign({
-			action: 'createContract',
-		},
-		param,
-		{
+	constructor(param, number) {
+		this.body = {
 			date: new Date().getTime(),
-			vendor_email,
+			vendor_email: config.VENDOR_EMAIL,
 			customer_number: number,
-			contract_definition_id,
+			contract_definition_id: config.CONTRACT_DEFINITION_ID,
 			closed: false,
 			message_title: '',
 			message_body: '',
@@ -30,15 +27,20 @@ export default class CreateContract {
 			keep_on_move: false,
 			transaction_id: '',
 			customer_entity_id: -1,
-		});
+		};
 
-		this.url = new URL(`${host}/calinda/hub/selling/model/contract/create`);
-
-		Object.keys(params).forEach(key => this.url.searchParams.append(key, params[key]));
+		this.url = `${config.HOST}/calinda/hub/selling/model/contract/create?action=createContract`;
 	}
 
 	async init() {
-		const response = await fetch(this.url);
+		const response = await fetch(`https://cors-anywhere.herokuapp.com/${this.url}`, {
+			method: 'POST',
+			headers: {
+				j_token: config.TOKEN,
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(this.body),
+		});
 
 		return response.json();
 	}

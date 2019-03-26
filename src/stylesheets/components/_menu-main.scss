@@ -21,6 +21,27 @@
     }
     line-height: #{ $base-line-height }px;
 
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@at-root .js & {
+		opacity: 0;
+		animation: {
+			name: fadeIn;
+			duration: 0.7s;
+			timing-function: map-get( $easings, ease-in-out );
+			iteration-count: 1;
+			fill-mode: forwards;
+		}
+	}
+
     // .Menu-main__item
     &__item {}
 

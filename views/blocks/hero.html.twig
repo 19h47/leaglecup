@@ -16,7 +16,7 @@ Hero-block
 				<div class="page-block__content Wysiwyg">{{- hero.content -}}</div>
 
 				{% if hero.link %}
-					<a class="Hero-block__button Button Button--outline-primary" href="{{ hero.link.url }}"{{ hero.link.target ? ' target="_blank"' }}>
+					<a class="page-block__button Hero-block__button Button Button--outline-primary" href="{{ hero.link.url }}"{{ hero.link.target ? ' target="_blank"' }}>
 						{{- hero.link.title | default( 'Découvrir' ) -}}
 					</a>
 				{% endif %}

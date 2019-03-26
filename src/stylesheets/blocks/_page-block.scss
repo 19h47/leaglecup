@@ -6,6 +6,18 @@
 
 	transition: 0.7s map-get( $easings, ease );
 
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translate3d( 0, $grid-gutter-width, 0);
+		}
+
+		to {
+			opacity: 1;
+			transform: translate3d( 0, 0, 0 );
+		}
+	}
+
 	/**
 	 * Fade in
 	 */
@@ -44,12 +56,50 @@
             top 0
             bottom $grid-gutter-width
         );
+
+		@at-root .js & {
+			opacity: 0;
+			animation: {
+				duration: 0.7s;
+				timing-function: map-get( $easings, ease-in-out );
+				delay: 0;
+				iteration-count: 1;
+				name: fadeInUp;
+				fill-mode: forwards;
+			}
+		}
     }
 
     // .block-content
     &__content {
         @include margin( bottom $grid-gutter-width );
+
+		@at-root .js & {
+			opacity: 0;
+			animation: {
+				duration: 0.9s;
+				timing-function: map-get( $easings, ease-in-out );
+				delay: 0.1s;
+				iteration-count: 1;
+				name: fadeInUp;
+				fill-mode: forwards;
+			}
+		}
     }
+
+	&__button {
+		@at-root .js & {
+			opacity: 0;
+			animation: {
+				duration: 1.1s;
+				timing-function: map-get( $easings, ease-in-out );
+				delay: 0.2s;
+				iteration-count: 1;
+				name: fadeInUp;
+				fill-mode: forwards;
+			}
+		}
+	}
 
     // .page-block__inner
     &__inner {

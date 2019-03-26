@@ -77,7 +77,7 @@ export default class Checkbox {
 			this.conditionalEls[i].classList.remove('is-off');
 		}
 
-		this.$checkbox.value = 1;
+		this.$checkbox.value = 'true';
 		this.$checkbox.setAttribute('checked', true);
 
 		return true;
@@ -100,7 +100,7 @@ export default class Checkbox {
 			this.conditionalEls[i].classList.add('is-off');
 		}
 
-		this.$checkbox.value = 0;
+		this.$checkbox.value = 'false';
 		this.$checkbox.removeAttribute('checked');
 
 		return true;

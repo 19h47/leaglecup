@@ -81,7 +81,6 @@ class LeagleCup extends Timber {
 		$this->load_dependencies();
 		$this->setup();
 
-
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 

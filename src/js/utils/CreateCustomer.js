@@ -1,3 +1,5 @@
+import config from 'js/config';
+
 /**
  * Create customer
  *
@@ -10,16 +12,12 @@
  */
 export default class CreateCustomer {
 	// eslint-disable-next-line
-	constructor(data, param, host, customer_code, number) {
-		const params = Object.assign({
-			action: 'selectOrCreateCustomer',
-		},
-		param,
-		{
+	constructor(data, customer_code, number) {
+		this.body = {
 			address_1: data.address_1,
-			address_2: data.address_2,
-			birthdate: data.birthdate,
-			birthplace: data.birthplace,
+			// address_2: data.address_2,
+			// birthdate: data.birthdate,
+			// birthplace: data.birthplace,
 			cell_phone: data.cell_phone,
 			city: data.city,
 			civility: data.civility,
@@ -31,18 +29,25 @@ export default class CreateCustomer {
 			job_title: data.job_title,
 			lastname: data.lastname,
 			number,
-			phone: data.phone,
+			// phone: data.phone,
 			postal_code: data.postal_code,
-			registration_number: data.registration_number,
-		});
+			// registration_number: data.registration_number,
+		};
 
-		this.url = new URL(`${host}/calinda/hub/selling/model/customer/update`);
-
-		Object.keys(params).forEach(key => this.url.searchParams.append(key, params[key]));
+		this.url = `${config.HOST}/calinda/hub/selling/model/customer/update?action=selectOrCreateCustomer`;
 	}
 
 	async init() {
-		const response = await fetch(this.url);
+		const response = await fetch(`https://cors-anywhere.herokuapp.com/${this.url}`, {
+			method: 'POST',
+			mode: 'cors',
+			headers: {
+				j_token: config.TOKEN,
+				'Access-Control-Allow-Methods': 'POST',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(this.body),
+		});
 
 		return response.json();
 	}

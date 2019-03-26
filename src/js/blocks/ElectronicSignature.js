@@ -5,9 +5,11 @@ import AddContractProperty from 'Utils/AddContractProperty';
 
 import Bouncer from 'formbouncerjs';
 
-import config from 'js/config';
-
-
+/**
+ * Electronic signature
+ *
+ * @param obj element DOM object.
+ */
 export default class ElectronicSignature {
 	constructor(element) {
 		// eslint-disable-next-line
@@ -48,10 +50,8 @@ export default class ElectronicSignature {
 			option_2: false, // boolean: true || false
 		};
 
-		this.customer_number = new Date().getTime();
-		this.number = new Date().getTime();
-
-		this.param = { j_token: config.TOKEN };
+		this.customer_number = new Date().getTime().toString();
+		this.number = new Date().getTime().toString();
 
 		this.initEvents();
 
@@ -73,14 +73,16 @@ export default class ElectronicSignature {
 				license_number: this.data.license_number,
 				ffg_index: this.data.ffg_index,
 				t_shirt_size: this.data.t_shirt_size,
-				medical_certificate: this.data.medical_certificate || false,
+				medical_certificate: this.data.medical_certificate || 'false',
 				scramble: this.data.scramble,
 				scramble_lastname_second_player: this.data.scramble_lastname_second_player,
 				scramble_firstname_second_player: this.data.scramble_firstname_second_player,
 				scramble_license_number_second_player: this.data.scramble_license_number_second_player,
-				option_1: this.data.option_1 || false,
-				option_2: this.data.option_2 || false,
+				option_1: this.data.option_1 || 'false',
+				option_2: this.data.option_2 || 'false',
 			};
+
+			console.log({ form: this.dataForm, data: this.data });
 
 			this.connect();
 		});
@@ -89,23 +91,16 @@ export default class ElectronicSignature {
 	connect() {
 		const customer = new CreateCustomer(
 			this.data,
-			this.param,
-			config.HOST,
 			this.customer_number,
 			this.number,
 		);
 		const contractor = new CreateContractor(
 			this.data,
-			this.param,
-			config.HOST,
 			this.number,
 		);
 		const contract = new CreateContract(
 			this.param,
-			config.HOST,
 			this.number,
-			config.CONTRACT_DEFINITION_ID,
-			config.VENDOR_EMAIL,
 		);
 
 
@@ -113,6 +108,7 @@ export default class ElectronicSignature {
 			.then(() => {
 				contractor.init();
 				contract.init().then((data) => {
+					console.log(data);
 					// eslint-disable-next-line
 					for (let [key, value] of Object.entries(this.properties)) {
 						const property = new AddContractProperty(

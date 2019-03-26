@@ -24,16 +24,16 @@
 
 						<div class="Form__group d-none">
 							{# Hidden #}
-							<input id="country" type="hidden" name="country" value="FR">
-							<input id="registration_number" type="hidden" name="registration_number" value="">
-							<input id="address_2" type="hidden" name="address_2" value="">
-							<input id="phone" type="hidden" name="phone" value="">
-							<input id="birthdate" type="hidden" name="birthdate" value="">
-							<input id="birthplace" type="hidden" name="birthplace" value="">
+							<input id="country" type="hidden" name="country" value="FRANCE">
+							{# <input id="registration_number" type="hidden" name="registration_number" value=""> #}
+							{# <input id="address_2" type="hidden" name="address_2" value=""> #}
+							{# <input id="phone" type="hidden" name="phone" value=""> #}
+							{# <input id="birthdate" type="hidden" name="birthdate" value=""> #}
+							{# <input id="birthplace" type="hidden" name="birthplace" value=""> #}
 						</div>
 
 						<div class="Form__group col-12">
-							<label class="Form__label Form__label--required" for="civility">Civilité</label>
+							<label class="Form__label Form__label--required" for="civility">{{- 'Civilité' -}}'</label>
 							<select class="Form__select" id="civility" name="civility">
 								<option value="MONSIEUR">Monsieur</option>
 								<option value="MADAME">Madame</option>
@@ -179,8 +179,8 @@
 										</select>
 									</div>
 								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">180 €</p></div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">180 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">220 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">220 €</p></div>
 							</div>
 							<div class="Form__group row">
 								<div class="col-8">
@@ -190,7 +190,9 @@
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox ">
 										<button type="button"></button>
-										<input class="d-none js-calc" id="option_1" name="option_1" type="checkbox" data-number="50">
+										<div class="d-none">
+											<input class="js-calc" id="option_1" name="option_1" value="false" type="checkbox" data-number="50">
+										</div>
 									</div>
 								</div>
 							</div>
@@ -199,25 +201,25 @@
 								<div class="col-8">
 									<p><strong>Options 2</strong><br>Green-fee pour accès au parcours le 11 octobre 2019</p>
 								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">47 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox">
 										<button type="button"></button>
-										<input class="d-none js-calc" type="checkbox" id="option_2" name="option_2" data-number="47">
+										<input class="d-none js-calc" id="option_2" name="option_2" value="false" type="checkbox" data-number="50">
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="col-12">
-									<p class="text-align-right Form__label--required white-space-nowrap"><span class="js-total">180</span> €</p></div>
+									<p class="text-align-right Form__label--required white-space-nowrap"><span class="js-total">220</span> €</p></div>
 							</div>
 
 
 							<div class="row">
 								<div class="col-12">
 									<p class="Form__message Form__message--required margin-0 text-align-right">
-										* TVA non applicable, article 293B du Code Général des Impôts
+										{{- '* TVA non applicable, article 293B du Code Général des Impôts' -}}
 									</p>
 								</div>
 							</div>
@@ -229,7 +231,7 @@
 							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" data-condition-class="js-condition-medical-certificate">
 								<button type="button"></button>
 								<span>J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)</span>
-								<input class="d-none" id="medical_certificate" name="medical_certificate" type="checkbox">
+								<input class="d-none" id="medical_certificate" name="medical_certificate" value="false" type="checkbox">
 							</div>
 						</div>
 

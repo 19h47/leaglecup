@@ -9,22 +9,25 @@ import config from 'js/config';
 export default class addContractProperty {
 	// eslint-disable-next-line
 	constructor(key, value, contract_id) {
-		const params = {
-			action: 'addContractProperty',
-			j_token: config.TOKEN,
+		this.body = {
 			contract_id,
 			key,
 			value,
 			to_fill_by_user: true,
 		};
 
-		this.url = new URL(`${config.HOST}/calinda/hub/selling/model/contractproperty/insert`);
-
-		Object.keys(params).forEach(k => this.url.searchParams.append(k, params[k]));
+		this.url = `${config.HOST}/calinda/hub/selling/model/contractproperty/insert?action=addContractProperty`;
 	}
 
 	async init() {
-		const response = await fetch(this.url);
+		const response = await fetch(`https://cors-anywhere.herokuapp.com/${this.url}`, {
+			method: 'POST',
+			headers: {
+				j_token: config.TOKEN,
+				'Content-Type': 'application/json;charset=utf-8',
+			},
+			body: JSON.stringify(this.body),
+		});
 
 		return response.json();
 	}

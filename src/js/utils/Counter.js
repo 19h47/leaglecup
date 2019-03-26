@@ -25,6 +25,8 @@ export default class Counter {
 				const number = parseInt(event.target.getAttribute('data-number'), 10);
 				const total = parseInt(this.$total.innerHTML, 10);
 
+				console.log(total);
+
 				Counter.calc(event.target.checked, number, total, this.$total);
 			});
 		}
