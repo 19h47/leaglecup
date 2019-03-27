@@ -82,8 +82,6 @@ export default class ElectronicSignature {
 				option_2: this.data.option_2 || 'false',
 			};
 
-			console.log({ form: this.dataForm, data: this.data });
-
 			this.connect();
 		});
 	}
@@ -108,7 +106,6 @@ export default class ElectronicSignature {
 			.then(() => {
 				contractor.init();
 				contract.init().then((data) => {
-					console.log(data);
 					// eslint-disable-next-line
 					for (let [key, value] of Object.entries(this.properties)) {
 						const property = new AddContractProperty(

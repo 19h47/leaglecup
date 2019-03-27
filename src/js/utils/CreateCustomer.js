@@ -43,7 +43,6 @@ export default class CreateCustomer {
 			mode: 'cors',
 			headers: {
 				j_token: config.TOKEN,
-				'Access-Control-Allow-Methods': 'POST',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(this.body),
