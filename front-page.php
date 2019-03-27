@@ -16,7 +16,7 @@ if ( ! class_exists( 'Timber' ) ) {
 	return;
 }
 
-$context = Timber::get_context();
+$context = Timber::context();
 
 $context['post']       = new TimberPost();
 $context['node_type']  = 'default-page';

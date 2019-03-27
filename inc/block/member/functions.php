@@ -40,7 +40,7 @@ add_action( 'acf/init', 'acf_block_gutenberg_member_posts' );
  * @return void
  */
 function acf_block_gutenberg_member_posts_callback( $block, $content = '', $is_preview = false ) {
-	$context            = Timber::get_context();
+	$context            = Timber::context();
 	$context['members'] = get_field( 'members' );
 
 	if ( ! empty( $context['members'] ) ) {

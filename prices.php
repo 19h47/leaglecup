@@ -8,7 +8,7 @@
  */
 
 // Grab context.
-$context = Timber::get_context();
+$context = Timber::context();
 
 // Get terms.
 $context['prices'] = Timber::get_posts(
