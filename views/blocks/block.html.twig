@@ -12,13 +12,13 @@ Block
 			</div>
 
             {% if block.link %}
-        		<div class="col-12 col-md-7 text-align-right{{ socials is iterable ? '' : ' offset-md-1' }}">
+        		<div class="col-12 col-md-6 text-align-right{{ socials is iterable ? '' : ' offset-md-2' }}">
         			<a class="page-block__menu" href="{{ block.link.url }}">{{- title -}}</a>
         		</div>
         	{% endif %}
 
         	{% if socials is iterable %}
-        		<div class="col-12 col-md-1 text-align-right{{ block.link ? '' : ' offset-md-7' }}">
+        		<div class="col-12 col-md-2 text-align-right{{ block.link ? '' : ' offset-md-7' }}">
         			{% include 'components/socials.html.twig' %}
         		</div>
         	{% endif %}

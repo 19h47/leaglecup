@@ -64,4 +64,24 @@ function leaglecup_customize_contact( $wp_customize ) {
 			'settings'    => 'linkedin',
 		)
 	);
+
+
+	// Email.
+	$wp_customize->add_setting(
+		'email',
+		array(
+			'type'      => 'option',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'email',
+		array(
+			'label'       => __( 'Email' ),
+			'description' => __( 'Indiquer l\'adresse mail du site' ),
+			'section'     => 'contact',
+			'settings'    => 'email',
+		)
+	);
 }

@@ -1,0 +1,21 @@
+{#
+
+@file pages/front-page.html.twig
+@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+
+#}
+{% extends 'index.html.twig' %}
+
+{% block hero %}
+	<section class="Page__hero Site-container">
+		<div class="row">
+			<div class="col-12 col-md-5">
+				<h1 itemprop="name" class="page-block__title">404</h1>
+				<div class="page-block__content">
+					<p>Désolé, nous n'avons pas pu trouver ce que vous cherchiez.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% include 'common/grid.html.twig' %}
+{% endblock %}

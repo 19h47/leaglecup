@@ -281,6 +281,12 @@ class LeagleCup extends Timber {
 				'url'   => 'https://www.linkedin.com/shareArticle?mini=true&url=',
 				'link'  => get_option( 'linkedin' ),
 			),
+			array(
+				'title' => 'Contactez-nous',
+				'slug'  => 'email',
+				'name'  => __( 'Contactez-nous' ),
+				'link'  => 'mailto:' . get_option( 'email' ),
+			)
 		);
 
 		foreach ( $socials as $social ) {

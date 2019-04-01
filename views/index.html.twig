@@ -11,12 +11,12 @@
 <header class="Site-header">
 	<div class="Site-container">
 		<div class="row">
-			<div class="col-12 col-md-4">
+			<div class="col-12 col-md-3">
 				<a class="d-inline-block" href="{{ site.link }}">
 					<img class="Logo" src="{{ theme.path }}/dist/img/svg/logo-decor.svg" alt="{{ site.description }}" width="202" height="72">
 				</a>
 			</div>
-			<div class="col-12 col-md-7{{ contact.socials is iterable ? '' : ' offset-md-1' }}">
+			<div class="col-12 col-md-7{{ contact.socials is iterable ? '' : ' offset-md-2' }}">
 				{%
 					include 'components/menu-main.html.twig'
 					with { items: menu.main.items }
@@ -24,7 +24,7 @@
 				%}
 			</div>
 			{% if contact.socials is iterable %}
-				<div class="col-12 col-md-1 text-align-md-right">
+				<div class="col-12 col-md-2 text-align-md-right">
 					{% include 'components/socials.html.twig' %}
 				</div>
 			{% endif %}
@@ -78,7 +78,7 @@
 
 					{% if post.get_field( 'display_partners') %}{{ partners }}{% endif %}
 
-					{% include 'common/grid.html.twig' %}
+					{# {% include 'common/grid.html.twig' %} #}
 				</section>
 			{% endif %}
 		{% endblock %}

@@ -59,7 +59,7 @@ module.exports = merge(
             }),
 			new PurgecssPlugin({
       			paths: glob.sync(path.join(__dirname, '..', 'views/**/*.html.twig')),
-				whitelist: ['is-invalid', 'is-hidden', 'is-current', 'is-in-viewport', 'Front-page', 'Site-header', 'Page'],
+				whitelist: ['is-invalid', 'is-hidden', 'is-current', 'is-in-viewport', 'has-content', 'Front-page', 'Site-header', 'Page'],
 				whitelistPatternsChildren: [/^flickity-/, /^wp-block-/, /^Partners-block/, /^Event-block/, /^Form/]
     		}),
 			new CompressionPlugin()
