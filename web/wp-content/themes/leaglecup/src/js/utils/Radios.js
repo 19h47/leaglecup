@@ -1,6 +1,7 @@
 /**
  * Class Radios
  *
+ * @param obj element DOM element.
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class Radios {
@@ -46,6 +47,9 @@ export default class Radios {
 	/**
 	 * Checkbox.activate
 	 *
+	 * @param obj element DOM element.
+	 * @param obj input DOM element.
+	 * @param bool active
 	 * @return	bool
 	 */
 	static activate(element, input, active) {
@@ -70,6 +74,9 @@ export default class Radios {
 	/**
 	 * Checkbox.deactivate
 	 *
+	 * @param obj element DOM element.
+	 * @param obj input DOM element.
+	 * @param bool active
 	 * @return	bool
 	 */
 	static deactivate(element, input, active) {
@@ -90,6 +97,11 @@ export default class Radios {
 		return true;
 	}
 
+	/**
+	 * Deactive all
+	 *
+	 * @return void
+	 */
 	deactivateAll() {
 		for (let i = 0; i < this.elements.length; i += 1) {
 			const input = this.elements[i].querySelector('input');

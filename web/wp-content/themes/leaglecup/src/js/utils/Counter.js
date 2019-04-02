@@ -1,6 +1,7 @@
 /**
  * Class Counter
  *
+ * @param obj element DOM element.
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 export default class Counter {

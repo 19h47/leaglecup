@@ -6,10 +6,7 @@ import config from 'js/config';
  * Create a contract for a given customer, at a specified date (in milliseconds).
  *
  * @param obj param
- * @param str host
  * @param int number
- * @param int contract_definition_id
- * @param str vendor_email
  * @see https://www.sellandsign.com/fr/api-creation-contrat-a-faire-signer/
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */

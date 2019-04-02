@@ -45,7 +45,7 @@
         "eslint-loader": "^2.1.2",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-node": "^8.0.1",
-        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-promise": "^4.1.1",
         "eslint-plugin-standard": "^4.0.0",
         "file-loader": "^3.0.1",
         "image-webpack-loader": "^4.6.0",
@@ -67,6 +67,7 @@
         "webpack-notifier": "^1.7.0"
     },
     "dependencies": {
+        "@19h47/checkbox": "^1.0.1",
         "@babel/runtime": "^7.4.2",
         "animated-scroll-to": "^1.2.2",
         "bootstrap": "^4.3.1",

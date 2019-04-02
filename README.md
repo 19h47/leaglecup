@@ -1,17 +1,31 @@
-# La LEAGLE CUP
+# Leagle Cup
 
-LEAGLE CUP is a website for golf lovers.
+## Docker
 
-![leaglecup](screenshot.png)
-
-## [WordPress Coding standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards)
-
-**Step 1:** Run `make create_project` to install `wp-coding-standards/wpcs`.
-
-**Step 2:** Run `composer config-set` to set path for `wpcs`.
-
-You are now able to lint PHP files using WordPress Coding standards, for example with `functions.php`:
+Stops containers and removes containers with named volumes declared in the `volumes` section of the `docker-compse.yml`
 
 ```bash
-composer lint functions.php
+docker-compose down --volumes
 ```
+
+Builds, (re)creates, starts, and attaches to containers for a service
+
+```bash
+docker-compose up -d
+```
+
+## Make an url point to localhost
+
+```bash
+sudo nano /etc/hosts
+```
+
+```
+127.0.0.1 leaglecup.test www.leaglecup.test
+```
+
+Then type `ctrl + x`, and `y` to save and exit nano. Now, the custom url points to `localhost`.
+
+## Database
+
+Put your SQL dump in the `database` folder

@@ -189,7 +189,7 @@
 								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox ">
-										<button type="button"></button>
+										<button role="checkbox" type="button" aria-checked="false"></button>
 										<div class="d-none">
 											<input class="js-calc" id="option_1" name="option_1" value="false" type="checkbox" data-number="50">
 										</div>
@@ -204,7 +204,7 @@
 								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox">
-										<button type="button"></button>
+										<button role="checkbox" type="button" aria-checked="false"></button>
 										<input class="d-none js-calc" id="option_2" name="option_2" value="false" type="checkbox" data-number="50">
 									</div>
 								</div>
@@ -229,7 +229,7 @@
 						<div class="Form__group col-12">
 							<p class="Form__label Form__label--required">Obligatoire</p>
 							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" data-condition-class="js-condition-medical-certificate">
-								<button type="button"></button>
+								<button role="checkbox" type="button" aria-checked="false"></button>
 								<span>J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)</span>
 								<input class="d-none" id="medical_certificate" name="medical_certificate" value="false" type="checkbox">
 							</div>
@@ -312,6 +312,6 @@
 				</div>
 			</div>
 		</div>
-		{% include 'common/grid.html.twig' %}
+		{# {% include 'common/grid.html.twig' %} #}
 	</section>
 {% endblock %}

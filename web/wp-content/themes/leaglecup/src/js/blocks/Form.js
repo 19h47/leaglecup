@@ -1,4 +1,4 @@
-import Checkbox from 'Utils/Checkbox';
+import Checkbox from '@19h47/checkbox';
 import Radios from 'Utils/Radios';
 import Counter from 'Utils/Counter';
 

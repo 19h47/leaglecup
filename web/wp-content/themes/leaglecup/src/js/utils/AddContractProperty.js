@@ -5,6 +5,7 @@ import config from 'js/config';
  *
  * @param str key
  * @param     value
+ * @param     contract_id
  */
 export default class addContractProperty {
 	// eslint-disable-next-line

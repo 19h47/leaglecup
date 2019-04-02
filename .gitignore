@@ -1,7 +1,67 @@
-/prototypes/
-/vendor/
-/dist/
-/node_modules/
-/wpcs/
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
-/src/js/config.js
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker #
+##########
+database
+
+# WordPress files #
+###################
+web/wp-admin/
+web/wp-content/*
+!web/wp-content/themes/
+web/wp-content/themes/*
+web/wp-includes/
+
+web/.htaccess
+web/*.log
+web/*.php
+web/license.txt
+web/readme.html
+
+# Theme and plugins #
+#####################
+!web/wp-content/themes/leaglecup/
+web/wp-content/themes/leaglecup/vendor/
+web/wp-content/themes/leaglecup/wpcs/
+web/wp-content/themes/leaglecup/dist
+web/wp-content/themes/leaglecup/screenshots
+
+# Front-end #
+#############
+node_modules

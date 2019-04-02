@@ -1,10 +1,9 @@
 import config from 'js/config';
+
 /**
  * Create contractor
  *
  * @param obj data
- * @param obj param
- * @param str host
  * @param int number
  * @see https://www.sellandsign.com/fr/api-definition-de-signataires/
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
