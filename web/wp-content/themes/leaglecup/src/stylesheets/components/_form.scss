@@ -80,6 +80,8 @@
 
 		&.is-off {
 			@extend %Pointer-events-none;
+
+			user-select: none;
 			opacity: 0.3;
 		}
 	}
@@ -116,7 +118,9 @@
 		@extend .d-flex;
 		@extend %Cursor-pointer;
 
-		&:focus {
+		&.is-focus,
+		&:focus,
+		&:hover {
 			#{ $this }__input {
 				border: {
 					color: rgba( the_color( blue, very-dark ), 1 );
@@ -151,7 +155,7 @@
 				content: '';
 			}
 
-			@at-root #{ $this }.is-active #{ $this }__input {
+			@at-root #{ $this }.is-selected #{ $this }__input {
 				&::after {
 					background-color: rgba( the_color( blue, very-dark ), 1 );
 				}
@@ -197,13 +201,15 @@
 				content: '';
 			}
 
-			&:focus {
+			@at-root #{ $this }.is-focus button,
+			#{ $this }:focus button,
+			#{ $this }:hover button {
 				border: {
 					color: rgba( the_color( blue, very-dark ), 1 );
 				}
 			}
 
-			@at-root #{ $this }.is-active button {
+			@at-root #{ $this }.is-selected button {
 				&::after {
 					background-color: rgba( the_color( blue, very-dark ), 1 );
 				}

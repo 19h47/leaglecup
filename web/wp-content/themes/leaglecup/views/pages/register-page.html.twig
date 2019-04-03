@@ -170,7 +170,7 @@
 										OFFERT / Le polo de la compétition
 									</p>
 									<div class="margin-bottom-3">
-										<label class="Form__label" for="t-shirt-size">Préciser la taille du polo</label>
+										<label class="Form__label" for="t_shirt_size">Préciser la taille du polo</label>
 										<select class="Form__select" id="t_shirt_size" name="t_shirt_size">
 											<option value="S">S</option>
 											<option value="M">M</option>
@@ -188,8 +188,8 @@
 								</div>
 								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
 								<div class="col-2 text-align-right">
-									<div class="Form__checkbox js-checkbox ">
-										<button role="checkbox" type="button" aria-checked="false"></button>
+									<div role="checkbox" class="Form__checkbox js-checkbox" aria-checked="false" tabindex="0">
+										<button type="button"></button>
 										<div class="d-none">
 											<input class="js-calc" id="option_1" name="option_1" value="false" type="checkbox" data-number="50">
 										</div>
@@ -203,8 +203,8 @@
 								</div>
 								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
 								<div class="col-2 text-align-right">
-									<div class="Form__checkbox js-checkbox">
-										<button role="checkbox" type="button" aria-checked="false"></button>
+									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
+										<button type="button"></button>
 										<input class="d-none js-calc" id="option_2" name="option_2" value="false" type="checkbox" data-number="50">
 									</div>
 								</div>
@@ -228,18 +228,18 @@
 
 						<div class="Form__group col-12">
 							<p class="Form__label Form__label--required">Obligatoire</p>
-							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" data-condition-class="js-condition-medical-certificate">
-								<button role="checkbox" type="button" aria-checked="false"></button>
-								<span>J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)</span>
+							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" role="checkbox" data-condition-class="js-condition-medical-certificate" aria-checked="false" tabindex="0">
+								<button type="button"></button>
+								<span>{{- 'J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)' -}}</span>
 								<input class="d-none" id="medical_certificate" name="medical_certificate" value="false" type="checkbox">
 							</div>
 						</div>
 
-						<div class="Form__group js-radios col-12">
-							<h3 class="Form__label">Équipe scramble à 2</h3>
+						<div class="Form__group js-radios col-12" role="radiogroup" aria-labelledby="scramble-label">
+							<h3 id="scramble-label" class="Form__label">Équipe scramble à 2</h3>
 
 							<div class="Form__group">
-								<div class="Form__radio js-radio" tabindex="0">
+								<div class="Form__radio js-radio" role="radio" tabindex="0" aria-checked="true">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire</span>
 									<input class="d-none" type="radio" id="scramble_alone" name="scramble" value="Je viens seul" checked>
@@ -247,9 +247,9 @@
 							</div>
 
 							<div class="Form__group">
-								<div class="Form__radio js-radio" tabindex="0" data-condition-class="js-condition-scramble-team">
+								<div class="Form__radio js-radio" role="radio" tabindex="-1" aria-checked="false" data-condition-class="js-condition-scramble-team">
 									<span class="Form__radio__input"></span>
-									<span class="Form__radio__label">Je constitue une équipe</button>
+									<span class="Form__radio__label">Je constitue une équipe</span>
 									<input class="d-none" type="radio" id="scramble_team" name="scramble" value="Je constitue une équipe">
 								</div>
 							</div>

@@ -1,5 +1,5 @@
 import Checkbox from '@19h47/checkbox';
-import Radios from 'Utils/Radios';
+import Radios from '@19h47/radios';
 import Counter from 'Utils/Counter';
 
 export default class Form {
