@@ -17,13 +17,24 @@
 
 
 	&__thumbnail {
+		@extend %position-relative;
 		height: $grid-gutter-width * 8;
 		background-color: rgba( the_color( blue, very-dark ), 0.5 );
+
+		&::after {
+			@include absolute( top 0 right 0 bottom 0 left 0 );
+			@extend .d-block;
+
+			content: '';
+			background-color: rgba( the_color( blue, very-dark ), 0.3 );
+		}
 
 		img {
 			@extend .d-inline-block;
 			@extend %vertical-align-middle;
 			@include size( 100%, 100%!important );
+
+			filter: grayscale( 100% );
 			object-fit: cover;
 			object-position: center;
 		}

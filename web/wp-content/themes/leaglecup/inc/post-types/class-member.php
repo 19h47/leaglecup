@@ -41,6 +41,9 @@ class Member {
 		add_action( 'admin_head', array( $this, 'css' ) );
 
 		add_filter( 'dashboard_glance_items', array( $this, 'at_a_glance' ) );
+
+		add_filter( 'manage_member_posts_columns', array( $this, 'add_custom_columns' ) );
+		add_action( 'manage_member_posts_custom_column', array( $this, 'render_custom_columns' ), 10, 2 );
 	}
 
 
@@ -149,12 +152,70 @@ class Member {
 
 
 	/**
+	 * Add custom columns
+	 *
+	 * @param arr $columns Array of columns.
+	 */
+	public function add_custom_columns( $columns ) {
+
+		$new_columns = array();
+
+		foreach ( $columns as $key => $value ) {
+			if ( 'title' === $key ) {
+				$new_columns['thumbnail'] = __( 'Thumbnail' );
+			}
+
+			$new_columns[ $key ] = $value;
+		}
+		return $new_columns;
+	}
+
+
+	/**
+	 * Render custom columns
+	 *
+	 * @param str $column_name The column name.
+	 * @param int $post_id The ID of the post.
+	 */
+	public function render_custom_columns( $column_name, $post_id ) {
+		switch ( $column_name ) {
+			case 'thumbnail':
+				if ( get_the_post_thumbnail( $post_id ) ) {
+					echo '<a href="' . get_edit_post_link( $post_id ) . '">';
+					the_post_thumbnail( 'full' );
+					echo '</a>';
+				} else {
+					echo '—';
+				}
+
+				break;
+		}
+	}
+
+
+	/**
 	 * CSS
 	 */
 	public function css() {
 		?>
 		<style>
 			#dashboard_right_now .member-count:before { content: "\f307"; }
+			.fixed .column-thumbnail {
+				vertical-align: top;
+				width: 80px;
+			}
+
+			.column-thumbnail a {
+				display: block;
+			}
+			.column-thumbnail a img {
+				display: inline-block;
+				vertical-align: middle;
+				width: 80px;
+				height: 80px;
+				object-fit: cover;
+				object-position: center;
+			}
 		</style>
 		<?php
 	}

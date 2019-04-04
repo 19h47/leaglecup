@@ -2,7 +2,7 @@
 
 ## Docker
 
-Stops containers and removes containers with named volumes declared in the `volumes` section of the `docker-compse.yml`
+Stops containers and removes containers with named volumes declared in the `volumes` section of the `docker-compose.yml`
 
 ```bash
 docker-compose down --volumes
@@ -21,7 +21,7 @@ sudo nano /etc/hosts
 ```
 
 ```
-127.0.0.1 leaglecup.test www.leaglecup.test
+127.0.0.1   leaglecup.test www.leaglecup.test
 ```
 
 Then type `ctrl + x`, and `y` to save and exit nano. Now, the custom url points to `localhost`.
