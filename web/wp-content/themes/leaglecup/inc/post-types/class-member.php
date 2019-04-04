@@ -197,6 +197,9 @@ class Member {
 	 * CSS
 	 */
 	public function css() {
+		global $typenow;
+
+		if ( 'member' !== $typenow ) return false;
 		?>
 		<style>
 			#dashboard_right_now .member-count:before { content: "\f307"; }
@@ -218,5 +221,7 @@ class Member {
 			}
 		</style>
 		<?php
+
+		return true;
 	}
 }

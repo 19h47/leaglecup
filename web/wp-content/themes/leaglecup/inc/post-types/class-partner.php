@@ -117,6 +117,10 @@ class Partner {
 	 * CSS
 	 */
 	public function css() {
+		global $typenow;
+
+		if ( 'partner' !== $typenow ) return false;
+
 		?>
 		<style>
 			#dashboard_right_now .partner-count:before { content: "\f483"; }
@@ -138,6 +142,8 @@ class Partner {
 			}
 		</style>
 		<?php
+
+		return true;
 	}
 
 
