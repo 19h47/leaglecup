@@ -6,7 +6,7 @@
 	{% spaceless %}
 		{% for social in contact.socials %}
 		<li class="Socials__item">
-			<a class="Socials__link" href="{{ social.link }}" title="{{ social.title }}">
+			<a class="Socials__link" href="{{ social.link }}" title="{{ social.title }}" target="_blank">
 				{% include 'svg/use.html.twig' with { icon: social.slug } only %}
 			</a>
 		</li>
