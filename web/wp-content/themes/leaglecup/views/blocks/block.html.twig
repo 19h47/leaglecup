@@ -7,21 +7,19 @@ Block
 <section class="{{ name }}-block page-block" id="{{ name }}">
     <header class="Site-container page-block__header">
 		<div class="row">
-			<div class="col-12 col-md-4">
+			<div class="col-12 col-md-3">
 				<img class="Logo" src="{{ theme.path }}/dist/img/svg/logo-decor-white.svg" alt="{{ site.description }}" width="202" height="72">
 			</div>
 
-            {% if block.link %}
-        		<div class="col-12 col-md-6 text-align-right{{ socials is iterable ? '' : ' offset-md-2' }}">
+			<div class="col-12 col-md-9 flex-column flex-md-row margin-top-md-4 d-flex justify-content-md-end">
+            	{% if block.link %}
         			<a class="page-block__menu" href="{{ block.link.url }}">{{- title -}}</a>
-        		</div>
-        	{% endif %}
+        		{% endif %}
 
-        	{% if socials is iterable %}
-        		<div class="col-12 col-md-2 text-align-right{{ block.link ? '' : ' offset-md-7' }}">
+        		{% if socials is iterable %}
         			{% include 'components/socials.html.twig' %}
-        		</div>
-        	{% endif %}
+        		{% endif %}
+			</div>
 
     	</div>
 	</header>

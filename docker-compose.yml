@@ -2,20 +2,18 @@ version: '3.7'
 
 services:
   db:
-    container_name: leaglecup_database
     image: mysql:5.7
     ports:
       - "3306:3306"
     volumes:
       - ./database/leaglecup.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: leaglecup
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   phpmyadmin:
-    container_name: leaglecup_phpmyadmin
     image: phpmyadmin/phpmyadmin
     ports:
       - "8080:80"
@@ -25,7 +23,6 @@ services:
       PMA_HOST: db:3306
 
   web:
-    container_name: leaglecup_web
     depends_on:
       - db
     image: wordpress:latest
@@ -33,13 +30,13 @@ services:
       - "80:80"
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: leaglecup
-      WORDPRESS_TABLE_PREFIX: lglcp_
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX}
     volumes:
       - ./web:/var/www/html
 
 volumes:
-    db_data: {}
+  db_data: {}

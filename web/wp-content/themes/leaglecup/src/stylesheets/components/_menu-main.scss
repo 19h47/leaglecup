@@ -8,12 +8,12 @@
     $this: &;
 
     @include letter-spacing( 100 );
-    @include margin( top $grid-gutter-width right ( $grid-gutter-width / 4 ) * -1 left ( $grid-gutter-width / 4 ) * -1 );
+    @include margin( top $grid-gutter-width );
     @extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
-    @extend .d-flex, .justify-content-between, .flex-column, .flex-md-row;
+    @extend .d-flex, .justify-content-md-end, .flex-column, .flex-md-row;
 
     @include media-breakpoint-up( 'md' ) {
-        @include margin( top $grid-gutter-width * 1.5 );
+        @include margin( top 0 right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
     }
 
     font: {

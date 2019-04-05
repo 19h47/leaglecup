@@ -39,6 +39,7 @@ Thumbs.db
 # Docker #
 ##########
 database
+.env
 
 # WordPress files #
 ###################

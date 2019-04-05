@@ -16,18 +16,16 @@
 					<img class="Logo" src="{{ theme.path }}/dist/img/svg/logo-decor.svg" alt="{{ site.description }}" width="202" height="72">
 				</a>
 			</div>
-			<div class="col-12 col-md-7{{ contact.socials is iterable ? '' : ' offset-md-2' }}">
+			<div class="col-12 col-md-9 flex-column flex-md-row margin-top-md-4 d-flex justify-content-md-end">
 				{%
 					include 'components/menu-main.html.twig'
 					with { items: menu.main.items }
 					only
 				%}
-			</div>
-			{% if contact.socials is iterable %}
-				<div class="col-12 col-md-2 text-align-md-right">
+				{% if contact.socials is iterable %}
 					{% include 'components/socials.html.twig' %}
-				</div>
-			{% endif %}
+				{% endif %}
+			</div>
 		</div>
 	</div>
 

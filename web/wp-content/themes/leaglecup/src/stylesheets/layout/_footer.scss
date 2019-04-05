@@ -38,7 +38,7 @@
 
     // .Site-footer__copyright
     &__copyright {
-        @extend .d-flex, .justify-content-md-between, .flex-column, .flex-md-row;
+        @extend .d-flex, .justify-content-md-end, .flex-column, .flex-md-row;
         @extend %list-style-type-none, %text-transform-uppercase;
         @include letter-spacing( 100 );
         @include margin( top $grid-gutter-width );
@@ -51,6 +51,19 @@
             size: 13.5px;
         }
         line-height: 24px;
+
+		li {
+
+			&:first-child {
+				@include margin( left 0 );
+			}
+			&:last-child {
+				@include margin( right 0 );
+			}
+			@include media-breakpoint-up( 'md' ) {
+				@include margin( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
+			}
+		}
 
         a {
 			@extend .d-inline, .d-inline-block;

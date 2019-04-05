@@ -9,19 +9,25 @@
     @extend %list-style-type-none;
 
     @at-root .Site-header & {
-        @include margin( top $grid-gutter-width * 1.5 );
+        @extend .d-flex;
+		@include margin( top $grid-gutter-width );
+
+		@include media-breakpoint-up( 'md' ) {
+			@include margin( top 0 );
+		}
     }
 
     @at-root .Site-footer & {
+		@extend .d-flex;
         @include margin( top $grid-gutter-width );
 
         @include media-breakpoint-up( 'md' ) {
-            @include margin( top $grid-gutter-width * 1.5 );
+            @include margin( top 0 );
         }
     }
 
     @at-root .page-block & {
-        @include margin( top $grid-gutter-width * 1.5 );
+        @extend .d-flex;
     }
 
     // .Socials__item

@@ -29,3 +29,5 @@ Then type `ctrl + x`, and `y` to save and exit nano. Now, the custom url points 
 ## Database
 
 Put your SQL dump in the `database` folder
+
+## .env
