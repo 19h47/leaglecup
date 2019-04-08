@@ -1,5 +1,5 @@
 import Scroll from 'Utils/Scroll';
-import config from 'js/config';
+import { $body } from 'Utils/environment';
 
 /**
  * @file    js/common/Menu.js
@@ -10,7 +10,7 @@ export default class Menu {
 		// console.info('Menu.constructor');
 
 		this.buttons = document.querySelectorAll('.js-menu-button');
-		this.isOpen = config.body.classList.contains('menu--is-open');
+		this.isOpen = $body.classList.contains('menu--is-open');
 
 		this.$cont = null;
 
@@ -68,7 +68,7 @@ export default class Menu {
 
 		this.isOpen = true;
 
-		config.body.classList.add('menu--is-open');
+		$body.classList.add('menu--is-open');
 
 		// When menu is open, disableScroll
 		this.disableScroll();
@@ -86,7 +86,7 @@ export default class Menu {
 
 		this.isOpen = false;
 
-		config.body.classList.remove('menu--is-open');
+		$body.classList.remove('menu--is-open');
 
 		// When menu is closed, enableScroll
 		this.enableScroll();

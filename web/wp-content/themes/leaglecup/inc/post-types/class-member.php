@@ -197,12 +197,16 @@ class Member {
 	 * CSS
 	 */
 	public function css() {
-		global $typenow;
+		global $typenow; ?>
 
+		<style>
+			#dashboard_right_now .member-count:before { content: "\f307"; }
+		</style>
+
+		<?php
 		if ( 'member' !== $typenow ) return false;
 		?>
 		<style>
-			#dashboard_right_now .member-count:before { content: "\f307"; }
 			.fixed .column-thumbnail {
 				vertical-align: top;
 				width: 80px;

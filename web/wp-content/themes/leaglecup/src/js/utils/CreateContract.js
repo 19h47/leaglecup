@@ -1,4 +1,9 @@
-import config from 'js/config';
+import {
+	HOST,
+	VENDOR_EMAIL,
+	CONTRACT_DEFINITION_ID,
+	TOKEN,
+} from 'Utils/environment';
 
 /**
  * Create contract
@@ -14,9 +19,9 @@ export default class CreateContract {
 	constructor(param, number) {
 		this.body = {
 			date: new Date().getTime(),
-			vendor_email: config.VENDOR_EMAIL,
+			vendor_email: VENDOR_EMAIL,
 			customer_number: number,
-			contract_definition_id: config.CONTRACT_DEFINITION_ID,
+			contract_definition_id: CONTRACT_DEFINITION_ID,
 			closed: false,
 			message_title: '',
 			message_body: '',
@@ -26,14 +31,14 @@ export default class CreateContract {
 			customer_entity_id: -1,
 		};
 
-		this.url = `${config.HOST}/calinda/hub/selling/model/contract/create?action=createContract`;
+		this.url = `${HOST}/calinda/hub/selling/model/contract/create?action=createContract`;
 	}
 
 	async init() {
 		const response = await fetch(`https://cors-anywhere.herokuapp.com/${this.url}`, {
 			method: 'POST',
 			headers: {
-				j_token: config.TOKEN,
+				j_token: TOKEN,
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(this.body),

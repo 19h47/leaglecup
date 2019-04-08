@@ -1,4 +1,7 @@
-import config from 'js/config';
+import {
+	HOST,
+	TOKEN,
+} from 'Utils/environment';
 
 /**
  * Create customer
@@ -33,7 +36,7 @@ export default class CreateCustomer {
 			// registration_number: data.registration_number,
 		};
 
-		this.url = `${config.HOST}/calinda/hub/selling/model/customer/update?action=selectOrCreateCustomer`;
+		this.url = `${HOST}/calinda/hub/selling/model/customer/update?action=selectOrCreateCustomer`;
 	}
 
 	async init() {
@@ -41,7 +44,7 @@ export default class CreateCustomer {
 			method: 'POST',
 			mode: 'cors',
 			headers: {
-				j_token: config.TOKEN,
+				j_token: TOKEN,
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(this.body),

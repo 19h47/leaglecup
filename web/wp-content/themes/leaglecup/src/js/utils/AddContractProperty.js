@@ -1,4 +1,4 @@
-import config from 'js/config';
+import { TOKEN, HOST } from 'Utils/environment';
 
 /**
  * Add Contract Property
@@ -17,14 +17,14 @@ export default class addContractProperty {
 			to_fill_by_user: true,
 		};
 
-		this.url = `${config.HOST}/calinda/hub/selling/model/contractproperty/insert?action=addContractProperty`;
+		this.url = `${HOST}/calinda/hub/selling/model/contractproperty/insert?action=addContractProperty`;
 	}
 
 	async init() {
 		const response = await fetch(`https://cors-anywhere.herokuapp.com/${this.url}`, {
 			method: 'POST',
 			headers: {
-				j_token: config.TOKEN,
+				j_token: TOKEN,
 				'Content-Type': 'application/json;charset=utf-8',
 			},
 			body: JSON.stringify(this.body),

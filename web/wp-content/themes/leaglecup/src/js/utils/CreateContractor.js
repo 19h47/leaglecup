@@ -1,4 +1,7 @@
-import config from 'js/config';
+import {
+	TOKEN,
+	HOST,
+} from 'Utils/environment';
 
 /**
  * Create contractor
@@ -33,14 +36,14 @@ export default class CreateContractor {
 			// category: '',
 		};
 
-		this.url = `${config.HOST}/calinda/hub/selling/model/contractor/create?action=getOrCreateContractor`;
+		this.url = `${HOST}/calinda/hub/selling/model/contractor/create?action=getOrCreateContractor`;
 	}
 
 	async init() {
 		const response = await fetch(`https://cors-anywhere.herokuapp.com/${this.url}`, {
 			method: 'POST',
 			headers: {
-				j_token: config.TOKEN,
+				j_token: TOKEN,
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(this.body),

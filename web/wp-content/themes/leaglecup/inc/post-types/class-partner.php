@@ -117,13 +117,18 @@ class Partner {
 	 * CSS
 	 */
 	public function css() {
-		global $typenow;
+		global $typenow; ?>
+
+		<style>
+			#dashboard_right_now .partner-count:before { content: "\f483"; }
+		</style>
+
+		<?php
 
 		if ( 'partner' !== $typenow ) return false;
 
 		?>
 		<style>
-			#dashboard_right_now .partner-count:before { content: "\f483"; }
 			.fixed .column-thumbnail {
 				vertical-align: top;
 				width: 80px;
