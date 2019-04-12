@@ -43,13 +43,31 @@
 	}
 
     // .Menu-main__item
-    &__item {}
+    &__item {
+		@include media-breakpoint-up( 'md' ) {
+			&:first-child {
+				#{ $this }__link {
+					@include margin( left 0 );
+				}
+			}
+			&:last-child {
+				#{ $this }__link {
+					@include margin( right 0 );
+				}
+			}
+		}
+
+	}
 
     // .Menu-main__link
     &__link {
         @extend .d-inline-block, .d-md-block;
         @extend %position-relative;
 		@include padding( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
+
+		@include media-breakpoint-up( 'md' ) {
+			@include margin( right $grid-gutter-width / 8 left $grid-gutter-width / 8 );
+		}
 
 
         &::after {

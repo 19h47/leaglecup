@@ -115,7 +115,8 @@ module.exports = {
 			},
 			'svg-transform-loader',
 			'svgo-loader'
-			]},
+			]
+		},
 		{
 			test: /\.svg$/,
 			exclude: [/fonts/, /icons/],
