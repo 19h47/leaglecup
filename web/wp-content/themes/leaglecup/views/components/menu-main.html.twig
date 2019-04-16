@@ -1,16 +1,22 @@
 {#
-	@file views/components/menu-main.html.twig
-	@param arr items
-	@author Jérémy Levron <jeremylevron@19h47.fr> (htpp://19h47.fr)
+
+Menu main
+
+@file views/components/menu-main.html.twig
+@param arr items
+@author Jérémy Levron <jeremylevron@19h47.fr> (htpp://19h47.fr)
+
 #}
 {% if items is iterable %}
-<ul class="Menu-main" itemscope itemtype="http://schema.org/SiteNavigationElement">
-	{% for item in items %}
-		<li class="Menu-main__item{{ item.classes ? ' ' ~ item.classes | join( ' ' ) }}" itemprop="name">
-			<a class="Menu-main__link{{ item.current ? ' is-current' : '' }}" href="{{ item.url }}" itemprop="url" data-transition="fade">
-				{{- item.title -}}
-			</a>
-		</li>
-	{% endfor %}
-</ul>
+
+	<ul class="Menu-main" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		{% for item in items %}
+			<li class="Menu-main__item{{ item.classes ? ' ' ~ item.classes | join( ' ' ) }}" itemprop="name">
+				<a class="Menu-main__link{{ item.current ? ' is-current' : '' }}" href="{{ item.url }}" itemprop="url" data-transition="fade">
+					{{- item.title -}}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+
 {% endif %}

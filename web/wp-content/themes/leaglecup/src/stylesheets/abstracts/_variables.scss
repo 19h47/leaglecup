@@ -56,20 +56,6 @@ $font: (
 
 
 	/**
-	 * Font
-	 *
-	 * All fonts families found in the site are listed here
-	 *
-	 * @uses map-get( $font, $key ) to retrieve font value from map
-	 * @type map
-	 */
-	families: (
-		body: ( 'Cardo', serif ),
-		title: ( 'Josefin Sans', sans-serif ),
-	),
-
-
-	/**
 	 * Font weights
 	 *
 	 * Each font weight used in the theme.
