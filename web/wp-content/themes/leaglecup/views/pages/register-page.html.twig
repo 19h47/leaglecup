@@ -30,6 +30,7 @@
 							{# <input id="phone" type="hidden" name="phone" value=""> #}
 							{# <input id="birthdate" type="hidden" name="birthdate" value=""> #}
 							{# <input id="birthplace" type="hidden" name="birthplace" value=""> #}
+							<input class="js-total-input d-none" type="text" id="total" name="total" value="250">
 						</div>
 
 						<div class="Form__group col-12">
@@ -212,7 +213,9 @@
 
 							<div class="row">
 								<div class="col-12">
-									<p class="text-align-right Form__label--required white-space-nowrap"><span class="js-total">250</span> €</p></div>
+									<p class="text-align-right Form__label--required white-space-nowrap">
+										<span class="js-total">250</span> €</p>
+									</div>
 							</div>
 
 
@@ -242,7 +245,7 @@
 								<div class="Form__radio js-radio" role="radio" tabindex="0" aria-checked="true">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire</span>
-									<input class="d-none" type="radio" id="scramble_alone" name="scramble" value="Je viens seul" checked>
+									<input class="d-none" type="radio" id="scramble_alone" name="scramble" value="Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire" checked>
 								</div>
 							</div>
 
@@ -250,7 +253,7 @@
 								<div class="Form__radio js-radio" role="radio" tabindex="-1" aria-checked="false" data-condition-class="js-condition-scramble-team">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je constitue une équipe</span>
-									<input class="d-none" type="radio" id="scramble_team" name="scramble" value="Je constitue une équipe">
+									<input class="d-none" type="radio" id="scramble_team" name="scramble" value="Je constitue une équipe avec">
 								</div>
 							</div>
 

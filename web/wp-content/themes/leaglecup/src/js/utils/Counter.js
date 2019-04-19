@@ -13,6 +13,8 @@ export default class Counter {
 		if (null === this.$element) return false;
 
 		this.$total = this.$element.querySelector('.js-total');
+		this.$input = this.$element.querySelector('.js-total-input');
+
 		this.checkboxes = this.$element.querySelectorAll('.js-calc');
 
 		this.initEvents();
@@ -26,33 +28,45 @@ export default class Counter {
 				const number = parseInt(event.target.getAttribute('data-number'), 10);
 				const total = parseInt(this.$total.innerHTML, 10);
 
-				Counter.calc(event.target.checked, number, total, this.$total);
+				this.calc(event.target.checked, number, total);
 			});
 		}
 	}
 
-	static calc(checked, number, total, container) {
+	calc(checked, number, total) {
 		if (!checked) {
-			return Counter.sum(number, total, container);
+			return this.sum(number, total);
 		}
 
-		return Counter.subtract(number, total, container);
+		return this.subtract(number, total);
 	}
 
-	static sum(number, total, container) {
+	sum(number, total) {
 		const current = total + number;
 
-		return Counter.render(current, container);
+		return this.render(current);
 	}
 
-	static subtract(number, total, container) {
+	/**
+	 * Subtract
+	 *
+	 */
+	subtract(number, total) {
 		const current = total - number;
 
-		return Counter.render(current, container);
+		return this.render(current);
 	}
 
-	static render(number, container) {
+	/**
+	 * Render
+	 *
+	 */
+	render(number) {
 		// eslint-disable-next-line
-		container.innerHTML = number;
+		this.$total.innerHTML = number;
+
+		// Input
+		this.$input.value = number;
+		this.$input.setAttribute('value', number);
 	}
 }

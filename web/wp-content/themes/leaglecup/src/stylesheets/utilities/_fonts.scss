@@ -68,24 +68,3 @@
 .font-size-inherit {
 	@extend %font-size-inherit;
 }
-
-
-/**
- * Font family
- *
- * Constructor class for each font family found in map-get( $font, families )
- *
- * @param 	$font-family-name      name of the family
- * @param 	$font-family-value     value of the family
- * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
- */
-@each $font-family-name, $font-family-value in map-get( $font, families ) {
-
-	%font-family-#{ $font-family-name } {
-		font-family: #{ $font-family-value };
-	}
-
-	.font-family-#{ $font-family-name } {
-		@extend %font-family-#{ $font-family-name };
-	}
-}

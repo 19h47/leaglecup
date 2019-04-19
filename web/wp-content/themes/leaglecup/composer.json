@@ -1,6 +1,7 @@
 {
     "require": {
-        "timber/timber": "1.9.2"
+        "timber/timber": "1.9.2",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "scripts": {
         "config-set": "vendor/bin/phpcs --config-set installed_paths wpcs",

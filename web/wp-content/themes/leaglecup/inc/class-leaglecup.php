@@ -112,11 +112,15 @@ class LeagleCup extends Timber {
 
 		include_once get_template_directory() . '/inc/block/member/index.php';
 
+		include_once get_template_directory() . '/inc/class-sendcommand.php';
+
 		new Partner( $this->get_theme_version() );
 		new Price( $this->get_theme_version() );
 		new Member( $this->get_theme_version() );
 
 		new PartnerCategory( $this->get_theme_version() );
+
+		new SendCommand( $this->get_theme_version() );
 
 		if ( is_admin() ) {
 			new Admin( $this->get_theme_name(), $this->get_theme_version() );
@@ -375,7 +379,7 @@ class LeagleCup extends Timber {
 			$this->theme_name . '-global',
 			get_template_directory_uri() . '/dist/css/main.css',
 			array(),
-			'1.0.0'
+			$this->get_theme_version()
 		);
 
 		wp_enqueue_style( $this->theme_name . '-global' );
@@ -396,15 +400,24 @@ class LeagleCup extends Timber {
 			$this->theme_name . '-main',
 			get_template_directory_uri() . '/dist/js/main.js',
 			array(),
-			'1.0.0',
+			$this->get_theme_version(),
 			true
+		);
+
+		wp_localize_script(
+			$this->theme_name . '-main',
+			'wp',
+			array(
+				'ajax_url' => admin_url( 'admin-ajax.php' ),
+				'nonce'    => wp_create_nonce( 'security' ),
+			)
 		);
 
 		wp_enqueue_script(
 			'feature',
 			'//cdnjs.cloudflare.com/ajax/libs/feature.js/1.0.1/feature.min.js',
 			array(),
-			'1.0.0',
+			$this->get_theme_version(),
 			false
 		);
 		wp_add_inline_script(

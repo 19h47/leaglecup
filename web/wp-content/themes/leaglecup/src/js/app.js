@@ -1,5 +1,5 @@
 import GuidGuidBangBang from 'Common/GuidGuidBangBang';
-import ElectronicSignature from 'Blocks/ElectronicSignature';
+import Command from 'Blocks/Command';
 import Form from 'Blocks/Form';
 import animateScrollTo from 'animated-scroll-to';
 
@@ -11,8 +11,8 @@ import animateScrollTo from 'animated-scroll-to';
 	}
 
 	//
-	const electronicSignature = new ElectronicSignature('.js-electronic-signature');
-	electronicSignature.init();
+	const command = new Command('.js-electronic-signature');
+	command.init();
 
 	//
 	const form = new Form('.js-form');
