@@ -76,7 +76,8 @@ class SendCommand {
 	public function ajax() {
 		// Check for referer call.
 		check_ajax_referer( 'security', 'nonce' );
-
+		
+		// @TODO Test $_POST.
 		$this->data = $_POST;
 		$this->set_filename();
 		$this->create_contract()->request();
