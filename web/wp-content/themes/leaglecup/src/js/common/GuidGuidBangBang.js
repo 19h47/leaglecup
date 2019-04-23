@@ -49,7 +49,7 @@ export default class GuidGuidBangBang {
 		const div = document.createElement('div');
 		const column = index => `
 			<div class="col-1 text-align-center h-100">
-				<div class="Guid__column text-align-xs-center">${index}</div>
+				<div class="Guid__column text-align-center">${index}</div>
 			</div>
 		`;
 		let inner = '';
