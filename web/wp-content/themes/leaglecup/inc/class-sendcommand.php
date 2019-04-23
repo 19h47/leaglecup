@@ -185,7 +185,7 @@ class SendCommand {
 						'value' => $this->data['cell_phone'],
 					),
 					array(
-						'key'   => 'adresse1',
+						'key'   => 'address_1',
 						'value' => $this->data['address_1'],
 					),
 					array(

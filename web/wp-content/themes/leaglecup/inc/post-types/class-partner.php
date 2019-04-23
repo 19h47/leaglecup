@@ -90,7 +90,7 @@ class Partner {
 			'label'               => 'partenaire',
 			'description'         => __( 'Les partenaires', 'leaglecup' ),
 			'labels'              => $labels,
-			'supports'            => array( 'title', 'thumbnail', 'editor' ),
+			'supports'            => array( 'title', 'thumbnail', 'editor',  ),
 			'taxonomies'          => array( 'partner_category' ),
 			'hierarchical'        => false,
 			'public'              => true,
