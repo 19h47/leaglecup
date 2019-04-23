@@ -76,7 +76,7 @@ class SendCommand {
 	public function ajax() {
 		// Check for referer call.
 		check_ajax_referer( 'security', 'nonce' );
-		
+
 		// @TODO Test $_POST.
 		$this->data = $_POST;
 		$this->set_filename();
@@ -160,7 +160,7 @@ class SendCommand {
 
 		$customer = array(
 			'customer' => array(
-				'number'        => $this->filename,
+				'number'        => $this->get_filename(),
 				'mode'          => 3,
 				'contractor_id' => -1,
 				'vendor'        => $this->config['VENDOR_EMAIL'],
