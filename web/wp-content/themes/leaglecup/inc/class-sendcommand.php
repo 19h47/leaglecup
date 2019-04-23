@@ -36,7 +36,7 @@ class SendCommand {
 
 
 	/**
-	 * The file name
+	 * The filename
 	 *
 	 * @access private
 	 * @var    string
