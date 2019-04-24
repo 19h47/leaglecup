@@ -242,6 +242,10 @@ class SendCommand {
 					'value' => 'true' === $this->data['option_2'] ? '50 €' : '0 €',
 				),
 				array(
+					'key'   => 'option_3',
+					'value' => 'true' === $this->data['option_3'] ? '75 €' : '0 €',
+				),
+				array(
 					'key'   => 'total',
 					'value' => $this->data['total'] . ' €',
 				),

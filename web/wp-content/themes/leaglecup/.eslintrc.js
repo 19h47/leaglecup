@@ -12,7 +12,7 @@ module.exports = {
 		'no-console': 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-tabs': 0,
-		'indent': ['error', 'tab'],
+		'indent': ['error', 'tab', { 'SwitchCase': 1 }],
 		'no-param-reassign': ['error', {
 			props: true,
 			ignorePropertyModificationsFor: ['state']
