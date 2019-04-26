@@ -24,13 +24,17 @@ export default class Counter {
 
 	initEvents() {
 		for (let i = 0; i < this.checkboxes.length; i += 1) {
-			this.checkboxes[i].addEventListener('change', (event) => {
-				const number = parseInt(event.target.getAttribute('data-number'), 10);
-				const total = parseInt(this.$total.innerHTML, 10);
-
-				this.calc(event.target.checked, number, total);
-			});
+			this.checkboxes[i].addEventListener('change', event => this.change(event));
+			this.checkboxes[i].addEventListener('input', event => this.change(event));
 		}
+	}
+
+	change(event) {
+		const { target } = event;
+		const number = parseInt(target.getAttribute('data-number'), 10);
+		const total = parseInt(this.$total.innerHTML, 10);
+
+		this.calc(target.checked, number, total);
 	}
 
 	calc(checked, number, total) {
