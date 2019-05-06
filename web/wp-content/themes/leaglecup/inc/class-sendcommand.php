@@ -80,7 +80,8 @@ class SendCommand {
 		// @TODO Test $_POST.
 		$this->data = $_POST;
 		$this->set_filename();
-		$this->create_contract()->request();
+		$this->create_contract();
+		// $this->create_contract()->request();
 	}
 
 	/**
@@ -235,15 +236,15 @@ class SendCommand {
 				),
 				array(
 					'key'   => 'option_1',
-					'value' => 'true' === $this->data['option_1'] ? '50 €' : '0 €',
+					'value' => 'option_1' === $this->data['option_1'] ? '50 €' : '0 €',
 				),
 				array(
 					'key'   => 'option_2',
-					'value' => 'true' === $this->data['option_2'] ? '50 €' : '0 €',
+					'value' => 'option_2' === $this->data['option_2'] ? '50 €' : '0 €',
 				),
 				array(
 					'key'   => 'option_3',
-					'value' => 'true' === $this->data['option_3'] ? '75 €' : '0 €',
+					'value' => 'option_3' === $this->data['option_3'] ? '75 €' : '0 €',
 				),
 				array(
 					'key'   => 'total',
@@ -296,7 +297,7 @@ class SendCommand {
 			get_template_directory() . '/inc/form-data/' . $this->get_filename() . '.json',
 			wp_json_encode( $array )
 		);
-
+		var_dump( $array );
 		return $this;
 	}
 }

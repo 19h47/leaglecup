@@ -192,7 +192,7 @@
 									<div role="checkbox" class="Form__checkbox js-checkbox" aria-checked="false" tabindex="0">
 										<button type="button"></button>
 										<div class="d-none">
-											<input class="js-calc" id="option_1" name="option_1" value="false" type="checkbox" data-number="50">
+											<input class="js-calc" id="option_1" name="option_1" value="option_1" type="checkbox" data-number="50">
 										</div>
 									</div>
 								</div>
@@ -206,7 +206,7 @@
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
 										<button type="button"></button>
-										<input class="d-none js-calc" id="option_2" name="option_2" value="false" type="checkbox" data-number="50">
+										<input class="d-none js-calc" id="option_2" name="option_2" value="option_2" type="checkbox" data-number="50">
 									</div>
 								</div>
 							</div>
@@ -219,7 +219,7 @@
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
 										<button type="button"></button>
-										<input class="d-none js-calc" id="option_3" name="option_3" value="false" type="checkbox" data-number="75">
+										<input class="d-none js-calc" id="option_3" name="option_3" value="option_3" type="checkbox" data-number="75">
 									</div>
 								</div>
 							</div>
@@ -247,7 +247,7 @@
 							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" role="checkbox" data-condition-class="js-condition-medical-certificate" aria-checked="false" tabindex="0">
 								<button type="button"></button>
 								<span>{{- 'J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)' -}}</span>
-								<input class="d-none" id="medical_certificate" name="medical_certificate" value="false" type="checkbox">
+								<input class="d-none" id="medical_certificate" name="medical_certificate" value="medical_certificate" type="checkbox">
 							</div>
 						</div>
 
@@ -258,7 +258,9 @@
 								<div class="Form__radio js-radio" role="radio" tabindex="0" aria-checked="true">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire</span>
-									<input class="d-none" type="radio" id="scramble_alone" name="scramble" value="Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire" checked>
+									<div class="d-none">
+										<input type="radio" id="scramble_alone" name="scramble" value="Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire" checked>
+									</div>
 								</div>
 							</div>
 
@@ -266,7 +268,9 @@
 								<div class="Form__radio js-radio" role="radio" tabindex="-1" aria-checked="false" data-condition-class="js-condition-scramble-team">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je constitue une équipe</span>
-									<input class="d-none" type="radio" id="scramble_team" name="scramble" value="Je constitue une équipe avec">
+									<div class="d-none">
+										<input type="radio" id="scramble_team" name="scramble" value="Je constitue une équipe avec">
+									</div>
 								</div>
 							</div>
 
