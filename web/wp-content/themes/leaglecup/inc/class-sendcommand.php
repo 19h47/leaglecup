@@ -80,8 +80,7 @@ class SendCommand {
 		// @TODO Test $_POST.
 		$this->data = $_POST;
 		$this->set_filename();
-		$this->create_contract();
-		// $this->create_contract()->request();
+		$this->create_contract()->request();
 	}
 
 	/**
@@ -124,8 +123,6 @@ class SendCommand {
 				),
 			)
 		);
-
-		var_dump( $response->getBody()->getContents() );
 
 		// That's all folks!
 		wp_die();
@@ -183,15 +180,15 @@ class SendCommand {
 						'value' => $this->data['email'],
 					),
 					array(
-						'key'   => 'cell_phone',
+						'key'   => 'cellPhone',
 						'value' => $this->data['cell_phone'],
 					),
 					array(
-						'key'   => 'address_1',
+						'key'   => 'address1',
 						'value' => $this->data['address_1'],
 					),
 					array(
-						'key'   => 'postal_code',
+						'key'   => 'postalCode',
 						'value' => $this->data['postal_code'],
 					),
 					array(
@@ -199,7 +196,7 @@ class SendCommand {
 						'value' => $this->data['city'],
 					),
 					array(
-						'key'   => 'company_name',
+						'key'   => 'companyName',
 						'value' => $this->data['company_name'],
 					),
 				),
@@ -297,7 +294,7 @@ class SendCommand {
 			get_template_directory() . '/inc/form-data/' . $this->get_filename() . '.json',
 			wp_json_encode( $array )
 		);
-		var_dump( $array );
+
 		return $this;
 	}
 }
