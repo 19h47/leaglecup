@@ -14,15 +14,17 @@
 		<h3 class="Member__title">{{ member.title }}</h3>
 
 		{% if member.get_field( 'links' ) is iterable %}
-			<ul class="Member__socials Socials">
-			{% for link, key in member.get_field( 'links' ) if key.url %}
-				<li class="Socials__item">
-					<a class="Socials__link" href="{{ link == 'email' ? "mailto:#{key.url}" : key.url }}" target="_blank" title="{{ key.label }}">
-						{% include 'svg/use.html.twig' with { icon: link } %}
-					</a>
-				</li>
-			{% endfor %}
-			</ul>
+			{% spaceless %}
+				<ul class="Member__socials Socials">
+					{% for link, key in member.get_field( 'links' ) if key.url %}
+						<li class="Socials__item">
+							<a class="Socials__link" href="{{ link == 'email' ? "mailto:#{key.url}" : key.url }}" target="_blank" title="{{ key.label }}">
+								{% include 'svg/use.html.twig' with { icon: link } %}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endspaceless %}
 		{% endif %}
 	</li>
 {% endfor %}

@@ -6,7 +6,7 @@
 // Dependencies
 @import 'vendors/bootstrap-imports';
 
-@import 'abstracts/easings';
+@import '~architecture/src/stylesheets/abstracts/easings';
 
 @import 'abstracts/variables';
 
@@ -16,13 +16,25 @@
 // Vendors
 @import '~ress/ress';
 
+// Functions
+@import '~architecture/src/stylesheets/abstracts/functions';
 
-// Abstracts
+// Mixins.
 @import
-	'abstracts/functions',
-	'abstracts/mixins/includes',
-	'abstracts/placeholders',
-	'abstracts/animations';
+	'~architecture/src/stylesheets/abstracts/mixins/create-class-color',
+	'~architecture/src/stylesheets/abstracts/mixins/position',
+	'~architecture/src/stylesheets/abstracts/mixins/margin',
+	'~architecture/src/stylesheets/abstracts/mixins/padding',
+	'~architecture/src/stylesheets/abstracts/mixins/letter-spacing',
+	'~architecture/src/stylesheets/abstracts/mixins/size',
+	'~architecture/src/stylesheets/abstracts/mixins/auto-alpha',
+	'~architecture/src/stylesheets/abstracts/mixins/font',
+	'~architecture/src/stylesheets/abstracts/mixins/power';
+
+// Placeholders
+@import '~architecture/src/stylesheets/abstracts/placeholders';
+
+// @import '~architecture/src/stylesheets/abstracts/animations';
 
 @import 'vendors/wp-block';
 
@@ -73,5 +85,23 @@
 	'pages/register-page';
 
 
-// Utilities
-@import 'utilities/includes';
+// Utilities.
+@import
+	'vendors/architecture-variables',
+// 	'~architecture/src/stylesheets/utilities/colors',
+// 	'~architecture/src/stylesheets/utilities/cursors',
+// 	'~architecture/src/stylesheets/utilities/displays',
+	// '~architecture/src/stylesheets/utilities/floats',
+	'~architecture/src/stylesheets/utilities/fonts',
+	'~architecture/src/stylesheets/utilities/margins',
+	// '~architecture/src/stylesheets/utilities/overflows',
+	// '~architecture/src/stylesheets/utilities/paddings',
+	'~architecture/src/stylesheets/utilities/positions',
+	'~architecture/src/stylesheets/utilities/sizes',
+	'~architecture/src/stylesheets/utilities/text-aligns',
+	'~architecture/src/stylesheets/utilities/text-decorations',
+	'~architecture/src/stylesheets/utilities/text-transforms',
+	'~architecture/src/stylesheets/utilities/vertical-aligns',
+// 	'~architecture/src/stylesheets/utilities/visibilities',
+	// '~architecture/src/stylesheets/utilities/white-spaces',
+	'~architecture/src/stylesheets/utilities/lists';
