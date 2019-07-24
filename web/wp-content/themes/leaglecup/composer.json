@@ -1,4 +1,6 @@
 {
+	"name": "19h47/leaglecup",
+	"version": "1.0.0",
     "require": {
         "timber/timber": "1.9.2",
         "guzzlehttp/guzzle": "^6.3"
