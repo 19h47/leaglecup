@@ -11,14 +11,6 @@
 $context = Timber::context();
 
 // Get terms.
-$context['terms'] = Timber::get_terms(
-	array(
-		'taxonomy'       => 'partner_category',
-		'hide_empty'     => true,
-		'meta_key'       => 'partner_category_order',
-		'orderby'        => 'meta_value_num',
-		'order'          => 'ASC'
-	)
-);
+$context['terms'] = get_transient( 'leaglecup_partners' );
 
 Timber::render( 'common/partners.html.twig', $context );

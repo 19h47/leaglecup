@@ -36,6 +36,8 @@ class PartnerCategory {
 
 		add_action( 'manage_edit-partner_category_columns', array( $this, 'add_custom_columns' ) );
 		add_action( 'manage_partner_category_custom_column', array( $this, 'render_custom_columns' ), 10, 3 );
+
+		add_action( 'edited_partner_category', array( $this, 'edited' ), 10, 2 );
 	}
 
 
@@ -130,5 +132,20 @@ class PartnerCategory {
 
 				return $html;
 		}
+	}
+
+
+	/**
+	 * Edited
+	 *
+	 * Fires once a partner category has been edited.
+	 *
+	 * @param int $term_id Term ID.
+	 * @param int $tt_id Term taxonomy ID.
+	 * @link https://developer.wordpress.org/reference/hooks/save_post_post-post_type/
+	 * @access public
+	 */
+	public function edited( int $term_id, int $tt_id ) {
+		delete_transient( 'leaglecup_partners' );
 	}
 }

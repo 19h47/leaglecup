@@ -44,6 +44,28 @@ class Partner {
 
 		add_filter( 'manage_partner_posts_columns', array( $this, 'add_custom_columns' ) );
 		add_action( 'manage_partner_posts_custom_column', array( $this, 'render_custom_columns' ), 10, 2 );
+
+		add_action( 'save_post_partner', array( $this, 'save' ), 10, 3 );
+	}
+
+
+	/**
+	 * Save
+	 *
+	 * Fires once a partner has been saved.
+	 *
+	 * @param int     $post_id The post ID.
+	 * @param WP_Post $post The post object.
+	 * @param bool    $update Whether this is an existing post being updated or not.
+	 * @link https://developer.wordpress.org/reference/hooks/save_post_post-post_type/
+	 * @access public
+	 */
+	public function save( int $post_id, WP_Post $post, bool $update ) {
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		}
+
+		delete_transient( 'leaglecup_partners' );
 	}
 
 
@@ -90,7 +112,7 @@ class Partner {
 			'label'               => 'partenaire',
 			'description'         => __( 'Les partenaires', 'leaglecup' ),
 			'labels'              => $labels,
-			'supports'            => array( 'title', 'thumbnail', 'editor',  ),
+			'supports'            => array( 'title', 'thumbnail', 'editor' ),
 			'taxonomies'          => array( 'partner_category' ),
 			'hierarchical'        => false,
 			'public'              => true,
@@ -125,7 +147,9 @@ class Partner {
 
 		<?php
 
-		if ( 'partner' !== $typenow ) return false;
+		if ( 'partner' !== $typenow ) {
+			return false;
+		}
 
 		?>
 		<style>
@@ -182,7 +206,7 @@ class Partner {
 		switch ( $column_name ) {
 			case 'thumbnail':
 				if ( get_the_post_thumbnail( $post_id ) ) {
-					echo '<a href="' . get_edit_post_link( $post_id ) . '">';
+					echo '<a href="' . esc_html( get_edit_post_link( $post_id ) ) . '">';
 					the_post_thumbnail( 'full' );
 					echo '</a>';
 				} else {
@@ -209,7 +233,7 @@ class Partner {
 		}
 
 		$text = sprintf(
-			_n( '%1$s %4$s%2$s', '%1$s %4$s%3$s', $num_posts->{ $post_status } ),
+			_n( '%1$s %4$s%2$s', '%1$s %4$s%3$s', $num_posts->{ $post_status } ), // phpcs:ignore
 			number_format_i18n( $num_posts->{ $post_status } ),
 			strtolower( $object->labels->singular_name ),
 			strtolower( $object->labels->name ),

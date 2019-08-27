@@ -98,6 +98,7 @@ class LeagleCup extends Timber {
 		include_once get_template_directory() . '/inc/utilities.php';
 		include_once get_template_directory() . '/inc/reset.php';
 		include_once get_template_directory() . '/inc/template-functions.php';
+		include_once get_template_directory() . '/inc/get-partners.php';
 
 		include_once get_template_directory() . '/inc/class-admin.php';
 
@@ -263,6 +264,11 @@ class LeagleCup extends Timber {
 	public function add_to_context( $context ) {
 		global $wp;
 
+		// Transients.
+		get_partners();
+
+		$context['partners'] = get_transient( 'leaglecup_partners' );
+
 		// Menus.
 		$menus = get_registered_nav_menus();
 		foreach ( $menus as $menu => $value ) {
@@ -290,7 +296,7 @@ class LeagleCup extends Timber {
 				'slug'  => 'email',
 				'name'  => __( 'Contactez-nous' ),
 				'link'  => 'mailto:' . get_option( 'email' ),
-			)
+			),
 		);
 
 		foreach ( $socials as $social ) {
@@ -471,4 +477,4 @@ class LeagleCup extends Timber {
 
 $wp_theme = wp_get_theme();
 
-new LeagleCup( 'lglcup', $wp_theme->Version );
+new LeagleCup( 'lglcup', $wp_theme->Version ); // phpcs:ignore
