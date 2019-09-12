@@ -67,8 +67,8 @@
         "webpack-notifier": "^1.8.0"
     },
     "dependencies": {
-        "@19h47/checkbox": "^1.0.11",
-        "@19h47/radios": "^1.0.9",
+        "@19h47/checkbox": "^2.0.1",
+        "@19h47/radios": "^2.0.2",
         "@babel/runtime": "^7.5.5",
         "architecture": "github:19h47/architecture",
         "bootstrap": "^4.3.1",

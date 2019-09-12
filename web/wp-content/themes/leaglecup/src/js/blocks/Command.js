@@ -41,11 +41,6 @@ export default class Command {
 			const form = new FormData(this.$form);
 			this.$form.classList.add('Form--loading');
 
-			// eslint-disable-next-line
-			// for (const entryForm of form.entries()) {
-			// 	console.log(`${entryForm[0]}, ${entryForm[1]}`);
-			// }
-
 			fetch(this.url, {
 				method: 'POST',
 				body: form,

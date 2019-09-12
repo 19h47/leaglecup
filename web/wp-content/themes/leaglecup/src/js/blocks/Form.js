@@ -13,24 +13,15 @@ export default class Form {
 		}
 
 		// Checkboxes
-		const inputCheckboxes = this.$form.querySelectorAll('.js-checkbox');
-
-		for (let i = 0; i < inputCheckboxes.length; i += 1) {
-			const checkbox = new Checkbox(inputCheckboxes[i]);
-			checkbox.init();
-		}
+		const checkboxes = [...this.$form.querySelectorAll('.js-checkbox')];
+		checkboxes.map(input => new Checkbox(input).init());
 
 		// Radios
-		const inputRadios = this.$form.querySelectorAll('.js-radios');
-
-		for (let i = 0; i < inputRadios.length; i += 1) {
-			const radios = new Radios(inputRadios[i]);
-			radios.init();
-		}
+		const radios = [...this.$form.querySelectorAll('.js-radios')];
+		radios.map(input => new Radios(input).init());
 
 		// Counter
 		const counter = new Counter(this.$form);
-
 		counter.init();
 
 		return true;

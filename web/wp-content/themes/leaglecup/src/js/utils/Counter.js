@@ -45,6 +45,14 @@ export default class Counter {
 		return this.subtract(number, total);
 	}
 
+	/**
+	 * Sum
+	 *
+	 * @param  {int} number
+	 * @param  {int} total
+	 *
+	 * @return this.render
+	 */
 	sum(number, total) {
 		const current = total + number;
 
@@ -66,7 +74,6 @@ export default class Counter {
 	 *
 	 */
 	render(number) {
-		// eslint-disable-next-line
 		this.$total.innerHTML = number;
 
 		// Input
