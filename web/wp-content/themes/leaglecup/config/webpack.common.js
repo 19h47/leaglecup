@@ -8,7 +8,7 @@
 const path = require('path');
 
 // Plugins
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
@@ -188,12 +188,7 @@ module.exports = {
 		}]
 	},
 	plugins: [
-        new CleanWebpackPlugin(
-            ['dist'], {
-                root: resolve(''),
-				verbose: false,
-            }
-        ),
+        new CleanWebpackPlugin(),
 		manifestPlugin,
 		new SpriteLoaderPlugin({ plainSprite: true }),
 		new WebpackNotifierPlugin({
