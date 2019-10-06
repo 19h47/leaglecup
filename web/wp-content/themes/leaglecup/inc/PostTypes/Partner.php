@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Class Partner
  *
@@ -73,6 +73,8 @@ class Partner {
 
 	/**
 	 * Register Custom Post Type
+	 *
+	 * @access public
 	 */
 	public function register_post_type() {
 		$labels = array(
@@ -139,6 +141,8 @@ class Partner {
 
 	/**
 	 * CSS
+	 *
+	 * @access public
 	 */
 	public function css() {
 		global $typenow;
@@ -175,9 +179,11 @@ class Partner {
 	/**
 	 * Add custom columns
 	 *
-	 * @param arr $columns Array of columns.
+	 * @param array $columns Array of columns.
+	 * @link https://developer.wordpress.org/reference/hooks/manage_post_type_posts_columns/
+	 * @access public
 	 */
-	public function add_custom_columns( $columns ) {
+	public function add_custom_columns( array $columns ) {
 
 		$new_columns = array();
 
@@ -195,10 +201,12 @@ class Partner {
 	/**
 	 * Render custom columns
 	 *
-	 * @param str $column_name The column name.
-	 * @param int $post_id The ID of the post.
+	 * @param string $column_name The column name.
+	 * @param int    $post_id The ID of the post.
+	 * @link https://developer.wordpress.org/reference/hooks/manage_post-post_type_posts_custom_column/
+	 * @access public
 	 */
-	public function render_custom_columns( $column_name, $post_id ) {
+	public function render_custom_columns( string $column_name, int $post_id ) {
 		switch ( $column_name ) {
 			case 'thumbnail':
 				if ( get_the_post_thumbnail( $post_id ) ) {

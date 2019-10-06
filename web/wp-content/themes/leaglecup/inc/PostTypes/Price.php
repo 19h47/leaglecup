@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Class Price
  *
@@ -35,9 +35,9 @@ class Price {
 	 * Construct function
 	 *
 	 * @access public
-	 * @param str $theme_version Theme version.
+	 * @param string $theme_version Theme version.
 	 */
-	public function __construct( $theme_version ) {
+	public function __construct( string $theme_version ) {
 		$this->theme_version = $theme_version;
 
 		$this->register_post_type();
@@ -48,6 +48,8 @@ class Price {
 
 	/**
 	 * Register Custom Post Type
+	 *
+	 * @access public
 	 */
 	public function register_post_type() {
 		$labels = array(

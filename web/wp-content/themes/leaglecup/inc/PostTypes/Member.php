@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Class Member
  *
@@ -31,10 +31,10 @@ class Member {
 	/**
 	 * Construct function
 	 *
-	 * @param str $theme_version The theme version.
+	 * @param string $theme_version The theme version.
 	 * @access public
 	 */
-	public function __construct( $theme_version ) {
+	public function __construct( string $theme_version ) {
 		$this->theme_version = $theme_version;
 
 		$this->register_post_type();
@@ -49,6 +49,8 @@ class Member {
 
 	/**
 	 * Register Custom Post Type
+	 *
+	 * @access public
 	 */
 	public function register_post_type() {
 		$labels = array(
@@ -116,9 +118,10 @@ class Member {
 	/**
 	 * Add custom columns
 	 *
-	 * @param arr $columns Array of columns.
+	 * @param array $columns Array of columns.
+	 * @link https://developer.wordpress.org/reference/hooks/manage_post_type_posts_columns/
 	 */
-	public function add_custom_columns( $columns ) {
+	public function add_custom_columns( array $columns ) {
 
 		$new_columns = array();
 
@@ -136,14 +139,15 @@ class Member {
 	/**
 	 * Render custom columns
 	 *
-	 * @param str $column_name The column name.
-	 * @param int $post_id The ID of the post.
+	 * @param string $column_name The column name.
+	 * @param int    $post_id The ID of the post.
+	 * @link https://developer.wordpress.org/reference/hooks/manage_post-post_type_posts_custom_column/
 	 */
-	public function render_custom_columns( $column_name, $post_id ) {
+	public function render_custom_columns( string $column_name, int $post_id ) {
 		switch ( $column_name ) {
 			case 'thumbnail':
 				if ( get_the_post_thumbnail( $post_id ) ) {
-					echo '<a href="' . get_edit_post_link( $post_id ) . '">';
+					echo '<a href="' . esc_attr( get_edit_post_link( $post_id ) ) . '">';
 					the_post_thumbnail( 'full' );
 					echo '</a>';
 				} else {
@@ -157,6 +161,8 @@ class Member {
 
 	/**
 	 * CSS
+	 *
+	 * @access public
 	 */
 	public function css() {
 		global $typenow;
