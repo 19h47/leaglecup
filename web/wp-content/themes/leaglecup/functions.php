@@ -11,9 +11,8 @@
  * @see     https://developer.wordpress.org/themes/basics/theme-functions/
  */
 
-/**
- * Include class theme
- *
- * @link https://github.com/19h47/leaglecup
- */
-require_once get_template_directory() . '/inc/class-leaglecup.php';
+require_once get_template_directory() . '/vendor/autoload.php';
+
+use LeagleCup\App as App;
+
+new App( 'LeagleCup', wp_get_theme()->Version ); // phpcs:ignore

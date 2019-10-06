@@ -11,6 +11,8 @@
  * @link     https://github.com/19h47/leaglecup
  */
 
+namespace LeagleCup\PostTypes;
+
 /**
  * Price class
  *
@@ -41,9 +43,6 @@ class Price {
 		$this->register_post_type();
 
 		add_action( 'init', array( $this, 'register_post_type' ) );
-		add_action( 'admin_head', array( $this, 'css' ) );
-
-		add_filter( 'dashboard_glance_items', array( $this, 'at_a_glance' ) );
 	}
 
 
@@ -110,54 +109,5 @@ class Price {
 			'capability_type'     => 'post',
 		);
 		register_post_type( 'price', $args );
-	}
-
-
-	/**
-	 * CSS
-	 */
-	public function css() {
-		?>
-		<style>
-			#dashboard_right_now .price-count:before { content: "\f155"; }
-		</style>
-		<?php
-	}
-
-	/**
-	 * "At a glance" items (dashboard widget): add the testimony.
-	 *
-	 * @param arr $items Array to items.
-	 */
-	public function at_a_glance( $items ) {
-		$post_type   = 'price';
-		$post_status = 'publish';
-		$object      = get_post_type_object( $post_type );
-
-		$num_posts = wp_count_posts( $post_type );
-		if ( ! $num_posts || ! isset( $num_posts->{ $post_status } ) || 0 === (int) $num_posts->{ $post_status } ) {
-			return $items;
-		}
-
-		$text = sprintf(
-			_n( '%1$s %4$s%2$s', '%1$s %4$s%3$s', $num_posts->{$post_status} ),
-			number_format_i18n( $num_posts->{$post_status} ),
-			strtolower( $object->labels->singular_name ),
-			strtolower( $object->labels->name ),
-			'pending' === $post_status ? 'Pending ' : ''
-		);
-
-		if ( current_user_can( $object->cap->edit_posts ) ) {
-			$items[] = sprintf(
-				'<a class="%1$s-count" href="edit.php?post_status=%2$s&post_type=%1$s">%3$s</a>',
-				$post_type,
-				$post_status,
-				$text
-			);
-		} else {
-			$items[] = sprintf( '<span class="%1$s-count">%s</span>', $text );
-		}
-
-		return $items;
 	}
 }

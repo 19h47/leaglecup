@@ -1,9 +1,10 @@
 {
-	"name": "19h47/leaglecup",
-	"version": "1.0.0",
+    "name": "19h47/leaglecup",
+    "version": "1.0.0",
     "require": {
         "timber/timber": "1.9.2",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "19h47/set-glance-items": "dev-master"
     },
     "scripts": {
         "config-set": "vendor/bin/phpcs --config-set installed_paths wpcs",
@@ -16,5 +17,23 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
         "phpcompatibility/phpcompatibility-wp": "*"
+    },
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/19h47/set-glance-items.git"
+		}
+	],
+    "extra": {
+        "installer-paths": {
+            "../../plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "LeagleCup\\": "inc/"
+        }
     }
 }

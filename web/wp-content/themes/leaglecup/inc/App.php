@@ -8,11 +8,7 @@
  * @package LeagleCup
  */
 
-/**
- * Autoload
- */
-require_once get_template_directory() . '/vendor/autoload.php';
-
+namespace LeagleCup;
 
 /**
  * Timber
@@ -22,7 +18,18 @@ require_once get_template_directory() . '/vendor/autoload.php';
  * @see https://github.com/timber/timber
  */
 use Timber\Timber as Timber;
-use \Twig_SimpleFunction as Twig_SimpleFunction;
+use TimberMenu;
+use Twig_SimpleFunction;
+use SendCommand;
+use Set_Glance_Items;
+
+use LeagleCup\PostTypes\Partner as Partner;
+use LeagleCup\PostTypes\Price as Price;
+use LeagleCup\PostTypes\Member as Member;
+
+use LeagleCup\Taxonomies\PartnerCategory as PartnerCategory;
+
+use LeagleCup\Admin as Admin;
 
 
 /**
@@ -36,7 +43,7 @@ Timber::$dirname = array( 'views' );
 /**
  * LeagleCup
  */
-class LeagleCup extends Timber {
+class App extends Timber {
 
 	/**
 	 * The name of the theme
@@ -100,16 +107,8 @@ class LeagleCup extends Timber {
 		include_once get_template_directory() . '/inc/template-functions.php';
 		include_once get_template_directory() . '/inc/get-partners.php';
 
-		include_once get_template_directory() . '/inc/class-admin.php';
-
 		include_once get_template_directory() . '/inc/customizer/contact.php';
 		include_once get_template_directory() . '/inc/customizer/link.php';
-
-		include_once get_template_directory() . '/inc/post-types/class-partner.php';
-		include_once get_template_directory() . '/inc/post-types/class-price.php';
-		include_once get_template_directory() . '/inc/post-types/class-member.php';
-
-		include_once get_template_directory() . '/inc/taxonomies/class-partnercategory.php';
 
 		include_once get_template_directory() . '/inc/block/member/index.php';
 
@@ -122,6 +121,27 @@ class LeagleCup extends Timber {
 		new PartnerCategory( $this->get_theme_version() );
 
 		new SendCommand( $this->get_theme_version() );
+
+		// Set glance items plugin.
+		if ( class_exists( 'Set_Glance_Items' ) ) {
+			new Set_Glance_Items(
+				array(),
+				array(
+					array(
+						'name' => 'member',
+						'code' => '\f307',
+					),
+					array(
+						'name' => 'partner',
+						'code' => '\f483',
+					),
+					array(
+						'name' => 'price',
+						'code' => '\f155',
+					),
+				)
+			);
+		}
 
 		if ( is_admin() ) {
 			new Admin( $this->get_theme_name(), $this->get_theme_version() );
@@ -474,7 +494,3 @@ class LeagleCup extends Timber {
 		return $this->theme_name;
 	}
 }
-
-$wp_theme = wp_get_theme();
-
-new LeagleCup( 'lglcup', $wp_theme->Version ); // phpcs:ignore

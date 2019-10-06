@@ -8,6 +8,8 @@
  * @package LeagleCup
  */
 
+namespace LeagleCup\Taxonomies;
+
 /**
  * Partner category tag class
  */

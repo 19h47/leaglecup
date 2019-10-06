@@ -56,9 +56,9 @@ class SendCommand {
 	/**
 	 * Constructor
 	 *
-	 * @param str $theme_version The theme version.
+	 * @param string $theme_version The theme version.
 	 */
-	public function __construct( $theme_version ) {
+	public function __construct( string $theme_version ) {
 		$this->theme_version = $theme_version;
 		$this->config        = include_once get_template_directory() . '/inc/config.php';
 
