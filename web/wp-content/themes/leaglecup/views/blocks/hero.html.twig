@@ -14,19 +14,21 @@ Hero-block
 			<div class="col-12 col-md-5 offset-md-1">
 				<h1 class="page-block__title">{{- site.title -}}</h1>
 				<div class="page-block__content Wysiwyg">{{- hero.content -}}</div>
-
 				{% if hero.link %}
 					<a class="page-block__button Hero-block__button Button Button--outline-primary" href="{{ hero.link.url }}"{{ hero.link.target ? ' target="_blank"' }}>
 						{{- hero.link.title | default( 'Découvrir' ) -}}
 					</a>
 				{% endif %}
-
 			</div>
-			<div class="col-12 col-md-4 offset-md-1">
+			<div class="col-12 col-md-2 offset-md-1">
 				<img class="Hero-block__logo" src="{{ theme.path }}/dist/img/svg/logo.svg" alt="{{ site.description }}" width="261" height="188">
 			</div>
 		</div>
 	</div>
+
+	{% if hero.carousel %}
+		{% include 'blocks/carousel.html.twig' with { carousel: hero.carousel } %}
+	{% endif %}
 
 	<footer class="Page__hero__footer">
 		<a class="d-inline-block" href="#{{ target }}">

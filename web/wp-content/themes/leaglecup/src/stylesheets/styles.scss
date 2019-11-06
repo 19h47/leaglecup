@@ -15,6 +15,7 @@
 
 // Vendors
 @import '~ress/ress';
+@import '~flickity/css/flickity';
 
 // Functions
 @import '~architecture/src/stylesheets/abstracts/functions';
@@ -57,7 +58,8 @@
 	'blocks/partners',
 	'blocks/page-block',
 	'blocks/members',
-	'blocks/member';
+	'blocks/member',
+	'blocks/carousel';
 
 
 // Components
@@ -81,8 +83,7 @@
 // Pages
 @import
 	'pages/front-page',
-	'pages/page',
-	'pages/register-page';
+	'pages/page';
 
 
 // Utilities.

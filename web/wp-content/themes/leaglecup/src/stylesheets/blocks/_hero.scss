@@ -9,9 +9,13 @@
 
     @extend %position-relative;
 
-    @include media-breakpoint-up( 'md' ) {
+    @include media-breakpoint-up( md ) {
         height: #{ $base-line-height * 30 }px;
     }
+
+	@at-root .Front-page & {
+		height: auto!important;
+	}
 
     color: the_color( white );
 
@@ -54,14 +58,21 @@
     // .Hero-block__logo
     &__logo {
         @extend .d-none, .d-md-block;
-        @extend %margin-x-auto;
+		@include size( 100% );
+
+		object-fit: contain;
+		object-position: center;
     }
 
     // .Hero-block__footer
     .Page__hero__footer {
         @include absolute( right 0 bottom 0 left 0 );
-        @include margin( bottom $grid-gutter-width * 4 );
+		@include padding( bottom #{ $base-line-height * 4 }px );
         @extend .d-none, .d-md-block;
+
+		@at-root .Front-page & {
+			@extend %position-relative;
+		}
     }
 
     // .Hero-block__image

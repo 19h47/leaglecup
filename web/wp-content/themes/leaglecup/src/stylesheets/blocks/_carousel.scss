@@ -1,0 +1,112 @@
+/**
+ *
+ */
+.Carousel {
+	@extend %position-relative;
+	@include margin( bottom #{ $base-line-height * 2 }px );
+	@include padding( bottom #{ $base-line-height }px );
+
+	z-index: 4;
+
+	@include media-breakpoint-up( md ) {
+		@include margin( top #{ $base-line-height * 4 }px );
+		@include padding( bottom 0 );
+	}
+
+	// .Carousel__images
+	&__images {
+		@extend %list-style-type-none, %position-relative;
+	}
+
+	// .Carousel__image
+	&__image {
+		@include size( 100%, #{ $base-line-height * 20 }px );
+
+		img {
+			@include size( 100% );
+
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__button {
+		@extend %Pointer-events-none;
+		@include size( $grid-gutter-width );
+
+		border: {
+			color: currentColor;
+			radius: $grid-gutter-width / 4;
+			style: solid;
+			width: 1px;
+		}
+		transition: opacity map-get( $easings, linear );
+		opacity: 0.5;
+
+		&.is-active {
+			@extend %Pointer-events-auto;
+
+			opacity: 1;
+		}
+
+		svg {
+			@include size( $grid-gutter-width / 2 );
+			fill: the_color( white );
+		}
+	}
+
+	&__content {
+		@include padding( top #{ $base-line-height }px right $grid-gutter-width bottom #{ $base-line-height }px left $grid-gutter-width );
+		@include absolute( right 0 bottom 0 left 0 );
+
+		background-color: rgba( the_color( blue, very-dark ), 0.8 );
+		z-index: 1;
+
+		transition: 0.7s map-get( $easings, ease );
+		opacity: 0;
+		transform: translate3d( 0, $grid-gutter-width, 0);
+
+		*:last-child {
+			@include margin( bottom 0 );
+		}
+
+		@at-root .is-selected & {
+			opacity: 1;
+			transform: translate3d( 0, 0, 0 );
+		}
+	}
+
+	&__dots {
+		@extend %list-style-type-none;
+		@extend .d-none, .d-md-flex, .justify-content-center, .align-items-center;
+		@include margin( top #{ $base-line-height }px );
+
+		height: 6px;
+
+		li {
+			@include margin( right #{ $base-line-height / 4 }px left #{ $base-line-height / 4 }px );
+			@extend .d-flex;
+
+			&:last-child {
+				@include margin( right 0 );
+			}
+			&:first-child {
+				@include margin( left 0 );
+			}
+		}
+	}
+
+	&__dot {
+		@include size( #{ $base-line-height / 3 }px );
+
+		border-radius: #{ $base-line-height / 6 }px;
+		background-color: the_color( white );
+		opacity: 0.5;
+		transition: opacity 0.5s map-get( $easings, linear );
+
+
+		&.is-selected {
+			opacity: 1;
+		}
+	}
+}

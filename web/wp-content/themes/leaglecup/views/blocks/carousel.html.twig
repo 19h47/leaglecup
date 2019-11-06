@@ -1,0 +1,45 @@
+{#
+
+Carousel
+
+@param array carousel
+
+#}
+<div class="Carousel js-carousel page-block__content">
+	<div class="Site-container">
+		<div class="row">
+			<div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+				<button type="button" class="Carousel__button js-previous" aria-label="{{ __( 'Précédent', 'LeagleCup' ) }}">
+					{% include 'svg/use.html.twig' with { icon: 'arrow-left' } %}
+				</button>
+			</div>
+			<div class="col-12 col-md-8">
+				<ul class="Carousel__images js-container">
+					{% for image in carousel.images %}
+						<li class="Carousel__image js-cell">
+							<img src="{{ Image( image ).src }}" alt="{{ Image( image ).alt }}">
+
+							{% if Image( image ).post_content %}
+								<div class="Carousel__content">
+									{{- Image( image ).post_content -}}
+								</div>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+				<ul class="Carousel__dots">
+					{% for image in carousel.images %}
+						<li>
+							<button class="Carousel__dot js-dots{{ loop.first ? ' is-selected' }}" type="button" aria-label="{{ loop.index }}"></button>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+				<button type="button" class="Carousel__button js-next is-active" aria-label="{{ __( 'Suivant', 'LeagleCup' ) }}">
+					{% include 'svg/use.html.twig' with { icon: 'arrow-right' } %}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
