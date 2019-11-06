@@ -10,16 +10,10 @@
 
 namespace LeagleCup;
 
-/**
- * Timber
- *
- * Instanciate Timber
- *
- * @see https://github.com/timber/timber
- */
 use Timber\Timber as Timber;
 use TimberMenu;
 use Twig_SimpleFunction;
+use Symfony\Component\Dotenv\{ Dotenv };
 use SendCommand;
 use Set_Glance_Items;
 
@@ -30,6 +24,9 @@ use LeagleCup\PostTypes\Member as Member;
 use LeagleCup\Taxonomies\PartnerCategory as PartnerCategory;
 
 use LeagleCup\Admin as Admin;
+
+$dotenv = new Dotenv();
+$dotenv->load( get_template_directory() . '/.env' );
 
 
 /**
@@ -420,7 +417,10 @@ class App extends Timber {
 	public function enqueue_scripts() {
 
 		wp_deregister_script( 'wp-embed' );
-		wp_deregister_script( 'jquery' );
+
+		if ( 'true' === getenv( 'PRODUCTION' ) ) {
+			wp_deregister_script( 'jquery' );
+		}
 
 		wp_register_script(
 			$this->theme_name . '-main',

@@ -11,12 +11,10 @@
     @include padding( top $grid-gutter-width bottom $grid-gutter-width );
 
     @include media-breakpoint-up( 'md' ) {
-        @include padding( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) bottom 0 );
+        @include padding( top $grid-gutter-width * 1.5 bottom 0 );
     }
 
-    background: {
-        color: the_color( blue, very-soft );
-    }
+    background-color: the_color( blue, very-soft );
     color: the_color( white );
 
     // .Site-header .Grid

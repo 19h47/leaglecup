@@ -63,7 +63,8 @@
 			}
         }
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background: {
 				color: the_color( white );
 			}

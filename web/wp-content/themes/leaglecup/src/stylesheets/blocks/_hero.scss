@@ -10,7 +10,7 @@
     @extend %position-relative;
 
     @include media-breakpoint-up( 'md' ) {
-        height: $grid-gutter-width * 30;
+        height: #{ $base-line-height * 30 }px;
     }
 
     color: the_color( white );

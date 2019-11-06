@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   db:
+    container_name: leaglecup_database
     image: mysql:5.7
     ports:
       - "3306:3306"
@@ -14,7 +15,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    container_name: leaglecup_phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
     ports:
       - "8080:80"
     depends_on:
@@ -23,6 +25,7 @@ services:
       PMA_HOST: db:3306
 
   web:
+    container_name: leaglecup_web
     depends_on:
       - db
     image: wordpress:latest

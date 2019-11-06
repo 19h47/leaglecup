@@ -8,12 +8,17 @@
 	pointer-events: none;
 	z-index: 10000;
 
-	@include fixed(
+	@include absolute(
 		top 0
 		right 0
 		bottom 0
 		left 0
 	);
+
+	background-size: 100% #{ $base-line-height }px;
+	background-repeat: repeat;
+	background-position: top left;
+	background-image: linear-gradient( rgba( 160, 160, 160, 0.3 ) 0px, transparent 1px, transparent 100% );
 
 
 	/**

@@ -5,19 +5,17 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Site-footer {
-    @include padding( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) bottom $grid-gutter-width * 2 );
+    @include padding( top ( $grid-gutter-width / 2 ) + ( $grid-gutter-width * 2 ) bottom $grid-gutter-width * 2 );
 
     background-color: the_color( blue, very-dark );
     color: the_color( white );
 
     hr {
-        @include margin( bottom $grid-gutter-width * 2 );
-        border: none;
+        @include margin( top -1px bottom $grid-gutter-width * 2 );
 
+		border: none;
         height: 1px;
-        background: {
-            color: the_color( white );
-        }
+        background-color: the_color( white );
 
         @include media-breakpoint-up( 'md' ) {
             @include margin( bottom $grid-gutter-width );
@@ -47,13 +45,10 @@
             @include margin( top 0 );
         }
 
-        font: {
-            size: 13.5px;
-        }
+        font-size: 13.5px;
         line-height: 24px;
 
 		li {
-
 			&:first-child {
 				@include margin( left 0 );
 			}
@@ -84,11 +79,10 @@
                 content: '';
             }
 
-            &:hover {
+            &:hover,
+			&:focus {
                 &::after {
-					border-bottom: {
-						color: rgba( the_color( white ), 1 );
-					}
+					border-bottom-color: rgba( the_color( white ), 1 );
                 }
             }
         }

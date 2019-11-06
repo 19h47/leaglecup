@@ -4,19 +4,12 @@
     "require": {
         "timber/timber": "1.9.2",
         "guzzlehttp/guzzle": "^6.3",
-        "19h47/set-glance-items": "dev-master"
-    },
-    "scripts": {
-        "config-set": "vendor/bin/phpcs --config-set installed_paths wpcs",
-        "lint": "vendor/bin/phpcs --standard=WordPress"
+        "19h47/set-glance-items": "dev-master",
+        "symfony/dotenv": "^4.3"
     },
     "support": {
         "issues": "https://github.com/19h47/leaglecup/issues",
         "source": "https://github.com/19h47/leaglecup"
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "*",
-        "phpcompatibility/phpcompatibility-wp": "*"
     },
 	"repositories": [
 		{

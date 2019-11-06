@@ -159,14 +159,14 @@ $prototype-height: $prototype-height-unitless * 1px;
  */
 $spacers: (
 	0: 0,
-	1: $grid-gutter-width-unitless * 0.25,
-	2: $grid-gutter-width-unitless * 0.5,
-	3: $grid-gutter-width-unitless,
-	4: $grid-gutter-width-unitless * 1.5,
-	5: $grid-gutter-width-unitless * 2,
-	6: $grid-gutter-width-unitless * 3,
-	7: $grid-gutter-width-unitless * 4,
-	8: $grid-gutter-width-unitless * 5,
+	1: #{ $base-line-height * 0.25 },
+	2: #{ $base-line-height * 0.5 },
+	3: #{ $base-line-height },
+	4: #{ $base-line-height * 1.5 },
+	5: #{ $base-line-height * 2 },
+	6: #{ $base-line-height * 3 },
+	7: #{ $base-line-height * 4 },
+	8: #{ $base-line-height * 5 },
 );
 
 
