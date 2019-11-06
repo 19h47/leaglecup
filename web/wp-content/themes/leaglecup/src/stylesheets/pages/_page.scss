@@ -66,6 +66,10 @@
         .Grid {
             color: rgba( the_color( blue, very-dark ), 0.2 );
         }
+
+		@at-root .Gallery-page & {
+			background-color: the_color( blue, very-dark );
+		}
     }
 
     // .Page__wrapper

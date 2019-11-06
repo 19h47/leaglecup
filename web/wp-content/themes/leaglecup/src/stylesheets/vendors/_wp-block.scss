@@ -93,4 +93,37 @@
             text-decoration: none!important;
         }
     }
+
+	// .wp-block-gallery
+	&-gallery {
+		@extend .row;
+
+		padding-left: 0!important;
+
+		.blocks-gallery-item {
+			@extend .col-12, .col-md-4;
+			@include margin( bottom #{ $base-line-height }px );
+
+			@include media-breakpoint-up( md ) {
+				height: #{ $base-line-height * 10 }px;
+			}
+
+			figure {
+				@include size( 100% );
+			}
+
+			img {
+				@include size( 100% );
+
+				@include media-breakpoint-up( md ) {
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+
+			&:last-child {
+				@include margin( bottom 0 );
+			}
+		}
+	}
 }
