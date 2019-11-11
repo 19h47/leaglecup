@@ -97,6 +97,7 @@
 	// .wp-block-gallery
 	&-gallery {
 		@extend .row;
+		@extend %list-style-type-none;
 
 		padding-left: 0!important;
 

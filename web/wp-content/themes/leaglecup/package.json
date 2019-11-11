@@ -25,10 +25,10 @@
     },
     "homepage": "https://github.com/19h47/leaglecup#readme",
     "devDependencies": {
-        "@babel/core": "^7.6.4",
+        "@babel/core": "^7.7.2",
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "@babel/plugin-transform-runtime": "^7.6.2",
-        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-env": "^7.7.1",
         "autoprefixer": "^9.7.1",
         "babel-eslint": "^10.0.3",
         "babel-loader": "^8.0.6",
@@ -69,7 +69,7 @@
     "dependencies": {
         "@19h47/checkbox": "^2.0.3",
         "@19h47/radios": "^2.0.3",
-        "@babel/runtime": "^7.6.3",
+        "@babel/runtime": "^7.7.2",
         "architecture": "github:19h47/architecture",
         "bootstrap": "^4.3.1",
         "flickity": "^2.2.1",
