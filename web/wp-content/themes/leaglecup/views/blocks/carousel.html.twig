@@ -14,9 +14,9 @@ Carousel
 				</button>
 			</div>
 			<div class="col-12 col-md-8">
-				<ul class="Carousel__images js-container">
+				<div class="Carousel__images js-container">
 					{% for image in carousel.images %}
-						<li class="Carousel__image js-cell">
+						<div class="Carousel__image js-cell">
 							<img src="{{ Image( image ).src }}" alt="{{ Image( image ).alt }}">
 
 							{% if Image( image ).post_content %}
@@ -24,9 +24,9 @@ Carousel
 									{{- Image( image ).post_content -}}
 								</div>
 							{% endif %}
-						</li>
+						</div>
 					{% endfor %}
-				</ul>
+				</div>
 				<ul class="Carousel__dots">
 					{% for image in carousel.images %}
 						<li>
