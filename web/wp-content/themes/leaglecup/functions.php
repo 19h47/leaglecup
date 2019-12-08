@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * LEAGLE CUP functions and definitions
  *
