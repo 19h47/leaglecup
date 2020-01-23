@@ -2,9 +2,11 @@
 /**
  * Send command
  *
- * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  * @package LeagleCup
  */
+
+namespace LeagleCup;
 
 use GuzzleHttp\Client;
 
@@ -12,7 +14,7 @@ use GuzzleHttp\Client;
 /**
  * Class Send Command
  *
- * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 class SendCommand {
 
@@ -70,7 +72,7 @@ class SendCommand {
 	/**
 	 * Ajax
 	 *
-	 * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+	 * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
 	 * @access public
 	 */
 	public function ajax() {

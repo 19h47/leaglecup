@@ -1,5 +1,8 @@
 import Bouncer from 'formbouncerjs';
 
+
+const remove = target => target.classList.remove('Form--loading');
+
 /**
  * Command
  *
@@ -46,12 +49,12 @@ export default class Command {
 				body: form,
 			})
 				.then(() => {
-					this.$form.classList.remove('Form--loading');
+					remove(this.$form);
 					this.$form.classList.add('Form--success');
 				})
 				.catch((error) => {
 					console.log(error.message);
-					this.$form.classList.remove('Form--loading');
+					remove(this.$form);
 					this.$form.classList.add('Form--error');
 				});
 		});

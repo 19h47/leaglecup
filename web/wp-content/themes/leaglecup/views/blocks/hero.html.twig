@@ -26,7 +26,7 @@ Hero-block
 		</div>
 	</div>
 
-	{% if hero.carousel %}
+	{% if hero.carousel and hero.carousel.images is iterable %}
 		{% include 'blocks/carousel.html.twig' with { carousel: hero.carousel } %}
 	{% endif %}
 

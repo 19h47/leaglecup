@@ -4,7 +4,7 @@
  *
  * PHP version 7
  *
- * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  * @package LeagleCup
  */
 
@@ -14,16 +14,9 @@ use Timber\Timber as Timber;
 use TimberMenu;
 use Twig_SimpleFunction;
 use Symfony\Component\Dotenv\{ Dotenv };
-use SendCommand;
 use Set_Glance_Items;
 
-use LeagleCup\PostTypes\Partner as Partner;
-use LeagleCup\PostTypes\Price as Price;
-use LeagleCup\PostTypes\Member as Member;
-
-use LeagleCup\Taxonomies\PartnerCategory as PartnerCategory;
-
-use LeagleCup\Admin as Admin;
+use LeagleCup\{ Admin, PostTypes, Taxonomies, SendCommand };
 
 $dotenv = new Dotenv();
 $dotenv->load( get_template_directory() . '/.env' );
@@ -109,13 +102,11 @@ class App extends Timber {
 
 		include_once get_template_directory() . '/inc/block/member/index.php';
 
-		include_once get_template_directory() . '/inc/class-sendcommand.php';
+		new PostTypes\Partner( $this->get_theme_version() );
+		new PostTypes\Price( $this->get_theme_version() );
+		new PostTypes\Member( $this->get_theme_version() );
 
-		new Partner( $this->get_theme_version() );
-		new Price( $this->get_theme_version() );
-		new Member( $this->get_theme_version() );
-
-		new PartnerCategory( $this->get_theme_version() );
+		new Taxonomies\PartnerCategory( $this->get_theme_version() );
 
 		new SendCommand( $this->get_theme_version() );
 

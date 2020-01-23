@@ -4,7 +4,7 @@
  *
  * PHP version 7
  *
- * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author  Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  * @package LeagleCup
  */
 
@@ -53,7 +53,7 @@ class Admin {
 	 * Set admin footer text
 	 *
 	 * @link   https://developer.wordpress.org/reference/hooks/admin_footer_text/
-	 * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+	 * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
 	 * @access public
 	 * @return string
 	 */

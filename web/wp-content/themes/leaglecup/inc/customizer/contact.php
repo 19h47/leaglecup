@@ -6,7 +6,7 @@
  *
  * @category Contact
  * @package  LeagleCup
- * @author   Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author   Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
  * @link     https://github.com/19h47/leaglecup
  */

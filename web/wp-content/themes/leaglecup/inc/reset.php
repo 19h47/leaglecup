@@ -6,9 +6,9 @@
  *
  * @category Reset
  * @package  LeagleCup
- * @author   Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ * @author   Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
- * @link     http://19h47.fr
+ * @link     https://19h47.fr
  */
 
 add_filter( 'pre_get_shortlink', '__return_empty_string' );

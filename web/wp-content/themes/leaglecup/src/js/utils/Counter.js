@@ -30,6 +30,7 @@ export default class Counter {
 	}
 
 	change(event) {
+		console.info('Counter.change');
 		const { target } = event;
 		const number = parseInt(target.getAttribute('data-number'), 10);
 		const total = parseInt(this.$total.innerHTML, 10);
