@@ -65,7 +65,6 @@ function leaglecup_customize_contact( $wp_customize ) {
 		)
 	);
 
-
 	// Email.
 	$wp_customize->add_setting(
 		'email',

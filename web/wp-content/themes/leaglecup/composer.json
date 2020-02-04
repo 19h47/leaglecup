@@ -1,34 +1,35 @@
 {
     "name": "19h47/leaglecup",
     "version": "1.0.0",
-    "require": {
-        "timber/timber": "1.9.2",
-        "guzzlehttp/guzzle": "^6.3",
-        "19h47/set-glance-items": "dev-master",
-        "symfony/dotenv": "^4.3"
+    "authors": [
+		{
+			"name": "Jérémy Levron",
+			"email": "jeremylevron@19h47.fr"
+		}
+	],
+	"require": {
+		"timber/timber": "^1.9",
+		"19h47/set-glance-items": "dev-master",
+		"symfony/dotenv": "^4.3"
 	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "^3.5",
 		"wp-coding-standards/wpcs": "^2.2",
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
 	},
-    "support": {
-        "issues": "https://github.com/19h47/leaglecup/issues",
-        "source": "https://github.com/19h47/leaglecup"
-    },
 	"repositories": [
 		{
 			"type": "git",
 			"url": "https://github.com/19h47/set-glance-items.git"
 		}
 	],
-    "extra": {
-        "installer-paths": {
-            "../../plugins/{$name}/": [
-                "type:wordpress-plugin"
-            ]
-        }
-    },
+	"extra": {
+		"installer-paths": {
+			"../../plugins/{$name}/": [
+				"type:wordpress-plugin"
+			]
+		}
+	},
     "autoload": {
         "psr-4": {
             "LeagleCup\\": "inc/"

@@ -239,12 +239,12 @@ class SendCommand {
 				),
 				array(
 					'key'   => 'option_2',
-					'value' => 'option_2' === $this->data['option_2'] ? '50 €' : '0 €',
+					'value' => 'option_2' === $this->data['option_2'] ? '165 €' : '0 €',
 				),
-				array(
-					'key'   => 'option_3',
-					'value' => 'option_3' === $this->data['option_3'] ? '75 €' : '0 €',
-				),
+				// array(
+				// 	'key'   => 'option_3',
+				// 	'value' => 'option_3' === $this->data['option_3'] ? '75 €' : '0 €',
+				// ),
 				array(
 					'key'   => 'total',
 					'value' => $this->data['total'] . ' €',
