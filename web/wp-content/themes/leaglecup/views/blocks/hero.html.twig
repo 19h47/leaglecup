@@ -41,6 +41,6 @@ Hero-block
 	</footer>
 
 	{% include 'common/grid.html.twig' %}
-
-	<img class="Hero-block__image" src="{{ Image( hero.image ).src }}" alt="">
+	{% include 'partials/image.html.twig' with { image: Image( hero.image ), classes: [ 'Hero-block__image' ] } %}
+	{# <img class="Hero-block__image" src="{{ Image( hero.image ).src }}" alt=""> #}
 </section>

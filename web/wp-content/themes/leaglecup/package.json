@@ -72,8 +72,10 @@
         "@babel/runtime": "^7.8.4",
         "architecture": "github:19h47/architecture",
         "bootstrap": "^4.4.1",
+        "core-js": "^3.6.4",
         "flickity": "^2.2.1",
         "formbouncerjs": "^1.4.6",
+        "regenerator-runtime": "^0.13.3",
         "ress": "^1.2.2"
     }
 }

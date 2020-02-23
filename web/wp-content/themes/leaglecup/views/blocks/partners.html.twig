@@ -37,6 +37,6 @@ Partners
 
 	{% include 'common/grid.html.twig' %}
 
-    <img class="Hero-block__image" src="{{ Image( block.image ).src }}" alt="{{ Image( block.image ).alt }}" width="{{ Image( block.image ).width }}" height="{{ Image( block.image ).height }}">
+	{% include 'partials/image.html.twig' with { image: Image( block.image ), classes: [ 'Hero-block__image' ] } %}
 
 {% endblock %}

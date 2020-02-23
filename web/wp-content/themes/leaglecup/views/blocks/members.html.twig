@@ -6,9 +6,7 @@
 {% for member in Post( members ) %}
 	<li class="Member">
 		<div class="Member__thumbnail">
-			{% if member.thumbnail %}
-				<img src="{{ TimberImage( member.thumbnail ).src }}" alt="{{ member.title }}" width="{{ TimberImage( member.thumbnail ).width }}" height="{{ TimberImage( member.thumbnail ).height }}">
-			{% endif %}
+			{% include 'partials/image.html.twig' with { image: Image( member.thumbnail ) | default( false ) } %}
 		</div>
 
 		<h3 class="Member__title">{{ member.title }}</h3>

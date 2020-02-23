@@ -18,7 +18,7 @@ Prices
                 <div class="row">
                     <div class="col-12 col-md-5 offset-md-1">
                         <div class="Price__thumbnail">
-                            <img src="{{ Image( price.thumbnail ).src }}" alt="{{ price.title }}">
+							{% include 'partials/image.html.twig' with { image: Image( price.thumbnail ) } %}
                         </div>
                     </div>
                     <div class="col-12 col-md-5">
@@ -47,8 +47,7 @@ Prices
             </div>
 
             {% include 'common/grid.html.twig' %}
-
-            <img class="Price__background" src="{{ Image( price.thumbnail ).src }}" alt="{{ price.title }}">
+			{% include 'partials/image.html.twig' with { image: Image( price.thumbnail ), classes: [ 'Price__background' ] } %}
         </article>
     {% endfor %}
 </div>

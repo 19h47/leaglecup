@@ -18,8 +18,8 @@ Partners
                             <li class="col-6 col-md-3 Partners__item{{ partner.content ? ' has-content' }}">
                                 {% if partner.get_field( 'link' ) %}
                                     <a href="{{ partner.get_field( 'link' ) }}" target="_blank">
-                                {% endif %}
-                                <img src="{{ Image( partner.thumbnail ).src }}" alt="{{ partner.title }}" width="{{ Image( partner.thumbnail ).width }}" height="{{ Image( partner.thumbnail ).height }}">
+								{% endif %}
+								{% include 'partials/image.html.twig' with { image: Image( partner.thumbnail ) } %}
                                 {{ partner.get_field( 'link' ) ? '</a>' }}
 								{% if partner.content %}
 									<div class="Partners__item__content">

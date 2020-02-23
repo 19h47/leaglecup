@@ -17,7 +17,7 @@ Carousel
 				<div class="Carousel__images js-container">
 					{% for image in carousel.images %}
 						<div class="Carousel__image js-cell">
-							<img src="{{ Image( image ).src }}" alt="{{ Image( image ).alt }}">
+							{% include 'partials/image.html.twig' with { image: Image( image ) } %}
 
 							{% if Image( image ).post_content %}
 								<div class="Carousel__content">

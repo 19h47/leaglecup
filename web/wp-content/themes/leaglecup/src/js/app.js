@@ -1,3 +1,6 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 import GuidGuidBangBang from 'Common/GuidGuidBangBang';
 import Command from 'Blocks/Command';
 import Form from 'Blocks/Form';
