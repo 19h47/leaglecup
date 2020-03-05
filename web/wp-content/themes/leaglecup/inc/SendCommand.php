@@ -91,6 +91,7 @@ class SendCommand {
 	 * @access public
 	 */
 	public function request() {
+
 		$client = new Client(
 			array(
 				// You can set any number of default request options.

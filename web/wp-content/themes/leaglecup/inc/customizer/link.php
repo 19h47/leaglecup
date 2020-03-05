@@ -25,8 +25,8 @@ function leaglecup_customize_link( $wp_customize ) {
 		'link',
 		array(
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Réglages des pages' ),
-			'title'       => __( 'Liens des pages' ),
+			'description' => __( 'Pages Settings', 'leaglecup' ),
+			'title'       => __( 'Pages Links', 'leaglecup' ),
 		)
 	);
 
@@ -42,8 +42,8 @@ function leaglecup_customize_link( $wp_customize ) {
 	$wp_customize->add_control(
 		'legal_mentions',
 		array(
-			'description' => __( 'Indiquer la page Mentions légales' ),
-			'label'       => __( 'Mentions légales' ),
+			'description' => __( 'Indicate the Legal Notice page', 'leaglecup' ),
+			'label'       => __( 'Legal Notice', 'leaglecup' ),
 			'section'     => 'link',
 			'type'        => 'dropdown-pages',
 		)

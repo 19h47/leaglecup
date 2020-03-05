@@ -10,7 +10,8 @@
 	"require": {
 		"timber/timber": "^1.9",
 		"19h47/set-glance-items": "dev-master",
-		"symfony/dotenv": "^4.3"
+		"symfony/dotenv": "^4.3",
+        "guzzlehttp/guzzle": "^6.5"
 	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "^3.5",

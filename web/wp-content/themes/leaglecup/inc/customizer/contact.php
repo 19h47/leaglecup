@@ -22,8 +22,8 @@ function leaglecup_customize_contact( $wp_customize ) {
 	$wp_customize->add_section(
 		'contact',
 		array(
-			'title'       => __( 'Coordonnées' ),
-			'description' => __( 'Réglages des coordonnées' ),
+			'title'       => __( 'Contact information', 'leaglecup' ),
+			'description' => __( 'Contact settings', 'leaglecup' ),
 		)
 	);
 
@@ -39,7 +39,7 @@ function leaglecup_customize_contact( $wp_customize ) {
 	$wp_customize->add_control(
 		'facebook',
 		array(
-			'label'       => __( 'Facebook' ),
+			'label'       => __( 'Facebook', 'leaglecup' ),
 			'description' => __( 'Indiquer l\'URL du compte Facebook' ),
 			'section'     => 'contact',
 			'settings'    => 'facebook',
@@ -58,7 +58,7 @@ function leaglecup_customize_contact( $wp_customize ) {
 	$wp_customize->add_control(
 		'linkedin',
 		array(
-			'label'       => __( 'LinkedIn' ),
+			'label'       => __( 'LinkedIn', 'leaglecup' ),
 			'description' => __( 'Indiquer l\'URL du compte LinkedIn' ),
 			'section'     => 'contact',
 			'settings'    => 'linkedin',
@@ -77,7 +77,7 @@ function leaglecup_customize_contact( $wp_customize ) {
 	$wp_customize->add_control(
 		'email',
 		array(
-			'label'       => __( 'Email' ),
+			'label'       => __( 'Email', 'leaglecup' ),
 			'description' => __( 'Indiquer l\'adresse mail du site' ),
 			'section'     => 'contact',
 			'settings'    => 'email',

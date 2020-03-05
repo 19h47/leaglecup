@@ -107,6 +107,7 @@ class App extends Timber {
 		new PostTypes\Member( $this->get_theme_version() );
 
 		new Taxonomies\PartnerCategory( $this->get_theme_version() );
+		new Taxonomies\TermUpdatedMessages( $this->get_theme_version() );
 
 		new SendCommand( $this->get_theme_version() );
 
@@ -288,21 +289,21 @@ class App extends Timber {
 			array(
 				'title' => 'Facebook',
 				'slug'  => 'facebook',
-				'name'  => __( 'Partager sur Facebook' ),
+				'name'  => __( 'Share on Facebook', 'leaglecup' ),
 				'url'   => 'https://www.facebook.com/sharer.php?u=',
 				'link'  => get_option( 'facebook' ),
 			),
 			array(
 				'title' => 'LinkedIn',
 				'slug'  => 'linkedin',
-				'name'  => __( 'Partager sur LinkedIn' ),
+				'name'  => __( 'Share on LinkedIn', 'leaglecup' ),
 				'url'   => 'https://www.linkedin.com/shareArticle?mini=true&url=',
 				'link'  => get_option( 'linkedin' ),
 			),
 			array(
 				'title' => 'Contactez-nous',
 				'slug'  => 'email',
-				'name'  => __( 'Contactez-nous' ),
+				'name'  => __( 'Contact Us', 'leaglecup' ),
 				'link'  => 'mailto:' . get_option( 'email' ),
 			),
 		);
@@ -374,10 +375,15 @@ class App extends Timber {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+
+
+		add_action(
+			'after_setup_theme',
+			function() {
+				load_theme_textdomain( 'prh', get_template_directory() . '/languages' );
+			}
+		);
 	}
-
-
-
 
 
 	/**

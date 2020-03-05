@@ -8,3 +8,5 @@
 /src/js/utils/environment.js
 /inc/config.php
 inc/Bon_de_commande.pages
+/inc/form-data
+!/inc/form-data/.gitkeep
