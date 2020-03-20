@@ -54,35 +54,38 @@ class Member {
 	 */
 	public function register_post_type() {
 		$labels = array(
-			'name'                  => _x( 'Members', 'Member Type Generale Name', 'leaglecup' ),
-			'singular_name'         => _x( 'Member', 'Member Type Singular Name', 'leaglecup' ),
-			'menu_name'             => __( 'Members', 'leaglecup' ),
-			'name_admin_bar'        => __( 'Member', 'leaglecup' ),
-			'parent_item_colon'     => __( 'Parent Member:', 'leaglecup' ),
-			'all_items'             => __( 'All Members', 'leaglecup' ),
-			'add_new_item'          => __( 'Add New Member', 'leaglecup' ),
-			'add_new'               => __( 'Add New', 'leaglecup' ),
-			'new_item'              => __( 'New Member', 'leaglecup' ),
-			'edit_item'             => __( 'Edit Member', 'leaglecup' ),
-			'update_item'           => __( 'Update Member', 'leaglecup' ),
-			'view_item'             => __( 'View Member', 'leaglecup' ),
-			'view_items'            => __( 'View Members', 'leaglecup' ),
-			'search_items'          => __( 'Chercher parmi les membres', 'leaglecup' ),
-			'not_found'             => __( 'Aucun membre n\'a été trouvé.', 'leaglecup' ),
-			'not_found_in_trash'    => __( 'Aucun membre n\'a été trouvé dans la corbeille.', 'leaglecup' ),
-			'featured_image'        => __( 'Image à la une', 'leaglecup' ),
-			'set_featured_image'    => __( 'Mettre une image à la une', 'leaglecup' ),
-			'remove_featured_image' => __( 'Retirer l\'image mise à la une', 'leaglecup' ),
-			'use_featured_image'    => __( 'Mettre une image à la une', 'leaglecup' ),
-			'insert_into_item'      => __( 'Insérer dans le membre', 'leaglecup' ),
-			'uploaded_to_this_item' => __( 'Téléversé sur ce membre', 'leaglecup' ),
-			'items_list'            => __( 'Liste des membres', 'leaglecup' ),
-			'items_list_navigation' => __( 'Navigation de la liste des membres', 'leaglecup' ),
-			'filter_items_list'     => __( 'Filtrer la liste des membres', 'leaglecup' ),
+			'name'                     => _x( 'Members', 'member type generale name', 'leaglecup' ),
+			'singular_name'            => _x( 'Member', 'member type singular name', 'leaglecup' ),
+			'add_new'                  => _x( 'Add New', 'member type', 'leaglecup' ),
+			'add_new_item'             => __( 'Add New Member', 'leaglecup' ),
+			'edit_item'                => __( 'Edit Member', 'leaglecup' ),
+			'new_item'                 => __( 'New Member', 'leaglecup' ),
+			'view_item'                => __( 'View Member', 'leaglecup' ),
+			'view_items'               => __( 'View Members', 'leaglecup' ),
+			'search_items'             => __( 'Search Members', 'leaglecup' ),
+			'not_found'                => __( 'No members found.', 'leaglecup' ),
+			'not_found_in_trash'       => __( 'No members found in Trash.', 'leaglecup' ),
+			'parent_item_colon'        => __( 'Parent Member:', 'leaglecup' ),
+			'all_items'                => __( 'All Members', 'leaglecup' ),
+			'archives'                 => __( 'Member Archives', 'leaglecup' ),
+			'attributes'               => __( 'Member Attributes', 'leaglecup' ),
+			'uploaded_to_this_item'    => __( 'Uploaded to this member', 'leaglecup' ),
+			'insert_into_item'         => __( 'Insert into member', 'leaglecup' ),
+			'featured_image'           => _x( 'Featured Image', 'member', 'leaglecup' ),
+			'set_featured_image'       => _x( 'Set featured image', 'member', 'leaglecup' ),
+			'remove_featured_image'    => _x( 'Remove featured image', 'member', 'leaglecup' ),
+			'use_featured_image'       => _x( 'Use as featured image', 'member', 'leaglecup' ),
+			'items_list_navigation'    => __( 'Members list navigation', 'leaglecup' ),
+			'items_list'               => __( 'Members list', 'leaglecup' ),
+			'item_published'           => __( 'Member published.', 'leaglecup' ),
+			'item_published_privately' => __( 'Member published privately.', 'leaglecup' ),
+			'item_reverted_to_draft'   => __( 'Member reverted to draft.', 'leaglecup' ),
+			'item_scheduled'           => __( 'Member scheduled.', 'leaglecup' ),
+			'item_updated'             => __( 'Member updated.', 'leaglecup' ),
 		);
 
 		$rewrite = array(
-			'slug'       => __( 'member', 'leaglecup' ),
+			'slug'       => _x( 'member', 'member slug', 'leaglecup' ),
 			'with_front' => true,
 			'pages'      => true,
 			'feeds'      => true,
@@ -90,7 +93,6 @@ class Member {
 
 		$args = array(
 			'label'               => 'membre',
-			'description'         => __( 'Les membres', 'leaglecup' ),
 			'labels'              => $labels,
 			'supports'            => array( 'title', 'thumbnail' ),
 			'taxonomies'          => array(),
@@ -127,7 +129,7 @@ class Member {
 
 		foreach ( $columns as $key => $value ) {
 			if ( 'title' === $key ) {
-				$new_columns['thumbnail'] = __( 'Thumbnail' );
+				$new_columns['thumbnail'] = __( 'Thumbnail', 'leaglecup' );
 			}
 
 			$new_columns[ $key ] = $value;

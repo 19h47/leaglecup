@@ -13,6 +13,6 @@
 
 require_once get_template_directory() . '/vendor/autoload.php';
 
-use LeagleCup\App as App;
+use LeagleCup\{ App };
 
 new App( 'leaglecup', wp_get_theme()->Version ); // phpcs:ignore

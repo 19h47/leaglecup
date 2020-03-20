@@ -52,7 +52,7 @@ export default class Command {
 					remove(this.$form);
 					this.$form.classList.add('Form--success');
 				})
-				.catch((error) => {
+				.catch(error => {
 					console.log(error.message);
 					remove(this.$form);
 					this.$form.classList.add('Form--error');

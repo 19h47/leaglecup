@@ -78,35 +78,38 @@ class Partner {
 	 */
 	public function register_post_type() {
 		$labels = array(
-			'name'                  => _x( 'Partenaires', 'Personne pluriel', 'leaglecup' ),
-			'singular_name'         => _x( 'Partenaire', 'Personne singulier', 'leaglecup' ),
-			'menu_name'             => __( 'Partenaires', 'leaglecup' ),
-			'name_admin_bar'        => __( 'Partenaire', 'leaglecup' ),
-			'parent_item_colon'     => __( 'Partenaires Parents :', 'leaglecup' ),
-			'all_items'             => __( 'Tous les partenaires', 'leaglecup' ),
-			'add_new_item'          => __( 'Ajouter un partenaire', 'leaglecup' ),
-			'add_new'               => __( 'Ajouter', 'leaglecup' ),
-			'new_item'              => __( 'Nouveau partenaire', 'leaglecup' ),
-			'edit_item'             => __( 'Modifier le partenaire', 'leaglecup' ),
-			'update_item'           => __( 'Mettre à jour le partenaire', 'leaglecup' ),
-			'view_item'             => __( 'Voir le partenaire', 'leaglecup' ),
-			'view_items'            => __( 'Voir les partenaires', 'leaglecup' ),
-			'search_items'          => __( 'Chercher parmi les partenaires', 'leaglecup' ),
-			'not_found'             => __( 'Aucun partenaire n\'a été trouvé.', 'leaglecup' ),
-			'not_found_in_trash'    => __( 'Aucun partenaire n\'a été trouvé dans la corbeille.', 'leaglecup' ),
-			'featured_image'        => __( 'Image à la une', 'leaglecup' ),
-			'set_featured_image'    => __( 'Mettre une image à la une', 'leaglecup' ),
-			'remove_featured_image' => __( 'Retirer l\'image mise à la une', 'leaglecup' ),
-			'use_featured_image'    => __( 'Mettre une image à la une', 'leaglecup' ),
-			'insert_into_item'      => __( 'Insérer dans le partenaire', 'leaglecup' ),
-			'uploaded_to_this_item' => __( 'Téléversé sur ce partenaire', 'leaglecup' ),
-			'items_list'            => __( 'Liste des partenaires', 'leaglecup' ),
-			'items_list_navigation' => __( 'Navigation de la liste des partenaires', 'leaglecup' ),
-			'filter_items_list'     => __( 'Filtrer la liste des partenaires', 'leaglecup' ),
+			'name'                     => _x( 'Partners', 'partner type generale name', 'leaglecup' ),
+			'singular_name'            => _x( 'Partner', 'partner type singular name', 'leaglecup' ),
+			'add_new'                  => _x( 'Add New', 'partner type', 'leaglecup' ),
+			'add_new_item'             => __( 'Add New Partner', 'leaglecup' ),
+			'edit_item'                => __( 'Edit Partner', 'leaglecup' ),
+			'new_item'                 => __( 'New Partner', 'leaglecup' ),
+			'view_items'               => __( 'View Partners', 'leaglecup' ),
+			'view_item'                => __( 'View Partner', 'leaglecup' ),
+			'search_items'             => __( 'Search Partners', 'leaglecup' ),
+			'not_found'                => __( 'No partners found.', 'leaglecup' ),
+			'not_found_in_trash'       => __( 'No partners found in Trash.', 'leaglecup' ),
+			'parent_item_colon'        => __( 'Parent Partner:', 'leaglecup' ),
+			'all_items'                => __( 'All Partners', 'leaglecup' ),
+			'archives'                 => __( 'Partner Archives', 'leaglecup' ),
+			'attributes'               => __( 'Partner Attributes', 'leaglecup' ),
+			'insert_into_item'         => __( 'Insert into partner', 'leaglecup' ),
+			'uploaded_to_this_item'    => __( 'Uploaded to this partner', 'leaglecup' ),
+			'featured_image'           => _x( 'Featured Image', 'partner', 'leaglecup' ),
+			'set_featured_image'       => _x( 'Set featured image', 'partner', 'leaglecup' ),
+			'remove_featured_image'    => _x( 'Remove featured image', 'partner', 'leaglecup' ),
+			'use_featured_image'       => _x( 'Use as featured image', 'partner', 'leaglecup' ),
+			'items_list_navigation'    => __( 'Partners list navigation', 'leaglecup' ),
+			'items_list'               => __( 'Partners list', 'leaglecup' ),
+			'item_published'           => __( 'Partner published.', 'leaglecup' ),
+			'item_published_privately' => __( 'Partner published privately.', 'leaglecup' ),
+			'item_reverted_to_draft'   => __( 'Partner reverted to draft.', 'leaglecup' ),
+			'item_scheduled'           => __( 'Partner scheduled.', 'leaglecup' ),
+			'item_updated'             => __( 'Partner updated.', 'leaglecup' ),
 		);
 
 		$rewrite = array(
-			'slug'       => __( 'partner', 'leaglecup' ),
+			'slug'       => _x( 'partner', 'partner slug', 'leaglecup' ),
 			'with_front' => true,
 			'pages'      => true,
 			'feeds'      => true,
@@ -114,7 +117,7 @@ class Partner {
 
 		$args = array(
 			'label'               => 'partenaire',
-			'description'         => __( 'Les partenaires', 'leaglecup' ),
+			'description'         => __( 'Partners', 'leaglecup' ),
 			'labels'              => $labels,
 			'supports'            => array( 'title', 'thumbnail', 'editor' ),
 			'taxonomies'          => array( 'partner_category' ),
@@ -189,7 +192,7 @@ class Partner {
 
 		foreach ( $columns as $key => $value ) {
 			if ( 'title' === $key ) {
-				$new_columns['thumbnail'] = __( 'Thumbnail' );
+				$new_columns['thumbnail'] = __( 'Thumbnail', 'leaglecup' );
 			}
 
 			$new_columns[ $key ] = $value;

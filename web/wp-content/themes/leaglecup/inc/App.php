@@ -380,7 +380,7 @@ class App extends Timber {
 		add_action(
 			'after_setup_theme',
 			function() {
-				load_theme_textdomain( 'prh', get_template_directory() . '/languages' );
+				load_theme_textdomain( 'leaglecup', get_template_directory() . '/languages' );
 			}
 		);
 	}

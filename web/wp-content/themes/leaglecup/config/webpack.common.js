@@ -158,6 +158,7 @@ module.exports = {
 		},
 		{
 			test: /\.(gif|png|jpe?g)$/i,
+			exclude: [/animations/],
 			use: [{
 				loader: 'file-loader',
 				options: {
@@ -171,13 +172,13 @@ module.exports = {
 				options: {
 					mozjpeg: {
 						progressive: true,
-						quality: 65
+						quality: [65]
 					},
 					optipng: {
 						enabled: false
 					},
 					pngquant: {
-						quality: '65-90',
+						quality: [0.65, 0.9],
 						speed: 4
 					},
 					gifsicle: {

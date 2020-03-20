@@ -51,26 +51,28 @@ class PartnerCategory {
 	public function register_taxonomy() {
 
 		$labels = array(
-			'name'                       => _x( 'Categories', 'Partner category General Name', 'leaglecup' ),
-			'singular_name'              => _x( 'Category', 'Partner category Singular Name', 'leaglecup' ),
-			'menu_name'                  => __( 'Categories', 'leaglecup' ),
-			'all_items'                  => __( 'Toutes les catégories', 'leaglecup' ),
-			'parent_item'                => __( 'Catégorie parente', 'leaglecup' ),
-			'parent_item_colon'          => __( 'Catégorie parente :', 'leaglecup' ),
-			'new_item_name'              => __( 'Nom de la nouvelle catégorie', 'leaglecup' ),
-			'add_new_item'               => __( 'Ajouter une nouvelle catégorie', 'leaglecup' ),
-			'edit_item'                  => __( 'Éditer la catégorie', 'leaglecup' ),
-			'update_item'                => __( 'Mettre à jour la catégorie', 'leaglecup' ),
-			'view_item'                  => __( 'Voir la catégorie', 'leaglecup' ),
-			'separate_items_with_commas' => __( 'Séparer les catégories par des virgules', 'leaglecup' ),
-			'add_or_remove_items'        => __( 'Ajouter ou supprimer une catégorie', 'leaglecup' ),
-			'choose_from_most_used'      => __( 'Choisir parmi les catégories les plus utilisées', 'leaglecup' ),
-			'popular_items'              => __( 'Catégorie populaire', 'leaglecup' ),
-			'search_items'               => __( 'Catégories recherchées', 'leaglecup' ),
-			'not_found'                  => __( 'Aucune catégorie n\'a été trouvée', 'leaglecup' ),
-			'no_terms'                   => __( 'Pas de catégorie', 'leaglecup' ),
-			'items_list'                 => __( 'Liste des catégories', 'leaglecup' ),
-			'items_list_navigation'      => __( 'Liste de navigation des catégories', 'leaglecup' ),
+			'name'                       => _x( 'Categories', 'partner category general name', 'leaglecup' ),
+			'singular_name'              => _x( 'Category', 'partner category Singular name', 'leaglecup' ),
+			'search_items'               => __( 'Search Categories', 'leaglecup' ),
+			'all_items'                  => __( 'All Categories', 'leaglecup' ),
+			'popular_items'              => __( 'Popular Categories', 'leaglecup' ),
+			'parent_item'                => __( 'Parent Category', 'leaglecup' ),
+			'parent_item_colon'          => __( 'Parent Category :', 'leaglecup' ),
+			'edit_item'                  => __( 'Edit Category', 'leaglecup' ),
+			'view_item'                  => __( 'View Category', 'leaglecup' ),
+			'update_item'                => __( 'Update Category', 'leaglecup' ),
+			'add_new_item'               => __( 'Add New Category', 'leaglecup' ),
+			'new_item_name'              => __( 'New Category Name', 'leaglecup' ),
+			'separate_items_with_commas' => __( 'Separate categories with commas', 'leaglecup' ),
+			'add_or_remove_items'        => __( 'Add or remove categories', 'leaglecup' ),
+			'choose_from_most_used'      => __( 'Choose from the most used categories', 'leaglecup' ),
+			'not_found'                  => __( 'No categories found.', 'leaglecup' ),
+			'no_terms'                   => __( 'No categories', 'leaglecup' ),
+			'items_list'                 => __( 'Categories list navigation', 'leaglecup' ),
+			'items_list_navigation'      => __( 'Categories list', 'leaglecup' ),
+			/* translators: City heading when selecting from the most used terms. */
+			'most_used'                  => _x( 'Most Used', 'partner category', 'leaglecup' ),
+			'back_to_items'              => __( '&larr; Back to Categories', 'leaglecup' ),
 		);
 
 		$args = array(
@@ -102,7 +104,7 @@ class PartnerCategory {
 
 		foreach ( $columns as $key => $value ) {
 			if ( 'posts' === $key ) {
-				$new_columns['order'] = __( 'Ordre' );
+				$new_columns['order'] = __( 'Order', 'leaglecup' );
 			}
 			$new_columns[ $key ] = $value;
 		}

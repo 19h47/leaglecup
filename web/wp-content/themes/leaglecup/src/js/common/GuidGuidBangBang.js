@@ -16,7 +16,7 @@ export default class GuidGuidBangBang {
 	}
 
 	initEvents() {
-		document.addEventListener('keydown', (e) => {
+		document.addEventListener('keydown', e => {
 			this.$cont = document.querySelector('.js-guid');
 			if ((e.metaKey || e.ctrlKey) && 186 === e.keyCode) {
 				this.toggle();

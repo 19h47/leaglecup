@@ -18,7 +18,7 @@ function acf_block_gutenberg_member_posts() {
 
 	$settings = array(
 		'name'            => 'member-posts',
-		'title'           => __( 'Les membres' ),
+		'title'           => __( 'Members', 'leaglecup' ),
 		'render_callback' => 'acf_block_gutenberg_member_posts_callback',
 		'category'        => 'widgets',
 		'icon'            => 'groups',

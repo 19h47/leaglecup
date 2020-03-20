@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leagle Cup\n"
-"POT-Creation-Date: 2020-03-01 15:06+0100\n"
-"PO-Revision-Date: 2020-03-01 15:07+0100\n"
+"POT-Creation-Date: 2020-03-20 21:36+0100\n"
+"PO-Revision-Date: 2020-03-20 21:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -39,420 +39,512 @@ msgstr "Contactez-nous"
 
 #: inc/App.php:370
 msgid "Main"
-msgstr ""
+msgstr "Principal"
 
 #: inc/PostTypes/Member.php:57
-msgctxt "Member Type Generale Name"
+msgctxt "member type generale name"
 msgid "Members"
 msgstr "Membres"
 
 #: inc/PostTypes/Member.php:58
-msgctxt "Member Type Singular Name"
+msgctxt "member type singular name"
 msgid "Member"
 msgstr "Membre"
 
 #: inc/PostTypes/Member.php:59
-msgid "Members"
-msgstr "Membres"
+msgctxt "member type"
+msgid "Add New"
+msgstr "Ajouter"
 
 #: inc/PostTypes/Member.php:60
-msgid "Member"
-msgstr "Membre"
-
-#: inc/PostTypes/Member.php:61
-msgid "Parent Member:"
-msgstr "Membre parent :"
-
-#: inc/PostTypes/Member.php:62
-msgid "All Members"
-msgstr "Tous les membres"
-
-#: inc/PostTypes/Member.php:63
 msgid "Add New Member"
 msgstr "Ajouter un nouveau membre"
 
-#: inc/PostTypes/Member.php:64
-msgid "Add New"
-msgstr "Ajouter un nouveau"
-
-#: inc/PostTypes/Member.php:65
-msgid "New Member"
-msgstr "Nouveau membre"
-
-#: inc/PostTypes/Member.php:66
+#: inc/PostTypes/Member.php:61
 msgid "Edit Member"
 msgstr "Éditer le membre"
 
-#: inc/PostTypes/Member.php:67
-msgid "Update Member"
-msgstr "Mettre à jour le membre"
+#: inc/PostTypes/Member.php:62
+msgid "New Member"
+msgstr "Nouveau membre"
 
-#: inc/PostTypes/Member.php:68
+#: inc/PostTypes/Member.php:63
 msgid "View Member"
 msgstr "Voir le membre"
 
-#: inc/PostTypes/Member.php:69
+#: inc/PostTypes/Member.php:64
 msgid "View Members"
 msgstr "Voir les membres"
 
+#: inc/PostTypes/Member.php:65
+msgid "Search Members"
+msgstr "Rechercher dans les membres"
+
+#: inc/PostTypes/Member.php:66
+msgid "No members found."
+msgstr "Aucun membre trouvé."
+
+#: inc/PostTypes/Member.php:67
+msgid "No members found in Trash."
+msgstr "Aucun membre trouvé dans la corbeille."
+
+#: inc/PostTypes/Member.php:68
+msgid "Parent Member:"
+msgstr "Membre parent :"
+
+#: inc/PostTypes/Member.php:69
+msgid "All Members"
+msgstr "Tous les membres"
+
 #: inc/PostTypes/Member.php:70
-msgid "Chercher parmi les membres"
-msgstr ""
+msgid "Member Archives"
+msgstr "Archives des membres"
 
 #: inc/PostTypes/Member.php:71
-msgid "Aucun membre n'a été trouvé."
-msgstr ""
+msgid "Member Attributes"
+msgstr "Attributs de membres"
 
 #: inc/PostTypes/Member.php:72
-msgid "Aucun membre n'a été trouvé dans la corbeille."
-msgstr ""
+msgid "Uploaded to this member"
+msgstr "Téléversé sur ce membre"
 
-#: inc/PostTypes/Member.php:73 inc/PostTypes/Partner.php:97
-#: inc/PostTypes/Price.php:72
-msgid "Image à la une"
-msgstr ""
+#: inc/PostTypes/Member.php:73
+msgid "Insert into member"
+msgstr "Insérer dans le membre"
 
-#: inc/PostTypes/Member.php:74 inc/PostTypes/Member.php:76
-#: inc/PostTypes/Partner.php:98 inc/PostTypes/Partner.php:100
-#: inc/PostTypes/Price.php:73 inc/PostTypes/Price.php:75
-msgid "Mettre une image à la une"
-msgstr ""
+#: inc/PostTypes/Member.php:74
+msgctxt "member"
+msgid "Featured Image"
+msgstr "Image mise en avant"
 
-#: inc/PostTypes/Member.php:75 inc/PostTypes/Partner.php:99
-#: inc/PostTypes/Price.php:74
-msgid "Retirer l'image mise à la une"
-msgstr ""
+#: inc/PostTypes/Member.php:75
+msgctxt "member"
+msgid "Set featured image"
+msgstr "Définir comme image mise en avant"
+
+#: inc/PostTypes/Member.php:76
+msgctxt "member"
+msgid "Remove featured image"
+msgstr "Supprimer l’image mise en avant"
 
 #: inc/PostTypes/Member.php:77
-msgid "Insérer dans le membre"
-msgstr ""
+msgctxt "member"
+msgid "Use as featured image"
+msgstr "Utiliser comme image mise en avant"
 
 #: inc/PostTypes/Member.php:78
-msgid "Téléversé sur ce membre"
-msgstr ""
+msgid "Members list navigation"
+msgstr "Navigation dans la liste des membres"
 
 #: inc/PostTypes/Member.php:79
-msgid "Liste des membres"
-msgstr ""
+msgid "Members list"
+msgstr "Liste des membres"
 
 #: inc/PostTypes/Member.php:80
-msgid "Navigation de la liste des membres"
-msgstr ""
+msgid "Member published."
+msgstr "Membre publié."
 
 #: inc/PostTypes/Member.php:81
-msgid "Filtrer la liste des membres"
-msgstr ""
+msgid "Member published privately."
+msgstr "Membre mis en ligne en privé."
 
-#: inc/PostTypes/Member.php:85
+#: inc/PostTypes/Member.php:82
+msgid "Member reverted to draft."
+msgstr "Membre reconvertie en brouillon."
+
+#: inc/PostTypes/Member.php:83
+msgid "Member scheduled."
+msgstr "Membre planifié."
+
+#: inc/PostTypes/Member.php:84
+msgid "Member updated."
+msgstr "Le membre a été mis a jour."
+
+#: inc/PostTypes/Member.php:88
+msgctxt "member slug"
 msgid "member"
-msgstr ""
+msgstr "member"
 
-#: inc/PostTypes/Member.php:93 inc/block/member/functions.php:21
-msgid "Les membres"
-msgstr ""
-
-#: inc/PostTypes/Member.php:130 inc/PostTypes/Partner.php:192
+#: inc/PostTypes/Member.php:132 inc/PostTypes/Partner.php:195
 msgid "Thumbnail"
-msgstr ""
+msgstr "Miniature"
 
 #: inc/PostTypes/Partner.php:81
-msgctxt "Personne pluriel"
-msgid "Partenaires"
-msgstr ""
+msgctxt "partner type generale name"
+msgid "Partners"
+msgstr "Partenaires"
 
 #: inc/PostTypes/Partner.php:82
-msgctxt "Personne singulier"
-msgid "Partenaire"
-msgstr ""
+msgctxt "partner type singular name"
+msgid "Partner"
+msgstr "Partenaire"
 
 #: inc/PostTypes/Partner.php:83
-msgid "Partenaires"
-msgstr ""
+msgctxt "partner type"
+msgid "Add New"
+msgstr "Ajouter"
 
 #: inc/PostTypes/Partner.php:84
-msgid "Partenaire"
-msgstr ""
+msgid "Add New Partner"
+msgstr "Ajouter un nouveau partenaire"
 
 #: inc/PostTypes/Partner.php:85
-msgid "Partenaires Parents :"
-msgstr ""
+msgid "Edit Partner"
+msgstr "Éditer le partenaire"
 
 #: inc/PostTypes/Partner.php:86
-msgid "Tous les partenaires"
-msgstr ""
+msgid "New Partner"
+msgstr "Nouveau partenaire"
 
 #: inc/PostTypes/Partner.php:87
-msgid "Ajouter un partenaire"
-msgstr ""
+msgid "View Partners"
+msgstr "Voir les partenaires"
 
-#: inc/PostTypes/Partner.php:88 inc/PostTypes/Price.php:63
-msgid "Ajouter"
-msgstr ""
+#: inc/PostTypes/Partner.php:88
+msgid "View Partner"
+msgstr "Voir le partenaire"
 
 #: inc/PostTypes/Partner.php:89
-msgid "Nouveau partenaire"
-msgstr ""
+msgid "Search Partners"
+msgstr "Rechercher dans les partenaires"
 
 #: inc/PostTypes/Partner.php:90
-msgid "Modifier le partenaire"
-msgstr ""
+msgid "No partners found."
+msgstr "Aucun partenaire trouvé."
 
 #: inc/PostTypes/Partner.php:91
-msgid "Mettre à jour le partenaire"
-msgstr ""
+msgid "No partners found in Trash."
+msgstr "Aucun partenaire trouvé dans la corbeille."
 
 #: inc/PostTypes/Partner.php:92
-msgid "Voir le partenaire"
-msgstr ""
+msgid "Parent Partner:"
+msgstr "Partenaire parent :"
 
 #: inc/PostTypes/Partner.php:93
-msgid "Voir les partenaires"
-msgstr ""
+msgid "All Partners"
+msgstr "Tous les partenaires"
 
 #: inc/PostTypes/Partner.php:94
-msgid "Chercher parmi les partenaires"
-msgstr ""
+msgid "Partner Archives"
+msgstr "Archives des partenaires"
 
 #: inc/PostTypes/Partner.php:95
-msgid "Aucun partenaire n'a été trouvé."
-msgstr ""
+msgid "Partner Attributes"
+msgstr "Attributs de partenaires"
 
 #: inc/PostTypes/Partner.php:96
-msgid "Aucun partenaire n'a été trouvé dans la corbeille."
-msgstr ""
+msgid "Insert into partner"
+msgstr "Insérer dans le partenaire"
+
+#: inc/PostTypes/Partner.php:97
+msgid "Uploaded to this partner"
+msgstr "Téléversé sur ce partenaire"
+
+#: inc/PostTypes/Partner.php:98
+msgctxt "partner"
+msgid "Featured Image"
+msgstr "Image mise en avant"
+
+#: inc/PostTypes/Partner.php:99
+msgctxt "partner"
+msgid "Set featured image"
+msgstr "Définir comme image mise en avant"
+
+#: inc/PostTypes/Partner.php:100
+msgctxt "partner"
+msgid "Remove featured image"
+msgstr "Supprimer l’image mise en avant"
 
 #: inc/PostTypes/Partner.php:101
-msgid "Insérer dans le partenaire"
-msgstr ""
+msgctxt "partner"
+msgid "Use as featured image"
+msgstr "Utiliser comme image mise en avant"
 
 #: inc/PostTypes/Partner.php:102
-msgid "Téléversé sur ce partenaire"
-msgstr ""
+msgid "Partners list navigation"
+msgstr "Navigation dans la liste des partenaires"
 
 #: inc/PostTypes/Partner.php:103
-msgid "Liste des partenaires"
-msgstr ""
+msgid "Partners list"
+msgstr "Liste des partenaires"
 
 #: inc/PostTypes/Partner.php:104
-msgid "Navigation de la liste des partenaires"
-msgstr ""
+msgid "Partner published."
+msgstr "Partenaire publié."
 
 #: inc/PostTypes/Partner.php:105
-msgid "Filtrer la liste des partenaires"
-msgstr ""
+msgid "Partner published privately."
+msgstr "Partenaire mis en ligne en privé."
 
-#: inc/PostTypes/Partner.php:109
+#: inc/PostTypes/Partner.php:106
+msgid "Partner reverted to draft."
+msgstr "Partenaire reconverti en brouillon."
+
+#: inc/PostTypes/Partner.php:107
+msgid "Partner scheduled."
+msgstr "Partenaire planifié."
+
+#: inc/PostTypes/Partner.php:108
+msgid "Partner updated."
+msgstr "Partenaire mis à jour."
+
+#: inc/PostTypes/Partner.php:112
+msgctxt "partner slug"
 msgid "partner"
-msgstr ""
+msgstr "partner"
 
-#: inc/PostTypes/Partner.php:117
-msgid "Les partenaires"
-msgstr ""
+#: inc/PostTypes/Partner.php:120 views/pages/front-page.html.twig:27
+msgid "Partners"
+msgstr "Les partenaires"
 
 #: inc/PostTypes/Price.php:56
-msgctxt "Personne pluriel"
-msgid "Tarifs"
-msgstr ""
+msgctxt "price type generale name"
+msgid "Prices"
+msgstr "Tarifs"
 
 #: inc/PostTypes/Price.php:57
-msgctxt "Personne singulier"
-msgid "Tarif"
-msgstr ""
+msgctxt "price type singular name"
+msgid "Price"
+msgstr "Tarif"
 
 #: inc/PostTypes/Price.php:58
-msgid "Tarifs"
-msgstr ""
+msgctxt "price type"
+msgid "Add New"
+msgstr "Ajouter"
 
 #: inc/PostTypes/Price.php:59
-msgid "Tarif"
-msgstr ""
+msgid "Add New Price"
+msgstr "Ajouter un nouveau tarif"
 
 #: inc/PostTypes/Price.php:60
-msgid "Tarifs Parents :"
-msgstr ""
+msgid "Edit Price"
+msgstr "Éditer le tarif"
 
 #: inc/PostTypes/Price.php:61
-msgid "Tous les tarifs"
-msgstr ""
+msgid "New Price"
+msgstr "Nouveau tarif"
 
 #: inc/PostTypes/Price.php:62
-msgid "Ajouter un tarif"
-msgstr ""
+msgid "View Price"
+msgstr "Voir le tarif"
+
+#: inc/PostTypes/Price.php:63
+msgid "View Prices"
+msgstr "Voir les tarifs"
 
 #: inc/PostTypes/Price.php:64
-msgid "Nouveau tarif"
-msgstr ""
+msgid "Search Prices"
+msgstr "Rechercher dans les tarifs"
 
 #: inc/PostTypes/Price.php:65
-msgid "Modifier le tarif"
-msgstr ""
+msgid "No prices found."
+msgstr "Aucun tarif trouvé."
 
 #: inc/PostTypes/Price.php:66
-msgid "Mettre à jour le tarif"
-msgstr ""
+msgid "No prices found in Trash."
+msgstr "Aucun tarif trouvé dans la corbeille."
 
 #: inc/PostTypes/Price.php:67
-msgid "Voir le tarif"
-msgstr ""
+msgid "Parent Price :"
+msgstr "Tarif parent :"
 
 #: inc/PostTypes/Price.php:68
-msgid "Voir les tarifs"
-msgstr ""
+msgid "All Prices"
+msgstr "Tous les tarifs"
 
 #: inc/PostTypes/Price.php:69
-msgid "Chercher parmi les tarifs"
-msgstr ""
+msgid "Price Archives"
+msgstr "Archives des tarifs"
 
 #: inc/PostTypes/Price.php:70
-msgid "Aucun tarif n'a été trouvé."
-msgstr ""
+msgid "Price Attributes"
+msgstr "Attributs de tarifs"
 
 #: inc/PostTypes/Price.php:71
-msgid "Aucun tarif n'a été trouvé dans la corbeille."
-msgstr ""
+msgid "Uploaded to this price"
+msgstr "Téléversé sur ce tarif"
+
+#: inc/PostTypes/Price.php:72
+msgid "Insert into price"
+msgstr "Insérer dans le tarif"
+
+#: inc/PostTypes/Price.php:73
+msgctxt "price"
+msgid "Featured Image"
+msgstr "Image mise en avant"
+
+#: inc/PostTypes/Price.php:74
+msgctxt "price"
+msgid "Set featured image"
+msgstr "Définir comme image mise en avant"
+
+#: inc/PostTypes/Price.php:75
+msgctxt "price"
+msgid "Remove featured image"
+msgstr "Supprimer l’image mise en avant"
 
 #: inc/PostTypes/Price.php:76
-msgid "Insérer dans le tarif"
-msgstr ""
+msgctxt "price"
+msgid "Use as featured image"
+msgstr "Utiliser comme image mise en avant"
 
 #: inc/PostTypes/Price.php:77
-msgid "Téléversé sur ce tarif"
-msgstr ""
+msgid "Prices list navigation"
+msgstr "Navigation dans la liste des tarifs"
 
 #: inc/PostTypes/Price.php:78
-msgid "Liste des tarifs"
-msgstr ""
+msgid "Prices list"
+msgstr "Liste des tarifs"
 
 #: inc/PostTypes/Price.php:79
-msgid "Navigation de la liste des tarifs"
-msgstr ""
+msgid "Price published."
+msgstr "Tarif publié."
 
 #: inc/PostTypes/Price.php:80
-msgid "Filtrer la liste des tarifs"
-msgstr ""
+msgid "Price published privately."
+msgstr "Tarif mis en ligne en privé."
 
-#: inc/PostTypes/Price.php:84
+#: inc/PostTypes/Price.php:81
+msgid "Price reverted to draft."
+msgstr "Tarif reconverti en brouillon."
+
+#: inc/PostTypes/Price.php:82
+msgid "Price scheduled."
+msgstr "Tarif planifié."
+
+#: inc/PostTypes/Price.php:83
+msgid "Price updated."
+msgstr "Le tarif a été mis a jour."
+
+#: inc/PostTypes/Price.php:87
+msgctxt "price slug"
 msgid "price"
-msgstr ""
-
-#: inc/PostTypes/Price.php:92 views/common/prices.html.twig:14
-msgid "Les tarifs"
-msgstr ""
+msgstr "price"
 
 #: inc/Taxonomies/PartnerCategory.php:54
-msgctxt "Partner category General Name"
+msgctxt "partner category general name"
 msgid "Categories"
-msgstr ""
+msgstr "Catégories"
 
 #: inc/Taxonomies/PartnerCategory.php:55
-msgctxt "Partner category Singular Name"
+msgctxt "partner category Singular name"
 msgid "Category"
-msgstr ""
+msgstr "Catégorie"
 
 #: inc/Taxonomies/PartnerCategory.php:56
-msgid "Categories"
-msgstr ""
+msgid "Search Categories"
+msgstr "Rechercher dans les catégories"
 
 #: inc/Taxonomies/PartnerCategory.php:57
-msgid "Toutes les catégories"
-msgstr ""
+msgid "All Categories"
+msgstr "Toutes les catégories"
 
 #: inc/Taxonomies/PartnerCategory.php:58
-msgid "Catégorie parente"
-msgstr ""
+msgid "Popular Categories"
+msgstr "Catégories populaires"
 
 #: inc/Taxonomies/PartnerCategory.php:59
-msgid "Catégorie parente :"
-msgstr ""
+msgid "Parent Category"
+msgstr "Catégorie parente"
 
 #: inc/Taxonomies/PartnerCategory.php:60
-msgid "Nom de la nouvelle catégorie"
-msgstr ""
+msgid "Parent Category :"
+msgstr "Catégorie parente :"
 
 #: inc/Taxonomies/PartnerCategory.php:61
-msgid "Ajouter une nouvelle catégorie"
-msgstr ""
+msgid "Edit Category"
+msgstr "Modifier la catégorie"
 
 #: inc/Taxonomies/PartnerCategory.php:62
-msgid "Éditer la catégorie"
-msgstr ""
+msgid "View Category"
+msgstr "Voir la catégorie"
 
 #: inc/Taxonomies/PartnerCategory.php:63
-msgid "Mettre à jour la catégorie"
-msgstr ""
+msgid "Update Category"
+msgstr "Mettre à jour la catégorie"
 
 #: inc/Taxonomies/PartnerCategory.php:64
-msgid "Voir la catégorie"
-msgstr ""
+msgid "Add New Category"
+msgstr "Ajouter une nouvelle catégorie"
 
 #: inc/Taxonomies/PartnerCategory.php:65
-msgid "Séparer les catégories par des virgules"
-msgstr ""
+msgid "New Category Name"
+msgstr "Nom de la nouvelle catégorie"
 
 #: inc/Taxonomies/PartnerCategory.php:66
-msgid "Ajouter ou supprimer une catégorie"
-msgstr ""
+msgid "Separate categories with commas"
+msgstr "Séparez les catégories par des virgules"
 
 #: inc/Taxonomies/PartnerCategory.php:67
-msgid "Choisir parmi les catégories les plus utilisées"
-msgstr ""
+msgid "Add or remove categories"
+msgstr "Ajouter ou retirer des catégories"
 
 #: inc/Taxonomies/PartnerCategory.php:68
-msgid "Catégorie populaire"
-msgstr ""
+msgid "Choose from the most used categories"
+msgstr "Choisir parmi les catégories les plus utilisées"
 
 #: inc/Taxonomies/PartnerCategory.php:69
-msgid "Catégories recherchées"
-msgstr ""
+msgid "No categories found."
+msgstr "Aucune catégorie trouvée."
 
 #: inc/Taxonomies/PartnerCategory.php:70
-msgid "Aucune catégorie n'a été trouvée"
-msgstr ""
+msgid "No categories"
+msgstr "Aucune catégorie"
 
 #: inc/Taxonomies/PartnerCategory.php:71
-msgid "Pas de catégorie"
-msgstr ""
+msgid "Categories list navigation"
+msgstr "Navigation de la liste des catégories"
 
 #: inc/Taxonomies/PartnerCategory.php:72
-msgid "Liste des catégories"
-msgstr ""
+msgid "Categories list"
+msgstr "Liste des catégories"
 
-#: inc/Taxonomies/PartnerCategory.php:73
-msgid "Liste de navigation des catégories"
-msgstr ""
+#. translators: City heading when selecting from the most used terms.
+#: inc/Taxonomies/PartnerCategory.php:74
+msgctxt "partner category"
+msgid "Most Used"
+msgstr "Plus utilisées"
 
-#: inc/Taxonomies/PartnerCategory.php:105
-msgid "Ordre"
-msgstr ""
+#: inc/Taxonomies/PartnerCategory.php:75
+msgid "&larr; Back to Categories"
+msgstr "&larr; Retour aux catégories"
+
+#: inc/Taxonomies/PartnerCategory.php:107
+msgid "Order"
+msgstr "Ordre"
 
 #: inc/Taxonomies/TermUpdatedMessages.php:40
 msgid "Category added."
-msgstr ""
+msgstr "Catégorie ajoutée."
 
 #: inc/Taxonomies/TermUpdatedMessages.php:41
 #: inc/Taxonomies/TermUpdatedMessages.php:45
 msgid "Category deleted."
-msgstr ""
+msgstr "Catégorie effacée."
 
 #: inc/Taxonomies/TermUpdatedMessages.php:42
 msgid "Category updated."
-msgstr ""
+msgstr "Catégorie mise à jour."
 
 #: inc/Taxonomies/TermUpdatedMessages.php:43
 msgid "Category not added."
-msgstr ""
+msgstr "Catégorie non ajoutée."
 
 #: inc/Taxonomies/TermUpdatedMessages.php:44
 msgid "Category not updated."
-msgstr ""
+msgstr "Catégorie non mise à jour."
 
 #: inc/acf.php:25
 msgid "Post Visibility"
-msgstr ""
+msgstr "Visibilité de la publication"
 
 #: inc/acf.php:41
 msgid "Password Protected"
-msgstr ""
+msgstr "Protégé par mot de passe"
+
+#: inc/block/member/functions.php:21
+msgid "Members"
+msgstr "Les membres"
 
 #: inc/customizer/contact.php:25
 msgid "Contact information"
@@ -504,6 +596,10 @@ msgstr "Mentions légales"
 
 #: views/blocks/hero.html.twig:39 views/index.html.twig:45
 msgid "Scroll"
+msgstr "Scroll"
+
+#: views/common/prices.html.twig:14
+msgid "Les tarifs"
 msgstr ""
 
 #: views/common/prices.html.twig:15
@@ -517,10 +613,6 @@ msgstr "Désolé, nous n’avons pas pu trouver ce que vous cherchiez."
 #: views/pages/front-page.html.twig:17
 msgid "Event"
 msgstr "Lévènement"
-
-#: views/pages/front-page.html.twig:27
-msgid "Partners"
-msgstr "Les partenaires"
 
 #: views/pages/register-page.html.twig:37
 msgid "Civility"
@@ -547,3 +639,20 @@ msgid ""
 "<a href=\"http://www.inesa.fr/\">ines a</a>, <a href=\"http://www.19h47.fr/"
 "\">19h47</a>"
 msgstr ""
+"<a href=\"http://www.inesa.fr/\">ines a</a>, <a href=\"http://www.19h47.fr/"
+"\">19h47</a>"
+
+#~ msgctxt "Partner category General Name"
+#~ msgid "Categories"
+#~ msgstr "Catégories"
+
+#~ msgctxt "Member Type Generale Name"
+#~ msgid "Members"
+#~ msgstr "Membres"
+
+#~ msgctxt "Member Type Singular Name"
+#~ msgid "Member"
+#~ msgstr "Membre"
+
+#~ msgid "Update Member"
+#~ msgstr "Mettre à jour le membre"
