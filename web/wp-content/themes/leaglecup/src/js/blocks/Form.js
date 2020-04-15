@@ -18,9 +18,7 @@ export default class Form {
 
 		// Radios
 		const radios = [...this.$form.querySelectorAll('.js-radiogroup')];
-		radios.map(input => {
-			return new RadioGroup(input).init();
-		});
+		radios.map(input => new RadioGroup(input).init());
 
 		// Counter
 		const counter = new Counter(this.$form);

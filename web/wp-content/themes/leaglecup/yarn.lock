@@ -2,29 +2,24 @@
 # yarn lockfile v1
 
 
-"@19h47/checkbox@^2.0.4":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@19h47/checkbox/-/checkbox-2.0.5.tgz#cd7b1f580833d4a5e4c28e814f1f405fbcf52a9f"
-  integrity sha512-JvSu11vhpQZklsUowlEy9FZWrmOdsWoAMUu3ZR4aBQAVE+SYEdsSBeaOH+URt3kPZjBiR1OWQ5uF52SGG04TQA==
+"@19h47/checkbox@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@19h47/checkbox/-/checkbox-3.0.1.tgz#bd9efcb61f834b539914659e746c03c4ad46a3e4"
+  integrity sha512-Qh5i/eSPfv23tPFy/pTO5NcSWiQvzmMfYSUYVAguVMATVYqR86kN8lzY2Td//NGZ08sTImNPW6smZarFlApDmQ==
   dependencies:
-    "@19h47/keycode" "^1.0.6"
+    "@19h47/keycode" "3.0.0"
 
-"@19h47/keycode@^1.0.6":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@19h47/keycode/-/keycode-1.0.7.tgz#eb9e3edd62b365a9989bd28f9753dd5522b6d119"
-  integrity sha512-SyDZH+CYIARxJqECpwzEL+6MnDaWSjLGHllWWhyNVHl1tf6hfGdsn87byoDtYscX87TJ3Xok4L3DdtiVHP0s9Q==
+"@19h47/keycode@3.0.0", "@19h47/keycode@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@19h47/keycode/-/keycode-3.0.0.tgz#f5f7afcf7416106a6ca0ab2e323e5d01b7525441"
+  integrity sha512-NkImLtu8fud6fW93YkuXgZbXMa7IGeQsnLKLnOxNP0qJb/LQ7B+JUTRHVER+mWts/YCcuo1MQ5P/bFxBYAxLWA==
 
 "@19h47/keycode@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@19h47/keycode/-/keycode-2.0.0.tgz#bb0e2c63fa85411b4f84691e06c091b1fdf6b459"
   integrity sha512-zVFkCVh9c7QzW0ir60Sg6jv5Tzz209xIWwU4ontoPJ2sW20UxNwD2nCITMbVx+YGNLZR/+7avnyVcs2ARnPD5g==
 
-"@19h47/keycode@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@19h47/keycode/-/keycode-3.0.0.tgz#f5f7afcf7416106a6ca0ab2e323e5d01b7525441"
-  integrity sha512-NkImLtu8fud6fW93YkuXgZbXMa7IGeQsnLKLnOxNP0qJb/LQ7B+JUTRHVER+mWts/YCcuo1MQ5P/bFxBYAxLWA==
-
-"@19h47/prettier-config@19h47/prettier-config", "@19h47/prettier-config@github:19h47/prettier-config":
+"@19h47/prettier-config@19h47/prettier-config":
   version "0.0.0"
   resolved "https://codeload.github.com/19h47/prettier-config/tar.gz/6a2958d2dc1192829c403b3867b69437ef3c63ae"
   dependencies:

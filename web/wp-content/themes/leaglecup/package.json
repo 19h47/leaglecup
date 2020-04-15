@@ -67,7 +67,7 @@
         "webpack-notifier": "^1.8.0"
     },
     "dependencies": {
-        "@19h47/checkbox": "^2.0.4",
+        "@19h47/checkbox": "^3.0.1",
         "@19h47/prettier-config": "19h47/prettier-config",
         "@19h47/radiogroup": "^4.1.2",
         "@19h47/radios": "3.0.0",
