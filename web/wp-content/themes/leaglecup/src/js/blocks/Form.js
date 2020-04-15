@@ -1,5 +1,5 @@
 import Checkbox from '@19h47/checkbox';
-import Radios from '@19h47/radios';
+import RadioGroup from '@19h47/radiogroup';
 import Counter from 'Utils/Counter';
 
 export default class Form {
@@ -17,8 +17,10 @@ export default class Form {
 		checkboxes.map(input => new Checkbox(input).init());
 
 		// Radios
-		const radios = [...this.$form.querySelectorAll('.js-radios')];
-		radios.map(input => new Radios(input).init());
+		const radios = [...this.$form.querySelectorAll('.js-radiogroup')];
+		radios.map(input => {
+			return new RadioGroup(input).init();
+		});
 
 		// Counter
 		const counter = new Counter(this.$form);

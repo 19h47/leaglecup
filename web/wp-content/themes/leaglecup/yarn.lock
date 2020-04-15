@@ -19,6 +19,28 @@
   resolved "https://registry.yarnpkg.com/@19h47/keycode/-/keycode-2.0.0.tgz#bb0e2c63fa85411b4f84691e06c091b1fdf6b459"
   integrity sha512-zVFkCVh9c7QzW0ir60Sg6jv5Tzz209xIWwU4ontoPJ2sW20UxNwD2nCITMbVx+YGNLZR/+7avnyVcs2ARnPD5g==
 
+"@19h47/keycode@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@19h47/keycode/-/keycode-3.0.0.tgz#f5f7afcf7416106a6ca0ab2e323e5d01b7525441"
+  integrity sha512-NkImLtu8fud6fW93YkuXgZbXMa7IGeQsnLKLnOxNP0qJb/LQ7B+JUTRHVER+mWts/YCcuo1MQ5P/bFxBYAxLWA==
+
+"@19h47/prettier-config@19h47/prettier-config", "@19h47/prettier-config@github:19h47/prettier-config":
+  version "0.0.0"
+  resolved "https://codeload.github.com/19h47/prettier-config/tar.gz/6a2958d2dc1192829c403b3867b69437ef3c63ae"
+  dependencies:
+    prettier "^1.x.x"
+
+"@19h47/radiogroup@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@19h47/radiogroup/-/radiogroup-4.1.2.tgz#3654720d4844f7d20c801c59f0981eb4157debc9"
+  integrity sha512-+fKo67h2xeMYgE7dSsx9EqVEdN0UlXkD+wz7K8oyacI659k3NxE+ln4I3IsCsPCQ41xqg9WhfvUU8Of1DQBp0Q==
+  dependencies:
+    "@19h47/keycode" "^3.0.0"
+    "@19h47/prettier-config" "19h47/prettier-config"
+    "@babel/plugin-transform-runtime" "^7.8.3"
+    core-js "^3.6.4"
+    eslint-config-prettier "^6.10.1"
+
 "@19h47/radios@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@19h47/radios/-/radios-3.0.0.tgz#1c0150c84aae85b48ba004027229095d71699127"
@@ -1505,7 +1527,7 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap@^4.4.1:
+bootstrap@^4.3.1, bootstrap@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.4.1.tgz#8582960eea0c5cd2bede84d8b0baf3789c3e8b01"
   integrity sha512-tbx5cHubwE6e2ZG7nqM3g/FZ5PQEDMWmMGNrCUBVRPHXTJaH7CBDdsLeu3eCh3B1tzAxTnAbtmrzvWEvT2NNEA==
@@ -2964,6 +2986,13 @@ eslint-config-airbnb-base@14.1.0:
     object.assign "^4.1.0"
     object.entries "^1.1.1"
 
+eslint-config-prettier@^6.10.1:
+  version "6.10.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.10.1.tgz#129ef9ec575d5ddc0e269667bf09defcd898642a"
+  integrity sha512-svTy6zh1ecQojvpbJSgH3aei/Rt7C6i090l5f2WQ4aB05lYHeZIR1qL4wZyyILTbtmnbHP5Yn8MrsOJMGa8RkQ==
+  dependencies:
+    get-stdin "^6.0.0"
+
 eslint-config-standard@14.1.1:
   version "14.1.1"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-14.1.1.tgz#830a8e44e7aef7de67464979ad06b406026c56ea"
@@ -3775,6 +3804,11 @@ get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
   integrity sha1-uWjGsKBDhDJJAui/Gl3zJXmkUP4=
+
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
+  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
 
 get-stream@3.0.0, get-stream@^3.0.0:
   version "3.0.0"
@@ -6788,6 +6822,11 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
+prettier@^1.x.x:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
+  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
+
 pretty-error@^2.0.2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/pretty-error/-/pretty-error-2.1.1.tgz#5f4f87c8f91e5ae3f3ba87ab4cf5e03b1a17f1a3"
@@ -7245,6 +7284,11 @@ ress@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/ress/-/ress-2.0.4.tgz#ec80a066f1e0107353143405ad8c1cc4a48b195e"
   integrity sha512-Fn9ugfCVPYn+8haQnen0rfm3gaX92Wk3SRpCNvrrpVvW6Iu1IKPU+UjsmVS8hYgweCBEr0x3nJd+TM+PXVaCoQ==
+
+ress@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/ress/-/ress-1.2.2.tgz#4fd00681c8d3ceaa79f5de1e54aaad15617e9777"
+  integrity sha1-T9AGgcjTzqp59d4eVKqtFWF+l3c=
 
 restore-cursor@^3.1.0:
   version "3.1.0"
