@@ -39,7 +39,7 @@ export default class Counter {
 	}
 
 	calc(checked, number, total) {
-		if (!checked) {
+		if (checked) {
 			return this.sum(number, total);
 		}
 
@@ -65,6 +65,7 @@ export default class Counter {
 	 *
 	 */
 	subtract(number, total) {
+		console.info('Counter.substract');
 		const current = total - number;
 
 		return this.render(current);
