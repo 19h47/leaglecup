@@ -33,7 +33,7 @@ class Partner {
 	/**
 	 * Construct function
 	 *
-	 * @param str $theme_version The theme version.
+	 * @param string $theme_version The theme version.
 	 * @access public
 	 */
 	public function __construct( $theme_version ) {

@@ -16,7 +16,6 @@ export default class Carousel {
 			return false;
 		}
 
-
 		this.$container = this.rootElement.querySelector('.js-container');
 
 		const $next = this.rootElement.querySelector('.js-next');
@@ -43,10 +42,10 @@ export default class Carousel {
 			$next.classList.add('is-active');
 			$previous.classList.add('is-active');
 
-			if (carousel.slides.length === (carousel.selectedIndex + 1)) {
+			if (carousel.slides.length === carousel.selectedIndex + 1) {
 				$next.classList.remove('is-active');
 			}
-			if (1 === (carousel.selectedIndex + 1)) {
+			if (1 === carousel.selectedIndex + 1) {
 				$previous.classList.remove('is-active');
 			}
 		});

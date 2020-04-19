@@ -1,6 +1,5 @@
 import Bouncer from 'formbouncerjs';
 
-
 const remove = target => target.classList.remove('Form--loading');
 
 /**
@@ -15,7 +14,7 @@ export default class Command {
 			errorClass: 'Form__error-message',
 			messages: {
 				missingValue: {
-					default: 'Veuillez remplir ce champ s\'il vous plaît.',
+					default: "Veuillez remplir ce champ s'il vous plaît.",
 				},
 				patternMismatch: {
 					email: 'Veuillez entrer une adresse email valide.',
