@@ -2,14 +2,13 @@
  *
  */
 .wp-block {
-
 	// .wp-block-embed
 	&-embed {
 		&.wp-embed-aspect-4-3 .wp-block-embed__wrapper {
 			position: relative;
 
 			&::before {
-				content: "";
+				content: '';
 				display: block;
 				padding-top: 50%; // Default to 2:1 aspect ratio.
 			}
@@ -26,104 +25,106 @@
 		}
 
 		&.wp-embed-aspect-4-3 .wp-block-embed__wrapper::before {
-			padding-top: percentage( 4 / 3 ); // 3 / 4 * 100
+			padding-top: percentage(4 / 3); // 3 / 4 * 100
 		}
 	}
 
-    // .wp-block-columns
-    &-columns {
-        @include margin( bottom $grid-gutter-width * 2 );
-        @extend .flex-wrap, .flex-md-nowrap, .d-flex;
+	// .wp-block-columns
+	&-columns {
+		@include margin(bottom $grid-gutter-width * 2);
+		@extend .flex-wrap, .flex-md-nowrap, .d-flex;
 
-        &.has-2-columns {}
-    }
+		&.has-2-columns {
+		}
+	}
 
-    // .wp-block-column
-    &-column {
-        @include margin( bottom 0 );
+	// .wp-block-column
+	&-column {
+		@include margin(bottom 0);
 
-        flex: 1;
-        flex-basis: 100%;
-        min-width: 0;
-        word-break: break-word;
-        overflow-wrap: break-word;
+		flex: 1;
+		flex-basis: 100%;
+		min-width: 0;
+		word-break: break-word;
+		overflow-wrap: break-word;
 
-        @include media-breakpoint-up( 'md' ) {
-            flex-basis: 50%;
-            flex-grow: 0;
+		@include media-breakpoint-up('md') {
+			flex-basis: 50%;
+			flex-grow: 0;
 
-            &:not(:last-child) {
-                @include margin( right $grid-gutter-width / 2 );
-            }
+			&:not(:last-child) {
+				@include margin(right $grid-gutter-width / 2);
+			}
 
-            &:not(:first-child) {
-                @include margin( left $grid-gutter-width / 2 );
-            }
+			&:not(:first-child) {
+				@include margin(left $grid-gutter-width / 2);
+			}
 
-        	& > *:last-child {
-        		margin-bottom: 0!important;
-        	}
-        }
+			& > *:last-child {
+				margin-bottom: 0 !important;
+			}
+		}
 
-        .wp-block-image {
-            @include margin( top $grid-gutter-width * 2 bottom $grid-gutter-width * 2 );
-        }
-    }
+		.wp-block-image {
+			@include margin(top $grid-gutter-width * 2 bottom $grid-gutter-width * 2);
+		}
+	}
 
-    // .wp-block-image
-    &-image {
-        @include margin( top $grid-gutter-width * 4 bottom $grid-gutter-width * 4 );
+	// .wp-block-image
+	&-image {
+		@include margin(top $grid-gutter-width * 4 bottom $grid-gutter-width * 4);
 
-        img {
-            @extend .d-inline-block;
-            @extend %vertical-align-middle;
-            max-width: 100%;
-            height: auto;
-        }
-    }
+		img {
+			@extend .d-inline-block;
+			@extend %vertical-align-middle;
+			max-width: 100%;
+			height: auto;
+		}
+	}
 
-    // .wp-block-button
-    &-button {
-        @include margin( top $grid-gutter-width bottom $grid-gutter-width );
+	// .wp-block-button
+	&-button {
+		@include margin(top $grid-gutter-width bottom $grid-gutter-width);
 
-
-        // .wp-block__link
-        &__link {
-            @extend .Button, .Button--outline-secondary;
-            text-decoration: none!important;
-        }
-    }
+		// .wp-block__link
+		&__link {
+			@extend .Button, .Button--outline-secondary;
+			text-decoration: none !important;
+		}
+	}
 
 	// .wp-block-gallery
 	&-gallery {
-		@extend .row;
-		@extend %list-style-type-none;
+		.blocks-gallery-grid {
+			@extend .row;
+			@extend %list-style-type-none;
 
-		padding-left: 0!important;
+			padding-left: 0 !important;
+		}
 
 		.blocks-gallery-item {
 			@extend .col-12, .col-md-4;
-			@include margin( bottom #{ $base-line-height }px );
+			@include margin(bottom #{$base-line-height}px);
 
-			@include media-breakpoint-up( md ) {
-				height: #{ $base-line-height * 10 }px;
+			@include media-breakpoint-up(md) {
+				height: #{$base-line-height * 10}px;
 			}
 
 			figure {
-				@include size( 100% );
+				@include size(100%);
 			}
 
 			img {
-				@include size( 100% );
+				@include size(100%);
 
-				@include media-breakpoint-up( md ) {
+				@include media-breakpoint-up(md) {
 					object-fit: cover;
 					object-position: center;
 				}
 			}
 
 			&:last-child {
-				@include margin( bottom 0 );
+				@include margin(bottom 0);
 			}
 		}
 	}
