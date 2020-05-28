@@ -8,25 +8,25 @@
 		outline: none;
 	}
 
-	transition: opacity map-get( $easings, ease-in-out );
+	transition: opacity map-get($easings, ease-in-out);
 
 	&--loading {
 		@extend %Pointer-events-none;
 
 		opacity: 0.8;
 	}
-	&--success {}
-	&--error {}
+	&--success {
+	}
+	&--error {
+	}
 
 	&__error {
 		@extend .d-none;
 		p {
 			@extend %text-align-center, %margin-y-0;
 			@include padding(
-				top ( $grid-gutter-width / 2 ) + 2
-				right $grid-gutter-width / 1.5
-				bottom ( $grid-gutter-width / 2 ) + 2
-				left $grid-gutter-width / 1.5
+				top ($grid-gutter-width / 2) + 2 right $grid-gutter-width / 1.5 bottom
+					($grid-gutter-width / 2) + 2 left $grid-gutter-width / 1.5
 			);
 
 			border: {
@@ -35,7 +35,7 @@
 				style: solid;
 				width: 1px;
 			}
-			color: the_color( red, pure );
+			color: the_color(red, pure);
 		}
 
 		@at-root #{ $this }--error & {
@@ -48,10 +48,8 @@
 		p {
 			@extend %text-align-center, %margin-y-0;
 			@include padding(
-				top ( $grid-gutter-width / 2 ) + 2
-				right $grid-gutter-width / 1.5
-				bottom ( $grid-gutter-width / 2 ) + 2
-				left $grid-gutter-width / 1.5
+				top ($grid-gutter-width / 2) + 2 right $grid-gutter-width / 1.5 bottom
+					($grid-gutter-width / 2) + 2 left $grid-gutter-width / 1.5
 			);
 
 			border: {
@@ -60,7 +58,7 @@
 				style: solid;
 				width: 1px;
 			}
-			color: the_color( yellow,  soft );
+			color: the_color(yellow, soft);
 		}
 
 		@at-root #{ $this }--success & {
@@ -71,12 +69,16 @@
 	// .Form__group
 	&__group {
 		@extend %position-relative;
-		@include margin( top $grid-gutter-width / 2 bottom $grid-gutter-width );
+		@include margin(top $grid-gutter-width / 2 bottom $grid-gutter-width);
 
-		#{ $this } > &:first-child { @include margin( top 0 ); }
-		#{ $this } > &:last-child { @include margin( bottom 0 ); }
+		#{ $this } > &:first-child {
+			@include margin(top 0);
+		}
+		#{ $this } > &:last-child {
+			@include margin(bottom 0);
+		}
 
-		transition: opacity 0.3s map-get( $easings, ease-in-out );
+		transition: opacity 0.3s map-get($easings, ease-in-out);
 
 		&.is-off {
 			@extend %Pointer-events-none;
@@ -89,79 +91,85 @@
 	//
 	&__select,
 	&__input {
-		@include padding( right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
-		@include size( 100%, $grid-gutter-width * 2 );
+		@include padding(right $grid-gutter-width / 2 left $grid-gutter-width / 2);
+		@include size(100%, $grid-gutter-width * 2);
 
 		border: {
-			color: rgba( the_color( blue, very-dark ), 0.3 );
+			color: rgba(the_color(blue, very-dark), 0.3);
 			radius: $grid-gutter-width / 2;
 			style: solid;
 			width: 1px;
 		}
-		transition: border-color 0.3s map-get( $easings, ease-in-out );
+		transition: border-color 0.3s map-get($easings, ease-in-out);
 
 		&:focus {
 			border: {
-				color: rgba( the_color( blue, very-dark ), 1 );
+				color: rgba(the_color(blue, very-dark), 1);
 			}
 		}
 
 		// .Form__input--text
-		&--text {}
+		&--text {
+		}
 
 		// .Form__input--tel
-		&--tel {}
+		&--tel {
+		}
 	}
 
 	&__radio {
 		$this: &;
 		@extend .d-flex;
-		@extend %Cursor-pointer;
+		@extend %cursor-pointer;
 
 		&.is-focus,
 		&:focus,
 		&:hover {
 			#{ $this }__input {
 				border: {
-					color: rgba( the_color( blue, very-dark ), 1 );
+					color: rgba(the_color(blue, very-dark), 1);
 				}
 			}
 		}
 
 		&__input {
 			@extend %position-relative;
-			@include size( $grid-gutter-width );
-			@include margin( right $grid-gutter-width / 2 );
+			@include size($grid-gutter-width);
+			@include margin(right $grid-gutter-width / 2);
 
 			border: {
-				color: rgba( the_color( blue, very-dark ), 0.3 );
+				color: rgba(the_color(blue, very-dark), 0.3);
 				radius: $grid-gutter-width / 2;
 				style: solid;
 				width: 1px;
 			}
 			flex: 0 0 auto;
-			transition: border-color 0.3s map-get( $easings, ease-in-out );
+			transition: border-color 0.3s map-get($easings, ease-in-out);
 
 			&::after {
-				@include absolute( top 0 right 0 bottom 0 left 0 );
-				@include margin( top $grid-gutter-width / 8 right $grid-gutter-width / 8 bottom $grid-gutter-width / 8 left $grid-gutter-width / 8 );
+				@include absolute(top 0 right 0 bottom 0 left 0);
+				@include margin(
+					top $grid-gutter-width / 8 right $grid-gutter-width / 8 bottom
+						$grid-gutter-width / 8 left $grid-gutter-width / 8
+				);
 				@extend .d-block;
 
-				background-color: rgba( the_color( blue, very-dark ), 0 );
+				background-color: rgba(the_color(blue, very-dark), 0);
 				border: {
 					radius: $grid-gutter-width / 2;
 				}
-				transition: background-color 0.3s map-get( $easings, ease-in-out );
+				transition: background-color 0.3s map-get($easings, ease-in-out);
 				content: '';
 			}
 
 			@at-root #{ $this }.is-selected #{ $this }__input {
 				&::after {
-					background-color: rgba( the_color( blue, very-dark ), 1 );
+					background-color: rgba(the_color(blue, very-dark), 1);
 				}
 			}
 		}
-		&__label {}
+		&__label {
+		}
 	}
 
 	// .Form__checkbox
@@ -172,46 +180,49 @@
 
 		//
 		&--has-label button {
-			@include margin( right $grid-gutter-width / 2 );
+			@include margin(right $grid-gutter-width / 2);
 		}
 
 		button {
-			@include size( $grid-gutter-width );
+			@include size($grid-gutter-width);
 			@extend %position-relative;
 
 			flex: 0 0 auto;
 			border: {
-				color: rgba( the_color( blue, very-dark ), 0.3 );
+				color: rgba(the_color(blue, very-dark), 0.3);
 				radius: $grid-gutter-width / 4;
 				style: solid;
 				width: 1px;
 			}
-			transition: border-color 0.3s map-get( $easings, ease-in-out );
+			transition: border-color 0.3s map-get($easings, ease-in-out);
 
 			&::after {
-				@include absolute( top 0 right 0 bottom 0 left 0 );
-				@include margin( top $grid-gutter-width / 8 right $grid-gutter-width / 8 bottom $grid-gutter-width / 8 left $grid-gutter-width / 8 );
+				@include absolute(top 0 right 0 bottom 0 left 0);
+				@include margin(
+					top $grid-gutter-width / 8 right $grid-gutter-width / 8 bottom
+						$grid-gutter-width / 8 left $grid-gutter-width / 8
+				);
 				@extend .d-block;
 
-				background-color: rgba( the_color( blue, very-dark ), 0 );
+				background-color: rgba(the_color(blue, very-dark), 0);
 				border: {
 					radius: $grid-gutter-width / 8;
 				}
-				transition: background-color 0.3s map-get( $easings, ease-in-out );
+				transition: background-color 0.3s map-get($easings, ease-in-out);
 				content: '';
 			}
 
 			@at-root #{ $this }.is-focus button,
-			#{ $this }:focus button,
-			#{ $this }:hover button {
+				#{ $this }:focus button,
+				#{ $this }:hover button {
 				border: {
-					color: rgba( the_color( blue, very-dark ), 1 );
+					color: rgba(the_color(blue, very-dark), 1);
 				}
 			}
 
 			@at-root #{ $this }.is-selected button {
 				&::after {
-					background-color: rgba( the_color( blue, very-dark ), 1 );
+					background-color: rgba(the_color(blue, very-dark), 1);
 				}
 			}
 		}
@@ -219,19 +230,19 @@
 
 	//
 	&__label {
-		@include margin( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
+		@include margin(right $grid-gutter-width / 4 left $grid-gutter-width / 4);
 		@extend .d-block;
 		@extend %font-weight-bold;
-		@include margin( bottom $grid-gutter-width / 4 );
+		@include margin(bottom $grid-gutter-width / 4);
 
 		// .Form__label--required
 		&--required {
 			&::after {
-				@include margin( left $grid-gutter-width / 8 );
+				@include margin(left $grid-gutter-width / 8);
 				@extend .d-inline-block;
 				@extend %font-weight-regular;
 
-				color: the_color( red, pure );
+				color: the_color(red, pure);
 				content: '*';
 			}
 		}
@@ -247,17 +258,17 @@
 		line-height: $grid-gutter-width;
 
 		&--required {
-			color: the_color( red, pure );
+			color: the_color(red, pure);
 		}
 	}
 
 	//
 	&__error-message {
 		@extend %Pointer-events-none;
-		@include absolute( top 100% right 0 left 0 );
-		@include margin( right $grid-gutter-width left $grid-gutter-width );
+		@include absolute(top 100% right 0 left 0);
+		@include margin(right $grid-gutter-width left $grid-gutter-width);
 
-		color: the_color( red, pure );
+		color: the_color(red, pure);
 		font-size: 13.5px;
 		line-height: $grid-gutter-width;
 	}

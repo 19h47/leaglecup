@@ -7,20 +7,18 @@
 	$this: &;
 
 	@extend .d-block, .d-md-inline-block;
+	@extend %text-align-center, %text-transform-uppercase, %font-weight-medium;
+	@include letter-spacing(100);
 
 	user-select: none;
 
-	transition:
-		color 0.3s map-get( $easings, ease-in-out ),
-		background-color 0.3s map-get( $easings, ease-in-out ),
-		border-color 0.3s map-get( $easings, ease-in-out );
+	transition: color 0.3s map-get($easings, ease-in-out),
+		background-color 0.3s map-get($easings, ease-in-out),
+		border-color 0.3s map-get($easings, ease-in-out);
 
-	@include media-breakpoint-up( 'md' ) {
+	@include media-breakpoint-up('md') {
 		white-space: nowrap;
 	}
-
-	@extend %text-align-center, %text-transform-uppercase, %font-weight-medium;
-	@include letter-spacing( 100 );
 
 	border: {
 		color: transparent;
@@ -36,53 +34,51 @@
 	}
 
 	@include padding(
-		top ( $grid-gutter-width / 2 ) + 2
-		right $grid-gutter-width / 1.5
-		bottom ( $grid-gutter-width / 2 ) + 2
-		left $grid-gutter-width / 1.5
+		top ($grid-gutter-width / 2) + 2 right $grid-gutter-width / 1.5 bottom
+			($grid-gutter-width / 2) + 2 left $grid-gutter-width / 1.5
 	);
 
 	&:not(:disabled):not(.disabled) {
-		@extend %Cursor-pointer;
+		@extend %cursor-pointer;
 	}
 
 	&--primary {
-		color: the_color( black );
+		color: the_color(black);
 
 		background: {
-			color: the_color( white );
+			color: the_color(white);
 		}
 		border: {
-			color: the_color( white );
+			color: the_color(white);
 		}
 
 		&:hover {
 			background-color: transparent;
-			color: the_color( white );
+			color: the_color(white);
 		}
 	}
 
 	&--outline-primary {
-		color: the_color( white );
+		color: the_color(white);
 		border: {
-			color: the_color( white );
+			color: the_color(white);
 		}
 
 		&:hover {
-			background-color: the_color( white );
-			color: the_color( black );
+			background-color: the_color(white);
+			color: the_color(black);
 		}
 	}
 
 	&--outline-secondary {
-		color: the_color( blue, very-dark );
+		color: the_color(blue, very-dark);
 		border: {
-			color: the_color( blue, very-dark );
+			color: the_color(blue, very-dark);
 		}
 
 		&:hover {
-			background-color: the_color( blue, very-dark );
-			color: the_color( white );
+			background-color: the_color(blue, very-dark);
+			color: the_color(white);
 		}
 	}
 }

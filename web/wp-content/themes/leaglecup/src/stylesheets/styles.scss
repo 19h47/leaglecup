@@ -2,7 +2,6 @@
  * Main
  */
 
-
 // Dependencies
 @import 'vendors/bootstrap-imports';
 
@@ -12,7 +11,6 @@
 
 // @import 'base/fonts';
 
-
 // Vendors
 @import '~ress/ress';
 @import '~flickity/css/flickity';
@@ -21,8 +19,7 @@
 @import '~architecture/src/stylesheets/abstracts/functions';
 
 // Mixins.
-@import
-	'~architecture/src/stylesheets/abstracts/mixins/create-class-color',
+@import '~architecture/src/stylesheets/abstracts/mixins/create-class-color',
 	'~architecture/src/stylesheets/abstracts/mixins/position',
 	'~architecture/src/stylesheets/abstracts/mixins/margin',
 	'~architecture/src/stylesheets/abstracts/mixins/padding',
@@ -40,69 +37,40 @@
 @import 'vendors/wp-block';
 
 // Base stuff
-@import
-	'base/base',
-	'base/typographies';
-
+@import 'base/base', 'base/typographies';
 
 // Layout
-@import
-	'layout/site',
-	'layout/header',
-	'layout/footer';
+@import 'layout/site', 'layout/header', 'layout/footer';
 
 // Blocks
-@import
-	'blocks/hero',
-	'blocks/event',
-	'blocks/partners',
-	'blocks/page-block',
-	'blocks/members',
-	'blocks/member',
-	'blocks/carousel';
-
+@import 'blocks/hero', 'blocks/event', 'blocks/partners', 'blocks/page-block', 'blocks/members',
+	'blocks/member', 'blocks/carousel';
 
 // Components
-@import
-	'components/socials',
-	'components/guid',
-	'components/logo',
-	'components/button',
-	'components/breadcrumb',
-	'components/wysiwyg',
-	'components/responsive-embed',
-	'components/latest-actualities',
-	'components/menu-main',
-	'components/grid',
-	'components/partners',
-	'components/price',
-	'components/prices',
-	'components/form';
-
+@import 'components/socials', 'components/guid', 'components/logo', 'components/button',
+	'components/breadcrumb', 'components/wysiwyg', 'components/responsive-embed',
+	'components/latest-actualities', 'components/menu-main', 'components/grid',
+	'components/partners', 'components/price', 'components/prices', 'components/form';
 
 // Pages
-@import
-	'pages/front-page',
-	'pages/page';
-
+@import 'pages/front-page', 'pages/page';
 
 // Utilities.
-@import
-	'vendors/architecture-variables',
-// 	'~architecture/src/stylesheets/utilities/colors',
-// 	'~architecture/src/stylesheets/utilities/cursors',
-// 	'~architecture/src/stylesheets/utilities/displays',
-	// '~architecture/src/stylesheets/utilities/floats',
-	'~architecture/src/stylesheets/utilities/fonts',
+@import 'vendors/architecture-variables',
+	// 	'~architecture/src/stylesheets/utilities/colors',
+		'~architecture/src/stylesheets/utilities/cursors',
+	// 	'~architecture/src/stylesheets/utilities/displays',
+		// '~architecture/src/stylesheets/utilities/floats',
+		'~architecture/src/stylesheets/utilities/fonts',
 	'~architecture/src/stylesheets/utilities/margins',
 	// '~architecture/src/stylesheets/utilities/overflows',
-	// '~architecture/src/stylesheets/utilities/paddings',
-	'~architecture/src/stylesheets/utilities/positions',
+		// '~architecture/src/stylesheets/utilities/paddings',
+		'~architecture/src/stylesheets/utilities/positions',
 	'~architecture/src/stylesheets/utilities/sizes',
 	'~architecture/src/stylesheets/utilities/text-aligns',
 	'~architecture/src/stylesheets/utilities/text-decorations',
 	'~architecture/src/stylesheets/utilities/text-transforms',
 	'~architecture/src/stylesheets/utilities/vertical-aligns',
-// 	'~architecture/src/stylesheets/utilities/visibilities',
-	// '~architecture/src/stylesheets/utilities/white-spaces',
-	'~architecture/src/stylesheets/utilities/lists';
+	// 	'~architecture/src/stylesheets/utilities/visibilities',
+		// '~architecture/src/stylesheets/utilities/white-spaces',
+		'~architecture/src/stylesheets/utilities/lists';
