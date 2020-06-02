@@ -79,8 +79,6 @@ class SendCommand {
 		// Check for referer call.
 		check_ajax_referer( 'security', 'nonce' );
 
-		wp_die(var_dump($_POST));
-
 		// @TODO Test $_POST.
 		$this->data = $_POST;
 		$this->set_filename();

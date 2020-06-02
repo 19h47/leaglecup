@@ -18,7 +18,7 @@ use Set_Glance_Items;
 
 use LeagleCup\{ Admin, PostTypes, Taxonomies, SendCommand };
 
-$dotenv = new Dotenv();
+$dotenv = new Dotenv(true);
 $dotenv->load( get_template_directory() . '/.env' );
 
 
