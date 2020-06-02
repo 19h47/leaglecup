@@ -1,20 +1,20 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-import GuidGuidBangBang from 'Common/GuidGuidBangBang';
+import Guid from 'Common/Guid';
 import Command from 'Blocks/Command';
 import Form from 'Blocks/Form';
 import Carousel from 'Blocks/Carousel';
 
 (() => {
 	if ('production' !== process.env.NODE_ENV) {
-		const guid = new GuidGuidBangBang();
+		const guid = new Guid();
 
 		guid.init();
 	}
 
 	//
-	const command = new Command('.js-electronic-signature');
+	const command = new Command('.js-command');
 	command.init();
 
 	//

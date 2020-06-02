@@ -1,14 +1,14 @@
 /**
- * @file    common/GuidGuidBangBang.js
+ * @file    common/Guid.js
  * @type    class
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (htpp://19h47.fr)
  */
-export default class GuidGuidBangBang {
+export default class Guid {
 	constructor() {
 		this.$cont = null;
 		this.class = 'd-none';
 
-		document.body.appendChild(GuidGuidBangBang.render(12));
+		document.body.appendChild(Guid.render(12));
 	}
 
 	init() {

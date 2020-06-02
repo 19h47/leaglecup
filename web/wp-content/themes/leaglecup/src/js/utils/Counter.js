@@ -1,3 +1,6 @@
+import subtract from '@19h47/subtract';
+import sum from '@19h47/sum';
+
 /**
  * Class Counter
  *
@@ -30,7 +33,7 @@ export default class Counter {
 	}
 
 	change(event) {
-		console.info('Counter.change');
+		// console.info('Counter.change');
 		const { target } = event;
 		const number = parseInt(target.getAttribute('data-number'), 10);
 		const total = parseInt(this.$total.innerHTML, 10);
@@ -40,35 +43,10 @@ export default class Counter {
 
 	calc(checked, number, total) {
 		if (checked) {
-			return this.sum(number, total);
+			return this.render(sum(number, total));
 		}
 
-		return this.subtract(number, total);
-	}
-
-	/**
-	 * Sum
-	 *
-	 * @param  {int} number
-	 * @param  {int} total
-	 *
-	 * @return this.render
-	 */
-	sum(number, total) {
-		const current = total + number;
-
-		return this.render(current);
-	}
-
-	/**
-	 * Subtract
-	 *
-	 */
-	subtract(number, total) {
-		console.info('Counter.substract');
-		const current = total - number;
-
-		return this.render(current);
+		return this.render(subtract(total, number));
 	}
 
 	/**
