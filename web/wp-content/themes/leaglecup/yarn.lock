@@ -44,13 +44,13 @@
     "@babel/plugin-transform-runtime" "^7.8.3"
     core-js "^3.6.4"
 
-"@19h47/subtract@19h47/subtract":
-  version "0.0.0"
-  resolved "https://codeload.github.com/19h47/subtract/tar.gz/289b69f1587d6feb6fa779c6f671e5c1a4290ccb"
+"@19h47/subtract@19h47/19h47-subtract":
+  version "0.0.2"
+  resolved "https://codeload.github.com/19h47/19h47-subtract/tar.gz/c6fc04b185104f447c8038a08cab381bd17613eb"
 
-"@19h47/sum@19h47/sum":
-  version "0.0.0"
-  resolved "https://codeload.github.com/19h47/sum/tar.gz/33ded71be4c34f71f187abf7e3fd33a530a6333f"
+"@19h47/sum@19h47/19h47-sum":
+  version "0.0.1"
+  resolved "https://codeload.github.com/19h47/19h47-sum/tar.gz/2feb44d1dc36db5c5e0faa0ed1f45c39b399dff7"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"

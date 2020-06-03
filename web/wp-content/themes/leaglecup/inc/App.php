@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Class Leagle Cup
  *
@@ -18,7 +18,7 @@ use Set_Glance_Items;
 
 use LeagleCup\{ Admin, PostTypes, Taxonomies, SendCommand };
 
-$dotenv = new Dotenv(true);
+$dotenv = new Dotenv( true );
 $dotenv->load( get_template_directory() . '/.env' );
 
 
@@ -375,7 +375,6 @@ class App extends Timber {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-
 
 		add_action(
 			'after_setup_theme',

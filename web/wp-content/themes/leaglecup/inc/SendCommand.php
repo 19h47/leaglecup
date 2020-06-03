@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Send command
  *
@@ -109,7 +109,7 @@ class SendCommand {
 				'multipart' => array(
 					array(
 						'name'     => $this->get_filename() . '.json',
-						'contents' => fopen( get_template_directory() . '/inc/form-data/' . $this->get_filename() . '.json', 'r' ),
+						'contents' => fopen( get_template_directory() . '/inc/form-data/' . $this->get_filename() . '.json', 'r' ), // phpcs:ignore
 						'filename' => $this->get_filename() . '.json',
 						'headers'  => array(
 							'Content-type' => 'application/json',
@@ -117,7 +117,7 @@ class SendCommand {
 					),
 					array(
 						'name'     => 'Bon_de_commande.pdf',
-						'contents' => fopen( get_template_directory() . '/inc/Bon_de_commande.pdf', 'r' ),
+						'contents' => fopen( get_template_directory() . '/inc/Bon_de_commande.pdf', 'r' ), // phpcs:ignore
 						'filename' => 'Bon_de_commande.pdf',
 						'headers'  => array(
 							'Content-type' => 'application/pdf',
