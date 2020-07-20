@@ -20,12 +20,12 @@ const WebpackNotifierPlugin = require('webpack-notifier');
  * @return {str} Dir.
  */
 function resolve(dir) {
-	return path.join(__dirname, '..', dir)
+	return path.join(__dirname, '..', dir);
 }
 
 // Manifest plugin
 const manifestPlugin = new ManifestPlugin({
-	publicPath: 'dist/'
+	publicPath: 'dist/',
 });
 
 module.exports = {
@@ -36,9 +36,9 @@ module.exports = {
 		inline: true,
 	},
 	externals: {
-		'jquery': 'jQuery',
-		'jQuery': 'jQuery',
-		'$': 'jQuery',
+		jquery: 'jQuery',
+		jQuery: 'jQuery',
+		$: 'jQuery',
 	},
 	resolve: {
 		alias: {
@@ -75,127 +75,139 @@ module.exports = {
 			fonts: resolve('src/fonts'),
 
 			// stylesheets
-			stylesheets: resolve('src/stylesheets')
-		}
+			stylesheets: resolve('src/stylesheets'),
+		},
 	},
 	module: {
-		rules: [{
-			enforce: 'pre',
-			test: /\.js$/,
-			exclude: [/node_modules/, /vendors/],
-			loader: 'eslint-loader'
-		},
-		{
-			test: /\.js$/,
-			exclude: /node_modules/,
-			loader: 'babel-loader'
-		},
-		{
-			test: /\.(woff2?|eot|ttf|otf|woff|svg)?$/,
-			exclude: [/img/, /icons/],
-			use: [{
-				loader: 'file-loader',
-				options: {
-					name: '[name].[ext]',
-					outputPath: 'fonts/',
-					publicPath: '../fonts/',
-				},
-
-			}]
-		},
-		{
-			test: /\.svg$/,
-			exclude: [/img/, /fonts/],
-			use: [{
-				loader: 'svg-sprite-loader',
-				options: {
-					spriteFilename: 'icons.svg',
-					extract: true
-				}
-			},
-			'svg-transform-loader',
-			'svgo-loader'
-			]
-		},
-		{
-			test: /\.svg$/,
-			exclude: [/fonts/, /icons/],
-			use: [{
-				loader: 'file-loader',
-				options: {
-					outputPath: 'img/svg',
-					name: '[name].[ext]',
-				}
+		rules: [
+			{
+				enforce: 'pre',
+				test: /\.js$/,
+				exclude: [/node_modules/, /vendors/],
+				loader: 'eslint-loader',
 			},
 			{
-				loader: 'svgo-loader',
-				options: {
-					plugins: [{
-						removeTitle: true
-					},
-					{
-						convertColors: {
-							shorthex: false
-						}
-					},
-					{
-						convertPathData: false
-					}]
-				}
-			}]
-		},
-		{
-			test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|ogv)(\?.*)?$/,
-			use: [{
-				loader: 'url-loader',
-				options: {
-					limit: 100000,
-					name: '[name].[ext]',
-					publicPath: resolve('src/videos'),
-					outputPath: 'videos/',
-				}
-			}]
-		},
-		{
-			test: /\.(gif|png|jpe?g)$/i,
-			exclude: [/animations/],
-			use: [{
-				loader: 'file-loader',
-				options: {
-					outputPath: 'img/',
-					name: '[ext]/[name].[ext]',
-					// publicPath: '../img/',
-				},
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
 			},
 			{
-				loader: 'image-webpack-loader',
-				options: {
-					mozjpeg: {
-						progressive: true,
-						quality: [65]
+				test: /\.(woff2?|eot|ttf|otf|woff|svg)?$/,
+				exclude: [/img/, /icons/],
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'fonts/',
+							publicPath: '../fonts/',
+						},
 					},
-					optipng: {
-						enabled: false
+				],
+			},
+			{
+				test: /\.svg$/,
+				exclude: [/img/, /fonts/],
+				use: [
+					{
+						loader: 'svg-sprite-loader',
+						options: {
+							spriteFilename: 'icons.svg',
+							extract: true,
+						},
 					},
-					pngquant: {
-						quality: [0.65, 0.9],
-						speed: 4
+					'svg-transform-loader',
+					'svgo-loader',
+				],
+			},
+			{
+				test: /\.svg$/,
+				exclude: [/fonts/, /icons/],
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							outputPath: 'img/svg',
+							name: '[name].[ext]',
+						},
 					},
-					gifsicle: {
-						interlaced: false
-					}
-				}
-			}]
-		}]
+					{
+						loader: 'svgo-loader',
+						options: {
+							plugins: [
+								{
+									removeTitle: true,
+								},
+								{
+									convertColors: {
+										shorthex: false,
+									},
+								},
+								{
+									convertPathData: false,
+								},
+							],
+						},
+					},
+				],
+			},
+			{
+				test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|ogv)(\?.*)?$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 100000,
+							name: '[name].[ext]',
+							publicPath: resolve('src/videos'),
+							outputPath: 'videos/',
+						},
+					},
+				],
+			},
+			{
+				test: /\.(gif|png|jpe?g)$/i,
+				exclude: [/animations/],
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							outputPath: 'img/',
+							name: '[ext]/[name].[ext]',
+							// publicPath: '../img/',
+						},
+					},
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							mozjpeg: {
+								progressive: true,
+								quality: [65],
+							},
+							optipng: {
+								enabled: false,
+							},
+							pngquant: {
+								quality: [0.65, 0.9],
+								speed: 4,
+							},
+							gifsicle: {
+								interlaced: false,
+							},
+						},
+					},
+				],
+			},
+		],
 	},
 	plugins: [
-        new CleanWebpackPlugin(),
+		new CleanWebpackPlugin(),
 		manifestPlugin,
 		new SpriteLoaderPlugin({ plainSprite: true }),
 		new WebpackNotifierPlugin({
-            title: 'Webpack',
-            excludeWarnings: true,
-            alwaysNotify: true
-        }),
+			title: 'Webpack',
+			excludeWarnings: true,
+			alwaysNotify: true,
+		}),
 	],
 };
