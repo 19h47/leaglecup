@@ -5,63 +5,62 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Partners {
+	// .Partners__title
+	&__title {
+		@extend .h4;
+		@extend %font-weight-bold;
+		@include margin(bottom $grid-gutter-width / 2);
 
-    // .Partners__title
-    &__title {
-        @extend .h4;
-        @extend %font-weight-bold;
-        @include margin( bottom $grid-gutter-width / 2 );
+		border: {
+			bottom: {
+				style: solid;
+				width: 1px;
+			}
+		}
+		line-height: $base-line-height * 2px;
+	}
 
-        border: {
-            bottom: {
-                style: solid;
-                width: 1px;
-            }
-        }
-        line-height: $base-line-height * 2px
-    }
+	// .Partners__items
+	&__items {
+		@extend .d-flex, .flex-column, .flex-md-row, .text-align-center;
+		@extend %list-style-type-none;
+	}
 
-    // .Partners__items
-    &__items {
-        @extend .d-flex, .flex-column, .flex-md-row, .text-align-center;
-        @extend %list-style-type-none;
-    }
+	// .Partners__item
+	&__item {
+		@include margin(top $grid-gutter-width bottom $grid-gutter-width);
 
-    // .Partners__item
-    &__item {
-        @include margin( top $grid-gutter-width bottom $grid-gutter-width );
+		a {
+			@extend .d-block;
+		}
 
-        a {
-            @extend .d-block;
-        }
+		img {
+			@extend .d-inline-block;
+			@extend %vertical-align-middle;
 
-        img {
-            @extend .d-inline-block;
-            @extend %vertical-align-middle;
+			@include size(auto, 48px);
 
-            @include size( auto, 48px );
+			max-width: $grid-gutter-width * 6;
 
-            max-width: $grid-gutter-width * 6;
-
-            object: {
-                fit: contain;
-                position: center;
-            }
-        }
+			object: {
+				fit: contain;
+				position: center;
+			}
+		}
 
 		&.has-content {
-			@include media-breakpoint-up( 'md' ) {
-				max-width: percentage( 3 / 10 );
+			@include media-breakpoint-up('md') {
+				max-width: percentage(3 / 10);
 			}
 		}
 
 		// .Partners__item__content
 		&__content {
-			@include margin( top $grid-gutter-width / 2 );
+			@include margin(top $grid-gutter-width / 2);
 
 			*:last-child {
-				@include margin( bottom 0 );
+				@include margin(bottom 0);
 			}
 		}
-    }
+	}
 }

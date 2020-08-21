@@ -5,84 +5,79 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Hero-block {
-    $this: &;
+	$this: &;
 
-    @extend %position-relative;
+	@extend %position-relative;
 
-    @include media-breakpoint-up( md ) {
-        height: #{ $base-line-height * 30 }px;
-    }
-
-	@at-root .Front-page & {
-		height: auto!important;
+	@include media-breakpoint-up(md) {
+		height: #{$base-line-height * 30}px;
 	}
 
-    color: the_color( white );
+	@at-root .Front-page & {
+		height: auto !important;
+	}
 
-    // overlay
-    &::after {
-        @include absolute( top 0 right 0 bottom 0 left 0 );
-        @extend .d-block;
-        @include size( 100% );
+	color: the_color(white);
 
-        background-color: rgba( the_color( blue, very-dark ), 0.8 );
-        content: '';
-    }
+	// overlay
+	&::after {
+		@include absolute(top 0 right 0 bottom 0 left 0);
+		@extend .d-block;
+		@include size(100%);
 
-    // .Hero-block .Grid
-    .Grid {
-        color: rgba( the_color( white ), 0.2 );
-    }
+		background-color: rgba(the_color(blue, very-dark), 0.8);
+		content: '';
+	}
 
-    // .Hero-block__inner
-    &__inner {
-        @extend %position-relative;
-        @include padding(
-            top $grid-gutter-width * 4
-            bottom $grid-gutter-width * 4
-        );
+	// .Hero-block .Grid
+	.Grid {
+		color: rgba(the_color(white), 0.2);
+	}
 
-        z-index: 4;
+	// .Hero-block__inner
+	&__inner {
+		@extend %position-relative;
+		@include padding(top $grid-gutter-width * 4 bottom $grid-gutter-width * 4);
 
-        @include media-breakpoint-up( 'md' ) {
-            @include padding(
-                top $grid-gutter-width * 10
-                bottom 0
-            );
-        }
-    }
+		z-index: 4;
 
-    // .Hero-block__button
-    &__button {}
+		@include media-breakpoint-up('md') {
+			@include padding(top $grid-gutter-width * 10 bottom 0);
+		}
+	}
 
-    // .Hero-block__logo
-    &__logo {
-        @extend .d-none, .d-md-block;
-		@include size( 100% );
+	// .Hero-block__button
+	&__button {
+	}
+
+	// .Hero-block__logo
+	&__logo {
+		@extend .d-none, .d-md-block;
+		@include size(100%);
 
 		object-fit: contain;
 		object-position: center;
-    }
+	}
 
-    // .Hero-block__footer
-    .Page__hero__footer {
-        @include absolute( right 0 bottom 0 left 0 );
-		@include padding( bottom #{ $base-line-height * 4 }px );
-        @extend .d-none, .d-md-block;
+	// .Hero-block__footer
+	.Page__hero__footer {
+		@include absolute(right 0 bottom 0 left 0);
+		@include padding(bottom #{$base-line-height * 4}px);
+		@extend .d-none, .d-md-block;
 
 		@at-root .Front-page & {
 			@extend %position-relative;
 		}
-    }
+	}
 
-    // .Hero-block__image
-    &__image {
-        @include absolute( top 0 right 0 bottom 0 left 0 );
-        @include size( 100% );
+	// .Hero-block__image
+	&__image {
+		@include absolute(top 0 right 0 bottom 0 left 0);
+		@include size(100%);
 
-        object: {
-            fit: cover;
-            position: center;
-        }
-    }
+		object: {
+			fit: cover;
+			position: center;
+		}
+	}
 }

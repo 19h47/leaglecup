@@ -10,7 +10,6 @@ export function next(slider) {
 	return slider.next();
 }
 
-
 /**
  * Navigation previous
  *
@@ -22,7 +21,6 @@ export function next(slider) {
 export function previous(slider) {
 	return slider.previous();
 }
-
 
 /**
  * Select
@@ -38,7 +36,6 @@ export function previous(slider) {
 export function select(slider, value, isWrapped = false, isInstant = false) {
 	return slider.selectCell(value, isWrapped, isInstant);
 }
-
 
 /**
  * Options object

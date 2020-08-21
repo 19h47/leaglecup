@@ -6,68 +6,56 @@
 
 h1,
 .h1 {
-	font-size: $base-font-size-px * power( $scale-factor, 2 );
-	line-height: #{ $base-line-height * 2 }px;
+	font-size: $base-font-size-px * power($scale-factor, 2);
+	line-height: #{$base-line-height * 2}px;
 
 	@extend %font-weight-bold, %text-transform-uppercase;
-	@include letter-spacing( 100 );
+	@include letter-spacing(100);
 
-	@include margin(
-		top #{ $base-line-height }px
-		bottom #{ $base-line-height * 2 }px
-	);
+	@include margin(top #{$base-line-height}px bottom #{$base-line-height * 2}px);
 
-	@include media-breakpoint-up( 'md' ) {
-		font-size: $base-font-size-px * power( $scale-factor, 3 );
+	@include media-breakpoint-up('md') {
+		font-size: $base-font-size-px * power($scale-factor, 3);
 	}
 }
 
 h2,
 .h2 {
-	font-size: $base-font-size-px * power( $scale-factor, 1 );
-	line-height: #{ $base-line-height * 2 }px;
+	font-size: $base-font-size-px * power($scale-factor, 1);
+	line-height: #{$base-line-height * 2}px;
 
 	@extend %font-weight-bold;
 
-	@include margin(
-		top #{ $base-line-height }px
-		bottom #{ $base-line-height }px
-	);
+	@include margin(top #{$base-line-height}px bottom #{$base-line-height}px);
 
-	@include media-breakpoint-up( 'md' ) {
-		font-size: $base-font-size-px * power( $scale-factor, 2 );
+	@include media-breakpoint-up('md') {
+		font-size: $base-font-size-px * power($scale-factor, 2);
 	}
 }
 
 h3,
 .h3 {
-	font-size: $base-font-size-px * power( $scale-factor, 1 );
-	line-height: #{ $base-line-height }px;
+	font-size: $base-font-size-px * power($scale-factor, 1);
+	line-height: #{$base-line-height}px;
 
 	@extend %font-weight-regular;
 
-	@include margin(
-		top #{ $base-line-height }px
-		bottom 0
-	);
+	@include margin(top #{$base-line-height}px bottom 0);
 }
 
 h4,
 .h4 {
-	font-size: $base-font-size-px * power( $scale-factor, 1 );
-	line-height: #{ $base-line-height }px;
+	font-size: $base-font-size-px * power($scale-factor, 1);
+	line-height: #{$base-line-height}px;
 
 	@extend %font-weight-regular;
 
-	@include margin(
-		top #{ $base-line-height }px
-		bottom 0
-	);
+	@include margin(top #{$base-line-height}px bottom 0);
 }
 
 h5,
 .h5 {
-	line-height: #{ $base-line-height }px;
+	line-height: #{$base-line-height}px;
 }
 
 h6,
@@ -75,10 +63,14 @@ h6,
 	line-height: $grid-gutter-width;
 }
 
-.dh1 {}
+.dh1 {
+}
 
-.dh2 {}
+.dh2 {
+}
 
-.dh3 {}
+.dh3 {
+}
 
-.dh4 {}
+.dh4 {
+}

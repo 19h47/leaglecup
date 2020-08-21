@@ -15,35 +15,30 @@
 $color-variations: (
 	black: #000,
 	white: #fff,
-
 	red: (
 		pure: #ff3200,
 	),
-
 	blue: (
 		pure: #0000ff,
 		very-dark: #000747,
 		very-soft: #8292dd,
 	),
-
 	yellow: (
 		soft: #c4e25d,
 	),
-
 	/**
 	 * Brand colors
 	 *
 	 * @see https://brandcolors.net/
-	 */
-	socials: (
-		facebook: #3b5998,
-		twitter: #1da1f2,
-		google-plus: #dd4b39,
-		linkedin: #0077b5,
-		viadeo: #f07355,
-	)
+	 */ socials:
+		(
+			facebook: #3b5998,
+			twitter: #1da1f2,
+			google-plus: #dd4b39,
+			linkedin: #0077b5,
+			viadeo: #f07355,
+		),
 );
-
 
 /**
  * Font
@@ -53,8 +48,6 @@ $color-variations: (
  * @type map
  */
 $font: (
-
-
 	/**
 	 * Font weights
 	 *
@@ -63,19 +56,18 @@ $font: (
 	 * @uses map-get( $font, weights ) to retrieve font weight value
 	 * @type map
 	 */
-	weights: (
-		extralight: 100,
-		light: 200,
-		book: 300,
-		regular: 400,
-		medium: 500,
-		semibold: 600,
-		bold: 700,
-		extrabold: 800,
-		extrablack: 900
-	),
-
-
+		weights:
+		(
+			extralight: 100,
+			light: 200,
+			book: 300,
+			regular: 400,
+			medium: 500,
+			semibold: 600,
+			bold: 700,
+			extrabold: 800,
+			extrablack: 900,
+		),
 	/**
 	 * Font styles
 	 *
@@ -84,9 +76,7 @@ $font: (
 	 * @uses map-get( $font, styles ) to retrieve font style value
 	 * @type list
 	 */
-	styles: 'italic',
-
-
+		styles: 'italic',
 	/**
 	 * Font sizes
 	 *
@@ -95,9 +85,8 @@ $font: (
 	 * @uses map-get( $font, sizes ) to retrieve font size value
 	 * @type list
 	 */
-	sizes: 22,
+		sizes: 22
 );
-
 
 /**
  * Base
@@ -106,7 +95,6 @@ $base-font-size: 18;
 $base-font-size-px: $base-font-size * 1px;
 $base-line-height: 24;
 $scale-factor: 1.333;
-
 
 /**
  * Outer gutter width
@@ -117,7 +105,6 @@ $scale-factor: 1.333;
 $grid-outer-gutter-width-unitless: $grid-gutter-width-unitless;
 $grid-outer-gutter-width: $grid-outer-gutter-width-unitless * 1px;
 
-
 /**
  * Prototype width
  *
@@ -125,7 +112,6 @@ $grid-outer-gutter-width: $grid-outer-gutter-width-unitless * 1px;
  */
 $prototype-width-unitless: 1366;
 $prototype-width: $prototype-width-unitless * 1px;
-
 
 /**
  * Container width without grid outer gutter width
@@ -135,22 +121,20 @@ $prototype-width: $prototype-width-unitless * 1px;
 $container-width-without-outer-gutter-unitless: 1110;
 $container-width: $container-width-without-outer-gutter-unitless * 1px;
 
-
 /**
  * Container sizes
  *
  * Sizes keep from prototype (grid + outer gutter * 2 )
  */
-$container-width-unitless: $container-width-without-outer-gutter-unitless + ( $grid-outer-gutter-width-unitless * 2 );
+$container-width-unitless: $container-width-without-outer-gutter-unitless +
+	($grid-outer-gutter-width-unitless * 2);
 $container-width: $container-width-unitless * 1px;
-
 
 /**
  * Prototype height
  */
 $prototype-height-unitless: 720;
 $prototype-height: $prototype-height-unitless * 1px;
-
 
 /**
  * Spacers
@@ -159,16 +143,15 @@ $prototype-height: $prototype-height-unitless * 1px;
  */
 $spacers: (
 	0: 0,
-	1: #{ $base-line-height * 0.25 },
-	2: #{ $base-line-height * 0.5 },
-	3: #{ $base-line-height },
-	4: #{ $base-line-height * 1.5 },
-	5: #{ $base-line-height * 2 },
-	6: #{ $base-line-height * 3 },
-	7: #{ $base-line-height * 4 },
-	8: #{ $base-line-height * 5 },
+	1: #{$base-line-height * 0.25},
+	2: #{$base-line-height * 0.5},
+	3: #{$base-line-height},
+	4: #{$base-line-height * 1.5},
+	5: #{$base-line-height * 2},
+	6: #{$base-line-height * 3},
+	7: #{$base-line-height * 4},
+	8: #{$base-line-height * 5},
 );
-
 
 /**
  * Directories
@@ -187,7 +170,6 @@ $directories: (
 	png: '../img/png/',
 	gif: '../img/gif/',
 );
-
 
 /**
  *

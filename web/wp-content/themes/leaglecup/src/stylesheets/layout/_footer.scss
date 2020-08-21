@@ -5,98 +5,105 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Site-footer {
-    @include padding( top ( $grid-gutter-width / 2 ) + ( $grid-gutter-width * 2 ) bottom $grid-gutter-width * 2 );
+	@include padding(
+		top ($grid-gutter-width / 2) + ($grid-gutter-width * 2) bottom $grid-gutter-width * 2
+	);
 
-    background-color: the_color( blue, very-dark );
-    color: the_color( white );
+	background-color: the_color(blue, very-dark);
+	color: the_color(white);
 
-    hr {
-        @include margin( top -1px bottom $grid-gutter-width * 2 );
+	hr {
+		@include margin(top -1px bottom $grid-gutter-width * 2);
 
 		border: none;
-        height: 1px;
-        background-color: the_color( white );
+		height: 1px;
+		background-color: the_color(white);
 
-        @include media-breakpoint-up( 'md' ) {
-            @include margin( bottom $grid-gutter-width );
-        }
-    }
+		@include media-breakpoint-up('md') {
+			@include margin(bottom $grid-gutter-width);
+		}
+	}
 
-    // .Site-footer__top
-    &__top {
-        @include padding( bottom $grid-gutter-width * 2 );
+	// .Site-footer__top
+	&__top {
+		@include padding(bottom $grid-gutter-width * 2);
 
-        @include media-breakpoint-up( 'md' ) {
-            @include padding( bottom $grid-gutter-width * 4 );
-        }
-    }
+		@include media-breakpoint-up('md') {
+			@include padding(bottom $grid-gutter-width * 4);
+		}
+	}
 
-    // .Site-footer__bottom
-    &__bottom {}
+	// .Site-footer__bottom
+	&__bottom {
+	}
 
-    // .Site-footer__copyright
-    &__copyright {
-        @extend .d-flex, .justify-content-md-end, .flex-column, .flex-md-row;
-        @extend %list-style-type-none, %text-transform-uppercase;
-        @include letter-spacing( 100 );
-        @include margin( top $grid-gutter-width );
+	// .Site-footer__copyright
+	&__copyright {
+		@extend .d-flex, .justify-content-md-end, .flex-column, .flex-md-row;
+		@extend %list-style-type-none, %text-transform-uppercase;
+		@include letter-spacing(100);
+		@include margin(top $grid-gutter-width);
 
-        @include media-breakpoint-up( 'md' ) {
-            @include margin( top 0 );
-        }
+		@include media-breakpoint-up('md') {
+			@include margin(top 0);
+		}
 
-        font-size: 13.5px;
-        line-height: 24px;
+		font-size: 13.5px;
+		line-height: 24px;
 
 		li {
 			&:first-child {
-				@include margin( left 0 );
+				@include margin(left 0);
 			}
 			&:last-child {
-				@include margin( right 0 );
+				@include margin(right 0);
 			}
-			@include media-breakpoint-up( 'md' ) {
-				@include margin( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
+			@include media-breakpoint-up('md') {
+				@include margin(right $grid-gutter-width / 4 left $grid-gutter-width / 4);
 			}
 		}
 
-        a {
+		a {
 			@extend .d-inline, .d-inline-block;
-            @extend %position-relative;
+			@extend %position-relative;
 
-            &::after {
-                @include absolute( top 0 right 0 bottom 0 left 0 );
+			&::after {
+				@include absolute(top 0 right 0 bottom 0 left 0);
 
-                @include size( 100% );
+				@include size(100%);
 
-				transition: border-color 0.3s map-get( $easings, ease-in-out );
+				transition: border-color 0.3s map-get($easings, ease-in-out);
 				border-bottom: {
-					color: rgba( the_color( white ), 0 );
+					color: rgba(the_color(white), 0);
 					radius: $grid-gutter-width / 4;
 					style: solid;
 					width: 1px;
 				}
-                content: '';
-            }
+				content: '';
+			}
 
-            &:hover,
+			&:hover,
 			&:focus {
-                &::after {
-					border-bottom-color: rgba( the_color( white ), 1 );
-                }
-            }
-        }
-    }
+				&::after {
+					border-bottom-color: rgba(the_color(white), 1);
+				}
+			}
+		}
+	}
 
-    // .Site-footer__partners
-    &__partners {
-        @extend .d-flex, .align-items-center;
+	// .Site-footer__partners
+	&__partners {
+		@extend .d-flex, .align-items-center;
 
-        a {
-            @include margin( right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
+		a {
+			@include margin(right $grid-gutter-width / 2 left $grid-gutter-width / 2);
 
-            &:last-child { @include margin( right 0 ); }
-            &:first-child { @include margin( left 0 ); }
-        }
-    }
+			&:last-child {
+				@include margin(right 0);
+			}
+			&:first-child {
+				@include margin(left 0);
+			}
+		}
+	}
 }

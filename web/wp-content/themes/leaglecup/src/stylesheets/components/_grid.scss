@@ -5,55 +5,55 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Grid {
-    @include absolute( top 0 right 0 bottom 0 left 0 );
-    @include margin( top 0 right auto bottom 0 left auto );
-    @include padding( right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
-    @extend %Pointer-events-none;
-    @extend .d-none, .d-md-block;
+	@include absolute(top 0 right 0 bottom 0 left 0);
+	@include margin(top 0 right auto bottom 0 left auto);
+	@include padding(right $grid-gutter-width / 2 left $grid-gutter-width / 2);
+	@extend %Pointer-events-none;
+	@extend .d-none, .d-md-block;
 
 	animation: {
 		duration: 1.4s;
-		timing-function: map-get( $easings, ease-in-out );
+		timing-function: map-get($easings, ease-in-out);
 		delay: 0s;
 		iteration-count: 1;
 		name: apparition;
 	}
 	transform-origin: 0 0;
-    max-width: $container-width;
-    z-index: 3;
+	max-width: $container-width;
+	z-index: 3;
 
 	@keyframes apparition {
 		0% {
 			opacity: 0;
-			transform: scaleY( 0 );
+			transform: scaleY(0);
 		}
 		100% {
 			opacity: 1;
-			transform: scaleY( 1 );
+			transform: scaleY(1);
 		}
 	}
 
-    // .Grid-column
-    &-column {
-        @extend .d-inline-block;
-        @include size( percentage( 1 / 8 ), 100% );
+	// .Grid-column
+	&-column {
+		@extend .d-inline-block;
+		@include size(percentage(1 / 8), 100%);
 
-        border: {
-            right: {
-                color: currentColor;
-                style: solid;
-                width: 1px;
-            }
-        }
+		border: {
+			right: {
+				color: currentColor;
+				style: solid;
+				width: 1px;
+			}
+		}
 
-        &:first-child {
-            border: {
-                left: {
-                    color: currentColor;
-                    style: solid;
-                    width: 1px;
-                }
-            }
-        }
-    }
+		&:first-child {
+			border: {
+				left: {
+					color: currentColor;
+					style: solid;
+					width: 1px;
+				}
+			}
+		}
+	}
 }

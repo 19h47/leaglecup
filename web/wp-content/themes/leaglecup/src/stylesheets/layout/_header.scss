@@ -5,39 +5,39 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Site-header {
-    $this: &;
+	$this: &;
 
-    @extend %position-relative;
-    @include padding( top $grid-gutter-width bottom $grid-gutter-width );
+	@extend %position-relative;
+	@include padding(top $grid-gutter-width bottom $grid-gutter-width);
 
-    @include media-breakpoint-up( 'md' ) {
-        @include padding( top $grid-gutter-width * 1.5 bottom 0 );
-    }
+	@include media-breakpoint-up('md') {
+		@include padding(top $grid-gutter-width * 1.5 bottom 0);
+	}
 
-    background-color: the_color( blue, very-soft );
-    color: the_color( white );
+	background-color: the_color(blue, very-soft);
+	color: the_color(white);
 
-    // .Site-header .Grid
-    .Grid {
-        color: rgba( the_color( white ), 0.2 );
-    }
+	// .Site-header .Grid
+	.Grid {
+		color: rgba(the_color(white), 0.2);
+	}
 
-    @at-root .Front-page & {
-        @extend .position-relative, .position-md-absolute;
+	@at-root .Front-page & {
+		@extend .position-relative, .position-md-absolute;
 
-        background: {
-            color: the_color( blue, very-dark );
-        }
-        z-index: 5;
+		background: {
+			color: the_color(blue, very-dark);
+		}
+		z-index: 5;
 
-        @include media-breakpoint-up( 'md' ) {
-            top: 0;
-            right: 0;
-            left: 0;
+		@include media-breakpoint-up('md') {
+			top: 0;
+			right: 0;
+			left: 0;
 
-            background: {
-                color: transparent;
-            }
-        }
-    }
+			background: {
+				color: transparent;
+			}
+		}
+	}
 }

@@ -19,15 +19,15 @@
 @import '~architecture/src/stylesheets/abstracts/functions';
 
 // Mixins.
-@import '~architecture/src/stylesheets/abstracts/mixins/create-class-color',
-	'~architecture/src/stylesheets/abstracts/mixins/position',
-	'~architecture/src/stylesheets/abstracts/mixins/margin',
-	'~architecture/src/stylesheets/abstracts/mixins/padding',
-	'~architecture/src/stylesheets/abstracts/mixins/letter-spacing',
-	'~architecture/src/stylesheets/abstracts/mixins/size',
-	'~architecture/src/stylesheets/abstracts/mixins/auto-alpha',
-	'~architecture/src/stylesheets/abstracts/mixins/font',
-	'~architecture/src/stylesheets/abstracts/mixins/power';
+@import '~architecture/src/stylesheets/abstracts/mixins/create-class-color';
+@import '~architecture/src/stylesheets/abstracts/mixins/position';
+@import '~architecture/src/stylesheets/abstracts/mixins/margin';
+@import '~architecture/src/stylesheets/abstracts/mixins/padding';
+@import '~architecture/src/stylesheets/abstracts/mixins/letter-spacing';
+@import '~architecture/src/stylesheets/abstracts/mixins/size';
+@import '~architecture/src/stylesheets/abstracts/mixins/auto-alpha';
+@import '~architecture/src/stylesheets/abstracts/mixins/font';
+@import '~architecture/src/stylesheets/abstracts/mixins/power';
 
 // Placeholders
 @import '~architecture/src/stylesheets/abstracts/placeholders';
@@ -37,40 +37,59 @@
 @import 'vendors/wp-block';
 
 // Base stuff
-@import 'base/base', 'base/typographies';
+@import 'base/base';
+@import 'base/typographies';
 
 // Layout
-@import 'layout/site', 'layout/header', 'layout/footer';
+@import 'layout/site';
+@import 'layout/header';
+@import 'layout/footer';
 
 // Blocks
-@import 'blocks/hero', 'blocks/event', 'blocks/partners', 'blocks/page-block', 'blocks/members',
-	'blocks/member', 'blocks/carousel';
+@import 'blocks/hero';
+@import 'blocks/event';
+@import 'blocks/partners';
+@import 'blocks/page-block';
+@import 'blocks/members';
+@import 'blocks/member';
+@import 'blocks/carousel';
 
 // Components
-@import 'components/socials', 'components/guid', 'components/logo', 'components/button',
-	'components/breadcrumb', 'components/wysiwyg', 'components/responsive-embed',
-	'components/latest-actualities', 'components/menu-main', 'components/grid',
-	'components/partners', 'components/price', 'components/prices', 'components/form';
+@import 'components/socials';
+@import 'components/guid';
+@import 'components/logo';
+@import 'components/button';
+@import 'components/breadcrumb';
+@import 'components/wysiwyg';
+@import 'components/responsive-embed';
+@import 'components/latest-actualities';
+@import 'components/menu-main';
+@import 'components/grid';
+@import 'components/partners';
+@import 'components/price';
+@import 'components/prices';
+@import 'components/form';
 
 // Pages
-@import 'pages/front-page', 'pages/page';
+@import 'pages/front-page';
+@import 'pages/page';
 
 // Utilities.
-@import 'vendors/architecture-variables',
-	// 	'~architecture/src/stylesheets/utilities/colors',
-		'~architecture/src/stylesheets/utilities/cursors',
-	// 	'~architecture/src/stylesheets/utilities/displays',
-		// '~architecture/src/stylesheets/utilities/floats',
-		'~architecture/src/stylesheets/utilities/fonts',
-	'~architecture/src/stylesheets/utilities/margins',
-	// '~architecture/src/stylesheets/utilities/overflows',
-		// '~architecture/src/stylesheets/utilities/paddings',
-		'~architecture/src/stylesheets/utilities/positions',
-	'~architecture/src/stylesheets/utilities/sizes',
-	'~architecture/src/stylesheets/utilities/text-aligns',
-	'~architecture/src/stylesheets/utilities/text-decorations',
-	'~architecture/src/stylesheets/utilities/text-transforms',
-	'~architecture/src/stylesheets/utilities/vertical-aligns',
-	// 	'~architecture/src/stylesheets/utilities/visibilities',
-		// '~architecture/src/stylesheets/utilities/white-spaces',
-		'~architecture/src/stylesheets/utilities/lists';
+@import 'vendors/architecture-variables';
+@import '~architecture/src/stylesheets/utilities/colors';
+@import '~architecture/src/stylesheets/utilities/cursors';
+@import '~architecture/src/stylesheets/utilities/displays';
+@import '~architecture/src/stylesheets/utilities/floats';
+@import '~architecture/src/stylesheets/utilities/fonts';
+@import '~architecture/src/stylesheets/utilities/margins';
+@import '~architecture/src/stylesheets/utilities/overflows';
+@import '~architecture/src/stylesheets/utilities/paddings';
+@import '~architecture/src/stylesheets/utilities/positions';
+@import '~architecture/src/stylesheets/utilities/sizes';
+@import '~architecture/src/stylesheets/utilities/text-aligns';
+@import '~architecture/src/stylesheets/utilities/text-decorations';
+@import '~architecture/src/stylesheets/utilities/text-transforms';
+@import '~architecture/src/stylesheets/utilities/vertical-aligns';
+@import '~architecture/src/stylesheets/utilities/visibilities';
+@import '~architecture/src/stylesheets/utilities/white-spaces';
+@import '~architecture/src/stylesheets/utilities/lists';

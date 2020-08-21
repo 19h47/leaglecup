@@ -4,17 +4,17 @@
 .page-block {
 	@extend %position-relative;
 
-	transition: 0.7s map-get( $easings, ease );
+	transition: 0.7s map-get($easings, ease);
 
 	@keyframes fadeInUp {
 		from {
 			opacity: 0;
-			transform: translate3d( 0, $grid-gutter-width, 0);
+			transform: translate3d(0, $grid-gutter-width, 0);
 		}
 
 		to {
 			opacity: 1;
-			transform: translate3d( 0, 0, 0 );
+			transform: translate3d(0, 0, 0);
 		}
 	}
 
@@ -22,10 +22,10 @@
 	 * Fade in
 	 */
 	&.fade-in {
-		@include autoAlpha( 0 );
+		@include autoAlpha(0);
 
 		&.is-in-viewport {
-			@include autoAlpha( 1 );
+			@include autoAlpha(1);
 		}
 	}
 
@@ -33,66 +33,63 @@
 	 * Slide in up
 	 */
 	&.slide-in-up {
-		transform: translateY( $grid-gutter-width );
+		transform: translateY($grid-gutter-width);
 
 		&.is-in-viewport {
-			transform: translateY( 0 );
+			transform: translateY(0);
 		}
 	}
 
 	// .page-block__header
-    &__header {
+	&__header {
 		@extend .d-none, .d-md-block;
-        @extend %position-relative;
-        @include margin( bottom $grid-gutter-width / 2 );
-        @include padding( top ( ( $grid-gutter-width / 2 ) + 1 ) + ( $grid-gutter-width * 2 ) );
+		@extend %position-relative;
+		@include margin(bottom $grid-gutter-width / 2);
+		@include padding(top (($grid-gutter-width / 2) + 1) + ($grid-gutter-width * 2));
 
-        z-index: 4;
-    }
+		z-index: 4;
+	}
 
-    // .page-block__title
-    &__title {
-        @include margin(
-            top 0
-            bottom $grid-gutter-width
-        );
+	// .page-block__title
+	&__title {
+		@include margin(top 0 bottom $grid-gutter-width);
 
 		@at-root .js & {
 			opacity: 0;
 			animation: {
 				duration: 0.7s;
-				timing-function: map-get( $easings, ease-in-out );
+				timing-function: map-get($easings, ease-in-out);
 				delay: 0;
 				iteration-count: 1;
 				name: fadeInUp;
 				fill-mode: forwards;
 			}
 		}
-    }
+	}
 
-    // .block-content
-    &__content {
-        @include margin( bottom $grid-gutter-width );
+	// .block-content
+	&__content {
+		@include margin(bottom $grid-gutter-width);
 
 		@at-root .js & {
 			opacity: 0;
 			animation: {
 				duration: 0.9s;
-				timing-function: map-get( $easings, ease-in-out );
+				timing-function: map-get($easings, ease-in-out);
 				delay: 0.1s;
 				iteration-count: 1;
 				name: fadeInUp;
 				fill-mode: forwards;
 			}
 		}
-    }
+	}
 
 	&__button {
 		@at-root .js & {
 			opacity: 0;
 			animation: {
 				duration: 1.1s;
-				timing-function: map-get( $easings, ease-in-out );
+				timing-function: map-get($easings, ease-in-out);
 				delay: 0.2s;
 				iteration-count: 1;
 				name: fadeInUp;
@@ -101,30 +98,27 @@
 		}
 	}
 
-    // .page-block__inner
-    &__inner {
-        @extend %position-relative;
-        @include padding(
-            top $grid-gutter-width * 4
-            bottom $grid-gutter-width * 4
-        );
+	// .page-block__inner
+	&__inner {
+		@extend %position-relative;
+		@include padding(top $grid-gutter-width * 4 bottom $grid-gutter-width * 4);
 
-        z-index: 4;
-    }
+		z-index: 4;
+	}
 
-    // .page-block__menu
-    &__menu {
-        @extend .d-flex;
-        @extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
-        @include letter-spacing( 100 );
+	// .page-block__menu
+	&__menu {
+		@extend .d-flex;
+		@extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
+		@include letter-spacing(100);
 
-	    @include media-breakpoint-up( 'md' ) {
-	        @include margin( top 0 right $grid-gutter-width / 2 left $grid-gutter-width / 2 );
-	    }
+		@include media-breakpoint-up('md') {
+			@include margin(top 0 right $grid-gutter-width / 2 left $grid-gutter-width / 2);
+		}
 
-        font: {
-            size: 13.5px;
-        }
-        line-height: #{ $base-line-height }px;
-    }
+		font: {
+			size: 13.5px;
+		}
+		line-height: #{$base-line-height}px;
+	}
 }

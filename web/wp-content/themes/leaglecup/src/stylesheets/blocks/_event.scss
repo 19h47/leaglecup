@@ -5,24 +5,24 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Event-block {
-    $this: &;
+	$this: &;
 
-    color: the_color( white );
-    background-color: the_color( blue, very-soft );
+	color: the_color(white);
+	background-color: the_color(blue, very-soft);
 
-    // .Event-block .Grid
-    .Grid {
-        color: rgba( the_color( blue, very-dark ), 0.2 );
-    }
+	// .Event-block .Grid
+	.Grid {
+		color: rgba(the_color(blue, very-dark), 0.2);
+	}
 
-    // .Event-block__image
-    &__image {
-        @include absolute( top 0 right 0 bottom 0 );
-        @include size( 100% );
+	// .Event-block__image
+	&__image {
+		@include absolute(top 0 right 0 bottom 0);
+		@include size(100%);
 
-        object: {
-            fit: cover;
-            position: $grid-gutter-width * 24 center;
-        }
-    }
+		object: {
+			fit: cover;
+			position: $grid-gutter-width * 24 center;
+		}
+	}
 }

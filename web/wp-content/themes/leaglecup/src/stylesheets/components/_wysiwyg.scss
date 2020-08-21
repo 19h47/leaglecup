@@ -7,36 +7,37 @@
 	z-index: 4;
 
 	& > *:first-child {
-		margin-top: 0!important;
+		margin-top: 0 !important;
 	}
 
 	& > *:last-child {
-		margin-bottom: 0!important;
+		margin-bottom: 0 !important;
 	}
 
 	ul {
-		@include margin( top $grid-gutter-width bottom $grid-gutter-width );
-		@include padding( left $grid-gutter-width );
+		@include margin(top $grid-gutter-width bottom $grid-gutter-width);
+		@include padding(left $grid-gutter-width);
 
 		li:last-child {
-			@include margin( bottom 0 );
+			@include margin(bottom 0);
 		}
 	}
 
 	li {
-		@include margin( bottom $grid-gutter-width / 2 );
+		@include margin(bottom $grid-gutter-width / 2);
 	}
 
-	h1 {}
+	h1 {
+	}
 
 	h2 {
 		@extend .h1;
-		@include margin( bottom $grid-gutter-width );
+		@include margin(bottom $grid-gutter-width);
 	}
 
 	h3 {
 		@extend .h2;
-		@include margin( bottom $grid-gutter-width / 2 );
+		@include margin(bottom $grid-gutter-width / 2);
 
 		border: {
 			bottom: {
@@ -71,7 +72,7 @@
 			position: relative;
 
 			&::before {
-				content: "";
+				content: '';
 				display: block;
 				padding-top: 50%; // Default to 2:1 aspect ratio.
 			}
@@ -88,7 +89,7 @@
 		}
 
 		&.wp-embed-aspect-21-9 .wp-block-embed__wrapper::before {
-			padding-top: percentage( 9 / 21 );
+			padding-top: percentage(9 / 21);
 		}
 
 		&.wp-embed-aspect-18-9 .wp-block-embed__wrapper::before {
@@ -96,7 +97,7 @@
 		}
 
 		&.wp-embed-aspect-16-9 .wp-block-embed__wrapper::before {
-			padding-top: percentage( 9 / 16 );
+			padding-top: percentage(9 / 16);
 		}
 
 		&.wp-embed-aspect-4-3 .wp-block-embed__wrapper::before {

@@ -5,19 +5,19 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 .Menu-main {
-    $this: &;
+	$this: &;
 
-    @include letter-spacing( 100 );
-    @include margin( top $grid-gutter-width );
-    @extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
-    @extend .d-flex, .justify-content-md-end, .flex-column, .flex-md-row;
+	@include letter-spacing(100);
+	@include margin(top $grid-gutter-width);
+	@extend %text-transform-uppercase, %font-weight-medium, %list-style-type-none;
+	@extend .d-flex, .justify-content-md-end, .flex-column, .flex-md-row;
 
-    @include media-breakpoint-up( 'md' ) {
-        @include margin( top 0 right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
-    }
+	@include media-breakpoint-up('md') {
+		@include margin(top 0 right $grid-gutter-width / 4 left $grid-gutter-width / 4);
+	}
 
-    font-size: 13.5px;
-    line-height: #{ $base-line-height }px;
+	font-size: 13.5px;
+	line-height: #{$base-line-height}px;
 
 	@keyframes fadeIn {
 		from {
@@ -34,63 +34,61 @@
 		animation: {
 			name: fadeIn;
 			duration: 0.7s;
-			timing-function: map-get( $easings, ease-in-out );
+			timing-function: map-get($easings, ease-in-out);
 			iteration-count: 1;
 			fill-mode: forwards;
 		}
 	}
 
-    // .Menu-main__item
-    &__item {
-		@include media-breakpoint-up( 'md' ) {
+	// .Menu-main__item
+	&__item {
+		@include media-breakpoint-up('md') {
 			&:first-child {
 				#{ $this }__link {
-					@include margin( left 0 );
+					@include margin(left 0);
 				}
 			}
 			&:last-child {
 				#{ $this }__link {
-					@include margin( right 0 );
+					@include margin(right 0);
 				}
 			}
 		}
-
 	}
 
-    // .Menu-main__link
-    &__link {
-        @extend .d-inline-block, .d-md-block;
-        @extend %position-relative;
-		@include padding( right $grid-gutter-width / 4 left $grid-gutter-width / 4 );
+	// .Menu-main__link
+	&__link {
+		@extend .d-inline-block, .d-md-block;
+		@extend %position-relative;
+		@include padding(right $grid-gutter-width / 4 left $grid-gutter-width / 4);
 
-		@include media-breakpoint-up( 'md' ) {
-			@include margin( right $grid-gutter-width / 8 left $grid-gutter-width / 8 );
+		@include media-breakpoint-up('md') {
+			@include margin(right $grid-gutter-width / 8 left $grid-gutter-width / 8);
 		}
 
+		&::after {
+			@include absolute(top 0 right 0 bottom 0 left 0);
 
-        &::after {
-            @include absolute( top 0 right 0 bottom 0 left 0 );
+			@include size(100%);
 
-            @include size( 100% );
-
-			transition: border-color 0.3s map-get( $easings, ease-in-out );
+			transition: border-color 0.3s map-get($easings, ease-in-out);
 			border: {
-				color: rgba( the_color( white ), 0 );
+				color: rgba(the_color(white), 0);
 				radius: $grid-gutter-width / 4;
 				style: solid;
 				width: 1px;
 			}
-            content: '';
-        }
+			content: '';
+		}
 
-        &:hover,
-        &.is-current,
+		&:hover,
+		&.is-current,
 		&:focus {
-            &::after {
+			&::after {
 				border: {
-					color: rgba( the_color( white ), 1 );
+					color: rgba(the_color(white), 1);
 				}
-            }
-        }
-    }
+			}
+		}
+	}
 }
