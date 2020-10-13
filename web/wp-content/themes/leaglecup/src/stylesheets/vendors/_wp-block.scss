@@ -80,6 +80,10 @@
 			max-width: 100%;
 			height: auto;
 		}
+
+		.aligncenter {
+			@extend %text-align-center;
+		}
 	}
 
 	// .wp-block-button
