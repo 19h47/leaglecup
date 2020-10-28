@@ -1,15 +1,14 @@
 {#
-
-Carousel
-
-@param array carousel
-
-#}
+ # Carousel
+ #
+ # @param array carousel
+ # @package LeagleCup
+ #}
 <div class="Carousel js-carousel page-block__content">
 	<div class="Site-container">
 		<div class="row">
 			<div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-				<button type="button" class="Carousel__button js-previous" aria-label="{{ __( 'Précédent', 'LeagleCup' ) }}">
+				<button type="button" class="Carousel__button js-previous" aria-label="{{ __( 'Previous', 'leaglecup' ) }}">
 					{% include 'svg/use.html.twig' with { icon: 'arrow-left' } %}
 				</button>
 			</div>
@@ -36,7 +35,7 @@ Carousel
 				</ul>
 			</div>
 			<div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-				<button type="button" class="Carousel__button js-next is-active" aria-label="{{ __( 'Suivant', 'LeagleCup' ) }}">
+				<button type="button" class="Carousel__button js-next is-active" aria-label="{{ __( 'Next', 'leaglecup' ) }}">
 					{% include 'svg/use.html.twig' with { icon: 'arrow-right' } %}
 				</button>
 			</div>

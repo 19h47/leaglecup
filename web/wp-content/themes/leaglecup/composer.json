@@ -1,7 +1,7 @@
 {
-    "name": "19h47/leaglecup",
-    "version": "1.0.0",
-    "authors": [
+	"name": "19h47/leaglecup",
+	"version": "2.0.0",
+	"authors": [
 		{
 			"name": "Jérémy Levron",
 			"email": "jeremylevron@19h47.fr"
@@ -11,7 +11,7 @@
 		"timber/timber": "^1.9",
 		"19h47/set-glance-items": "dev-master",
 		"symfony/dotenv": "^4.3",
-        "guzzlehttp/guzzle": "^6.5"
+		"guzzlehttp/guzzle": "^6.5"
 	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "^3.5",
@@ -31,9 +31,12 @@
 			]
 		}
 	},
-    "autoload": {
-        "psr-4": {
-            "LeagleCup\\": "inc/"
-        }
-    }
+	"autoload": {
+		"psr-4": {
+			"LeagleCup\\": "inc/"
+		},
+		"files": [
+			"./inc/helpers.php"
+		]
+	}
 }

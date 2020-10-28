@@ -1,15 +1,20 @@
 {#
-	@file   views/components/socials.html.twig
-	@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ # Socials
+ #
+ # @file   views/components/socials.html.twig
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ # @package LeagleCup
 #}
-<ul class="Socials">
-	{% apply spaceless %}
-		{% for social in contact.socials %}
-		<li class="Socials__item">
-			<a class="Socials__link" href="{{ social.link }}" title="{{ social.title }}" target="_blank" rel="noopener">
-				{% include 'svg/use.html.twig' with { icon: social.slug } only %}
-			</a>
-		</li>
-		{% endfor %}
-	{% endapply %}
-</ul>
+{% if socials %}
+	<ul class="Socials">
+		{% apply spaceless %}
+			{% for social in socials %}
+			<li class="Socials__item">
+				<a class="Socials__link" href="{{ social.link }}" title="{{ social.title }}" target="_blank" rel="noopener">
+					{% include 'svg/use.html.twig' with { icon: social.slug } only %}
+				</a>
+			</li>
+			{% endfor %}
+		{% endapply %}
+	</ul>
+{% endif %}

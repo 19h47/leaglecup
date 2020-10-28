@@ -1,6 +1,6 @@
 const presets = [
 	[
-		'@babel/env',
+		'@babel/preset-env',
 		{
 			modules: false,
 			targets: {
@@ -10,7 +10,7 @@ const presets = [
 				safari: '11.1',
 				ie: '11',
 			},
-			corejs: '3',
+			corejs: 3,
 			useBuiltIns: 'usage',
 		},
 	],

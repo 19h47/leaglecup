@@ -8,7 +8,7 @@ module.exports = {
 	rules: {
 		'arrow-parens': ['error', 'as-needed'],
 		'no-console': 'off',
-		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'no-debugger': 'production' === process.env.NODE_ENV ? 'error' : 'off',
 		'no-tabs': 0,
 		indent: ['error', 'tab', { SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }],
 		'template-curly-spacing': ['off'],
@@ -19,6 +19,18 @@ module.exports = {
 		// Added: https://github.com/standard/eslint-plugin-standard/issues/12
 		// Maybe someday it will be removed: https://github.com/standard/eslint-plugin-standard/issues/27
 		'standard/no-callback-literal': 'off',
+		'import/no-anonymous-default-export': [
+			'error',
+			{
+				allowArray: false,
+				allowArrowFunction: false,
+				allowAnonymousClass: false,
+				allowAnonymousFunction: false,
+				allowCallExpression: true, // The true value here is for backward compatibility
+				allowLiteral: false,
+				allowObject: false,
+			},
+		],
 	},
 	parser: 'babel-eslint',
 	parserOptions: {
@@ -28,7 +40,7 @@ module.exports = {
 	settings: {
 		'import/resolver': {
 			webpack: {
-				config: 'config/webpack.common.js',
+				config: 'webpack/webpack.config.common.js',
 			},
 		},
 	},

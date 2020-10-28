@@ -1,9 +1,9 @@
 {#
-
-@file pages/register-page.html.twig
-@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
-
-#}
+ # Register page
+ #
+ # @file pages/register-page.html.twig
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ #}
 {% extends 'index.html.twig' %}
 
 {% block content %}
@@ -20,7 +20,9 @@
 
 			<div class="row">
 				<div class="col-12 col-md-8 offset-md-2">
-					<form class="Form row js-command js-form" method="post">
+					<form class="Form row js-register js-form" method="POST">
+
+
 
 						<div class="Form__group d-none">
 							{# Hidden #}
@@ -31,6 +33,13 @@
 							{# <input id="birthdate" type="hidden" name="birthdate" value=""> #}
 							{# <input id="birthplace" type="hidden" name="birthplace" value=""> #}
 							<input class="js-total-input" type="text" id="total" name="total" value="375">
+
+							{{ nonce }}
+
+							{% if recaptcha.site_key %}
+								<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+							{% endif %}
+
 						</div>
 
 						<div class="Form__group col-12">
@@ -105,8 +114,8 @@
 						</div>
 
 						<div class="Form__group col-12">
-							<label class="Form__label Form__label--required" for="address_1">{{- 'Adresse' -}}</label>
-							<input class="Form__input" id="address_1" type="text" name="address_1" required placeholder="{{ 'ex. 99 avenue des Champs-Élysées' }}">
+							<label class="Form__label Form__label--required" for="address">{{- 'Adresse' -}}</label>
+							<input class="Form__input" id="address" type="text" name="address" required placeholder="{{ 'ex. 99 avenue des Champs-Élysées' }}">
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
@@ -205,9 +214,9 @@
 								</div>
 								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
 								<div class="col-2 text-align-right">
-									<div id="option_1-input" class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
+									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
 										<button type="button"></button>
-										<input class="d-none js-calc" id="option_1" name="option_1" value="option_1" type="checkbox" data-number="50">
+										<input class="d-none js-calc" id="option_0" name="options[0]" type="checkbox" data-number="50">
 									</div>
 								</div>
 							</div>
@@ -222,7 +231,7 @@
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
 										<button type="button"></button>
-										<input class="d-none js-calc" id="option_2" name="option_2" value="option_2" type="checkbox" data-number="165">
+										<input class="d-none js-calc" id="option_1" name="options[1]" type="checkbox" data-number="165">
 									</div>
 								</div>
 							</div>
@@ -245,16 +254,6 @@
 						</div>
 
 
-						<div class="Form__group col-12">
-							<p class="Form__label Form__label--required">Obligatoire</p>
-							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" role="checkbox" data-condition-class="js-condition-medical-certificate" aria-checked="false" tabindex="0">
-								<button type="button"></button>
-								<span>{{- 'J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)' -}}</span>
-								<input class="d-none" id="medical_certificate" name="medical_certificate" value="medical_certificate" type="checkbox">
-							</div>
-						</div>
-
-
 						<div class="Form__group js-radiogroup col-12" role="radiogroup" aria-labelledby="scramble-label">
 							<h3 id="scramble-label" class="Form__label">Équipe scramble à 2</h3>
 
@@ -263,36 +262,36 @@
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire</span>
 									<div class="d-none">
-										<input type="radio" id="scramble_alone" name="scramble" value="Je viens seul(e) et sollicite l’association Leagle Cup pour trouver un/une partenaire" checked>
+										<input type="radio" name="team[double]" value="false" checked>
 									</div>
 								</div>
 							</div>
 
 							<div class="Form__group">
-								<div class="Form__radio" role="radio" tabindex="-1" aria-checked="false" data-condition-class="js-condition-scramble-team">
+								<div class="Form__radio" role="radio" tabindex="-1" aria-checked="false">
 									<span class="Form__radio__input"></span>
 									<span class="Form__radio__label">Je constitue une équipe</span>
 									<div class="d-none">
-										<input type="radio" id="scramble_team" name="scramble" value="Je constitue une équipe avec">
+										<input type="radio" name="team[double]" value="true">
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
-								<div class="Form__group js-condition-scramble-team is-off col-12 col-md-6">
-									<label class="Form__label" for="scramble_lastname_second_player">{{- 'Nom du deuxième joueur' -}}</label>
-									<input class="Form__input" id="scramble_lastname_second_player" type="text" name="scramble_lastname_second_player" placeholder="ex. Bernard">
+								<div class="Form__group js-team is-off col-12 col-md-6">
+									<label class="Form__label" for="team_firstname">{{- 'Prénom du deuxième joueur' -}}</label>
+									<input class="Form__input" id="team_firstname" name="team[firstname]" type="text" placeholder="ex. Jean">
 								</div>
-								<div class="Form__group js-condition-scramble-team is-off col-12 col-md-6">
-									<label class="Form__label" for="scramble_firstname_second_player">{{- 'Prénom du deuxième joueur' -}}</label>
-									<input class="Form__input" id="scramble_firstname_second_player" name="scramble_firstname_second_player" type="text" placeholder="ex. Jean">
+								<div class="Form__group js-team is-off col-12 col-md-6">
+									<label class="Form__label" for="team_lastname">{{- 'Nom du deuxième joueur' -}}</label>
+									<input class="Form__input" id="team_lastname" type="text" name="team[lastname]" placeholder="ex. Bernard">
 								</div>
 							</div>
 
 							<div class="row">
-								<div class="Form__group js-condition-scramble-team is-off col-12">
-									<label class="Form__label" for="scramble_license_number_second_player">Numéro de licence du deuxième joueur</label>
-									<input class="Form__input" id="scramble_license_number_second_player" type="text" name="scramble_license_number_second_player" placeholder="ex.">
+								<div class="Form__group js-team is-off col-12">
+									<label class="Form__label" for="team_license">Numéro de licence du deuxième joueur</label>
+									<input class="Form__input" id="team_license" type="text" name="team[license_number]" placeholder="ex.">
 								</div>
 							</div>
 
@@ -307,8 +306,19 @@
 
 						</div>
 
-						<div class="Form__group js-condition-medical-certificate is-off col-12">
-							<button class="Form__submit Button Button--outline-secondary" type="submit">{{- 'Je m\'inscris' -}}</button>
+						<div class="Form__group col-12">
+							<p class="Form__label Form__label--required">Obligatoire</p>
+							<div class="Form__checkbox Form__checkbox--has-label js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
+								<button type="button"></button>
+								<span>{{- 'J’atteste sur l’honneur être en possession d’un certificat médical valide autorisant la pratique du golf en compétition (l’accès à la compétition pourra être refusé si le joueur n’est pas en mesure d’attester être en possession d’un certificat médical en cours de validité)' -}}</span>
+								<input class="d-none" id="medical_certificate" name="medical_certificate" value="medical_certificate" type="checkbox">
+							</div>
+						</div>
+
+						<div class="Form__group js-submit is-off col-12">
+							<button class="Form__submit Button Button--outline-secondary" type="submit">
+								{{- 'Je m\'inscris' -}}
+							</button>
 						</div>
 
 						<div class="Form_group col-12 text-align-right">

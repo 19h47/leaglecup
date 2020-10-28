@@ -17,14 +17,9 @@
 				</a>
 			</div>
 			<div class="col-12 col-md-9 flex-column flex-md-row margin-top-md-4 d-flex justify-content-md-end">
-				{%
-					include 'components/menu-main.html.twig'
-					with { items: menu.main.items }
-					only
-				%}
-				{% if contact.socials is iterable %}
-					{% include 'components/socials.html.twig' %}
-				{% endif %}
+				{% include 'components/menu-main.html.twig' with { items: menus.main.items } only %}
+				{% include 'components/socials.html.twig' %}
+
 			</div>
 		</div>
 	</div>

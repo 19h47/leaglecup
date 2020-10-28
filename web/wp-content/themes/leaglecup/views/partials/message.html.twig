@@ -1,0 +1,36 @@
+<p>Bonjour,</p>
+
+<p>Merci pour votre inscription, en voici un récapitulatif :</p>
+
+<p>{{- post.meta( 'civility' ) }}&nbsp;{{ post.meta( 'firstname' ) }}&nbsp;{{ post.meta( 'lastname' ) -}}</p>
+<p>Raison social : {{ post.meta( 'company_name' ) -}}</p>
+<p>Profession : {{ post.meta( 'job_title' ) -}}</p>
+
+<p>Email : {{ post.meta( 'email' ) -}}</p>
+<p>Téléphone mobile : {{ post.meta( 'cell_phone' ) -}}</p>
+
+<p>Adresse : {{ post.meta( 'address' ) }}</p>
+<p>Ville : {{ post.meta( 'city' ) }}</p>
+<p>Code postal : {{ post.meta( 'postal_code' ) }}</p>
+
+{{- post.meta( 'license_number' ) ? "<p>Numéro de licence : #{ post.meta( 'license_number' ) }</p>" : '' -}}
+{{- post.meta( 'ffg_index' ) ? "<p>Index FFG : #{ post.meta( 'ffg_index' ) }</p>" : '' -}}
+
+<p>Taille du polo : {{ post.meta( 't_shirt_size' ) }}</p>
+
+{{- post.meta( 'options_0' ) ? "<p>Vous avez sélectionné l'option 1</p>" : '' -}}
+{{- post.meta( 'options_1' ) ? "<p>Vous avez sélectionné l'option 2</p>" : '' -}}
+
+<p>Pour un total de {{ post.meta( 'total' ) }}&nbsp;€</p>
+
+{% if post.meta( 'team_double' ) %}
+	<p>Vous constituez une équipe avec :</p>
+	<p>{{- post.meta( 'team_firstname' ) ? post.meta( 'team_firstname' ) : ''  }}{{ post.meta( 'team_lastname' ) and post.meta( 'team_firstname' ) ? " #{ post.meta( 'team_lastname' ) }" : post.meta( 'team_lastname' )  }}</p>
+	{{ post.meta( 'team_license_number' ) ? "<p>Dont le numéro de licence est #{ post.meta( 'team_license_number' ) }</p>" : ''  }}
+{% else %}
+	<p>Vous venez seul(e) et sollicitez l’association <strong>Leagle Cup</strong> pour trouver un/une partenaire</p>
+{% endif %}
+
+<p>Toute l'équipe de la Leagle Cup vous remercie et vous recontactera très prochainement.</p>
+
+<p>À bientôt</p>

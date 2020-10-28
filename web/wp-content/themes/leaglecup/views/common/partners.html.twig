@@ -14,7 +14,7 @@ Partners
                     <h2 class="Partners__title">{{ term.name }}</h2>
 
                     <ul class="Partners__items row">
-                        {% for partner in term.get_posts('posts_per_page=-1') %}
+                        {% for partner in term.get_posts( 'posts_per_page=-1' ) %}
                             <li class="col-6 col-md-3 Partners__item{{ partner.content ? ' has-content' }}">
                                 {% if partner.get_field( 'link' ) %}
                                     <a href="{{ partner.get_field( 'link' ) }}" target="_blank">

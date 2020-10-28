@@ -39,7 +39,7 @@ Prices
                 {% if price.get_field( 'link' ) %}
                     <footer class="Price__footer">
                         <a class="Button Button--outline-primary" href="{{ price.get_field( 'link' ).url }}"{{- price.get_field( 'link' ).target ? ' target="_blank"' : '' -}}>
-                            {{- price.get_field( 'link' ).title | default( 'Je m\'inscris' ) -}}
+                            {{- price.get_field( 'link' ).title | default( __( 'I\'m registering', 'leaglecup' ) ) -}}
                         </a>
                     </footer>
                 {% endif %}

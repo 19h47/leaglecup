@@ -7,10 +7,12 @@
  * @author  Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
  */
 
+ use LeagleCup\Core\{ Transients };
+
 // Grab context.
 $context = Timber::context();
 
 // Get terms.
-$context['terms'] = get_transient( 'leaglecup_partners' );
+$context['terms'] = Transients::partners();
 
 Timber::render( 'common/partners.html.twig', $context );
