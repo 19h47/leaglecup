@@ -15,6 +15,16 @@ Menu main
 				<a class="Menu-main__link{{ item.current ? ' is-current' : '' }}" href="{{ item.url }}" itemprop="url" data-transition="fade">
 					{{- item.title -}}
 				</a>
+
+				{% if item.children %}
+					<ul class="Menu-main__children">
+						{% for child in item.children %}
+							<li class="Menu-main__item Menu-main__item--child{{ child.classes ? ' ' ~ child.classes | join( ' ' ) }}">
+								<a class="Menu-main__link" href="{{ child.url }}">{{- child.title -}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
 			</li>
 		{% endfor %}
 	</ul>

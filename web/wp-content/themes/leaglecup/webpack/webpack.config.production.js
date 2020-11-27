@@ -32,6 +32,7 @@ const safelist = () => ({
 		/Partners-block/,
 		/wp-block/,
 		/Form/,
+		/menu-item-has-children/,
 	],
 });
 

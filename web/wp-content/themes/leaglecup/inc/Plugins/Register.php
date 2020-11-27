@@ -153,7 +153,7 @@ class Register {
 
 		Mail::init()
 			->to( $to )
-			->subject( __( 'LEAGLE CUP: New registration', 'leaglecup' ) )
+			->subject( __( 'Votre inscription à la Leagle Cup', 'leaglecup' ) )
 			->message( 'partials/message.html.twig', $context )
 			->headers( $headers )
 			->send();
