@@ -16,6 +16,8 @@ $context['node_type']  = 'default-page';
 $context['body_class'] = 'Register-page';
 $context['nonce']      = Helper::ob_function( 'wp_nonce_field', array( 'register', 'register-verification' ) );
 
+$context['price'] = Timber::get_post( get_field( 'price', $context['post']->id ) );
+
 $templates = array( 'pages/register-page.html.twig' );
 
 Timber::render( $templates, $context );

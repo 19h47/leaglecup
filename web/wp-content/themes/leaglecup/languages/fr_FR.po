@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leagle Cup\n"
-"POT-Creation-Date: 2020-10-28 22:42+0100\n"
-"PO-Revision-Date: 2020-10-28 22:42+0100\n"
+"POT-Creation-Date: 2020-11-29 12:32+0100\n"
+"PO-Revision-Date: 2020-11-29 12:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -97,7 +97,7 @@ msgstr "Clef du site"
 msgid "Secret key"
 msgstr "Clef secrète"
 
-#: inc/Block/Member.php:39
+#: inc/Block/Member.php:41
 msgid "Members"
 msgstr "Les membres"
 
@@ -749,8 +749,8 @@ msgid "Password Protected"
 msgstr "Protégé par mot de passe"
 
 #: inc/Plugins/Register.php:156
-msgid "LEAGLE CUP: New registration"
-msgstr "LEAGLE CUP : Nouvel inscription"
+msgid "Votre inscription à la Leagle Cup"
+msgstr ""
 
 #: inc/Setup/Menus.php:33
 msgid "Main"
@@ -800,17 +800,9 @@ msgstr "Suivant"
 msgid "Scroll"
 msgstr "Scroll"
 
-#: views/common/prices.html.twig:14
-msgid "Les tarifs"
-msgstr ""
-
-#: views/common/prices.html.twig:15
-msgid "(TVA non applicable)"
-msgstr ""
-
-#: views/common/prices.html.twig:42
+#: views/common/prices.html.twig:41
 msgid "I'm registering"
-msgstr ""
+msgstr "Je m’inscris"
 
 #: views/pages/404.html.twig:15
 msgid "Sorry, we could not find what you were looking for."
@@ -820,11 +812,15 @@ msgstr "Désolé, nous n’avons pas pu trouver ce que vous cherchiez."
 msgid "Event"
 msgstr "Lévènement"
 
-#: views/pages/register-page.html.twig:46
+#: views/pages/register-page.html.twig:48
 msgid "Civility"
 msgstr "Civilité"
 
-#: views/pages/register-page.html.twig:334
+#: views/pages/register-page.html.twig:181
+msgid "Specify the size of the polo shirt"
+msgstr "Indiquez la taille du polo"
+
+#: views/pages/register-page.html.twig:335
 msgid "Your registration hasn't been sent."
 msgstr "Votre inscription n’a pas été envoyée."
 
@@ -847,6 +843,9 @@ msgid ""
 msgstr ""
 "<a href=\"http://www.inesa.fr/\">ines a</a>, <a href=\"http://www.19h47.fr/"
 "\">19h47</a>"
+
+#~ msgid "LEAGLE CUP: New registration"
+#~ msgstr "LEAGLE CUP : Nouvel inscription"
 
 #~ msgid "Email"
 #~ msgstr "Email"

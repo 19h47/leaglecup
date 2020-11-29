@@ -6,7 +6,7 @@ const remove = target => target.classList.remove('Form--loading');
 /**
  * Command
  *
- * @param obj element DOM object.
+ * @param {Object} element DOM object.
  */
 export default class Register {
 	constructor(element) {

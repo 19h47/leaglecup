@@ -93,7 +93,7 @@ class Price {
 			'can_export'          => true,
 			'has_archive'         => false,
 			'exclude_from_search' => false,
-			'publicly_queryable'  => true,
+			'publicly_queryable'  => false,
 			'rewrite'             => $rewrite,
 			'capability_type'     => 'post',
 		);

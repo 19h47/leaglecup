@@ -2,11 +2,13 @@
  # Register page
  #
  # @file pages/register-page.html.twig
- # @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ # @package LeagleCup
  #}
 {% extends 'index.html.twig' %}
 
 {% block content %}
+
 	<section class="Page__content">
 		<div class="Site-container">
 
@@ -27,7 +29,8 @@
 						<div class="Form__group d-none">
 							{# Hidden #}
 							<input id="country" type="hidden" name="country" value="FRANCE">
-							{# <input id="registration_number" type="hidden" name="registration_number" value=""> #}
+							<input type="hidden" name="title" value="{{ price.meta( 'sections' )[0].title }}">
+							<input type="hidden" name="price" value="{{ price.meta( 'sections' )[0].price }}">
 							{# <input id="address_2" type="hidden" name="address_2" value=""> #}
 							{# <input id="phone" type="hidden" name="phone" value=""> #}
 							{# <input id="birthdate" type="hidden" name="birthdate" value=""> #}
@@ -169,17 +172,14 @@
 
 							<div class="Form__group row overflow-hidden">
 								<div class="col-8">
-									<p><strong>Participation à la Leagle Cup incluant</strong><br>
-										Green-fee pour accès au parcours le 10 octobre 2020<br>
-										1 jeton de practice (le 10 octobre 2020)<br>
-										1 chariot manuel (le 10 octobre 2020)<br>
-										Cocktail dînatoire du 9 octobre 2020<br>
-										Remise des prix et soirée de gala le 10 octobre 2020<br>
-										2 nuits avec petit-déjeuner (9 et 10 octobre 2020) à l’hôtel Barrière Hermitage La Baule (base chambre single)<br>
-										OFFERT / Le polo de la compétition
-									</p>
+
 									<div class="margin-bottom-3">
-										<label class="Form__label" for="t_shirt_size">Préciser la taille du polo</label>
+										<strong>Participation à la Leagle Cup incluant</strong><br>
+										{{- price.meta( 'sections' )[0].content -}}
+									</div>
+
+									<div class="margin-bottom-3">
+										<label class="Form__label" for="t_shirt_size">{{- __( 'Specify the size of the polo shirt', 'leaglecup' ) -}}</label>
 										<select class="Form__select" id="t_shirt_size" name="t_shirt_size">
 											<option value="S">S</option>
 											<option value="M">M</option>
@@ -188,8 +188,8 @@
 										</select>
 									</div>
 								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">375 €</p></div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">375 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[0].price }} €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[0].price }} €</p></div>
 							</div>
 							{# <div class="Form__group row">
 								<div class="col-8">
@@ -208,30 +208,45 @@
 
 							<div class="Form__group row">
 								<div class="col-8">
-									<p>
-										<strong>Option 1</strong><br>Green-fee pour accès au parcours le 9 octobre 2020
-									</p>
+									<div class="margin-bottom-3">
+										<strong>{{- price.meta( 'sections' )[1].title -}}</strong><br>
+										{{- price.meta( 'sections' )[1].content -}}
+									</div>
 								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[1].price }} €</p></div>
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
 										<button type="button"></button>
-										<input class="d-none js-calc" id="option_0" name="options[0]" type="checkbox" data-number="50">
+										<input
+											class="d-none js-calc"
+											id="option_0"
+											name="options[0]"
+											type="checkbox"
+											data-number="{{ price.meta( 'sections' )[1].price }}"
+											value="{{ price.meta( 'sections' )[1].price }}"
+										>
 									</div>
 								</div>
 							</div>
 
 							<div class="Form__group row">
 								<div class="col-8">
-									<p>
-										<strong>Option 2</strong><br>Formule Accompagnant incluant le supplément chambre double avec petit-déjeuner pour les 2 nuits, la participation au Cocktail dînatoire de bienvenue le vendredi 9 octobre & la soirée de gala avec remise des prix le samedi 10 octobre
-									</p>
+									<div class="margin-bottom-3">
+										<strong>{{- price.meta( 'sections' )[2].title -}}</strong><br>
+										{{- price.meta( 'sections' )[2].content -}}
+									</div>
 								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">165 €</p></div>
+								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[2].price }} €</p></div>
 								<div class="col-2 text-align-right">
 									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
 										<button type="button"></button>
-										<input class="d-none js-calc" id="option_1" name="options[1]" type="checkbox" data-number="165">
+										<input
+											class="d-none js-calc"
+											id="option_1" name="options[1]"
+											type="checkbox"
+											data-number="{{ price.meta( 'sections' )[2].price }}"
+											value="{{- price.meta( 'sections' )[2].price }}"
+										>
 									</div>
 								</div>
 							</div>
@@ -239,7 +254,7 @@
 							<div class="row">
 								<div class="col-12">
 									<p class="text-align-right Form__label--required white-space-nowrap">
-										<span class="js-total">375</span> €</p>
+										<span class="js-total">{{- price.meta( 'sections' )[0].price -}}</span> €</p>
 								</div>
 							</div>
 

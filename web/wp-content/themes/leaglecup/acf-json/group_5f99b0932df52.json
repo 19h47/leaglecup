@@ -336,6 +336,46 @@
             ]
         },
         {
+            "key": "field_5fc38b733418c",
+            "label": "Titre de la formule",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fc38b803418d",
+            "label": "Prix de la formule",
+            "name": "price",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "€ HT",
+            "min": 0,
+            "max": "",
+            "step": 1
+        },
+        {
             "key": "field_5f99cd4aa9540",
             "label": "Taille du polo",
             "name": "t_shirt_size",
@@ -366,8 +406,8 @@
             "key": "field_5f99cc9e046c6",
             "label": "Option 1",
             "name": "options_0",
-            "type": "true_false",
-            "instructions": "Green-fee pour accès au parcours le 9 octobre 2020",
+            "type": "number",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -375,18 +415,20 @@
                 "class": "",
                 "id": ""
             },
-            "message": "50 €",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "€ HT",
+            "min": 0,
+            "max": "",
+            "step": 1
         },
         {
             "key": "field_5f99ccb3046c7",
             "label": "Option 2",
             "name": "options_1",
-            "type": "true_false",
-            "instructions": "Formule Accompagnant incluant le supplément chambre double avec petit-déjeuner pour les 2 nuits, la participation au Cocktail dînatoire de bienvenue le vendredi 9 octobre & la soirée de gala avec remise des prix le samedi 10 octobre",
+            "type": "number",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -394,11 +436,13 @@
                 "class": "",
                 "id": ""
             },
-            "message": "165 €",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "€ HT",
+            "min": 0,
+            "max": "",
+            "step": 1
         },
         {
             "key": "field_5f99cdce6179a",
@@ -458,5 +502,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603915869
+    "modified": 1606651692
 }

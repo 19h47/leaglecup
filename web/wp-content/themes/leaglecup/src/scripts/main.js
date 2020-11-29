@@ -10,7 +10,7 @@ import Carousel from 'blocks/Carousel';
 		guid.init();
 	}
 
-	console.log('%c🔥 ines a (http://inesa.fr) & 19h47 (http://19h47.fr) 🔥', 'padding:0.5em 1em;');
+	console.log('%c🔥 ines a (http://inesa.fr) & 19h47 (https://19h47.fr) 🔥', 'padding:0.5em 1em;');
 
 	//
 	const register = new Register('.js-register');

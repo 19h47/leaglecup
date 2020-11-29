@@ -20,21 +20,22 @@ export default class Counter {
 
 		this.checkboxes = this.$element.querySelectorAll('.js-calc');
 
+		console.log(this.$total);
+
 		this.initEvents();
 
 		return true;
 	}
 
 	initEvents() {
-		for (let i = 0; i < this.checkboxes.length; i += 1) {
-			this.checkboxes[i].addEventListener('change', event => this.change(event));
-			this.checkboxes[i].addEventListener('input', event => this.change(event));
-		}
+		this.checkboxes.forEach($checkbox => {
+			$checkbox.addEventListener('change', event => this.change(event));
+		});
 	}
 
-	change(event) {
-		// console.info('Counter.change');
-		const { target } = event;
+	change({ target }) {
+		console.info('Counter.change');
+
 		const number = parseInt(target.getAttribute('data-number'), 10);
 		const total = parseInt(this.$total.innerHTML, 10);
 

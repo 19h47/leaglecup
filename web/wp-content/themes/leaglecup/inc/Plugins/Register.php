@@ -32,23 +32,23 @@ class Register {
 	 * Register
 	 */
 	public function register() {
-		$url                  = 'https://www.google.com/recaptcha/api/siteverify?secret=';
-		$recaptcha_secret_key = get_option( 'recaptcha_secret_key' );
+		// $url                  = 'https://www.google.com/recaptcha/api/siteverify?secret=';
+		// $recaptcha_secret_key = get_option( 'recaptcha_secret_key' );
 
-		if ( ! isset( $_POST['register-verification'] ) || ! wp_verify_nonce( $_POST['register-verification'], 'register' ) ) {
-			wp_send_json_error();
-		}
+		// if ( ! isset( $_POST['register-verification'] ) || ! wp_verify_nonce( $_POST['register-verification'], 'register' ) ) {
+		// 	wp_send_json_error();
+		// }
 
-		if ( isset( $_POST['g-recaptcha-response'] ) ) {
-			$response = wp_remote_get( $url . $recaptcha_secret_key . '&response=' . $_POST['g-recaptcha-response'] );
-			$response = json_decode( $response['body'], true );
+		// if ( isset( $_POST['g-recaptcha-response'] ) ) {
+		// 	$response = wp_remote_get( $url . $recaptcha_secret_key . '&response=' . $_POST['g-recaptcha-response'] );
+		// 	$response = json_decode( $response['body'], true );
 
-			if ( false === $response['success'] ) {
-				wp_send_json_error();
-			}
-		} else {
-			wp_send_json_error();
-		}
+		// 	if ( false === $response['success'] ) {
+		// 		wp_send_json_error();
+		// 	}
+		// } else {
+		// 	wp_send_json_error();
+		// }
 
 
 		$data = array(
@@ -69,6 +69,8 @@ class Register {
 			't_shirt_size'        => $_POST['t_shirt_size'],
 			'options'			  => $_POST['options'],
 			'total'			      => $_POST['total'],
+			'title'               => $_POST['title'],
+			'price'               => $_POST['price'],
 		);
 
 		$new_post = $this->save_post( $data );
@@ -111,6 +113,9 @@ class Register {
 		add_post_meta( $pid, 'ffg_index', $data['ffg_index'], true );
 
 		add_post_meta( $pid, 't_shirt_size', $data['t_shirt_size'], true );
+
+		add_post_meta( $pid, 'title', $data['title'], true );
+		add_post_meta( $pid, 'price', $data['price'], true );
 
 		foreach ( $data['options'] as $key => $value ) {
 			add_post_meta( $pid, 'options_' . $key, $value, true );
