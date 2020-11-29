@@ -75,7 +75,7 @@
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "€",
+                    "append": "€ HT",
                     "min": "",
                     "max": "",
                     "step": 1
@@ -132,7 +132,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1550618589
+    "modified": 1606646888
 }

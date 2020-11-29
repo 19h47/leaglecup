@@ -1,45 +1,44 @@
 {#
-
-Prices
-
-@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
-
-#}
+ # Prices
+ #
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ # @package LeagleCup
+ #}
 <div class="Prices">
     {% for price in prices %}
         <article class="Price">
             <div class="Site-container">
                 <div class="row">
                     <div class="col-12 col-md-10 offset-md-1">
-                        <h2 class="Prices__title h1">{{ __( 'Les tarifs' ) }}</h2>
-                        <h3 class="Price__title h2">{{- price.title }} <span>{{ __( '(TVA non applicable)' ) -}}</span></h3>
+                        <h2 class="Price__title">{{- price.title }}</h2>
+						{{- price.meta( 'subtitle' ) ? "<h3 class=\"Price__subtitle\">#{ price.meta( 'subtitle' ) }&nbsp;<span>#{ __( '(TVA non applicable)', 'leaglecup' ) }</span></h3>" : '' -}}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-5 offset-md-1">
                         <div class="Price__thumbnail">
-							{% include 'partials/image.html.twig' with { image: Image( price.thumbnail ) } %}
+							{% include 'partials/image.html.twig' with { image: price.thumbnail } %}
                         </div>
                     </div>
                     <div class="col-12 col-md-5">
-                        {% for section in price.get_field( 'sections' ) %}
+                        {% for section in price.meta( 'sections' ) %}
                             <div class="Price__section">
                                 <h4 class="Price__section__title">
                                     <strong>{{- section.title -}}</strong>
-                                    {{- section.price ? " <span>#{ section.price } €</span>" -}}
+                                    {{- section.price ? " <span>#{ section.price } € HT</span>" -}}
                                 </h4>
                                 <div class="Price__section__content">
-                                    {{ section.content }}
+                                    {{- section.content -}}
                                 </div>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
 
-                {% if price.get_field( 'link' ) %}
+                {% if price.meta( 'link' ) %}
                     <footer class="Price__footer">
-                        <a class="Button Button--outline-primary" href="{{ price.get_field( 'link' ).url }}"{{- price.get_field( 'link' ).target ? ' target="_blank"' : '' -}}>
-                            {{- price.get_field( 'link' ).title | default( __( 'I\'m registering', 'leaglecup' ) ) -}}
+                        <a class="Button Button--outline-primary" href="{{ price.meta( 'link' ).url | e }}"{{- price.meta( 'link' ).target ? ' target="_blank" rel="noopener noreferer"' : '' -}}>
+                            {{- price.meta( 'link' ).title | default( __( "I'm registering", 'leaglecup' ) ) -}}
                         </a>
                     </footer>
                 {% endif %}
@@ -47,7 +46,9 @@ Prices
             </div>
 
             {% include 'common/grid.html.twig' %}
-			{% include 'partials/image.html.twig' with { image: Image( price.thumbnail ), classes: [ 'Price__background' ] } %}
+
+			{% include 'partials/image.html.twig' with { image: price.thumbnail, classes: [ 'Price__background' ] } %}
+
         </article>
     {% endfor %}
 </div>

@@ -69,7 +69,7 @@
 	},
 	"dependencies": {
 		"@19h47/checkbox": "^4.1.0",
-		"@19h47/radiogroup": "^5.2.2",
+		"@19h47/radiogroup": "^5.4.0",
 		"@19h47/radios": "3.0.0",
 		"@19h47/subtract": "19h47/19h47-subtract",
 		"@19h47/sum": "19h47/19h47-sum",

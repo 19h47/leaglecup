@@ -32,6 +32,14 @@
 		line-height: 48px;
 		z-index: 4;
 
+	}
+
+	&__subtitle {
+		@extend %position-relative;
+		@include margin(bottom $grid-gutter-width);
+
+		z-index: 4;
+
 		span {
 			@extend %font-weight-regular;
 			font: {
