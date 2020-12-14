@@ -75,7 +75,7 @@
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "€ HT",
+                    "append": "€ TTC",
                     "min": "",
                     "max": "",
                     "step": 1
@@ -134,5 +134,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606646888
+    "modified": 1607966063
 }
