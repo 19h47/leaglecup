@@ -35,7 +35,7 @@
 							{# <input id="phone" type="hidden" name="phone" value=""> #}
 							{# <input id="birthdate" type="hidden" name="birthdate" value=""> #}
 							{# <input id="birthplace" type="hidden" name="birthplace" value=""> #}
-							<input class="js-total-input" type="text" id="total" name="total" value="375">
+							<input class="js-total-input" type="text" id="total" name="total" value="{{ price.meta( 'sections' )[0].price }}">
 
 							{{ nonce }}
 
