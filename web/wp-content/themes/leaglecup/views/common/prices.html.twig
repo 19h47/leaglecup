@@ -10,8 +10,8 @@
             <div class="Site-container">
                 <div class="row">
                     <div class="col-12 col-md-10 offset-md-1">
-                        <h2 class="Price__title">{{- price.title }}</h2>
-						{{- price.meta( 'subtitle' ) ? "<h3 class=\"Price__subtitle\">#{ price.meta( 'subtitle' ) }&nbsp;<span>#{ __( '(TVA non applicable)', 'leaglecup' ) }</span></h3>" : '' -}}
+                        <h2 class="Price__title">{{- price.title }}{{ price.meta( 'duty_free' ) ? "&nbsp;<sup>#{ price.meta( 'duty_free' ) } € HT</sup>" : '' -}}</h2>
+						{{- price.meta( 'subtitle' ) ? "<h3 class=\"Price__subtitle\">#{ price.meta( 'subtitle' ) }</h3>" : '' -}}
                     </div>
                 </div>
                 <div class="row">
