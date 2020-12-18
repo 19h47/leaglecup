@@ -40,7 +40,7 @@ class Theme {
 
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_filter( 'timber_context', array( $this, 'add_socials_to_context' ) );
-		add_filter( 'timber_context', array( $this, 'add_manifest_to_context' ) );
+		add_filter( 'timber/context', array( $this, 'add_to_theme' ) );
 		add_filter( 'timber_context', array( $this, 'add_menus_to_context' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 
@@ -189,12 +189,12 @@ class Theme {
 
 
 	/**
-	 * Add manifest to context
+	 * Add to theme
 	 *
 	 * @param array $context Timber context.
 	 */
-	public function add_manifest_to_context( array $context ) : array {
-		$context['manifest'] = get_theme_manifest();
+	public function add_to_theme( array $context ) : array {
+		$context['theme']->manifest = get_theme_manifest();
 
 		return $context;
 	}

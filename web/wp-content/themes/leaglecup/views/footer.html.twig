@@ -1,10 +1,10 @@
 {#
-
-@author     Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
-@file       views/footer.twig
-@package    LeagleCup
-
-#}
+ # Footer
+ #
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ # @file views/footer.twig
+ # @package LeagleCup
+ #}
 		<footer class="Site-footer">
 			<div class="Site-container Site-footer__top">
 				<div class="row">
@@ -31,15 +31,12 @@
 					<div class="col-12 col-md-6">
 						<div class="Site-footer__partners">
 							{% apply spaceless %}
-								<a href="http://inovera.fr" target="_blank" rel="noopener">
-									<img class="d-inline-block vertical-align-middle" src="{{ theme.path }}/dist/img/svg/weblex.svg" alt="Weblex" width="64" height="48">
-								</a>
-								<a href="https://www.weblex.fr/" target="_blank" rel="noopener">
-									<img class="d-inline-block vertical-align-middle" src="{{ theme.path }}/dist/img/svg/inovera.svg" alt="Inovera" width="62" height="48">
+								<a href="https://www.weblex.fr/" target="_blank" rel="noopener noreferer">
+									<img class="d-inline-block vertical-align-middle" src="{{ theme.path }}/{{ theme.manifest['img/svg/weblex.svg'] }}" alt="WebLex" width="62" height="48">
 								</a>
 
-								<a href="https://www.hotelsbarriere.com/fr/la-baule/l-hermitage.html" target="_blank" rel="noopener">
-									<img class="d-inline-block vertical-align-middle" src="{{ theme.path }}/dist/img/png/hotel-barriere-lhermitage-white.png" alt="Hôtel Barrière l'Hermitage" width="100" height="24">
+								<a href="https://www.hotelsbarriere.com/fr/la-baule/l-hermitage.html" target="_blank" rel="noopener noreferer">
+									<img class="d-inline-block vertical-align-middle" src="{{ theme.path }}/{{ theme.manifest['img/png/hotel-barriere-lhermitage-white.png'] }}" alt="Hôtel Barrière l'Hermitage" width="100" height="24">
 								</a>
 							{% endapply %}
 						</div>
@@ -48,7 +45,7 @@
 						<ul class="Site-footer__copyright">
 							<li>© LEAGLE CUP</li>
 							<li><a href="{{ permalinks.legal_mentions }}">{{- __( 'Legal Notice', 'leaglecup' ) -}}</a></li>
-							<li>by&nbsp;<a href="http://inesa.fr" target="_blank" rel="noopener"><strong>ines a</strong></a>&nbsp;&&nbsp;<a href="http://19h47.fr" target="_blank" rel="noopener"><strong>19h47</strong></a></li>
+							<li>by&nbsp;<a href="http://inesa.fr" target="_blank" rel="noopener noreferer"><strong>ines a</strong></a>&nbsp;&&nbsp;<a href="http://19h47.fr" target="_blank" rel="noopener"><strong>19h47</strong></a></li>
 						</ul>
 					</div>
 				</div>
