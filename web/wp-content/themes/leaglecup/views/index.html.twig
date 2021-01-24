@@ -1,8 +1,11 @@
 {#
-	@author     Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
-	@file       views/index.twig
-	@package    LeagleCup
-#}
+ # Index
+ #
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ # @file views/index.twig
+ # @package WordPress
+ # @subpackage LeagleCup
+ #}
 
 {# Header #}
 {% include 'header.html.twig' %}
@@ -17,8 +20,8 @@
 				</a>
 			</div>
 			<div class="col-12 col-md-9 flex-column flex-md-row margin-top-md-4 d-flex justify-content-md-end">
-				{% include 'components/menu-main.html.twig' with { items: menus.main.items } only %}
-				{% include 'components/socials.html.twig' %}
+				{{- include( 'components/menu-main.html.twig', { items: menus.main.items }, with_context = false ) -}}
+				{{- include( 'components/socials.html.twig' ) -}}
 
 			</div>
 		</div>

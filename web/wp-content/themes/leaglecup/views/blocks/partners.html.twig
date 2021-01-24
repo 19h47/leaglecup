@@ -1,12 +1,13 @@
 {#
+ # Partners
+ #
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
+ # @param array partners
+ # @file blocks/partners.html.twig
+ # @package WordPress
+ # @subpackage LeagleCup
+ #}
 
-Partners
-
-@author Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)
-@param arr partners
-@file blocks/partners.html.twig
-
-#}
 {% extends 'blocks/block.html.twig' %}
 
 {% block content %}
@@ -19,11 +20,13 @@ Partners
 					<h3 class="h2">{{- block.subtitle -}}</h3>
 				{% endif %}
 
-				<div class="page-block__content Wysiwyg">{{- block.content -}}</div>
+				<div class="page-block__content Wysiwyg">
+					{{- block.content -}}
+				</div>
 
 				{% if block.link %}
 					<a class="page-block__button Button Button--outline-primary" href="{{ block.link.url }}"{{ block.link.target ? ' target="_blank"' }}>
-						{{- block.link.title | default( 'Découvrir' ) -}}
+						{{- block.link.title | default( __( 'Discover', 'leaglecup' ) ) -}}
 					</a>
 				{% endif %}
 			</div>
@@ -35,8 +38,7 @@ Partners
 		</div>
 	</div>
 
-	{% include 'common/grid.html.twig' %}
-
-	{% include 'partials/image.html.twig' with { image: Image( block.image ), classes: [ 'Hero-block__image' ] } %}
+	{{- include( 'common/grid.html.twig' ) -}}
+	{{- include( 'partials/image.html.twig', { image: Image( block.image ), classes: [ 'Hero-block__image' ] } ) -}}
 
 {% endblock %}

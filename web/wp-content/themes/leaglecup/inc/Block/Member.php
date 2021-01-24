@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Functions
  *
@@ -13,7 +13,6 @@ use Timber;
  * Member
  */
 class Member {
-
 
 	/**
 	 * Runs initialization tasks.

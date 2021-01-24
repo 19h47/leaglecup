@@ -29,9 +29,9 @@ class Transients {
 
 		$posts = Timber::get_posts(
 			array(
-				'post_type'           => 'post',
-				'posts_per_page'      => -1,
-				'no_found_rows'       => true,
+				'post_type'      => 'post',
+				'posts_per_page' => -1,
+				'no_found_rows'  => true,
 			),
 		);
 

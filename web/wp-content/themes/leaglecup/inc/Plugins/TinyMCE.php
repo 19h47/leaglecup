@@ -1,9 +1,9 @@
-<?php
+<?php // phpcs:ignore
 /**
  * TinyMCE
  *
  * @package LeagleCup
- * @subpackage LeagleCup/Plugins/ACF
+ * @subpackage LeagleCup/Plugins/TinyMCE
  */
 
 namespace LeagleCup\Plugins;

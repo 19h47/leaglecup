@@ -32,25 +32,6 @@ class Register {
 	 * Register
 	 */
 	public function register() {
-		// $url                  = 'https://www.google.com/recaptcha/api/siteverify?secret=';
-		// $recaptcha_secret_key = get_option( 'recaptcha_secret_key' );
-
-		// if ( ! isset( $_POST['register-verification'] ) || ! wp_verify_nonce( $_POST['register-verification'], 'register' ) ) {
-		// 	wp_send_json_error();
-		// }
-
-		// if ( isset( $_POST['g-recaptcha-response'] ) ) {
-		// 	$response = wp_remote_get( $url . $recaptcha_secret_key . '&response=' . $_POST['g-recaptcha-response'] );
-		// 	$response = json_decode( $response['body'], true );
-
-		// 	if ( false === $response['success'] ) {
-		// 		wp_send_json_error();
-		// 	}
-		// } else {
-		// 	wp_send_json_error();
-		// }
-
-
 		$data = array(
 			'firstname'           => $_POST['firstname'],
 			'lastname'            => $_POST['lastname'],
@@ -67,8 +48,8 @@ class Register {
 			'license_number'      => $_POST['license_number'],
 			'ffg_index'           => $_POST['ffg_index'],
 			't_shirt_size'        => $_POST['t_shirt_size'],
-			'options'			  => $_POST['options'],
-			'total'			      => $_POST['total'],
+			'options'             => $_POST['options'],
+			'total'               => $_POST['total'],
 			'title'               => $_POST['title'],
 			'price'               => $_POST['price'],
 		);
