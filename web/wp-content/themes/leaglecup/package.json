@@ -77,7 +77,7 @@
 		"bootstrap": "^4.6.0",
 		"flickity": "^2.2.2",
 		"formbouncerjs": "^1.4.6",
-		"postcss": "^8.2.4",
+		"postcss": "^8.2.10",
 		"ress": "3.0.0"
 	}
 }
