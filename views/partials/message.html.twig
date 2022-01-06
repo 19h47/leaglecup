@@ -14,8 +14,12 @@
 	{{- post.meta( 'license_number' ) ? "Numéro de licence : #{ post.meta( 'license_number' ) }<br>" : '' -}}
 	{{- post.meta( 'ffg_index' ) ? "Index FFG : #{ post.meta( 'ffg_index' ) }<br>" : '' -}}
 	Taille du polo : {{ post.meta( 't_shirt_size' ) }}<br>
-	{{- post.meta( 'options_0' ) ? "Vous avez sélectionné l'option 1 (green fee du vendredi)<br>" : '' -}}
-	{{- post.meta( 'options_1' ) ? "Vous avez sélectionné l'option 2 (forfait accompagnant)<br>" : '' -}}
+
+	Participation : {{ post.meta( 'price' ) }} €<br>
+
+	{% for option in post.meta( 'options' ) %}
+		Vous avez sélectionné l'option à {{ option }} €<br>
+	{% endfor %}
 
 	Pour un total de {{ post.meta( 'total' ) }} €<br>
 

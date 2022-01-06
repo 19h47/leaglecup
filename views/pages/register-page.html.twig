@@ -31,6 +31,7 @@
 							<input id="country" type="hidden" name="country" value="FRANCE">
 							<input type="hidden" name="title" value="{{ price.meta( 'sections' )[0].title }}">
 							<input type="hidden" name="price" value="{{ price.meta( 'sections' )[0].price }}">
+							<input type="hidden" name="price_id" value="{{ price.id }}">
 							{# <input id="address_2" type="hidden" name="address_2" value=""> #}
 							{# <input id="phone" type="hidden" name="phone" value=""> #}
 							{# <input id="birthdate" type="hidden" name="birthdate" value=""> #}
@@ -170,7 +171,7 @@
 								<div class="col-2"><p class="text-align-right"><strong>Total</strong> <sup>TTC</sup></p></div>
 							</div>
 
-							<div class="Form__group row overflow-hidden">
+							<div class="overflow-hidden Form__group row">
 								<div class="col-8">
 
 									<div class="margin-bottom-3">
@@ -206,50 +207,30 @@
 								</div>
 							</div> #}
 
-							<div class="Form__group row">
-								<div class="col-8">
-									<div class="margin-bottom-3">
-										<strong>{{- price.meta( 'sections' )[1].title -}}</strong><br>
-										{{- price.meta( 'sections' )[1].content -}}
+							{% for section in price.meta( 'sections' )[1:] %}
+								<div class="Form__group row">
+									<div class="col-8">
+										<div class="margin-bottom-3">
+											<strong>{{- section.title -}}</strong><br>
+											{{- section.content -}}
+										</div>
+									</div>
+									<div class="col-2"><p class="text-align-right white-space-nowrap">{{- section.price }} €</p></div>
+									<div class="col-2 text-align-right">
+										<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
+											<button type="button"></button>
+											<input
+												class="d-none js-calc"
+												id="option_{{ loop.index0 }}"
+												name="options[{{ loop.index0 }}]"
+												type="checkbox"
+												data-number="{{ section.price }}"
+												value="{{ section.price }}"
+											>
+										</div>
 									</div>
 								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[1].price }} €</p></div>
-								<div class="col-2 text-align-right">
-									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
-										<button type="button"></button>
-										<input
-											class="d-none js-calc"
-											id="option_0"
-											name="options[0]"
-											type="checkbox"
-											data-number="{{ price.meta( 'sections' )[1].price }}"
-											value="{{ price.meta( 'sections' )[1].price }}"
-										>
-									</div>
-								</div>
-							</div>
-
-							<div class="Form__group row">
-								<div class="col-8">
-									<div class="margin-bottom-3">
-										<strong>{{- price.meta( 'sections' )[2].title -}}</strong><br>
-										{{- price.meta( 'sections' )[2].content -}}
-									</div>
-								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[2].price }} €</p></div>
-								<div class="col-2 text-align-right">
-									<div class="Form__checkbox js-checkbox" role="checkbox" aria-checked="false" tabindex="0">
-										<button type="button"></button>
-										<input
-											class="d-none js-calc"
-											id="option_1" name="options[1]"
-											type="checkbox"
-											data-number="{{ price.meta( 'sections' )[2].price }}"
-											value="{{- price.meta( 'sections' )[2].price }}"
-										>
-									</div>
-								</div>
-							</div>
+							{% endfor %}
 
 							<div class="row">
 								<div class="col-12">

@@ -1,30 +1,14 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+.env
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+# PHP #
+#######
+vendor
+wpcs
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
+# Webpack #
+###########
+dist
+node_modules
 
 # OS generated files #
 ######################
@@ -35,34 +19,3 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Docker #
-##########
-database
-.env
-
-# WordPress files #
-###################
-web/wp-admin/
-web/wp-content/*
-!web/wp-content/themes/
-web/wp-content/themes/*
-web/wp-includes/
-
-web/.htaccess
-web/*.log
-web/*.php
-web/license.txt
-web/readme.html
-
-# Theme and plugins #
-#####################
-!web/wp-content/themes/leaglecup/
-web/wp-content/themes/leaglecup/vendor/
-web/wp-content/themes/leaglecup/wpcs/
-web/wp-content/themes/leaglecup/dist
-web/wp-content/themes/leaglecup/screenshots
-
-# Front-end #
-#############
-node_modules

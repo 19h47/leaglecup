@@ -404,45 +404,22 @@
         },
         {
             "key": "field_5f99cc9e046c6",
-            "label": "Option 1",
-            "name": "options_0",
-            "type": "number",
+            "label": "Options",
+            "name": "options",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
             "prepend": "",
-            "append": "€ HT",
-            "min": 0,
-            "max": "",
-            "step": 1
-        },
-        {
-            "key": "field_5f99ccb3046c7",
-            "label": "Option 2",
-            "name": "options_1",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "€ HT",
-            "min": 0,
-            "max": "",
-            "step": 1
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5f99cdce6179a",
@@ -502,5 +479,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606651692
+    "show_in_rest": 0,
+    "modified": 1641496356
 }

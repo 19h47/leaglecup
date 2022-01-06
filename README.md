@@ -1,33 +1,25 @@
-# Leagle Cup
+# La LEAGLE CUP
 
-## Docker
+LEAGLE CUP is a website for golf lovers.
 
-Stops containers and removes containers with named volumes declared in the `volumes` section of the `docker-compose.yml`
+![leaglecup](screenshot.png)
 
-```bash
-docker-compose down --volumes
+## Install
+
 ```
-
-Builds, (re)creates, starts, and attaches to containers for a service
-
-```bash
-docker-compose up -d
-```
-
-## Make an url point to localhost
-
-```bash
-sudo nano /etc/hosts
+composer Install
 ```
 
 ```
-127.0.0.1   leaglecup.test www.leaglecup.test
+npm i
 ```
 
-Then type `ctrl + x`, and `y` to save and exit nano. Now, the custom url points to `localhost`.
+## Build
 
-## Database
+```
+npm run dev
+```
 
-Put your SQL dump in the `database` folder
-
-## .env
+```
+npm run build
+```

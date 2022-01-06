@@ -97,10 +97,15 @@ class Register {
 
 		add_post_meta( $pid, 'title', $data['title'], true );
 		add_post_meta( $pid, 'price', $data['price'], true );
+		add_post_meta( $pid, 'price_id', $data['price'], true );
+
+		$options = array();
 
 		foreach ( $data['options'] as $key => $value ) {
-			add_post_meta( $pid, 'options_' . $key, $value, true );
+			$options[] = $value;
 		}
+
+		add_post_meta( $pid, 'options', $options, true );
 
 		add_post_meta( $pid, 'total', $data['total'], true );
 

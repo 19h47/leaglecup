@@ -6,6 +6,8 @@ import Counter from 'utils/Counter';
 export default class FormBlock {
 	constructor(element) {
 		this.$form = document.querySelector(element);
+
+		console.log(this.$form)
 	}
 
 	init() {
@@ -13,19 +15,22 @@ export default class FormBlock {
 			return false;
 		}
 
-		grecaptcha.ready(() => {
-			grecaptcha
-				.execute(leaglecup.recaptcha_site_key, { action: 'validate_captcha' })
-				.then(token => {
-					this.$form.querySelector('#g-recaptcha-response').value = token;
-				});
-		});
+		if (grecaptcha) {
+			grecaptcha.ready(() => {
+				grecaptcha
+					.execute(leaglecup.recaptcha_site_key, { action: 'validate_captcha' })
+					.then(token => {
+						this.$form.querySelector('#g-recaptcha-response').value = token;
+					});
+			});
+		}
 
 		const $submit = this.$form.querySelector('.js-submit');
 		const teams = [...document.querySelectorAll('.js-team')];
 
 		// Checkboxes
 		const checkboxes = [...this.$form.querySelectorAll('.js-checkbox')];
+
 		checkboxes.forEach(input => {
 			const checkbox = new Checkbox(input);
 

@@ -3,6 +3,8 @@ import Register from 'blocks/Register';
 import FormBlock from 'blocks/FormBlock';
 import Carousel from 'blocks/Carousel';
 
+console.log('totot');
+
 (() => {
 	if ('production' !== process.env.NODE_ENV) {
 		const guid = new Guid();

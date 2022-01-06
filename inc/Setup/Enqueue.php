@@ -50,9 +50,17 @@ class Enqueue {
 		}
 
 		wp_register_script( // phpcs:ignore
+			get_theme_text_domain() . '-vendors',
+			get_template_directory_uri() . '/' . get_theme_manifest()['vendors.js'],
+			array(),
+			null,
+			true
+		);
+
+		wp_register_script( // phpcs:ignore
 			get_theme_text_domain() . '-main',
 			get_template_directory_uri() . '/' . get_theme_manifest()['main.js'],
-			array(),
+			array( get_theme_text_domain() . '-vendors' ),
 			null,
 			true
 		);
