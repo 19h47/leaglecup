@@ -7,7 +7,7 @@ export default class FormBlock {
 	constructor(element) {
 		this.$form = document.querySelector(element);
 
-		console.log(this.$form)
+		console.log(this.$form);
 	}
 
 	init() {
