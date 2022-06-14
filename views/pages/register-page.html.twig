@@ -58,7 +58,7 @@
 						<div class="Form__group col-12 col-md-6">
 							<label class="Form__label Form__label--required" for="firstname"
 							>
-								{{- 'Prénom' -}}
+								{{- __( 'Prénom', 'leaglecup' ) -}}
 							</label>
 							<input
 								class="Form__input"
@@ -93,8 +93,15 @@
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label Form__label--required" for="job_title">{{- 'Profession' -}}</label>
-							<input class="Form__input" id="job_title" type="text" name="job_title" required placeholder="{{ 'ex. Avocat / Expert-comptable' }}">
+							<label class="Form__label Form__label--required" for="job_title">{{- __( 'Profession', 'leaglecup' ) -}}</label>
+							<input
+								class="Form__input"
+								id="job_title"
+								type="text"
+								name="job_title"
+								required
+								placeholder="{{ __( 'ex. Avocat / Expert-comptable / Notaire', 'leaglecup' ) }}"
+							>
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
