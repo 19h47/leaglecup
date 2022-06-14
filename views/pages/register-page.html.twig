@@ -199,20 +199,6 @@
 								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[0].price }} €</p></div>
 								<div class="col-2"><p class="text-align-right white-space-nowrap">{{- price.meta( 'sections' )[0].price }} €</p></div>
 							</div>
-							{# <div class="Form__group row">
-								<div class="col-8">
-									<p><strong>Option 1</strong><br>Chambre double</p>
-								</div>
-								<div class="col-2"><p class="text-align-right white-space-nowrap">50 €</p></div>
-								<div class="col-2 text-align-right">
-									<div role="checkbox" class="Form__checkbox js-checkbox" aria-checked="false" tabindex="0">
-										<button type="button"></button>
-										<div class="d-none">
-											<input class="js-calc" id="option_1" name="option_1" value="option_1" type="checkbox" data-number="50">
-										</div>
-									</div>
-								</div>
-							</div> #}
 
 							{% for section in price.meta( 'sections' )[1:] %}
 								<div class="Form__group row">
@@ -232,7 +218,7 @@
 												name="options[{{ loop.index0 }}]"
 												type="checkbox"
 												data-number="{{ section.price }}"
-												value="{{ section.price }}"
+												value="{{ section.title }}"
 											>
 										</div>
 									</div>
@@ -333,10 +319,10 @@
 							<p><strong>Conditions de règlement</strong><br>par virement bancaire</p>
 							<p>
 								<strong>Coordonnées bancaires :</strong><br>
-								Titulaire du compte : WebLex<br>
-								RIB : 30047 14293 00020106401 38<br>
-								IBAN : FR76 3004 7142 9300 0201 0640 138<br>
-								BIC : CMCIFRPP
+								Titulaire du compte : WEVENT By WEBLEX<br>
+								RIB : 10278 36058 00010868701 29<br>
+								IBAN : FR76 1027 8360 5800 0108 6870 129<br>
+								BIC : CMCIFR2A
 							</p>
 
 							<p>Pour que l’inscription soit prise en compte, indiquer <strong>impérativement</strong> en libellé/référence le nom et prénom du joueur</p>
