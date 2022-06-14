@@ -84,23 +84,35 @@
 
 						<div class="Form__group col-12 col-md-6">
 							<label
-								class="Form__label"
+								class="Form__label {{ post.meta( 'fields' ).company_name.required ? 'Form__label--required' : '' }}"
 								for="company_name"
 							>
-								{{- 'Raison sociale' -}}
+								{{- post.meta( 'fields' ).company_name.label -}}
 							</label>
-							<input class="Form__input" id="company_name" type="text" name="company_name" placeholder="{{ 'ex. Vandelay Industries' }}">
+							<input
+								class="Form__input"
+								id="company_name"
+								type="text"
+								name="company_name"
+								placeholder="{{ post.meta( 'fields' ).company_name.placeholder }}"
+								{{ post.meta( 'fields' ).company_name.required ? 'required' : '' }}
+							>
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label Form__label--required" for="job_title">{{- __( 'Profession', 'leaglecup' ) -}}</label>
+							<label
+								class="Form__label {{ post.meta( 'fields' ).job_title.required ? 'Form__label--required' : '' }}"
+								for="job_title"
+							>
+								{{- post.meta( 'fields' ).job_title.label -}}
+							</label>
 							<input
 								class="Form__input"
 								id="job_title"
 								type="text"
 								name="job_title"
-								required
-								placeholder="{{ __( 'ex. Avocat / Expert-comptable / Notaire', 'leaglecup' ) }}"
+								placeholder="{{ post.meta( 'fields' ).job_title.placeholder }}"
+								{{ post.meta( 'fields' ).job_title.required ? 'required' : '' }}
 							>
 						</div>
 
