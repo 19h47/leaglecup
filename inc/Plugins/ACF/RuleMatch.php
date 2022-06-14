@@ -1,62 +1,27 @@
 <?php // phpcs:ignore
 /**
- * ACF
+ * Rule Match
  *
  * @package LeagleCup
  * @subpackage LeagleCup/Plugins/ACF
  */
 
-namespace LeagleCup\Plugins;
+namespace LeagleCup\Plugins\ACF;
 
 use WP_Post;
 
 /**
- * WordPress
+ * Rule Match
  */
-class ACF {
+class RuleMatch {
 	/**
 	 * Runs initialization tasks.
 	 *
 	 * @return void
 	 */
 	public function run() {
-		// Show field set on password protected pages.
-		add_filter( 'acf/location/rule_types', array( $this, 'rules_types' ) );
-		add_filter( 'acf/location/rule_values/visibility', array( $this, 'rules_values_visibility' ) );
 		add_filter( 'acf/location/rule_match/visibility', array( $this, 'rules_match_visibility' ), 10, 3 );
 	}
-
-
-
-	/**
-	 * Location rules types
-	 *
-	 * @param arr $choices The choices.
-	 * @return $choices
-	 */
-	public function rules_types( $choices ) {
-
-		$choices['Page']['visibility'] = __( 'Post Visibility' );
-
-		return $choices;
-
-	}
-
-
-
-	/**
-	 * Location rules values visibility
-	 *
-	 * @param  arr $choices The choices.
-	 * @return $coices
-	 */
-	public function rules_values_visibility( $choices ) {
-
-		$choices['password'] = __( 'Password Protected' );
-
-		return $choices;
-	}
-
 
 	/**
 	 * Location rules match visibility
@@ -82,5 +47,3 @@ class ACF {
 		return $match;
 	}
 }
-
-
