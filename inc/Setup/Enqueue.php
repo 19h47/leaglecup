@@ -39,7 +39,7 @@ class Enqueue {
 			wp_deregister_script( 'jquery' );
 		}
 
-		if ( is_page_template( 'page-templates/register.php' ) && get_option( 'recaptcha_site_key' ) ) {
+		if ( is_page_template( 'page-templates/registration-form.php' ) && get_option( 'recaptcha_site_key' ) ) {
 			wp_enqueue_script( // phpcs:ignore
 				'recaptcha',
 				'https://www.google.com/recaptcha/api.js?render=' . get_option( 'recaptcha_site_key' ),

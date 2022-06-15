@@ -8,7 +8,7 @@ const remove = target => target.classList.remove('Form--loading');
  *
  * @param {Object} element DOM object.
  */
-export default class Register {
+class RegistrationForm {
 	constructor(element) {
 		// eslint-disable-next-line
 		const bouncer = new Bouncer(element, {
@@ -25,7 +25,7 @@ export default class Register {
 			disableSubmit: true,
 		});
 
-		this.url = `${leaglecup.ajax_url}?action=register&nonce=${leaglecup.nonce}`;
+		this.url = `${leaglecup.ajax_url}?action=registration_form&nonce=${leaglecup.nonce}`;
 		this.$form = document.querySelector(element);
 	}
 
@@ -69,3 +69,5 @@ export default class Register {
 		});
 	}
 }
+
+export default RegistrationForm

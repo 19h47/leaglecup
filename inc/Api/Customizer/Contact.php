@@ -57,7 +57,7 @@ class Contact {
 			'facebook',
 			array(
 				'label'       => __( 'Facebook', 'leaglecup' ),
-				'description' => __( 'Indiquer l\'URL du compte Facebook' ),
+				'description' => __( 'Enter Facebook Account URL', 'leaglecup' ),
 				'section'     => 'contact',
 				'settings'    => 'facebook',
 			)
@@ -76,7 +76,7 @@ class Contact {
 			'linkedin',
 			array(
 				'label'       => __( 'LinkedIn', 'leaglecup' ),
-				'description' => __( 'Indiquer l\'URL du compte LinkedIn' ),
+				'description' => __( 'Enter LinkedIn Account URL', 'leaglecup' ),
 				'section'     => 'contact',
 				'settings'    => 'linkedin',
 			)
@@ -95,7 +95,7 @@ class Contact {
 			'public_email',
 			array(
 				'label'       => __( 'Public email', 'leaglecup' ),
-				'description' => __( 'Indiquer l\'adresse mail du site' ),
+				'description' => __( 'Enter Public Email Address', 'leaglecup' ),
 				'section'     => 'contact',
 				'settings'    => 'public_email',
 			)

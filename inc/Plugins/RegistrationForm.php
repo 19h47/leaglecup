@@ -13,9 +13,10 @@ use LeagleCup\Core\{ Mail };
 use WP_Post;
 
 /**
- * Register
+ * Register Form
  */
-class Register {
+class RegistrationForm {
+
 
 	/**
 	 * Runs initialization tasks.
@@ -23,15 +24,15 @@ class Register {
 	 * @return void
 	 */
 	public function run() {
-		add_action( 'wp_ajax_nopriv_register', array( $this, 'register' ) );
-		add_action( 'wp_ajax_register', array( $this, 'register' ) );
+		add_action( 'wp_ajax_nopriv_registration_form', array( $this, 'registration_form' ) );
+		add_action( 'wp_ajax_registration_form', array( $this, 'registration_form' ) );
 	}
 
 
 	/**
 	 * Register
 	 */
-	public function register() {
+	public function registration_form() {
 		$data = array(
 			'firstname'           => $_POST['firstname'],
 			'lastname'            => $_POST['lastname'],
@@ -144,7 +145,7 @@ class Register {
 
 		Mail::init()
 			->to( $to )
-			->subject( __( 'Votre inscription à la Leagle Cup', 'leaglecup' ) )
+			->subject( __( 'Your registration for the Leagle Cup', 'leaglecup' ) )
 			->message( 'partials/message.html.twig', $context )
 			->headers( $headers )
 			->send();

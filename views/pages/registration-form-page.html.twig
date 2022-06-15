@@ -1,7 +1,7 @@
 {#
- # Register page
+ # Registration page
  #
- # @file pages/register-page.html.twig
+ # @file pages/registration-page.html.twig
  # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  # @package LeagleCup
  #}
@@ -22,7 +22,7 @@
 
 			<div class="row">
 				<div class="col-12 col-md-8 offset-md-2">
-					<form class="Form row js-register js-form" method="POST">
+					<form class="Form row js-registration js-form" method="POST">
 
 
 
@@ -47,38 +47,43 @@
 						</div>
 
 						<div class="Form__group col-12">
-							<label class="Form__label Form__label--required" for="civility">{{- __( 'Civility', 'leaglecup' ) -}}</label>
-							<select class="Form__select" id="civility" name="civility">
-								<option value="MONSIEUR">{{- 'Monsieur' -}}</option>
-								<option value="MADAME">{{- 'Madame' -}}</option>
-								<option value="MADEMOISELLE">{{- 'Mademoiselle' -}}</option>
+							<label class="Form__label {{ post.meta( 'fields' ).civility.required ? 'Form__label--required' : '' }}" for="civility">
+								{{- post.meta( 'fields' ).civility.label -}}
+							</label>
+							<select class="Form__select" id="civility" name="civility" {{ post.meta( 'fields' ).company_name.required ? 'required' : '' }}>
+								{%- for choice in post.meta( 'fields' ).civility.choices -%}
+									<option value="{{ choice.value }}">{{- choice.label -}}</option>
+								{%- endfor -%}
 							</select>
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label Form__label--required" for="firstname"
+							<label class="Form__label {{ post.meta( 'fields' ).first_name.required ? 'Form__label--required' : '' }}" for="firstname"
 							>
-								{{- __( 'Prénom', 'leaglecup' ) -}}
+								{{- post.meta( 'fields' ).first_name.label -}}
 							</label>
 							<input
 								class="Form__input"
 								id="firstname"
 								type="text"
 								name="firstname"
-								placeholder="{{ 'ex. Marie' }}"
-								required
+								placeholder="{{- post.meta( 'fields' ).first_name.placeholder -}}"
+								{{ post.meta( 'fields' ).first_name.required ? 'required' : '' }}
 							>
 						</div>
 
 						<div class="Form__group col-12 col-md-6">
-							<label class="Form__label Form__label--required" for="lastname">{{- 'Nom' -}}</label>
+							<label class="Form__label {{ post.meta( 'fields' ).last_name.required ? 'Form__label--required' : '' }}" for="lastname"
+							>
+								{{- post.meta( 'fields' ).last_name.label -}}
+							</label>
 							<input
 								class="Form__input"
 								id="lastname"
 								type="text"
 								name="lastname"
-								placeholder="{{ 'ex. Martin' }}"
-								required
+								placeholder="{{- post.meta( 'fields' ).last_name.placeholder -}}"
+								{{ post.meta( 'fields' ).last_name.required ? 'required' : '' }}
 							>
 						</div>
 

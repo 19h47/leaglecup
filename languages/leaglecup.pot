@@ -1,984 +1,916 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Leagle Cup\n"
-"POT-Creation-Date: 2022-06-15 10:16+0200\n"
-"PO-Revision-Date: 2022-06-15 10:19+0200\n"
+"POT-Creation-Date: 2022-06-15 09:45+0200\n"
+"PO-Revision-Date: 2020-03-01 11:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
-"X-Poedit-SearchPathExcluded-3: dist\n"
-"X-Poedit-SearchPathExcluded-4: src\n"
 
 #: inc/Api/Customizer/Contact.php:42
 msgid "Contact information"
-msgstr "Coordonnées"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:43
 msgid "Contact settings"
-msgstr "Réglages des coordonnées"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:59
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:60
-msgid "Enter Facebook Account URL"
-msgstr "Indiquer l’URL du compte Facebook"
+msgid "Indiquer l'URL du compte Facebook"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:78
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:79
-msgid "Enter LinkedIn Account URL"
-msgstr "Indiquer l’URL du compte LinkedIn"
+msgid "Indiquer l'URL du compte LinkedIn"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:97
 msgid "Public email"
-msgstr "Adresse email publique"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:98
-msgid "Enter Public Email Address"
-msgstr "Indiquer l’adresse email publique du site"
+msgid "Indiquer l'adresse mail du site"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:116
 msgid "Email addresses"
-msgstr "Adresses email"
+msgstr ""
 
 #: inc/Api/Customizer/Contact.php:117
 msgid "Separate email addresses with commas"
-msgstr "Séparez les adresses email par des virgules"
+msgstr ""
 
 #: inc/Api/Customizer/Link.php:44
 msgid "Pages Settings"
-msgstr "Réglages des pages"
+msgstr ""
 
 #: inc/Api/Customizer/Link.php:45
 msgid "Pages Links"
-msgstr "Liens des pages"
+msgstr ""
 
 #: inc/Api/Customizer/Link.php:61
 msgid "Indicate the Legal Notice page"
-msgstr "Indiquer la page des Mentions légales"
+msgstr ""
 
 #: inc/Api/Customizer/Link.php:62 views/footer.html.twig:47
 msgid "Legal Notice"
-msgstr "Mentions légales"
+msgstr ""
 
 #: inc/Api/Customizer/Recaptcha.php:40
 msgid "reCAPTCHA"
-msgstr "reCAPTCHA"
+msgstr ""
 
 #: inc/Api/Customizer/Recaptcha.php:41
 msgid "reCAPTCHA Settings"
-msgstr "Paramètres reCAPTCHA"
+msgstr ""
 
 #: inc/Api/Customizer/Recaptcha.php:56
 msgid "Site key"
-msgstr "Clef du site"
+msgstr ""
 
 #: inc/Api/Customizer/Recaptcha.php:73
 msgid "Secret key"
-msgstr "Clef secrète"
+msgstr ""
 
 #: inc/Block/Member.php:40
 msgid "Members"
-msgstr "Les membres"
+msgstr ""
 
 #: inc/Core/Member.php:43
 msgctxt "member type generale name"
 msgid "Members"
-msgstr "Membres"
+msgstr ""
 
 #: inc/Core/Member.php:44
 msgctxt "member type singular name"
 msgid "Member"
-msgstr "Membre"
+msgstr ""
 
 #: inc/Core/Member.php:45
 msgctxt "member type"
 msgid "Add New"
-msgstr "Ajouter"
+msgstr ""
 
 #: inc/Core/Member.php:46
 msgid "Add New Member"
-msgstr "Ajouter un nouveau membre"
+msgstr ""
 
 #: inc/Core/Member.php:47
 msgid "Edit Member"
-msgstr "Éditer le membre"
+msgstr ""
 
 #: inc/Core/Member.php:48
 msgid "New Member"
-msgstr "Nouveau membre"
+msgstr ""
 
 #: inc/Core/Member.php:49
 msgid "View Member"
-msgstr "Voir le membre"
+msgstr ""
 
 #: inc/Core/Member.php:50
 msgid "View Members"
-msgstr "Voir les membres"
+msgstr ""
 
 #: inc/Core/Member.php:51
 msgid "Search Members"
-msgstr "Rechercher dans les membres"
+msgstr ""
 
 #: inc/Core/Member.php:52
 msgid "No members found."
-msgstr "Aucun membre trouvé."
+msgstr ""
 
 #: inc/Core/Member.php:53
 msgid "No members found in Trash."
-msgstr "Aucun membre trouvé dans la corbeille."
+msgstr ""
 
 #: inc/Core/Member.php:54
 msgid "Parent Member:"
-msgstr "Membre parent :"
+msgstr ""
 
 #: inc/Core/Member.php:55
 msgid "All Members"
-msgstr "Tous les membres"
+msgstr ""
 
 #: inc/Core/Member.php:56
 msgid "Member Archives"
-msgstr "Archives des membres"
+msgstr ""
 
 #: inc/Core/Member.php:57
 msgid "Member Attributes"
-msgstr "Attributs de membres"
+msgstr ""
 
 #: inc/Core/Member.php:58
 msgid "Uploaded to this member"
-msgstr "Téléversé sur ce membre"
+msgstr ""
 
 #: inc/Core/Member.php:59
 msgid "Insert into member"
-msgstr "Insérer dans le membre"
+msgstr ""
 
 #: inc/Core/Member.php:60
 msgctxt "member"
 msgid "Featured Image"
-msgstr "Image mise en avant"
+msgstr ""
 
 #: inc/Core/Member.php:61
 msgctxt "member"
 msgid "Set featured image"
-msgstr "Définir comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Member.php:62
 msgctxt "member"
 msgid "Remove featured image"
-msgstr "Supprimer l’image mise en avant"
+msgstr ""
 
 #: inc/Core/Member.php:63
 msgctxt "member"
 msgid "Use as featured image"
-msgstr "Utiliser comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Member.php:64
 msgid "Members list navigation"
-msgstr "Navigation dans la liste des membres"
+msgstr ""
 
 #: inc/Core/Member.php:65
 msgid "Members list"
-msgstr "Liste des membres"
+msgstr ""
 
 #: inc/Core/Member.php:66
 msgid "Member published."
-msgstr "Membre publié."
+msgstr ""
 
 #: inc/Core/Member.php:67
 msgid "Member published privately."
-msgstr "Membre mis en ligne en privé."
+msgstr ""
 
 #: inc/Core/Member.php:68
 msgid "Member reverted to draft."
-msgstr "Membre reconvertie en brouillon."
+msgstr ""
 
 #: inc/Core/Member.php:69
 msgid "Member scheduled."
-msgstr "Membre planifié."
+msgstr ""
 
 #: inc/Core/Member.php:70
 msgid "Member updated."
-msgstr "Le membre a été mis a jour."
+msgstr ""
 
 #: inc/Core/Member.php:74
 msgctxt "member slug"
 msgid "member"
-msgstr "member"
+msgstr ""
 
 #: inc/Core/Member.php:119 inc/Core/Partner.php:182
 msgid "Thumbnail"
-msgstr "Miniature"
+msgstr ""
 
 #. translators: Publish box date format, see https://secure.php.net/date
 #: inc/Core/Message.php:41
 msgid "M j, Y @ H:i"
-msgstr "M j, Y @ H:i"
+msgstr ""
 
 #: inc/Core/Message.php:46 inc/Core/Message.php:94
 msgid "View Message"
-msgstr "Voir le message"
+msgstr ""
 
 #: inc/Core/Message.php:52 inc/Core/Message.php:58
 msgid "Preview Message"
-msgstr "Prévisualiser le message"
+msgstr ""
 
 #: inc/Core/Message.php:63 inc/Core/Message.php:66 inc/Core/Message.php:116
 msgid "Message updated."
-msgstr "Message mis à jour."
+msgstr ""
 
 #: inc/Core/Message.php:64
 msgid "Custom field updated."
-msgstr "Champ personnalisé mis à jour."
+msgstr ""
 
 #: inc/Core/Message.php:65
 msgid "Custom field deleted."
-msgstr "Champ personnalisé supprimé."
+msgstr ""
 
 #. translators: %s: date and time of the revision
 #: inc/Core/Message.php:68
 #, php-format
 msgid "Message restored to revision from %s."
-msgstr "Message rétabli à partir de la révision du %s."
+msgstr ""
 
 #: inc/Core/Message.php:69 inc/Core/Message.php:112
 msgid "Message published."
-msgstr "Message mis en ligne."
+msgstr ""
 
 #: inc/Core/Message.php:70
 msgid "Message saved."
-msgstr "Message enregistré."
+msgstr ""
 
 #: inc/Core/Message.php:71
 msgid "Message submitted."
-msgstr "Message envoyé."
+msgstr ""
 
 #: inc/Core/Message.php:72
 #, php-format
 msgid "Message scheduled for: %s."
-msgstr "Message planifié pour le : %s."
+msgstr ""
 
 #: inc/Core/Message.php:73
 msgid "Message draft updated."
-msgstr "Le brouillon du message a été mis à jour."
+msgstr ""
 
 #: inc/Core/Message.php:88
 msgctxt "message general name"
 msgid "Messages"
-msgstr "Messages"
+msgstr ""
 
 #: inc/Core/Message.php:89
 msgctxt "message singular name"
 msgid "Message"
-msgstr "Message"
+msgstr ""
 
 #: inc/Core/Message.php:90
 msgctxt "message"
 msgid "Add New"
-msgstr "Ajouter"
+msgstr ""
 
 #: inc/Core/Message.php:91
 msgid "Add New Messages"
-msgstr "Ajouter un nouveau message"
+msgstr ""
 
 #: inc/Core/Message.php:92
 msgid "Edit Message"
-msgstr "Modifier le message"
+msgstr ""
 
 #: inc/Core/Message.php:93
 msgid "New Message"
-msgstr "Nouveau message"
+msgstr ""
 
 #: inc/Core/Message.php:95
 msgid "View Messages"
-msgstr "Voir les messages"
+msgstr ""
 
 #: inc/Core/Message.php:96
 msgid "Search Messages"
-msgstr "Rechercher des messages"
+msgstr ""
 
 #: inc/Core/Message.php:97
 msgid "No messages found."
-msgstr "Aucun message trouvé."
+msgstr ""
 
 #: inc/Core/Message.php:98
 msgid "No messages found in Trash."
-msgstr "Aucun message trouvé dans la corbeille."
+msgstr ""
 
 #: inc/Core/Message.php:99
 msgid "Parent Message:"
-msgstr "Message parent :"
+msgstr ""
 
 #: inc/Core/Message.php:100
 msgid "All messages"
-msgstr "Tous les messages"
+msgstr ""
 
 #: inc/Core/Message.php:101
 msgid "Message Archives"
-msgstr "Archives des messages"
+msgstr ""
 
 #: inc/Core/Message.php:102
 msgid "Message Attributes"
-msgstr "Attributs de messages"
+msgstr ""
 
 #: inc/Core/Message.php:103
 msgid "Insert into message"
-msgstr "Insérer dans le message"
+msgstr ""
 
 #: inc/Core/Message.php:104
 msgid "Uploaded to this message"
-msgstr "Téléversés sur ce message"
+msgstr ""
 
 #: inc/Core/Message.php:105
 msgctxt "message"
 msgid "Featured Image"
-msgstr "Image mise en avant"
+msgstr ""
 
 #: inc/Core/Message.php:106
 msgctxt "message"
 msgid "Set featured image"
-msgstr "Définir comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Message.php:107
 msgctxt "message"
 msgid "Remove featured image"
-msgstr "Supprimer l’image mise en avant"
+msgstr ""
 
 #: inc/Core/Message.php:108
 msgctxt "message"
 msgid "Use as featured image"
-msgstr "Utiliser comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Message.php:109
 msgid "Filter messages list"
-msgstr "Filtrer la liste des messages"
+msgstr ""
 
 #: inc/Core/Message.php:110
 msgid "Messages list navigation"
-msgstr "Navigation de la liste des messages"
+msgstr ""
 
 #: inc/Core/Message.php:111
 msgid "Messages list"
-msgstr "Liste des messages"
+msgstr ""
 
 #: inc/Core/Message.php:113
 msgid "Message published privately."
-msgstr "Message mis en ligne en privé."
+msgstr ""
 
 #: inc/Core/Message.php:114
 msgid "Message reverted to draft."
-msgstr "Message reconverti en brouillon."
+msgstr ""
 
 #: inc/Core/Message.php:115
 msgid "Message scheduled."
-msgstr "Message planifié."
+msgstr ""
 
 #: inc/Core/Message.php:120
 msgid "Message"
-msgstr "Message"
+msgstr ""
 
 #: inc/Core/Partner.php:68
 msgctxt "partner type generale name"
 msgid "Partners"
-msgstr "Partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:69
 msgctxt "partner type singular name"
 msgid "Partner"
-msgstr "Partenaire"
+msgstr ""
 
 #: inc/Core/Partner.php:70
 msgctxt "partner type"
 msgid "Add New"
-msgstr "Ajouter"
+msgstr ""
 
 #: inc/Core/Partner.php:71
 msgid "Add New Partner"
-msgstr "Ajouter un nouveau partenaire"
+msgstr ""
 
 #: inc/Core/Partner.php:72
 msgid "Edit Partner"
-msgstr "Éditer le partenaire"
+msgstr ""
 
 #: inc/Core/Partner.php:73
 msgid "New Partner"
-msgstr "Nouveau partenaire"
+msgstr ""
 
 #: inc/Core/Partner.php:74
 msgid "View Partners"
-msgstr "Voir les partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:75
 msgid "View Partner"
-msgstr "Voir le partenaire"
+msgstr ""
 
 #: inc/Core/Partner.php:76
 msgid "Search Partners"
-msgstr "Rechercher dans les partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:77
 msgid "No partners found."
-msgstr "Aucun partenaire trouvé."
+msgstr ""
 
 #: inc/Core/Partner.php:78
 msgid "No partners found in Trash."
-msgstr "Aucun partenaire trouvé dans la corbeille."
+msgstr ""
 
 #: inc/Core/Partner.php:79
 msgid "Parent Partner:"
-msgstr "Partenaire parent :"
+msgstr ""
 
 #: inc/Core/Partner.php:80
 msgid "All Partners"
-msgstr "Tous les partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:81
 msgid "Partner Archives"
-msgstr "Archives des partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:82
 msgid "Partner Attributes"
-msgstr "Attributs de partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:83
 msgid "Insert into partner"
-msgstr "Insérer dans le partenaire"
+msgstr ""
 
 #: inc/Core/Partner.php:84
 msgid "Uploaded to this partner"
-msgstr "Téléversé sur ce partenaire"
+msgstr ""
 
 #: inc/Core/Partner.php:85
 msgctxt "partner"
 msgid "Featured Image"
-msgstr "Image mise en avant"
+msgstr ""
 
 #: inc/Core/Partner.php:86
 msgctxt "partner"
 msgid "Set featured image"
-msgstr "Définir comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Partner.php:87
 msgctxt "partner"
 msgid "Remove featured image"
-msgstr "Supprimer l’image mise en avant"
+msgstr ""
 
 #: inc/Core/Partner.php:88
 msgctxt "partner"
 msgid "Use as featured image"
-msgstr "Utiliser comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Partner.php:89
 msgid "Partners list navigation"
-msgstr "Navigation dans la liste des partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:90
 msgid "Partners list"
-msgstr "Liste des partenaires"
+msgstr ""
 
 #: inc/Core/Partner.php:91
 msgid "Partner published."
-msgstr "Partenaire publié."
+msgstr ""
 
 #: inc/Core/Partner.php:92
 msgid "Partner published privately."
-msgstr "Partenaire mis en ligne en privé."
+msgstr ""
 
 #: inc/Core/Partner.php:93
 msgid "Partner reverted to draft."
-msgstr "Partenaire reconverti en brouillon."
+msgstr ""
 
 #: inc/Core/Partner.php:94
 msgid "Partner scheduled."
-msgstr "Partenaire planifié."
+msgstr ""
 
 #: inc/Core/Partner.php:95
 msgid "Partner updated."
-msgstr "Partenaire mis à jour."
+msgstr ""
 
 #: inc/Core/Partner.php:99
 msgctxt "partner slug"
 msgid "partner"
-msgstr "partner"
+msgstr ""
 
 #: inc/Core/Partner.php:107 views/pages/front-page.html.twig:27
 msgid "Partners"
-msgstr "Les partenaires"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:41
 msgctxt "partner category general name"
 msgid "Categories"
-msgstr "Catégories"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:42
 msgctxt "partner category Singular name"
 msgid "Category"
-msgstr "Catégorie"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:43
 msgid "Search Categories"
-msgstr "Rechercher dans les catégories"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:44
 msgid "All Categories"
-msgstr "Toutes les catégories"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:45
 msgid "Popular Categories"
-msgstr "Catégories populaires"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:46
 msgid "Parent Category"
-msgstr "Catégorie parente"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:47
 msgid "Parent Category :"
-msgstr "Catégorie parente :"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:48
 msgid "Edit Category"
-msgstr "Modifier la catégorie"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:49
 msgid "View Category"
-msgstr "Voir la catégorie"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:50
 msgid "Update Category"
-msgstr "Mettre à jour la catégorie"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:51
 msgid "Add New Category"
-msgstr "Ajouter une nouvelle catégorie"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:52
 msgid "New Category Name"
-msgstr "Nom de la nouvelle catégorie"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:53
 msgid "Separate categories with commas"
-msgstr "Séparez les catégories par des virgules"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:54
 msgid "Add or remove categories"
-msgstr "Ajouter ou retirer des catégories"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:55
 msgid "Choose from the most used categories"
-msgstr "Choisir parmi les catégories les plus utilisées"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:56
 msgid "No categories found."
-msgstr "Aucune catégorie trouvée."
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:57
 msgid "No categories"
-msgstr "Aucune catégorie"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:58
 msgid "Categories list navigation"
-msgstr "Navigation de la liste des catégories"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:59
 msgid "Categories list"
-msgstr "Liste des catégories"
+msgstr ""
 
 #. translators: City heading when selecting from the most used terms.
 #: inc/Core/PartnerCategory.php:61
 msgctxt "partner category"
 msgid "Most Used"
-msgstr "Plus utilisées"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:62
 msgid "&larr; Back to Categories"
-msgstr "&larr; Retour aux catégories"
+msgstr ""
 
 #: inc/Core/PartnerCategory.php:94
 msgid "Order"
-msgstr "Ordre"
+msgstr ""
 
 #: inc/Core/Price.php:41
 msgctxt "price type generale name"
 msgid "Prices"
-msgstr "Tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:42
 msgctxt "price type singular name"
 msgid "Price"
-msgstr "Tarif"
+msgstr ""
 
 #: inc/Core/Price.php:43
 msgctxt "price type"
 msgid "Add New"
-msgstr "Ajouter"
+msgstr ""
 
 #: inc/Core/Price.php:44
 msgid "Add New Price"
-msgstr "Ajouter un nouveau tarif"
+msgstr ""
 
 #: inc/Core/Price.php:45
 msgid "Edit Price"
-msgstr "Éditer le tarif"
+msgstr ""
 
 #: inc/Core/Price.php:46
 msgid "New Price"
-msgstr "Nouveau tarif"
+msgstr ""
 
 #: inc/Core/Price.php:47
 msgid "View Price"
-msgstr "Voir le tarif"
+msgstr ""
 
 #: inc/Core/Price.php:48
 msgid "View Prices"
-msgstr "Voir les tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:49
 msgid "Search Prices"
-msgstr "Rechercher dans les tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:50
 msgid "No prices found."
-msgstr "Aucun tarif trouvé."
+msgstr ""
 
 #: inc/Core/Price.php:51
 msgid "No prices found in Trash."
-msgstr "Aucun tarif trouvé dans la corbeille."
+msgstr ""
 
 #: inc/Core/Price.php:52
 msgid "Parent Price :"
-msgstr "Tarif parent :"
+msgstr ""
 
 #: inc/Core/Price.php:53
 msgid "All Prices"
-msgstr "Tous les tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:54
 msgid "Price Archives"
-msgstr "Archives des tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:55
 msgid "Price Attributes"
-msgstr "Attributs de tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:56
 msgid "Uploaded to this price"
-msgstr "Téléversé sur ce tarif"
+msgstr ""
 
 #: inc/Core/Price.php:57
 msgid "Insert into price"
-msgstr "Insérer dans le tarif"
+msgstr ""
 
 #: inc/Core/Price.php:58
 msgctxt "price"
 msgid "Featured Image"
-msgstr "Image mise en avant"
+msgstr ""
 
 #: inc/Core/Price.php:59
 msgctxt "price"
 msgid "Set featured image"
-msgstr "Définir comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Price.php:60
 msgctxt "price"
 msgid "Remove featured image"
-msgstr "Supprimer l’image mise en avant"
+msgstr ""
 
 #: inc/Core/Price.php:61
 msgctxt "price"
 msgid "Use as featured image"
-msgstr "Utiliser comme image mise en avant"
+msgstr ""
 
 #: inc/Core/Price.php:62
 msgid "Prices list navigation"
-msgstr "Navigation dans la liste des tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:63
 msgid "Prices list"
-msgstr "Liste des tarifs"
+msgstr ""
 
 #: inc/Core/Price.php:64
 msgid "Price published."
-msgstr "Tarif publié."
+msgstr ""
 
 #: inc/Core/Price.php:65
 msgid "Price published privately."
-msgstr "Tarif mis en ligne en privé."
+msgstr ""
 
 #: inc/Core/Price.php:66
 msgid "Price reverted to draft."
-msgstr "Tarif reconverti en brouillon."
+msgstr ""
 
 #: inc/Core/Price.php:67
 msgid "Price scheduled."
-msgstr "Tarif planifié."
+msgstr ""
 
 #: inc/Core/Price.php:68
 msgid "Price updated."
-msgstr "Le tarif a été mis a jour."
+msgstr ""
 
 #: inc/Core/Price.php:72
 msgctxt "price slug"
 msgid "price"
-msgstr "price"
+msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:54
-msgid "Registration Form Page Options"
-msgstr "Options de la page du formulaire d’inscription"
+msgid "Register Template Options"
+msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:58
 msgid "Price"
-msgstr "Tarif"
+msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:69
 msgid "Fields"
-msgstr "Champs"
+msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:76
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:85
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:100
 msgid "Civility"
-msgstr "Civilité"
+msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:82
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:84
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:121
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:123
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:155
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:157
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:189
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:191
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:220
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:222
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:114
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:116
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:145
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:147
 msgid "Label"
-msgstr "Label"
+msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:89
 msgid "Choices"
-msgstr "Choix"
+msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:93
-msgid "Sir"
-msgstr "Monsieur"
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:108
+msgid "Company Name"
+msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:94
-msgid "Madam"
-msgstr "Madame"
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:117
+msgid "Social Reason"
+msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:95
-msgid "Miss"
-msgstr "Mademoiselle"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:106
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:137
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:171
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:205
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:236
-msgid "Required"
-msgstr "Obligatoire"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:115
-msgid "First Name"
-msgstr "Prénom"
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:122
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:153
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:155
+msgid "Placeholder"
+msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:124
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:131
-msgid "First name"
-msgstr "Prénom"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:129
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:163
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:197
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:228
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:230
-msgid "Placeholder"
-msgstr "Placeholder"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:132
-msgid "e.g. Art"
-msgstr "ex. Art"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:149
-msgid "Last Name"
-msgstr "Nom de famille"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:158
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:165
-msgid "Last name"
-msgstr "Nom de famille"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:166
-msgid "e.g. Vandelay"
-msgstr "ex. Vandelay"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:183
-msgid "Company Name"
-msgstr "Nom de l'entreprise"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:192
-msgid "Social Reason"
-msgstr "Raison sociale"
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:199
 msgid "e.g. Company Name"
-msgstr "ex. Nom de l’entreprise"
+msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:200
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:125
 msgid "e.g. Vandelay Industries"
-msgstr "ex. Vandelay Industries"
+msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:214
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:130
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:161
+msgid "Required"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:139
 msgid "Job Title"
-msgstr "Profession"
+msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:223
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:148
 msgid "Profession"
-msgstr "Profession"
+msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:231
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:156
 msgid "e.g. Lawyer / Accountant / Notary"
-msgstr "ex. Avocat / Expert-comptable / Notaire"
+msgstr ""
 
 #: inc/Plugins/ACF/RuleTypes.php:36
 msgid "Page Visibility"
-msgstr "Visibilité de la page"
+msgstr ""
 
 #: inc/Plugins/ACF/RuleValues.php:34
 msgid "Password Protected"
-msgstr "Protégé par mot de passe"
+msgstr ""
 
 #: inc/Plugins/RegistrationForm.php:148
-msgid "Your registration for the Leagle Cup"
-msgstr "Votre inscription à la Leagle Cup"
+msgid "Votre inscription à la Leagle Cup"
+msgstr ""
 
 #: inc/Setup/Menus.php:33
 msgid "Main"
-msgstr "Principal"
+msgstr ""
 
 #: inc/Setup/TermUpdatedMessages.php:38
 msgid "Category added."
-msgstr "Catégorie ajoutée."
+msgstr ""
 
 #: inc/Setup/TermUpdatedMessages.php:39 inc/Setup/TermUpdatedMessages.php:43
 msgid "Category deleted."
-msgstr "Catégorie effacée."
+msgstr ""
 
 #: inc/Setup/TermUpdatedMessages.php:40
 msgid "Category updated."
-msgstr "Catégorie mise à jour."
+msgstr ""
 
 #: inc/Setup/TermUpdatedMessages.php:41
 msgid "Category not added."
-msgstr "Catégorie non ajoutée."
+msgstr ""
 
 #: inc/Setup/TermUpdatedMessages.php:42
 msgid "Category not updated."
-msgstr "Catégorie non mise à jour."
+msgstr ""
 
 #: inc/Setup/Theme.php:215
 msgid "Share on Facebook"
-msgstr "Partager sur Facebook"
+msgstr ""
 
 #: inc/Setup/Theme.php:222
 msgid "Share on LinkedIn"
-msgstr "Partagez sur LinkedIn"
+msgstr ""
 
 #: inc/Setup/Theme.php:229
 msgid "Contact Us"
-msgstr "Contactez-nous"
+msgstr ""
 
 #: views/blocks/carousel.html.twig:11
 msgid "Previous"
-msgstr "Précédent"
+msgstr ""
 
 #: views/blocks/carousel.html.twig:38
 msgid "Next"
-msgstr "Suivant"
+msgstr ""
 
 #: views/blocks/hero.html.twig:19 views/blocks/partners.html.twig:29
 msgid "Discover"
-msgstr "Découvrir"
+msgstr ""
 
 #: views/blocks/hero.html.twig:40 views/index.html.twig:43
 msgid "Scroll"
-msgstr "Scroll"
+msgstr ""
 
 #: views/common/prices.html.twig:41
-#: views/pages/registration-form-page.html.twig:318
+#: views/pages/registration-form-page.html.twig:315
 msgid "I'm registering"
-msgstr "Je m’inscris"
+msgstr ""
 
 #: views/pages/404.html.twig:15
 msgid "Sorry, we could not find what you were looking for."
-msgstr "Désolé, nous n’avons pas pu trouver ce que vous cherchiez."
+msgstr ""
 
 #: views/pages/front-page.html.twig:17
 msgid "Event"
-msgstr "Lévènement"
+msgstr ""
 
-#: views/pages/registration-form-page.html.twig:207
+#: views/pages/registration-form-page.html.twig:63
+msgid "Prénom"
+msgstr ""
+
+#: views/pages/registration-form-page.html.twig:204
 msgid "Specify the size of the polo shirt"
-msgstr "Indiquez la taille du polo"
+msgstr ""
 
-#: views/pages/registration-form-page.html.twig:332
+#: views/pages/registration-form-page.html.twig:329
 msgid "Your registration hasn't been sent."
-msgstr "Votre inscription n’a pas été envoyée."
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Leagle Cup"
-msgstr "Leagle Cup"
+msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://www.leaglecup.fr"
-msgstr "https://www.leaglecup.fr"
+msgid "http://www.leaglecup.fr"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid "La <strong>LEAGLE CUP</strong> is a website for golf lovers"
-msgstr "La <strong>LEAGLE CUP</strong> est un site pour les amateurs de golf"
+msgstr ""
 
 #. Author of the plugin/theme
 msgid ""
-"<a href=\"https://www.inesa.fr/\">ines a</a>, <a href=\"https://www.19h47.fr/"
+"<a href=\"http://www.inesa.fr/\">ines a</a>, <a href=\"http://www.19h47.fr/"
 "\">19h47</a>"
 msgstr ""
-"<a href=\"https://www.inesa.fr/\">ines a</a>, <a href=\"https://www.19h47.fr/"
-"\">19h47</a>"
-
-#~ msgid "LEAGLE CUP: New registration"
-#~ msgstr "LEAGLE CUP : Nouvel inscription"
-
-#~ msgid "Email"
-#~ msgstr "Email"
-
-#~ msgctxt "Partner category General Name"
-#~ msgid "Categories"
-#~ msgstr "Catégories"
-
-#~ msgctxt "Member Type Generale Name"
-#~ msgid "Members"
-#~ msgstr "Membres"
-
-#~ msgctxt "Member Type Singular Name"
-#~ msgid "Member"
-#~ msgstr "Membre"
-
-#~ msgid "Update Member"
-#~ msgstr "Mettre à jour le membre"

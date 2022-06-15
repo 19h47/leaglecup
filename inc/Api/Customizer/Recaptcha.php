@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Feed
+ * Recaptcha
  *
  * @category Customizer
  * @package  LeagleCup

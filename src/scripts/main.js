@@ -1,5 +1,5 @@
 import Guid from 'common/Guid';
-import Register from 'blocks/Register';
+import RegistrationForm from 'blocks/RegistrationForm';
 import FormBlock from 'blocks/FormBlock';
 import Carousel from 'blocks/Carousel';
 
@@ -15,8 +15,8 @@ console.log('totot');
 	console.log('%c🔥 ines a (http://inesa.fr) & 19h47 (https://19h47.fr) 🔥', 'padding:0.5em 1em;');
 
 	//
-	const register = new Register('.js-register');
-	register.init();
+	const registrationForm = new RegistrationForm('.js-registration');
+	registrationForm.init();
 
 	//
 	const form = new FormBlock('.js-form');

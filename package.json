@@ -25,13 +25,8 @@
 		"prod": "webpack --mode=production --config webpack/webpack.config.js"
 	},
 	"dependencies": {
-<<<<<<< HEAD
 		"@19h47/checkbox": "^4.4.1",
 		"@19h47/radiogroup": "^5.4.3",
-=======
-		"@19h47/checkbox": "^4.4.0",
-		"@19h47/radiogroup": "^5.4.1",
->>>>>>> 634dd50e54d55f924145c37ffd55d688abd47bab
 		"@19h47/subtract": "19h47/19h47-subtract",
 		"@19h47/sum": "19h47/19h47-sum",
 		"architecture": "github:19h47/architecture",
@@ -48,7 +43,6 @@
 		"@babel/plugin-proposal-class-properties": "^7.17.12",
 		"@babel/plugin-proposal-object-rest-spread": "^7.18.0",
 		"@babel/plugin-syntax-dynamic-import": "^7.8.3",
-<<<<<<< HEAD
 		"@babel/plugin-transform-parameters": "^7.17.12",
 		"@babel/plugin-transform-react-jsx": "^7.17.12",
 		"@babel/plugin-transform-runtime": "^7.18.5",
@@ -63,22 +57,6 @@
 		"core-js": "^3.23.0",
 		"css-loader": "^6.7.1",
 		"cssnano": "5.1.11",
-=======
-		"@babel/plugin-transform-parameters": "^7.16.7",
-		"@babel/plugin-transform-react-jsx": "^7.16.7",
-		"@babel/plugin-transform-runtime": "^7.16.7",
-		"@babel/plugin-transform-spread": "^7.16.7",
-		"@babel/preset-env": "^7.16.7",
-		"@babel/preset-react": "^7.16.7",
-		"@babel/runtime": "^7.16.7",
-		"autoprefixer": "10.4.2",
-		"babel-loader": "^8.2.3",
-		"clean-webpack-plugin": "^4.0.0",
-		"compression-webpack-plugin": "9.2.0",
-		"core-js": "^3.20.2",
-		"css-loader": "^6.5.1",
-		"cssnano": "5.0.15",
->>>>>>> 634dd50e54d55f924145c37ffd55d688abd47bab
 		"dotenv": "^10.0.0",
 		"eslint": "^8.17.0",
 		"eslint-config-airbnb-base": "^15.0.0",
