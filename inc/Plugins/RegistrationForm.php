@@ -53,6 +53,13 @@ class RegistrationForm {
 			'total'               => $_POST['total'],
 			'title'               => $_POST['title'],
 			'price'               => $_POST['price'],
+			// Guide
+			'guide'               => array(
+				'firstname'  => $_POST['guide_firstname'],
+				'lastname'   => $_POST['guide_lastname'],
+				'email'      => $_POST['guide_email'],
+				'cell_phone' => $_POST['guide_cell_phone'],
+			),
 		);
 
 		$new_post = $this->save_post( $data );
@@ -99,6 +106,12 @@ class RegistrationForm {
 		add_post_meta( $pid, 'title', $data['title'], true );
 		add_post_meta( $pid, 'price', $data['price'], true );
 		add_post_meta( $pid, 'price_id', $data['price'], true );
+
+		// Guide.
+		add_post_meta( $pid, 'guide_firstname', $data['guide']['firstname'], true );
+		add_post_meta( $pid, 'guide_lastname', $data['guide']['lastname'], true );
+		add_post_meta( $pid, 'guide_email', $data['guide']['email'], true );
+		add_post_meta( $pid, 'guide_cell_phone', $data['guide']['cell_phone'], true );
 
 		$options = array();
 

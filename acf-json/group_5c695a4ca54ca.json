@@ -6,6 +6,7 @@
             "key": "field_5c695a520ffb7",
             "label": "Sous-titre",
             "name": "subtitle",
+            "aria-label": "",
             "type": "text",
             "instructions": "Indiquer le sous-titre du Tarif",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_5fdb613c7dc26",
             "label": "Prix hors taxes",
             "name": "duty_free",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -44,6 +46,7 @@
             "key": "field_5c695a7c0ffb8",
             "label": "Sections",
             "name": "sections",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -63,6 +66,7 @@
                     "key": "field_5c695aee0ffb9",
                     "label": "Titre",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "Indiquer le titre de la section",
                     "required": 0,
@@ -76,12 +80,14 @@
                     "placeholder": "Titre",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_5c695a7c0ffb8"
                 },
                 {
                     "key": "field_5c695cf102345",
                     "label": "Prix",
                     "name": "price",
+                    "aria-label": "",
                     "type": "number",
                     "instructions": "Indiquer le prix de la section",
                     "required": 0,
@@ -97,12 +103,14 @@
                     "append": "€ TTC",
                     "min": "",
                     "max": "",
-                    "step": 1
+                    "step": 1,
+                    "parent_repeater": "field_5c695a7c0ffb8"
                 },
                 {
                     "key": "field_5c695b3a0ffbc",
                     "label": "Contenu",
                     "name": "content",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "Indiquer le contenu de la section",
                     "required": 0,
@@ -116,14 +124,38 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
-                    "delay": 0
+                    "delay": 0,
+                    "parent_repeater": "field_5c695a7c0ffb8"
+                },
+                {
+                    "key": "field_64061535afc2a",
+                    "label": "Accompagnant",
+                    "name": "guide",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_5c695a7c0ffb8"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_5c6c8fc93626c",
             "label": "Lien",
             "name": "link",
+            "aria-label": "",
             "type": "link",
             "instructions": "Indiquer le lien du Tarif",
             "required": 0,
@@ -153,5 +185,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608212863
+    "show_in_rest": 0,
+    "modified": 1678120268
 }

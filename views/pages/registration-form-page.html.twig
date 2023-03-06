@@ -236,6 +236,7 @@
 												type="checkbox"
 												data-number="{{ section.price }}"
 												value="{{ section.title }}"
+												data-guide="{{ section.guide ? 'true' : 'false' }}"
 											>
 										</div>
 									</div>
@@ -249,6 +250,63 @@
 								</div>
 							</div>
 
+						</div>
+
+
+						<div class="Form__group col-12 is-off js-guide" >
+							<h3 id="guide_label" class="Form__label">Accompagnant</h3>
+						</div>
+
+						<div class="Form__group col-12 col-md-6 is-off js-guide">
+							<label class="Form__label Form__label--required" for="guide_firstname"
+							>
+								Prénom
+							</label>
+							<input
+								class="Form__input"
+								id="guide_firstname"
+								type="text"
+								name="guide_firstname"
+								placeholder="Prénom de l'accompagnant"
+								required
+								disabled
+							>
+						</div>
+
+						<div class="Form__group col-12 col-md-6 is-off js-guide">
+							<label class="Form__label Form__label--required" for="guide_lastname"
+							>
+								Nom
+							</label>
+							<input
+								class="Form__input"
+								id="guide_lastname"
+								type="text"
+								name="guide_lastname"
+								placeholder="Nom de l'accompagnant"
+								required
+								disabled
+							>
+						</div>
+
+						<div class="Form__group col-12 col-md-6 is-off js-guide">
+							<label class="Form__label" for="guide_email">{{- 'Email' -}}</label>
+							<input class="Form__input" id="guide_email" type="email" name="guide_email" disabled placeholder="{{ 'ex. art@vandelay.com' }}">
+						</div>
+
+						<div class="Form__group col-12 col-md-6 is-off js-guide">
+							<label class="Form__label" for="guide_cell_phone">
+								{{- 'Téléphone mobile' -}}
+							</label>
+							<input
+								class="Form__input Form__input--tel"
+								id="guide_cell_phone"
+								type="tel"
+								name="guide_cell_phone"
+								pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
+								placeholder="{{ 'ex. 01 23 45 67 89' }}"
+								disabled
+							>
 						</div>
 
 

@@ -17,6 +17,18 @@
 
 	Participation : {{ post.meta( 'price' ) }} €<br>
 
+	{% if post.meta( 'guide_firstname' ) or post.meta( 'guide_lastname' ) %}
+		Nom et prénom de l'accompagnant : {{ post.meta( 'guide_firstname' ) }} {{ post.meta( 'guide_lastname' ) }}<br>
+	{% endif %}
+
+	{% if post.meta( 'guide_email' ) %}
+		Adresse mail de l'accompagnant : {{ post.meta( 'guide_email' ) }}<br>
+	{% endif %}
+
+	{% if post.meta( 'guide_cell_phone' ) %}
+		Numéro de téléphone de l'accompagnant : {{ post.meta( 'guide_cell_phone' ) }}<br>
+	{% endif %}
+
 	{% for option in post.meta( 'options' ) %}
 		Vous avez sélectionné : {{ option }}<br>
 	{% endfor %}
