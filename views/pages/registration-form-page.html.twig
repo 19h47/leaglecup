@@ -210,6 +210,7 @@
 											<option value="M">M</option>
 											<option value="L">L</option>
 											<option value="XL">XL</option>
+											<option value="2XL">2XL</option>
 										</select>
 									</div>
 								</div>
@@ -290,12 +291,12 @@
 						</div>
 
 						<div class="Form__group col-12 col-md-6 is-off js-guide">
-							<label class="Form__label" for="guide_email">{{- 'Email' -}}</label>
-							<input class="Form__input" id="guide_email" type="email" name="guide_email" disabled placeholder="{{ 'ex. art@vandelay.com' }}">
+							<label class="Form__label Form__label--required" for="guide_email">{{- 'Email' -}}</label>
+							<input class="Form__input" id="guide_email" type="email" name="guide_email" disabled placeholder="{{ 'ex. art@vandelay.com' }}" required>
 						</div>
 
 						<div class="Form__group col-12 col-md-6 is-off js-guide">
-							<label class="Form__label" for="guide_cell_phone">
+							<label class="Form__label Form__label--required" for="guide_cell_phone">
 								{{- 'Téléphone mobile' -}}
 							</label>
 							<input
@@ -306,6 +307,7 @@
 								pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
 								placeholder="{{ 'ex. 01 23 45 67 89' }}"
 								disabled
+								required
 							>
 						</div>
 
@@ -379,7 +381,7 @@
 
 						<div class="Form_group col-12 text-align-right">
 							<p><strong>Si votre navigateur n’est pas à jour, vous pouvez rencontrer des difficultés pour valider votre inscription.</strong></p>
-							<p><strong>Dans ce cas, n’hésitez pas à nous contacter directement par mail : <a href="mailto:contact@leaglecup.fr" target="_blank" rel="noopener">contact@leaglecup.fr</a> ou par téléphone : <a href="tel:0982541600" target="_blank" rel="noopener">09 82 54 16 00</a>.</strong></p>
+							<p><strong>Dans ce cas, n’hésitez pas à nous contacter directement par mail : <a href="mailto:contact@leaglecup.fr" target="_blank" rel="noopener">contact@leaglecup.fr</a> ou par téléphone : <a href="tel:+33255599917" target="_blank" rel="noopener">02 55 59 99 17</a>.</strong></p>
 						</div>
 
 						<div class="Form__group col-12 Form__success">
@@ -393,7 +395,7 @@
 						<div class="Form__group col-12">
 							<p><strong>Conditions de règlement</strong><br>par virement bancaire</p>
 							<p>
-								<strong>Coordonnées bancaires :</strong><br>
+								<strong>Coordonnées bancaires :</strong><br>
 								Titulaire du compte : WEVENT By WEBLEX<br>
 								RIB : 10278 36058 00010868701 29<br>
 								IBAN : FR76 1027 8360 5800 0108 6870 129<br>

@@ -58,7 +58,8 @@
 				style: solid;
 				width: 1px;
 			}
-			color: the_color(yellow, soft);
+			color: the_color(red, pure);
+			// color: the_color(yellow, soft);
 		}
 
 		@at-root #{ $this }--success & {
