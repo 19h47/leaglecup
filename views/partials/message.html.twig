@@ -66,3 +66,15 @@
 	Mail : contact@leaglecup.fr<br>
 	Ligne directe : 02 55 59 99 17
 </p>
+
+{% if partners %}
+	<table style="width: 100%; table-layout: fixed;">
+		<tr>
+			{% for partner in partners %}
+				<td>
+					<img style="width: 80%; margin: 0 auto; height: auto; display: block;" src="{{ partner }}" alt="">
+				</td>
+			{% endfor %}
+		</tr>
+	</table>
+{% endif %}

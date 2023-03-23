@@ -148,9 +148,10 @@ class RegistrationForm {
 		$headers[] = 'From: LEAGLE CUP <' . $email . '>';
 		$headers[] = 'Bcc: ' . $email;
 
-		$context = Timber::get_context();
+		$data = Timber::get_context();
 
-		$context['post'] = new Post( $id );
+		$data['post']     = new Post( $id );
+		$data['partners'] = get_field( 'partners', 'option' );
 
 		foreach ( $email_adresses as $email_adress ) {
 			$headers[] = 'Bcc: ' . $email_adress;
@@ -159,7 +160,7 @@ class RegistrationForm {
 		Mail::init()
 			->to( $to )
 			->subject( __( 'Your registration for the Leagle Cup', 'leaglecup' ) )
-			->message( 'partials/message.html.twig', $context )
+			->message( 'partials/message.html.twig', $data )
 			->headers( $headers )
 			->send();
 	}
