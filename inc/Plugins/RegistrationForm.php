@@ -53,6 +53,13 @@ class RegistrationForm {
 			'total'               => $_POST['total'],
 			'title'               => $_POST['title'],
 			'price'               => $_POST['price'],
+			// Guide
+			'guide'               => array(
+				'firstname'  => $_POST['guide_firstname'],
+				'lastname'   => $_POST['guide_lastname'],
+				'email'      => $_POST['guide_email'],
+				'cell_phone' => $_POST['guide_cell_phone'],
+			),
 		);
 
 		$new_post = $this->save_post( $data );
@@ -100,6 +107,12 @@ class RegistrationForm {
 		add_post_meta( $pid, 'price', $data['price'], true );
 		add_post_meta( $pid, 'price_id', $data['price'], true );
 
+		// Guide.
+		add_post_meta( $pid, 'guide_firstname', $data['guide']['firstname'], true );
+		add_post_meta( $pid, 'guide_lastname', $data['guide']['lastname'], true );
+		add_post_meta( $pid, 'guide_email', $data['guide']['email'], true );
+		add_post_meta( $pid, 'guide_cell_phone', $data['guide']['cell_phone'], true );
+
 		$options = array();
 
 		foreach ( $data['options'] as $key => $value ) {
@@ -135,9 +148,10 @@ class RegistrationForm {
 		$headers[] = 'From: LEAGLE CUP <' . $email . '>';
 		$headers[] = 'Bcc: ' . $email;
 
-		$context = Timber::get_context();
+		$data = Timber::get_context();
 
-		$context['post'] = new Post( $id );
+		$data['post']     = new Post( $id );
+		$data['partners'] = get_field( 'partners', 'option' );
 
 		foreach ( $email_adresses as $email_adress ) {
 			$headers[] = 'Bcc: ' . $email_adress;
@@ -146,7 +160,7 @@ class RegistrationForm {
 		Mail::init()
 			->to( $to )
 			->subject( __( 'Your registration for the Leagle Cup', 'leaglecup' ) )
-			->message( 'partials/message.html.twig', $context )
+			->message( 'partials/message.html.twig', $data )
 			->headers( $headers )
 			->send();
 	}
