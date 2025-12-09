@@ -3,7 +3,7 @@
 <p>L’équipe de la <strong>Leagle Cup</strong> vous remercie pour votre inscription dont voici un récapitulatif :</p>
 
 <p>
-	Nom et prénom : {{ post.meta( 'civility' ) }} {{ post.meta( 'firstname' ) }} {{ post.meta( 'lastname' ) -}}<br>
+	Nom et prénom : {{ post.meta( 'civility' ) }} {{ post.meta( 'firstname' ) }} {{ post.meta( 'lastname' ) -}}<br>
 	Raison social : {{ post.meta( 'company_name' ) -}}<br>
 	Profession : {{ post.meta( 'job_title' ) -}}<br>
 	Email : {{ post.meta( 'email' ) -}}<br>
@@ -16,6 +16,18 @@
 	Taille du polo : {{ post.meta( 't_shirt_size' ) }}<br>
 
 	Participation : {{ post.meta( 'price' ) }} €<br>
+
+	{% if post.meta( 'guide_firstname' ) or post.meta( 'guide_lastname' ) %}
+		Nom et prénom de l'accompagnant : {{ post.meta( 'guide_firstname' ) }} {{ post.meta( 'guide_lastname' ) }}<br>
+	{% endif %}
+
+	{% if post.meta( 'guide_email' ) %}
+		Adresse mail de l'accompagnant : {{ post.meta( 'guide_email' ) }}<br>
+	{% endif %}
+
+	{% if post.meta( 'guide_cell_phone' ) %}
+		Numéro de téléphone de l'accompagnant : {{ post.meta( 'guide_cell_phone' ) }}<br>
+	{% endif %}
 
 	{% for option in post.meta( 'options' ) %}
 		Vous avez sélectionné : {{ option }}<br>
@@ -35,11 +47,11 @@
 </p>
 
 <p>
-	Nous vous précisons que votre inscription sera définitivement validée à réception du versement de votre participation par virement bancaire (identification bancaire rappelée ci-après) :
+	Nous vous précisons que votre inscription sera définitivement validée à réception du versement de votre participation par virement bancaire (identification bancaire rappelée ci-après) :
 </p>
 
 <p>
-	<strong>Coordonnées bancaires : <span style="color: #ff3200;">(Attention : nouvelles coordonnées bancaires )</span></strong><br>
+	<strong>Coordonnées bancaires :</strong><br>
 	Titulaire du compte : WEVENT By WEBLEX<br>
 	RIB : 10278 36058 00010868701 29<br>
 	IBAN : FR76 1027 8360 5800 0108 6870 129<br>
@@ -51,6 +63,18 @@
 <p>
 	À bientôt<br>
 	Céline MENGUY pour la Leagle Cup<br>
-	Mail : contact@leaglecup.fr<br>
-	Ligne directe : 09.82.50.82.01
+	Mail : contact@leaglecup.fr<br>
+	Ligne directe : 02 55 59 99 17
 </p>
+
+{% if partners %}
+	<table style="width: 100%; table-layout: fixed;">
+		<tr>
+			{% for partner in partners %}
+				<td>
+					<img style="width: 140px; max-width: 100%; margin: 0 auto; height: auto; display: block;" src="{{ partner }}" alt="">
+				</td>
+			{% endfor %}
+		</tr>
+	</table>
+{% endif %}

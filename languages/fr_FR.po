@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leagle Cup\n"
-"POT-Creation-Date: 2022-06-15 10:16+0200\n"
-"PO-Revision-Date: 2022-06-15 10:19+0200\n"
+"POT-Creation-Date: 2023-03-23 12:29+0100\n"
+"PO-Revision-Date: 2023-03-23 12:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -520,7 +520,8 @@ msgctxt "partner slug"
 msgid "partner"
 msgstr "partner"
 
-#: inc/Core/Partner.php:107 views/pages/front-page.html.twig:27
+#: inc/Core/Partner.php:107 inc/Plugins/ACF/Fields/MessageOptionsFields.php:58
+#: views/pages/front-page.html.twig:27
 msgid "Partners"
 msgstr "Les partenaires"
 
@@ -740,6 +741,10 @@ msgctxt "price slug"
 msgid "price"
 msgstr "price"
 
+#: inc/Plugins/ACF/Fields/MessageOptionsFields.php:54
+msgid "Message Options Fields"
+msgstr "Options du message"
+
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:54
 msgid "Registration Form Page Options"
 msgstr "Options de la page du formulaire d’inscription"
@@ -857,6 +862,14 @@ msgstr "Profession"
 msgid "e.g. Lawyer / Accountant / Notary"
 msgstr "ex. Avocat / Expert-comptable / Notaire"
 
+#: inc/Plugins/ACF/Init.php:30
+msgid "Message Settings"
+msgstr "Réglages du message"
+
+#: inc/Plugins/ACF/Init.php:31
+msgid "Settings"
+msgstr "Réglages"
+
 #: inc/Plugins/ACF/RuleTypes.php:36
 msgid "Page Visibility"
 msgstr "Visibilité de la page"
@@ -865,7 +878,7 @@ msgstr "Visibilité de la page"
 msgid "Password Protected"
 msgstr "Protégé par mot de passe"
 
-#: inc/Plugins/RegistrationForm.php:148
+#: inc/Plugins/RegistrationForm.php:161
 msgid "Your registration for the Leagle Cup"
 msgstr "Votre inscription à la Leagle Cup"
 
@@ -922,7 +935,7 @@ msgid "Scroll"
 msgstr "Scroll"
 
 #: views/common/prices.html.twig:41
-#: views/pages/registration-form-page.html.twig:318
+#: views/pages/registration-form-page.html.twig:378
 msgid "I'm registering"
 msgstr "Je m’inscris"
 
@@ -938,7 +951,7 @@ msgstr "Lévènement"
 msgid "Specify the size of the polo shirt"
 msgstr "Indiquez la taille du polo"
 
-#: views/pages/registration-form-page.html.twig:332
+#: views/pages/registration-form-page.html.twig:392
 msgid "Your registration hasn't been sent."
 msgstr "Votre inscription n’a pas été envoyée."
 

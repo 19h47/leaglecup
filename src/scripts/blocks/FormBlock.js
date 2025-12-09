@@ -27,6 +27,7 @@ export default class FormBlock {
 
 		const $submit = this.$form.querySelector('.js-submit');
 		const teams = [...document.querySelectorAll('.js-team')];
+		const guides = [...document.querySelectorAll('.js-guide')];
 
 		// Checkboxes
 		const checkboxes = [...this.$form.querySelectorAll('.js-checkbox')];
@@ -35,15 +36,40 @@ export default class FormBlock {
 			const checkbox = new Checkbox(input);
 
 			checkbox.init();
+
 			checkbox.$input.addEventListener('activate', ({ target }) => {
 				if ('medical_certificate' === target.value) {
 					$submit.classList.remove('is-off');
+				}
+
+				if (JSON.parse(target.getAttribute('data-guide'))) {
+					guides.forEach($guide => {
+						const $input = $guide.querySelector('input');
+
+						if ($input) {
+							$input.removeAttribute('disabled');
+						}
+
+						$guide.classList.remove('is-off');
+					});
 				}
 			});
 
 			checkbox.$input.addEventListener('deactivate', ({ target }) => {
 				if ('medical_certificate' === target.value) {
 					$submit.classList.add('is-off');
+				}
+
+				if (JSON.parse(target.getAttribute('data-guide'))) {
+					guides.forEach($guide => {
+						const $input = $guide.querySelector('input');
+
+						if ($input) {
+							$input.setAttribute('disabled', true);
+						}
+
+						$guide.classList.add('is-off');
+					});
 				}
 			});
 		});

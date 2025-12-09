@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Leagle Cup\n"
-"POT-Creation-Date: 2022-06-15 09:45+0200\n"
+"POT-Creation-Date: 2023-03-23 12:29+0100\n"
 "PO-Revision-Date: 2020-03-01 11:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -36,7 +36,7 @@ msgid "Facebook"
 msgstr ""
 
 #: inc/Api/Customizer/Contact.php:60
-msgid "Indiquer l'URL du compte Facebook"
+msgid "Enter Facebook Account URL"
 msgstr ""
 
 #: inc/Api/Customizer/Contact.php:78
@@ -44,7 +44,7 @@ msgid "LinkedIn"
 msgstr ""
 
 #: inc/Api/Customizer/Contact.php:79
-msgid "Indiquer l'URL du compte LinkedIn"
+msgid "Enter LinkedIn Account URL"
 msgstr ""
 
 #: inc/Api/Customizer/Contact.php:97
@@ -52,7 +52,7 @@ msgid "Public email"
 msgstr ""
 
 #: inc/Api/Customizer/Contact.php:98
-msgid "Indiquer l'adresse mail du site"
+msgid "Enter Public Email Address"
 msgstr ""
 
 #: inc/Api/Customizer/Contact.php:116
@@ -518,7 +518,9 @@ msgctxt "partner slug"
 msgid "partner"
 msgstr ""
 
-#: inc/Core/Partner.php:107 views/pages/front-page.html.twig:27
+#: inc/Core/Partner.php:107
+#: inc/Plugins/ACF/Fields/MessageOptionsFields.php:58
+#: views/pages/front-page.html.twig:27
 msgid "Partners"
 msgstr ""
 
@@ -738,8 +740,12 @@ msgctxt "price slug"
 msgid "price"
 msgstr ""
 
+#: inc/Plugins/ACF/Fields/MessageOptionsFields.php:54
+msgid "Message Options Fields"
+msgstr ""
+
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:54
-msgid "Register Template Options"
+msgid "Registration Form Page Options"
 msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:58
@@ -758,10 +764,14 @@ msgstr ""
 
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:82
 #: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:84
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:114
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:116
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:145
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:147
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:121
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:123
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:155
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:157
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:189
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:191
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:220
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:222
 msgid "Label"
 msgstr ""
 
@@ -769,43 +779,94 @@ msgstr ""
 msgid "Choices"
 msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:108
-msgid "Company Name"
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:93
+msgid "Sir"
 msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:117
-msgid "Social Reason"
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:94
+msgid "Madam"
 msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:122
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:153
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:155
-msgid "Placeholder"
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:95
+msgid "Miss"
 msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:124
-msgid "e.g. Company Name"
-msgstr ""
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:125
-msgid "e.g. Vandelay Industries"
-msgstr ""
-
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:130
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:161
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:106
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:137
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:171
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:205
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:236
 msgid "Required"
 msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:139
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:115
+msgid "First Name"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:124
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:131
+msgid "First name"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:129
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:163
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:197
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:228
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:230
+msgid "Placeholder"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:132
+msgid "e.g. Art"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:149
+msgid "Last Name"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:158
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:165
+msgid "Last name"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:166
+msgid "e.g. Vandelay"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:183
+msgid "Company Name"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:192
+msgid "Social Reason"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:199
+msgid "e.g. Company Name"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:200
+msgid "e.g. Vandelay Industries"
+msgstr ""
+
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:214
 msgid "Job Title"
 msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:148
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:223
 msgid "Profession"
 msgstr ""
 
-#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:156
+#: inc/Plugins/ACF/Fields/RegistrationFormTemplate.php:231
 msgid "e.g. Lawyer / Accountant / Notary"
+msgstr ""
+
+#: inc/Plugins/ACF/Init.php:30
+msgid "Message Settings"
+msgstr ""
+
+#: inc/Plugins/ACF/Init.php:31
+msgid "Settings"
 msgstr ""
 
 #: inc/Plugins/ACF/RuleTypes.php:36
@@ -816,8 +877,8 @@ msgstr ""
 msgid "Password Protected"
 msgstr ""
 
-#: inc/Plugins/RegistrationForm.php:148
-msgid "Votre inscription à la Leagle Cup"
+#: inc/Plugins/RegistrationForm.php:161
+msgid "Your registration for the Leagle Cup"
 msgstr ""
 
 #: inc/Setup/Menus.php:33
@@ -873,7 +934,7 @@ msgid "Scroll"
 msgstr ""
 
 #: views/common/prices.html.twig:41
-#: views/pages/registration-form-page.html.twig:315
+#: views/pages/registration-form-page.html.twig:378
 msgid "I'm registering"
 msgstr ""
 
@@ -885,15 +946,11 @@ msgstr ""
 msgid "Event"
 msgstr ""
 
-#: views/pages/registration-form-page.html.twig:63
-msgid "Prénom"
-msgstr ""
-
-#: views/pages/registration-form-page.html.twig:204
+#: views/pages/registration-form-page.html.twig:207
 msgid "Specify the size of the polo shirt"
 msgstr ""
 
-#: views/pages/registration-form-page.html.twig:329
+#: views/pages/registration-form-page.html.twig:392
 msgid "Your registration hasn't been sent."
 msgstr ""
 
@@ -902,7 +959,7 @@ msgid "Leagle Cup"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://www.leaglecup.fr"
+msgid "https://www.leaglecup.fr"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -911,6 +968,6 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid ""
-"<a href=\"http://www.inesa.fr/\">ines a</a>, <a href=\"http://www.19h47.fr/"
-"\">19h47</a>"
+"<a href=\"https://www.inesa.fr/\">ines a</a>, <a href=\"https://www.19h47."
+"fr/\">19h47</a>"
 msgstr ""
