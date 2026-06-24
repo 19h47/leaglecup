@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@19h47/prettier-config": "^1.0.0",
-		"@babel/core": "^7.18.5",
+		"@babel/core": "^7.29.6",
 		"@babel/eslint-parser": "^7.18.2",
 		"@babel/plugin-proposal-class-properties": "^7.17.12",
 		"@babel/plugin-proposal-object-rest-spread": "^7.18.0",
