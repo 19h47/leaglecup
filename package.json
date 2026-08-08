@@ -70,7 +70,7 @@
 		"image-webpack-loader": "^8.1.0",
 		"mini-css-extract-plugin": "^2.6.0",
 		"node-sass": "^7.0.1",
-		"postcss": "^8.5.18",
+		"postcss": "^8.5.23",
 		"postcss-100vh-fix": "^1.0.2",
 		"postcss-loader": "^6.2.1",
 		"postcss-object-fit-images": "^1.1.2",
