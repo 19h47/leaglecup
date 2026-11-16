@@ -7,10 +7,7 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-// const PurgecssPlugin = require('purgecss-webpack-plugin');
-// const purgecssWordpress = require('purgecss-with-wordpress');
 
-// const glob = require('glob'); // eslint-disable-line import/no-extraneous-dependencies
 const resolve = require('./webpack.utils');
 
 module.exports = {
@@ -46,7 +43,9 @@ module.exports = {
 						options: {
 							sassOptions: {
 								sourceMap: false,
-								precision: 10,
+								// Bootstrap 4 relies on Sass syntax that Dart Sass deprecates
+								quietDeps: true,
+								silenceDeprecations: ['import'],
 							},
 						},
 					},
@@ -62,10 +61,5 @@ module.exports = {
 			filename: 'css/main.[chunkhash:8].css',
 		}),
 		new CompressionPlugin(),
-		// new PurgecssPlugin({
-		// 	paths: glob.sync(resolve('views/**/*'), { nodir: true }),
-		// 	safelist: purgecssWordpress.safelist,
-		// 	defaultExtractor: content => content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-		// }),
 	],
 };

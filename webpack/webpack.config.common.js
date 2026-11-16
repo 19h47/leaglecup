@@ -5,19 +5,13 @@
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 
-const webpack = require('webpack');
-
 // Plugins
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const dotenv = require('dotenv');
-
 const resolve = require('./webpack.utils');
-
-dotenv.config({ path: resolve('.env') });
 
 // Manifest plugin
 const manifestPlugin = new WebpackManifestPlugin({
@@ -27,7 +21,6 @@ const manifestPlugin = new WebpackManifestPlugin({
 module.exports = {
 	output: {
 		path: resolve('/dist'),
-		publicPath: process.env.PUBLIC_PATH,
 	},
 	externals: {
 		jquery: 'jQuery',
@@ -125,63 +118,11 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(gif)$/i,
-				exclude: [/animations/],
-				type: 'asset/resource',
-				generator: {
-					filename: 'img/gif/[name][ext]',
-				},
-				use: [
-					{
-						loader: 'image-webpack-loader',
-						options: {
-							gifsicle: {
-								interlaced: false,
-							},
-						},
-					},
-				],
-			},
-			{
 				test: /\.(png)$/i,
-				exclude: [/animations/],
 				type: 'asset/resource',
 				generator: {
 					filename: 'img/png/[name][ext]',
 				},
-				use: [
-					{
-						loader: 'image-webpack-loader',
-						options: {
-							optipng: {
-								enabled: false,
-							},
-							pngquant: {
-								quality: [0.65, 0.9],
-								speed: 4,
-							},
-						},
-					},
-				],
-			},
-			{
-				test: /\.(jpe?g)$/i,
-				exclude: [/animations/],
-				type: 'asset/resource',
-				generator: {
-					filename: 'img/jpg/[name][ext]',
-				},
-				use: [
-					{
-						loader: 'image-webpack-loader',
-						options: {
-							mozjpeg: {
-								progressive: true,
-								quality: [65],
-							},
-						},
-					},
-				],
 			},
 		],
 	},
@@ -192,9 +133,6 @@ module.exports = {
 			title: 'Webpack',
 			excludeWarnings: true,
 			alwaysNotify: true,
-		}),
-		new webpack.DefinePlugin({
-			'process.env': dotenv.parsed,
 		}),
 		new ESLintPlugin(),
 	],

@@ -39,7 +39,9 @@ module.exports = {
 						options: {
 							sassOptions: {
 								sourceMap: true,
-								precision: 10,
+								// Bootstrap 4 relies on Sass syntax that Dart Sass deprecates
+								quietDeps: true,
+								silenceDeprecations: ['import'],
 							},
 						},
 					},
