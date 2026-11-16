@@ -35,10 +35,6 @@ class Enqueue {
 	public function enqueue_scripts() : void {
 		wp_deregister_script( 'wp-embed' );
 
-		if ( 'true' === getenv( 'PRODUCTION' ) ) {
-			wp_deregister_script( 'jquery' );
-		}
-
 		if ( is_page_template( 'page-templates/registration-form.php' ) && get_option( 'recaptcha_site_key' ) ) {
 			wp_enqueue_script( // phpcs:ignore
 				'recaptcha',
@@ -73,18 +69,6 @@ class Enqueue {
 				'nonce'              => wp_create_nonce( 'security' ),
 				'recaptcha_site_key' => get_option( 'recaptcha_site_key' ),
 			)
-		);
-
-		wp_enqueue_script( // phpcs:ignore
-			'feature',
-			'//cdnjs.cloudflare.com/ajax/libs/feature.js/1.0.1/feature.min.js',
-			array(),
-			null,
-			false
-		);
-		wp_add_inline_script(
-			'feature',
-			'document.documentElement.className=document.documentElement.className.replace("no-js","js"),feature.touch&&!navigator.userAgent.match(/Trident\/(6|7)\./)&&(document.documentElement.className=document.documentElement.className.replace("no-touch","touch"));'
 		);
 
 		wp_enqueue_script( get_theme_text_domain() . '-main' );

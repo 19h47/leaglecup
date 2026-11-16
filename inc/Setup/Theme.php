@@ -129,17 +129,6 @@ class Theme {
 			);
 		}
 
-		if ( function_exists( 'html_class' ) ) {
-			$twig->addFunction(
-				new TwigFunction(
-					'html_class',
-					function ( $args = '' ) {
-						return html_class( $args );
-					}
-				)
-			);
-		}
-
 		if ( function_exists( 'yoast_breadcrumb' ) ) {
 			$twig->addFunction(
 				new TwigFunction(
