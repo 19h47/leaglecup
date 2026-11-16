@@ -26,6 +26,24 @@ class WordPress {
 
 		add_filter( 'wpcf7_load_js', '__return_false' );
 		add_filter( 'wpcf7_load_css', '__return_false' );
+
+		add_filter( 'rest_endpoints', array( $this, 'hide_users_endpoints' ) );
+	}
+
+	/**
+	 * Hide the users endpoints of the REST API from visitors, who could list the login of every account.
+	 *
+	 * @param array $endpoints The REST API endpoints.
+	 * @return array
+	 */
+	public function hide_users_endpoints( array $endpoints ) : array {
+		if ( is_user_logged_in() ) {
+			return $endpoints;
+		}
+
+		unset( $endpoints['/wp/v2/users'], $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+
+		return $endpoints;
 	}
 
 	/**
